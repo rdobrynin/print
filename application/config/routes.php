@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+$route['admin/login'] = 'admin/lunit/login';
+$route['admin/logout'] = 'admin/lunit/logout';
 
 
 /* End of file routes.php */
