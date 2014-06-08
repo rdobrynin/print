@@ -14,12 +14,13 @@ class Admin_model extends CI_Model {
       ->where('email_address', $email)
       ->where('password', $password)
       ->get('users');
-  if($query->num_rows > 0) {
-    print_r($query->result_array());
+    if ($query->num_rows > 0) {
+      print_r($query->row());
+      return $query->row();
+    }
+    else {
+      echo 'wrong password';
+//      return FALSE;
+    }
   }
-    return $query->result_array();
-
-
-  }
-
 }
