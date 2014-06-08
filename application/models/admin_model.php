@@ -15,12 +15,10 @@ class Admin_model extends CI_Model {
       ->where('password', $password)
       ->get('users');
     if ($query->num_rows > 0) {
-      print_r($query->row());
       return $query->row();
     }
     else {
-      echo 'wrong password';
-//      return FALSE;
+      return FALSE;
     }
   }
 }
