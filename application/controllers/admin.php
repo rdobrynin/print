@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
 
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
-      $this->admin_model->verify_user();
+      $this->admin_model->verify_user('roman.dobrynin@gmail.com', 'qwerty');
 
     }
 

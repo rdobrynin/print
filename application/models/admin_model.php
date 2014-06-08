@@ -8,13 +8,15 @@ class Admin_model extends CI_Model {
     parent::__construct();
   }
 
-  public function verify_user() {
+  public function verify_user($email, $password) {
     $query = $this
       ->db
-      ->where('email_address', 'roman.dobrynin@gmail.com')
-      ->where('password', 'Baboza7791')
+      ->where('email_address', $email)
+      ->where('password', $password)
       ->get('users');
+  if($query->num_rows > 0) {
     print_r($query->result_array());
+  }
     return $query->result_array();
 
 
