@@ -22,7 +22,7 @@
         <li><a href="#"><i class="fa fa-bar-chart-o"></i> Machines</a></li>
         <li><a href="#"><i class="fa fa-table"></i> Team</a></li>
         <li><a href="#"><i class="fa fa-edit"></i> Print jobs</a></li>
-        <li><a href="calculator"><i class="fa fa-font"></i> Calculator</a></li>
+        <li><a href="#"><i class="fa fa-font"></i> Calculator</a></li>
         <li><a href="#"><i class="fa fa-desktop"></i> Shedules</a></li>
         <li><a href="#"><i class="fa fa-wrench"></i> Tasks</a></li>
         <li><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>

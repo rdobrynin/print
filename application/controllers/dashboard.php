@@ -26,8 +26,4 @@ class Dashboard extends CI_Controller {
     $this->load->view('blank_page');
   }
 
-  public function calculator() {
-
-    $this->load->view('calculator');
-  }
 }
