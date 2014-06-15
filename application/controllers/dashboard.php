@@ -15,7 +15,11 @@ class Dashboard extends CI_Controller {
 
 
   public function index() {
-    $this->load->view('dashboard');
+    $this->load->model('admin_model');
+
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+
+    $this->load->view('dashboard', $data);
   }
 
   public function blank_page() {
@@ -23,6 +27,7 @@ class Dashboard extends CI_Controller {
   }
 
   public function calculator() {
+
     $this->load->view('calculator');
   }
 }
