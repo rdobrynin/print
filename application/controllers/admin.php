@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
   public function index() {
 
     if(isset($_SESSION['username'])) {
-      redirect('welcome');
+      redirect('dashboard');
     }
 
     $this->load->library('form_validation');
@@ -29,7 +29,7 @@ class Admin extends CI_Controller {
       if($res !== false) {
 //person has account
         $_SESSION['username'] = $this->input->post('email_address');
-        redirect('welcome');
+        redirect('dashboard');
       }
       else {
         echo 'Wrong password';

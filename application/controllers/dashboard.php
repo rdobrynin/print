@@ -2,7 +2,7 @@
   exit('No direct script access allowed');
 }
 
-class Welcome extends CI_Controller {
+class Dashboard extends CI_Controller {
 
   public function __construct() {
     session_start();
@@ -15,6 +15,14 @@ class Welcome extends CI_Controller {
 
 
   public function index() {
-    $this->load->view('welcome_message');
+    $this->load->view('dashboard');
+  }
+
+  public function blank_page() {
+    $this->load->view('blank_page');
+  }
+
+  public function calculator() {
+    $this->load->view('calculator');
   }
 }
