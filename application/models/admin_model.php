@@ -23,6 +23,21 @@ class Admin_model extends CI_Model {
     }
   }
 
+  public function check_email($email) {
+    $query = $this
+      ->db
+      ->where('email_address', $email)
+      ->limit('1')
+      ->get('users');
+    if ($query->num_rows > 0) {
+      return $query->row();
+    }
+    else {
+      return FALSE;
+    }
+  }
+
+
   public function get_user($username) {
     $query = $this
       ->db

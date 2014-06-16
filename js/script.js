@@ -21,7 +21,6 @@ $(function () {
         // Сначала присваеваем переменным значения из наших полей ввода
         // Доступ к полям по их ID
         var user_login = $("#email_address").val();
-console.log();
         // Это функция запроса ajax, в переменной html
         // мы сможем получить обратный текст после обработки
         var html = $.ajax({
@@ -33,7 +32,7 @@ console.log();
                 // Перечесляем передаваемые переменные
                 // Сначала идёт название которое получит controller
                 // через метод post, следом наша переменная с данными
-                'user_login' : user_login
+                'email_address' : user_login
             }),
             dataType: "html",
             async: false
@@ -41,6 +40,8 @@ console.log();
 
         // Здесь мы просто перезаписываем div с id="ajax_login" данными
         // которые вернул наш controller
+        $('#check_login').show();
+        $('.errors').hide();
         $("#check_login").empty().append(html);
     });
 

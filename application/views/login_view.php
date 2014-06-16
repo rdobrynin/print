@@ -14,8 +14,6 @@
         <div class="errors ">
 <!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
           <?php echo validation_errors();?></div>
-        <p>Please provide your details</p>
-
         <div class="field">
           <label for="username">Username</label>
           <input type="text" id="email_address" name="email_address" value="" placeholder="Email" class="login username-field form-control" />
@@ -24,15 +22,13 @@
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field form-control"/>
         </div>
-
       </div> <!-- /login-fields -->
-
       <div class="login-actions">
-        <button class="button btn btn-success btn-large">Sign In</button>
+        <button class="button btn btn-success btn-large" id="login_btn">Sign In</button>
       </div> <!-- .actions -->
       <?php echo form_close(); ?>
     </div> <!-- /content -->
-    <div id="check_login" style="color:red;"></div>
+    <div id="check_login"></div>
 
   </div> <!-- /account-container -->
   <!-- JavaScript -->

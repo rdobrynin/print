@@ -30,6 +30,7 @@ div.content.clearfix {
     margin-top: 20px;
     color: red;
     width: 100%;
+    display: block;
 }
 
 
@@ -43,4 +44,17 @@ h1 {
 
 .alert {
     margin-bottom: 5px;
+}
+
+#check_login {
+    display: none;
+    color: red;
+    width: 88%;
+    text-align: center;
+    background-color: #ddd;
+    padding: 10px;
+    margin: 9px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    border-radius: 4px;
 }
