@@ -27,6 +27,8 @@
         <button class="button btn btn-success btn-large" id="login_btn">Sign In</button>
       </div> <!-- .actions -->
       <?php echo form_close(); ?>
+      <div class="sign_up pull-left"><a href="#">Sign up</a></div>
+      <div class="sign_up pull-right"><a href="#">Forgot password ?</a></div>
     </div> <!-- /content -->
     <div id="check_login"></div>
 
