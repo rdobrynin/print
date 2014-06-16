@@ -10,7 +10,7 @@ class Ajax extends CI_Controller {
 
 
     $this->load->model('admin_model');
-    $check= $this->admin_model->check_email($userLogin);
+    $news= $this->admin_model->check_email($userLogin);
 
 //    $check_email = $check->email_address;
 
@@ -19,10 +19,10 @@ class Ajax extends CI_Controller {
     $returnText = '';
 
     // Делаем простую проверку, замените на свою
-    if($userLogin != $check->email_address){
-      $returnText = '<span style="color:red;">Email address is incorrect</span>';
-    } else {
+    if($userLogin == $news[0]->email_address){
       $returnText = '<span style="color:#1e6cff;">Email address is correct</span>';
+    } else {
+      $returnText = '<span style="color:red;">Email address is not correct</span>';
     }
 
     // Возвращаем ответ
@@ -31,3 +31,5 @@ class Ajax extends CI_Controller {
   }
 
 }
+
+

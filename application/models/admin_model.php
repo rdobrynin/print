@@ -30,9 +30,10 @@ class Admin_model extends CI_Model {
       ->limit('1')
       ->get('users');
     if ($query->num_rows > 0) {
-      return $query->row();
+      return $query->result();
     }
     else {
+      error_reporting(0);
       return FALSE;
     }
   }
