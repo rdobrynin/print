@@ -41,6 +41,8 @@
 $route['default_controller'] = "admin";
 $route['404_override'] = '';
 $route['logout'] = 'admin/logout';
+$route['signup'] = 'admin/signup';
+$route['forgot'] = 'admin/forgot';
 $route['calculator'] = 'dashboard/calculator';
 
 

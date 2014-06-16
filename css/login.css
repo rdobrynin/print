@@ -46,6 +46,14 @@ h1 {
     font-size: 26px;
 }
 
+label {
+    color: #999;
+}
+
+.fa {
+    color:#999;
+}
+
 .alert {
     margin-bottom: 5px;
 }

@@ -39,9 +39,24 @@ class Admin extends CI_Controller {
   }
 
 // logout and session destroy
-
   function logout() {
     session_destroy();
     $this->load->view('login_view');
+  }
+
+//  sign up
+  function signup() {
+    if(isset($_SESSION['username'])) {
+      redirect('dashboard');
+    }
+
+    $data['main_content'] = 'signup_form';
+    $this->load->view('signup_view', $data);
+  }
+
+//  forgot password or username
+  function forgot() {
+    session_destroy();
+    $this->load->view('forgot_view');
   }
 }
