@@ -12,7 +12,7 @@ class Admin_model extends CI_Model {
     $query = $this
       ->db
       ->where('email_address', $email)
-      ->where('password', $password)
+      ->where('password', md5($password))
     ->limit('1')
       ->get('users');
     if ($query->num_rows > 0) {
