@@ -48,6 +48,7 @@ h1 {
 
 label {
     color: #999;
+    font-weight: normal;
 }
 
 .fa {
@@ -75,4 +76,9 @@ label {
     padding-top: 10px;
     margin-bottom: -10px;
     text-align: center;
+}
+
+i.fa {
+    font-size: 15px;
+    opacity: 0.5;
 }

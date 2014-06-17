@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Print Management</a>
+<span id="title"><a class="navbar-brand" id="title">Print Management</a></span>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

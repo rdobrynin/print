@@ -16,10 +16,6 @@
         <legend>Personal information</legend>
 
       <div class="login-fields">
-        <div class="errors ">
-<!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
-          <?php echo validation_errors();?></div>
-
 
         <div class="field">
           <label for="first_name">First name:</label>
@@ -38,7 +34,7 @@
         </div>
 
         <div class="field">
-          <label for="facebook"><i class="fa fa-facebook-square"></i>&nbsp;Facebook:</label>
+          <label for="facebook"><i class="fa fa-facebook"></i>&nbsp;Facebook:</label>
           <input type="text" id="facebook" name="facebook" value="" placeholder="Facebook address" class="login password-field form-control"/>
         </div>
 
@@ -51,13 +47,16 @@
         <fieldset>
           <legend>Account information</legend>
           <div class="field">
-            <label for="email_address_signup"><i class="fa fa-user"></i>&nbsp;Username</label>
+            <label for="email_address_signup"><i class="fa fa-user"></i>&nbsp;Email address</label>
             <input type="text" id="email_address_signup" name="email_address_signup" value="" placeholder="Email" class="login username-field form-control" />
           </div> <!-- /field -->
           <div class="field">
             <label for="password_signup"><i class="fa fa-key"></i>&nbsp;Password:</label>
             <input type="password" id="password_signup" name="password_signup" value="" placeholder="Password" class="login password-field form-control"/>
           </div>
+
+          <div class="errors ">
+            <?php echo validation_errors();?></div>
         </fieldset>
 
 

@@ -45,13 +45,26 @@ class Admin extends CI_Controller {
   }
 
 //  sign up
-  function signup() {
-    if(isset($_SESSION['username'])) {
-      redirect('dashboard');
-    }
+//  function signup() {
+//    if(isset($_SESSION['username'])) {
+//      redirect('dashboard');
+//    }
+//    $this->load->view('signup_view');
+//  }
 
-    $data['main_content'] = 'signup_form';
-    $this->load->view('signup_view', $data);
+//  validate sign form
+
+  function signup() {
+
+    $this->load->library('form_validation');
+    $this->form_validation->set_rules('email_address_signup', 'Email', 'required|valid_email');
+    $this->form_validation->set_rules('password_signup', 'Password', 'required|min_length[4]');
+    if ($this->form_validation->run() !== false) {
+      echo('thanx for registration');
+    }
+      else {
+        $this->load->view('signup_view');
+      }
   }
 
 //  forgot password or username
