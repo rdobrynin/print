@@ -51,9 +51,11 @@ class Admin extends CI_Controller {
     $this->form_validation->set_rules('email_address_signup', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('password_signup', 'Password', 'trim|required|min_length[4]|md5');
     $this->form_validation->set_rules('password_signup_2', 'Password', 'trim|required|matches[password_signup]');
-
     if ($this->form_validation->run() !== false) {
-      echo('thanx for registration');
+     $this->load->model('admin_model');
+      if($query=$this->admin_model->create_member()) {
+echo 'done';
+      }
     }
       else {
         $this->load->view('signup_view');
