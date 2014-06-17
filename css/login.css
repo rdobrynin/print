@@ -82,3 +82,8 @@ i.fa {
     font-size: 15px;
     opacity: 0.5;
 }
+
+legend{
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1PX 0PX 0 #FFF;
+}

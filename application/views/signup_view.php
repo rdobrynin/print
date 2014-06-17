@@ -28,21 +28,6 @@
           <input type="text" id="last_name" name="last_name" value="" placeholder="Last name" class="login password-field form-control"/>
         </div>
 
-        <div class="field">
-          <label for="phone"><i class="fa fa-phone"></i>&nbsp;Phone number:</label>
-          <input type="text" id="phone" name="phone" value="" placeholder="Phone" class="login password-field form-control"/>
-        </div>
-
-        <div class="field">
-          <label for="facebook"><i class="fa fa-facebook"></i>&nbsp;Facebook:</label>
-          <input type="text" id="facebook" name="facebook" value="" placeholder="Facebook address" class="login password-field form-control"/>
-        </div>
-
-        <div class="field">
-          <label for="skype"><i class="fa fa-skype"></i>&nbsp;Skype:</label>
-          <input type="text" id="skype" name="skype" value="" placeholder="Skype" class="login password-field form-control"/>
-        </div>
-
 <!--        ACCOUNT INFO-->
         <fieldset>
           <legend>Account information</legend>
@@ -50,9 +35,15 @@
             <label for="email_address_signup"><i class="fa fa-user"></i>&nbsp;Email address</label>
             <input type="text" id="email_address_signup" name="email_address_signup" value="" placeholder="Email" class="login username-field form-control" />
           </div> <!-- /field -->
+
+
           <div class="field">
             <label for="password_signup"><i class="fa fa-key"></i>&nbsp;Password:</label>
             <input type="password" id="password_signup" name="password_signup" value="" placeholder="Password" class="login password-field form-control"/>
+          </div>
+
+          <div class="field">
+            <input type="password" id="password_signup_2" name="password_signup_2" value="" placeholder="Password confirmation" class="login password-field form-control"/>
           </div>
 
           <div class="errors ">

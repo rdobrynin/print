@@ -39,6 +39,11 @@ class Admin_model extends CI_Model {
   }
 
 
+  public function insert_user() {
+
+  }
+
+
   public function get_user($username) {
     $query = $this
       ->db
