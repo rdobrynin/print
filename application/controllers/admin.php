@@ -54,7 +54,7 @@ class Admin extends CI_Controller {
     if ($this->form_validation->run() !== false) {
      $this->load->model('admin_model');
       if($query=$this->admin_model->create_member()) {
-echo 'done';
+        $this->load->view('invite_view');
       }
     }
       else {
@@ -68,3 +68,4 @@ echo 'done';
     $this->load->view('forgot_view');
   }
 }
+
