@@ -22,8 +22,4 @@ class Dashboard extends CI_Controller {
     $this->load->view('dashboard', $data);
   }
 
-  public function blank_page() {
-    $this->load->view('blank_page');
-  }
-
 }

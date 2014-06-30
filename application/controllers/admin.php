@@ -41,7 +41,7 @@ class Admin extends CI_Controller {
 // logout and session destroy
   function logout() {
     session_destroy();
-    $this->load->view('login_view');
+    $this->load->view('login/login_view');
   }
 
   function signup() {
@@ -54,18 +54,18 @@ class Admin extends CI_Controller {
     if ($this->form_validation->run() !== false) {
      $this->load->model('admin_model');
       if($query=$this->admin_model->create_member()) {
-        $this->load->view('invite_view');
+        $this->load->view('login/invite_view');
       }
     }
       else {
-        $this->load->view('signup_view');
+        $this->load->view('login/signup_view');
       }
   }
 
 //  forgot password or username
   function forgot() {
     session_destroy();
-    $this->load->view('forgot_view');
+    $this->load->view('login/forgot_view');
   }
 }
 
