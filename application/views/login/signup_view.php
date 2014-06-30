@@ -1,7 +1,4 @@
 <?php include('head.php');?>
-
-<body>
-
 <div>
   <div class="account-container">
     <div class="content clearfix">
@@ -63,5 +60,4 @@
     <div id="check_login"></div>
 
   </div> <!-- /account-container -->
-</body>
-</html>
+<?php include('footer.php');?>
