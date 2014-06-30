@@ -20,10 +20,4 @@ class Dashboard extends CI_Controller {
     $this->load->view('dashboard', $data);
   }
 
-  function profile() {
-    $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
-    $this->load->view('profile_view', $data);
-  }
-
 }

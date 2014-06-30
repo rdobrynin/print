@@ -1,11 +1,4 @@
-<?php include('head.php');?>
-<p>profile</p>
-
-<?php var_dump($user);?>
-
-<a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
-
-<div class="modal" id="myModal">
+<div class="modal" id="profile">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -22,4 +15,3 @@
     </div>
   </div>
 </div>
-<?php include('footer.php');?>
