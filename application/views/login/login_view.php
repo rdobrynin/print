@@ -1,34 +1,25 @@
 <?php include('head.php');?>
-<div>
-  <div class="account-container">
-    <div class="content clearfix">
-    <!--  HELPER FORM-->
-    <?php echo form_open('admin'); ?>
+  <div class="container" id="main_login" style="display: block;">
+    <form class="form-signin" action="http://localhost/prm/admin" method="POST" autocomplete="off">
+      <div class="errors ">
+        <!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
+        <?php echo validation_errors();?></div>
+      <center><h2 class="text-muted">Brilliant Management</h2><small class="text-muted">user athorization</small></center><br>
 
-      <h1>Member Login</h1>
-
-      <div class="login-fields">
-        <div class="errors ">
-<!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
-          <?php echo validation_errors();?></div>
-        <div class="field">
-          <label for="username"><i class="fa fa-user"></i>&nbsp;Username</label>
-          <input type="text" id="email_address" name="email_address" value="" placeholder="Email" class="login username-field form-control" />
-        </div> <!-- /field -->
-        <div class="field">
-          <label for="password"><i class="fa fa-key"></i>&nbsp;Password:</label>
-          <input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field form-control"/>
-        </div>
-      </div> <!-- /login-fields -->
-      <div class="login-actions">
-        <button class="button btn btn-success btn-large" id="login_btn">Log in</button>
-      </div> <!-- .actions -->
+      <input type="text" id="email_address" autocomplete="off"  name="email_address" value="" class="form-control" placeholder="Email" />
+      <input type="password" id="password" name="password" value="" placeholder="Password" class="form-control"/>
+      <input type="hidden" name="req_url" value="/helpdesk/">
+      <button class="btn btn-lg btn-primary btn-block" id="login_btn"> <i class="fa fa-check"></i></button>
+<div style="padding-bottom: 20px;">
+  <small class="pull-left">
+    <center><br><a href="signup" id="show_activate_form">Sign up</a>
+    </center>
+  </small>
+  <small class="pull-right">
+    <center><br><a href="forgot" id="show_activate_form">Forgot password ?</a>
+    </center>
+  </small>
+</div>
       <?php echo form_close(); ?>
-      <div class="sign_up pull-left"><a href="signup">Sign up</a></div>
-      <div class="sign_up pull-right"><a href="forgot">Forgot password ?</a></div>
-    </div> <!-- /content -->
-    <div id="check_login"></div>
-
-  </div> <!-- /account-container -->
-  <!-- JavaScript -->
+  </div>
 <?php include('footer.php');?>

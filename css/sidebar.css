@@ -1,0 +1,479 @@
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #222;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+    overflow: overlay;
+    background: url('../img/mesh.png');
+    background-position: 0 -30px;
+
+}
+
+#page-content-wrapper {
+  width: 100%;
+    padding-top: 50px;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    padding-top: 27px;
+}
+
+.sidebar-nav li {
+  line-height: 26px;
+  text-indent: 20px;
+    padding-top:  10px;
+    padding-bottom:  10px;
+}
+
+li.sidebar-brand {
+    padding-top: 0;
+}
+
+.sidebar-nav li a {
+  color: #428bca;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff !important;
+    transition: all 1.4s ease 0s;
+
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.inset {
+
+  padding-left: 36px;
+  padding-right: 40px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    #wrapper {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        left: 45px;
+    }
+
+    #wrapper.active {
+        position: relative;
+        left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+        left: 250px;
+        width: 250px;
+        transition: all 0.4s ease 0s;
+    }
+
+    #menu-toggle {
+        display: inline-block;
+        background-color: #222;
+        height: 47px;
+        width: 48px;
+        visibility: hidden;
+    }
+
+    .inset {
+        padding: 30px;
+        padding-top: 0px;
+    }
+
+    ul.navbar.navbar-left {
+        display: none;
+    }
+
+    .nav > li {
+        position: relative;
+        display: block;
+        float: right;
+    }
+
+    .left-resp-menu {
+        display: none;
+    }
+
+    .sidebar-nav li a {
+        text-align: right;
+        text-shadow: 1px 1px #000;
+    }
+
+}
+
+/*NAV*/
+
+.sidebar-nav li {
+    border-bottom: 1px solid #000;
+    box-shadow: 0px 1px 0px #2C2C2C;
+}
+
+.sidebar-nav li.active {
+    background: rgba(59, 62, 66, 0.50);
+}
+
+
+
+.sidebar-nav li a {
+    text-shadow: 1px 1px #000 !important;
+}
+
+
+li.active a {
+    color:#ddd;
+}
+
+
+i.fa, i.glyphicon {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+
+/*NAVBAR LEFT*/
+
+ul.navbar.navbar-left {
+    margin-left: -16px;
+    border-radius: 0;
+    width: 251px;
+    margin-bottom: 0;
+    /* margin-top: -2px; */
+    padding-top: 0px;
+    height: 78px;
+    position: absolute;
+    background-color: #222;
+    border-bottom: 1px solid #000;
+    box-shadow: 0px 1px 0px #2C2C2C;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: transparent;
+    text-shadow: 1px 1px #000;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    top: 50px;
+    z-index: 1000;
+}
+
+
+.messages-dropdown .dropdown-menu {
+    min-width: 300px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+.left-resp-menu {
+    display: inline;
+}
+
+
+@media (max-width: 767px) {
+    .sidebar-nav li a {
+        text-align: right;
+        padding-right: 0;
+        font-size: 21px;
+        margin-right: -6px;
+        text-shadow: 1px 1px #000;
+    }
+    .left-resp-menu {
+        display: none;
+    }
+
+    .sidebar-nav li {
+        border-bottom: 0 solid #000;
+        box-shadow: 0 0 0 #2C2C2C;
+        line-height: 48px;
+    }
+
+    .sidebar-nav {
+        left: -7px;
+    }
+
+    .sidebar-nav li.active {
+        background: transparent;
+    }
+
+    .sidebar-nav li:hover {
+        background: transparent;
+    }
+
+    span.badge-resp {
+        position: absolute;
+        right: 0;
+        /* width: 19px; */
+        height: 19px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        float: inherit;
+        /* background: transparent; */
+        text-indent: initial;
+        padding: 7px;
+        padding-top: 4px;
+        display: block;
+    }
+
+    ul.navbar.navbar-left {
+   background: transparent;
+    }
+    ul.sidebar-nav li:hover {
+        transition: none;
+        background: transparent !important;
+    }
+
+
+
+}
+
+span.badge-resp {
+    position: absolute;
+    right: 0;
+    /* width: 19px; */
+    height: 16px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    float: inherit;
+    /* background: transparent; */
+    text-indent: initial;
+    padding: 5px;
+    padding-top: 3px;
+    display: block;
+    margin-top: -20px;
+    background-color: red;
+}
+
+@media (min-width: 768px) {
+    span.badge-resp {
+        position: absolute;
+        right: 10px;
+        /* width: 19px; */
+        height: 18px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        float: inherit;
+        /* background: transparent; */
+        text-indent: initial;
+        padding: 5px;
+        padding-top: 3px;
+        display: block !important;
+        margin-top: -20px;
+        background-color: red;
+        width: 20px;
+        padding-right: 7px;
+    }
+
+}
+
+.avatar-top {
+    background-color: #999;
+    width: 45px;
+    height: 45px;
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
+    display: block;
+    position: fixed;
+    top: 17px;
+    left: 19px;
+    overflow: hidden;
+}
+
+span.avata-img {
+    left: 1px;
+    position: relative;
+    left: -2px;
+    top: -3px;
+}
+
+.avatar-name {
+    position: relative;
+    padding-left: 39px;
+    color: #428bca;
+    top: 11px;
+    text-shadow: 1px 1px #000;
+}
+
+.message {
+    display: block;
+}
+
+li.message-preview {
+    padding-top: 10px;
+    margin-right: 0;
+    width: 375px;
+}
+
+i.fa-clock-o {
+    margin-left: 0;
+}
+
+.dropdown-user {
+    padding: 10px;
+}
+
+p#back-top {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+
+p#back-top i{
+    color: #717171;
+}
+
+p#back-top a {
+    color:  #ddd;
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+    color: rgb(184, 184, 184) !important;
+}
+
+.dropdown-menu > li > a:hover {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+    color: #222 !important;
+}
+
+ul.sidebar-nav li i {
+    margin-left: -20px !important;
+}
+
+ul.sidebar-nav li:hover {
+    transition: all 1.4s ease 0s;
+    background: rgba(59, 62, 66, 0.50);
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #080808;
+}
+
+div.navbar-collapse.navbar-inverse.navbar-fixed-top {
+
+
+}
+
+
+
+
+
+
+
