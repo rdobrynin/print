@@ -35,7 +35,7 @@ class Admin extends CI_Controller {
         echo 'Wrong password';
       }
     }
-    $this->load->view('login_view');
+    $this->load->view('login/login_view');
   }
 
 // logout and session destroy
