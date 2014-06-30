@@ -2,13 +2,11 @@
   <div class="container" id="main_login" style="display: block;">
     <form class="form-signin" action="http://localhost/prm/admin" method="POST" autocomplete="off">
       <div class="errors ">
-        <!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
         <?php echo validation_errors();?></div>
       <center><h2 class="text-muted">Brilliant Management</h2><small class="text-muted">user athorization</small></center><br>
 
       <input type="text" id="email_address" autocomplete="off"  name="email_address" value="" class="form-control" placeholder="Email" />
       <input type="password" id="password" name="password" value="" placeholder="Password" class="form-control"/>
-      <input type="hidden" name="req_url" value="/helpdesk/">
       <button class="btn btn-lg btn-primary btn-block" id="login_btn"> <i class="fa fa-check"></i></button>
 <div style="padding-bottom: 20px;">
   <small class="pull-left">
