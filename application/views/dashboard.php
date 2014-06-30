@@ -72,7 +72,7 @@
        <?php print($user[0]['first_name'].' '. $user[0]['last_name'])?>
         <b class="caret"></b></a>
       <ul class="dropdown-menu dropdown-user">
-        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+        <li><a href="<?php print(site_url())?>dashboard/profile"><i class="fa fa-user"></i> Profile</a></li>
         <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
         <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
         <li class="divider"></li>
