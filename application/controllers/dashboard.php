@@ -20,4 +20,10 @@ class Dashboard extends CI_Controller {
     $this->load->view('dashboard', $data);
   }
 
+  function projects() {
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $this->load->view('projects_view', $data);
+  }
+
 }
