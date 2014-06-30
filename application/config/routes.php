@@ -44,6 +44,7 @@ $route['logout'] = 'admin/logout';
 //$route['signup'] = 'admin/signup';
 $route['signup'] = 'admin/signup';
 $route['forgot'] = 'admin/forgot';
+$route['profile'] = 'dashboard/profile';
 $route['calculator'] = 'dashboard/calculator';
 
 
