@@ -19,4 +19,25 @@ if (!function_exists('test')) {
     }
     return $result;
   }
+
+  function task_status($status) {
+    $result=0;
+    if($status == 4) {
+      $result = 'complete';
+    }
+    else if($status == 3) {
+      $result = 'approve';
+    }
+    else if($status == 2) {
+      $result = 'process';
+    }
+    else if($status == 5) {
+      $result = 'overdue';
+    }
+    else if($status == 1) {
+      $result = 'pause';
+    }
+    return $result;
+  }
+
 }

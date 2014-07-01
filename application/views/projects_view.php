@@ -97,8 +97,8 @@
                 <td>1</td>
                 <td>Magendo shop</td>
                 <td><a href="#"><span class="badge badge-task">3</span></a></td>
-                <td><?php print(time());?></td>
-                <td><?php print(time());?></td>
+                <td><?php print(date('F j, Y'));?></td>
+                <td><?php print(date('F j, Y'));?></td>
                 <td>Roman Dobrynin</td>
                 <td><span class="label label-warning">Approve</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
@@ -108,8 +108,8 @@
                 <td>2</td>
                 <td>Facebook application</td>
                 <td><a href="#"><span class="badge badge-task">18</span></a></td>
-                <td><?php print(time());?></td>
-                <td><?php print(time());?></td>
+                <td><?php print(date('F j, Y'));?></td>
+                <td><?php print(date('F j, Y'));?></td>
                 <td>Roman Dobrynin</td>
                 <td><span class="label label-success">Process</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
