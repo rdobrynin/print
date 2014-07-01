@@ -68,93 +68,56 @@
 
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
+    <h3>Administer projects</h3>
       <div class="row">
-
-
-        <div class="col-md-12">
-          <h4>Projects</h4>
-          <div class="table-responsive">
-
-
-            <table id="mytable" class="table table-bordred table-striped">
-
-              <thead>
-
-              <th><input type="checkbox" id="checkall" /></th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Address</th>
-              <th>Edit</th>
-              <th>Delete</th>
-              </thead>
-              <tbody>
-
-              <tr>
-                <td><input type="checkbox" class="checkthis" /></td>
-                <td>Mohsin</td>
-                <td>Irshad</td>
-                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-              </tr>
-
-              <tr>
-                <td><input type="checkbox" class="checkthis" /></td>
-                <td>Mohsin</td>
-                <td>Irshad</td>
-                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-              </tr>
-
-
-              <tr>
-                <td><input type="checkbox" class="checkthis" /></td>
-                <td>Mohsin</td>
-                <td>Irshad</td>
-                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-              </tr>
-
-
-
-              <tr>
-                <td><input type="checkbox" class="checkthis" /></td>
-                <td>Mohsin</td>
-                <td>Irshad</td>
-                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-              </tr>
-
-
-
-              <tr>
-                <td><input type="checkbox" class="checkthis" /></td>
-                <td>Mohsin</td>
-                <td>Irshad</td>
-                <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-              </tr>
-              </tbody>
-
-            </table>
-
-            <div class="clearfix"></div>
-            <ul class="pagination pull-right">
-              <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-            </ul>
-
+        <div class="panel panel-primary filterable">
+          <div class="panel-heading">
+            <h3 class="panel-title">Current Projects</h3>
+            <div class="pull-right">
+              <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+            </div>
           </div>
+          <table class="table">
+            <thead>
+            <tr class="filters">
+              <th><input type="text" class="form-control" placeholder="#" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Project name" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Tasks" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Opt time" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Due to" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Curator" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+              <th><input type="hidden" class="form-control" placeholder="Edit" disabled></th>
+              <th><input type="hidden" class="form-control" placeholder="Delete" disabled></th>
+            </tr>
+            </thead>
+            <tbody>
 
+              <tr>
+                <td>1</td>
+                <td>Magendo shop</td>
+                <td><a href="#"><span class="badge badge-task">3</span></a></td>
+                <td><?php print(time());?></td>
+                <td><?php print(time());?></td>
+                <td>Roman Dobrynin</td>
+                <td><span class="label label-warning">Approve</span></td>
+                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Facebook application</td>
+                <td><a href="#"><span class="badge badge-task">18</span></a></td>
+                <td><?php print(time());?></td>
+                <td><?php print(time());?></td>
+                <td>Roman Dobrynin</td>
+                <td><span class="label label-success">Process</span></td>
+                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
       </div>
     <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
