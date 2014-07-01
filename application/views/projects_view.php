@@ -15,6 +15,8 @@
       </li>
       <li><a href="#"><i class="glyphicon glyphicon-stats"></i>&nbsp;<span class="left-resp-menu">Chart</span></a>
       </li>
+      <li><a href="comments"><i class="fa fa-comment"></i>&nbsp;<span class="left-resp-menu">Comments</span></a>
+      </li>
       <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>&nbsp;<span class="left-resp-menu">Help</span></a>
       </li>
 
@@ -63,13 +65,6 @@
 
 <!-- Page content -->
 <div id="page-content-wrapper">
-  <div class="content-header">
-    <h1>
-      <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
-      PRM Brilliant
-    </h1>
-  </div>
-
 
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
