@@ -77,7 +77,7 @@
 
 
         <div class="col-md-12">
-          <h4>Bootstrap Snipp for Datatable</h4>
+          <h4>Projects</h4>
           <div class="table-responsive">
 
 
@@ -191,9 +191,6 @@
       </div>
       <!-- /.modal-dialog -->
     </div>
-
-
-
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
