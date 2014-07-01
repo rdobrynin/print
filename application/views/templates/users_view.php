@@ -10,7 +10,7 @@
       <div class="row">
         <div class="panel panel-primary filterable">
           <div class="panel-heading">
-            <h3 class="panel-title">Users</h3>
+            <h3 class="panel-title">Current users</h3>
             <div class="pull-right">
               <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
             </div>
@@ -48,6 +48,8 @@
       <a href="#top"><span></span><i style="font-size: 30px;" class="fa fa-arrow-circle-up"></i><span></span></a>
     </p>
   </div>
+
+<!--  New users-->
 </div>
 </div>
 
