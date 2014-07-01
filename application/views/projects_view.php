@@ -218,7 +218,6 @@
 
   </div>
 </div>
-<?php include('profile_view.php');?>
 </div>
 
 <?php include('footer.php');?>

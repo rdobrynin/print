@@ -61,4 +61,12 @@ class Admin_model extends CI_Model {
 
     return $query->result_array();
   }
+
+  public function get_users() {
+    $query = $this
+      ->db
+      ->get('users');
+
+    return $query->result_array();
+  }
 }
