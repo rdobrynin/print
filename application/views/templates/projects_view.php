@@ -107,6 +107,7 @@
       <th>Task name</th>
       <th>Started</th>
       <th>Due to</th>
+      <th>CTS</th>
       <th>Curator</th>
       <th>Implementor</th>
       <th>Status</th>
@@ -118,6 +119,7 @@
         <td>Fix payment module</td>
         <td><?php print(date('F j, Y'));?></td>
         <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#"><span class="badge alert-danger" id="route-task">30 min</span></a></td>
         <td><a href="#">Andrei S.</a></td>
         <td><a href="#">Roman D.</a></td>
         <td><span class="label label-success">Process</span></td>
@@ -129,17 +131,31 @@
         <td>Sort table</td>
         <td><?php print(date('F j, Y'));?></td>
         <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#"><span class="badge alert-danger" id="route-task">12h</span></a></td>
         <td><a href="#">Andrei S.</a></td>
         <td><a href="#">Roman D.</a></td>
         <td><span class="label label-success">Process</span></td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
-      <tr>
+      <tr id="status-id">
         <td>3</td>
         <td>Reform code</td>
         <td><?php print(date('F j, Y'));?></td>
         <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#"><span class="badge alert-danger" id="route-task">23h</span></a></td>
+        <td><a href="#">Andrei S.</a></td>
+        <td><a href="#">Roman D.</a></td>
+        <td><span class="label label-danger">Overdue</span></td>
+        <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+        <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Reform code</td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#"><span class="badge alert-danger" id="route-task">3h</span></a></td>
         <td><a href="#">Andrei S.</a></td>
         <td><a href="#">Roman D.</a></td>
         <td><span class="label label-success">Process</span></td>

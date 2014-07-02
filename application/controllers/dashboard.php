@@ -69,4 +69,12 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/test_view');
   }
 
+  function clients() {
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
+    $data['roles'] = $this->admin_model->get_roles();
+    $this->load->view('templates/client_view', $data);
+  }
+
 }
