@@ -20,7 +20,9 @@ class Dashboard extends CI_Controller {
   public function index() {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/dashboard_view', $data);
+    $this->load->view('templates/profile_view', $data);
   }
 
   /**
@@ -30,7 +32,9 @@ class Dashboard extends CI_Controller {
   function projects() {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/projects_view', $data);
+    $this->load->view('templates/profile_view', $data);
   }
 
   /**
