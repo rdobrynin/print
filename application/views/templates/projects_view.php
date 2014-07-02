@@ -89,11 +89,11 @@
               <tr>
                 <td>1</td>
                 <td>Magendo shop</td>
-                <td><a href="#"><span class="badge badge-task">3</span></a></td>
+                <td><a href="#"><span class="badge badge-task" id="route-task">3</span></a></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td>Roman Dobrynin</td>
-                <td><span class="label label-warning">Approve</span></td>
+                <td><span class="label label-success">Process</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
               </tr>
@@ -107,10 +107,11 @@
       <th>Task name</th>
       <th>Started</th>
       <th>Due to</th>
+      <th>Curator</th>
       <th>Implementor</th>
       <th>Status</th>
-        <th>Edit</th>
-        <th>Delete</th>
+      <th>Edit</th>
+      <th>Delete</th>
       </tr>
       <tr>
         <td>1</td>
@@ -119,6 +120,7 @@
         <td>4</td>
         <td>5</td>
         <td>6</td>
+        <td>7</td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
@@ -129,6 +131,7 @@
         <td>4</td>
         <td>5</td>
         <td>6</td>
+        <td>7</td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
@@ -139,6 +142,7 @@
         <td>4</td>
         <td>5</td>
         <td>6</td>
+        <td>7</td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
@@ -150,11 +154,11 @@
               <tr>
                 <td>2</td>
                 <td>Facebook application</td>
-                <td><a href="#"><span class="badge badge-task">18</span></a></td>
+                <td></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td>Roman Dobrynin</td>
-                <td><span class="label label-success">Process</span></td>
+                <td><span class="label label-warning">Approve</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
               </tr>
@@ -220,3 +224,11 @@
 </div>
 
 <?php include('footer.php');?>
+
+<script>
+  $("#route-task").click(function () {
+$('#task-for-project').fadeToggle( "fast", function() {
+});
+
+  });
+</script>
