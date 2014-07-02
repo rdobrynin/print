@@ -45,6 +45,7 @@ class Dashboard extends CI_Controller {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $data['roles'] = $this->admin_model->get_roles();
     if ($data['user'][0]['role'] == 4) {
       $this->load->view('templates/users_view', $data);
       $this->load->view('templates/profile_view', $data);

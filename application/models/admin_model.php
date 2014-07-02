@@ -64,4 +64,11 @@ class Admin_model extends CI_Model {
       ->get('users');
     return $query->result_array();
   }
+
+  public function get_roles() {
+    $query = $this
+      ->db
+      ->get('roles');
+    return $query->result_array();
+  }
 }
