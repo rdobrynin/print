@@ -5,45 +5,59 @@
 <div id="page-content-wrapper">
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
-    <div class="row">
-      <h3>Administer users</h3>
       <div class="row">
-        <div class="panel panel-primary filterable">
-          <div class="panel-heading">
-            <h3 class="panel-title">Current users</h3>
-            <div class="pull-right">
-              <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+        <!--      tabs-->
+        <ul class="nav nav-tabs" id="admin-users-tab">
+          <li class="active"><a href="#current-users" data-toggle="tab" title="Current users"><button class="btn btn-info">Current users</button></a></li>
+          <li><a href="#new-users" data-toggle="tab" title="New users"><button class="btn btn-info">New users</button></a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="current-users">
+            <!--                  current_users-->
+            <div class="panel panel-primary filterable panel-tabs">
+              <div class="panel-heading">
+                <h3 class="panel-title">Administer current users</h3>
+                <div class="pull-right">
+                  <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                <tr class="filters">
+                  <th><input type="text" class="form-control" placeholder="#" disabled></th>
+                  <th><input type="text" class="form-control" placeholder="Name" disabled></th>
+                  <th><input type="text" class="form-control" placeholder="Email" disabled></th>
+                  <th><input type="text" class="form-control" placeholder="Role" disabled></th>
+                  <th><input type="text" class="form-control" placeholder="Created" disabled></th>
+                  <th><input type="hidden" class="form-control" placeholder="Edit" disabled></th>
+                  <th><input type="hidden" class="form-control" placeholder="Delete" disabled></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($users as $uk => $uv):?>
+                  <tr>
+                    <td><?php print($uv['id']);?></td>
+                    <td><?php print($uv['first_name'].' '.$uv['last_name']);?></td>
+                    <td><?php print($uv['email_address']);?></td>
+                    <td><?php print(show_role($uv['role']));?></td>
+                    <td><?php print($uv['date_created']);?></td>
+                    <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                    <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                  </tr>
+                <?php endforeach; ?>
+                </tbody>
+              </table>
             </div>
           </div>
-          <table class="table">
-            <thead>
-            <tr class="filters">
-              <th><input type="text" class="form-control" placeholder="#" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Name" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Email" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Role" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Created" disabled></th>
-              <th><input type="hidden" class="form-control" placeholder="Edit" disabled></th>
-              <th><input type="hidden" class="form-control" placeholder="Delete" disabled></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($users as $uk => $uv):?>
-            <tr>
-              <td><?php print($uv['id']);?></td>
-              <td><?php print($uv['first_name'].' '.$uv['last_name']);?></td>
-              <td><?php print($uv['email_address']);?></td>
-              <td><?php print(show_role($uv['role']));?></td>
-              <td><?php print($uv['date_created']);?></td>
-              <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-              <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
-            </tr>
-            <?php endforeach; ?>
-            </tbody>
-          </table>
+          <div class="tab-pane fade" id="new-users">
+            <!--                  new users-->
+
+          </div>
+          <div class="clearfix"></div>
         </div>
+        <!--      tabs-->
       </div>
-    </div>
     <p id="back-top">
       <a href="#top"><span></span><i style="font-size: 30px;" class="fa fa-arrow-circle-up"></i><span></span></a>
     </p>
@@ -107,3 +121,9 @@
 </div>
 
 <?php include('footer.php');?>
+<script>
+  $('#admin-users-tab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>

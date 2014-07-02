@@ -46,6 +46,7 @@ $route['signup'] = 'admin/signup';
 $route['forgot'] = 'admin/forgot';
 $route['projects'] = 'dashboard/projects';
 $route['users'] = 'dashboard/users';
+$route['test'] = 'dashboard/test';
 $route['comments'] = 'dashboard/comments';
 
 

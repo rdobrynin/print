@@ -59,4 +59,8 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/comments_view', $data);
   }
 
+  function test() {
+    $this->load->view('templates/test_view');
+  }
+
 }
