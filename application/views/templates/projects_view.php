@@ -3,7 +3,6 @@
 <div id="wrapper">
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
-
     <ul class="sidebar-nav">
       <li><a href="dashboard"><i class="fa fa-dashboard"></i>&nbsp;<span class="left-resp-menu">Dashboard</span></a>
       </li>
@@ -19,8 +18,6 @@
       </li>
       <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>&nbsp;<span class="left-resp-menu">Help</span></a>
       </li>
-
-
       <!--MINI INBOX-->
       <div class="mini-inbox">
         <div class="alert inbox">
@@ -59,13 +56,10 @@
 
       </div>
       <!--END MINI INBOX-->
-
     </ul>
   </div>
-
 <!-- Page content -->
 <div id="page-content-wrapper">
-
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
     <h3>Administer projects</h3>
@@ -92,7 +86,6 @@
             </tr>
             </thead>
             <tbody>
-
               <tr>
                 <td>1</td>
                 <td>Magendo shop</td>
@@ -104,6 +97,56 @@
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
               </tr>
+              <!--TASK-->
+<tr>
+  <td colspan="9" class="td-task" id="task-for-project">
+    <table class="table table-task">
+      <tbody class="tbody-task">
+      <tr>
+      <th>#</th>
+      <th>Task name</th>
+      <th>Started</th>
+      <th>Due to</th>
+      <th>Implementor</th>
+      <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+        <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+        <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+        <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+      </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+              <!-- TASK-->
               <tr>
                 <td>2</td>
                 <td>Facebook application</td>
@@ -137,8 +180,6 @@
             </div>
             <div class="form-group">
               <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
-
-
             </div>
           </div>
           <div class="modal-footer ">
