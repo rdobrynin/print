@@ -17,8 +17,12 @@
             <!--                  current_users-->
             <div class="panel panel-primary filterable panel-tabs">
               <div class="panel-heading">
+
                 <h3 class="panel-title">Administer current users</h3>
                 <div class="pull-right">
+                  <span class="pull-left" style="margin-right: 20px;">
+                    <button class="btn btn-primary btn-xs" data-title="Add role" data-toggle="modal" data-target="#add_role" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-plus">&nbsp;Roles</span></button>
+                  </span>
                   <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
                 </div>
               </div>
@@ -119,7 +123,7 @@
   </div>
   <!-- /.modal-dialog -->
 </div>
-
+<?php include('add_role_view.php');?>
 <?php include('footer.php');?>
 <script>
   $('#admin-users-tab a').click(function (e) {

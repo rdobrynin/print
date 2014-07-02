@@ -47,6 +47,7 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     if ($data['user'][0]['role'] == 4) {
       $this->load->view('templates/users_view', $data);
+      $this->load->view('templates/profile_view', $data);
     }
     else {
       show_404();
