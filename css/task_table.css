@@ -18,3 +18,14 @@ tbody.tbody-task {
     border: 1px solid #ddd;
 }
 
+.project-task-main {
+    background-color: #ddd;
+    color: #0085B9;
+    font-weight: bold;
+}
+
+.current-tasks-table {
+    background-color: #428bca;
+    color:#fff;
+}
+

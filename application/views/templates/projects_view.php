@@ -74,19 +74,19 @@
           <table class="table">
             <thead>
             <tr class="filters">
-              <th><input type="text" class="form-control" placeholder="#" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Project name" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Tasks" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Opt time" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Due to" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Curator" disabled></th>
-              <th><input type="text" class="form-control" placeholder="Status" disabled></th>
-              <th><input type="hidden" class="form-control" placeholder="Edit" disabled></th>
-              <th><input type="hidden" class="form-control" placeholder="Delete" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="#" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Project name" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Tasks" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Opt time" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Due to" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Curator" disabled></th>
+              <th><input type="text" class="form-control filter-input" placeholder="Status" disabled></th>
+              <th><input type="hidden" class="form-control filter-input" placeholder="Edit" disabled></th>
+              <th><input type="hidden" class="form-control filter-input" placeholder="Delete" disabled></th>
             </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="12">
                 <td>1</td>
                 <td>Magendo shop</td>
                 <td><a href="#"><span class="badge badge-task" id="route-task">3</span></a></td>
@@ -102,7 +102,7 @@
   <td colspan="9" class="td-task" id="task-for-project">
     <table class="table table-task">
       <tbody class="tbody-task">
-      <tr>
+      <tr class="current-tasks-table">
       <th>#</th>
       <th>Task name</th>
       <th>Started</th>
@@ -176,7 +176,7 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <input class="form-control " type="text" placeholder="Mohsin">
+              <input class="form-control" type="text" placeholder="Mohsin">
             </div>
             <div class="form-group">
 
@@ -226,9 +226,19 @@
 <?php include('footer.php');?>
 
 <script>
-  $("#route-task").click(function () {
-$('#task-for-project').fadeToggle( "fast", function() {
-});
-
+  $(function () {
+    $("#route-task").click(function () {
+      $(this).closest("tr").toggleClass("project-task-main");
+      $('#task-for-project').fadeToggle("fast", function () {
+      });
+      if ($("#route-task").closest("tr").hasClass('project-task-main')) {
+        $('.btn-filter').attr('disabled', 'disabled');
+        $('.filter-input').attr('disabled', 'disabled');
+      }
+      else {
+        $('.btn-filter').removeAttr('disabled');
+        $('.filter-input').removeAttr('disabled');
+      }
+    });
   });
 </script>
