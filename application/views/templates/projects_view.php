@@ -88,11 +88,11 @@
             <tbody>
               <tr class="12">
                 <td>1</td>
-                <td>Magendo shop</td>
+                <td class="current-title-project">Magendo shop</td>
                 <td><a href="#"><span class="badge badge-task" id="route-task">3</span></a></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td><?php print(date('F j, Y'));?></td>
-                <td>Roman Dobrynin</td>
+                <td><a href="#">Roman Dobrynin</a></td>
                 <td><span class="label label-success">Process</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
@@ -115,34 +115,34 @@
       </tr>
       <tr>
         <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
+        <td>Fix payment module</td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#">Andrei S.</a></td>
+        <td><a href="#">Roman D.</a></td>
+        <td><span class="label label-success">Process</span></td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
       <tr>
         <td>2</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
+        <td>Sort table</td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#">Andrei S.</a></td>
+        <td><a href="#">Roman D.</a></td>
+        <td><span class="label label-success">Process</span></td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
       <tr>
         <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
+        <td>Reform code</td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><?php print(date('F j, Y'));?></td>
+        <td><a href="#">Andrei S.</a></td>
+        <td><a href="#">Roman D.</a></td>
+        <td><span class="label label-success">Process</span></td>
         <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
         <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
       </tr>
@@ -157,7 +157,7 @@
                 <td></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td><?php print(date('F j, Y'));?></td>
-                <td>Roman Dobrynin</td>
+                <td><a href="#">Roman Dobrynin</a></td>
                 <td><span class="label label-warning">Approve</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
@@ -168,7 +168,7 @@
                 <td><a href="#"><span class="badge badge-task" id="route-task">1</span></a></td>
                 <td><?php print(date('F j, Y'));?></td>
                 <td><?php print(date('F j, Y'));?></td>
-                <td>Roman Dobrynin</td>
+                <td><a href="#">Roman Dobrynin</a></td>
                 <td><span class="label label-info">Complete</span></td>
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
@@ -239,7 +239,14 @@
 <script>
   $(function () {
     $("#route-task").click(function () {
+      var $panel = $('.filterable .btn-filter').parents('.filterable'),
+        $filters = $panel.find('.filters input'),
+        $tbody = $panel.find('.table tbody');
+      $filters.val('').prop('disabled', true);
+      $tbody.find('.no-result').remove();
+      $tbody.find('tr').show();
       $(this).closest("tr").toggleClass("project-task-main");
+      $(".current-title-project").toggleClass("label label-info label-cur-pr");
       $('#task-for-project').fadeToggle("fast", function () {
       });
       if ($("#route-task").closest("tr").hasClass('project-task-main')) {

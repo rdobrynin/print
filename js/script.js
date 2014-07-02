@@ -82,6 +82,7 @@ $('.closebox').click(function(e){
             column = $panel.find('.filters th').index($input.parents('th')),
             $table = $panel.find('.table'),
             $rows = $table.find('tbody tr');
+
         /* Dirtiest filter function ever ;) */
         var $filteredRows = $rows.filter(function(){
             var value = $(this).find('td').eq(column).text().toLowerCase();
@@ -89,6 +90,7 @@ $('.closebox').click(function(e){
         });
         /* Clean previous no-result if exist */
         $table.find('tbody .no-result').remove();
+
         /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
         $rows.show();
         $filteredRows.hide();
