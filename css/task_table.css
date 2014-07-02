@@ -34,3 +34,7 @@ tbody.tbody-task {
     position: relative ;
 }
 
+.panel-primary {
+    border-color: #CFCFCF;
+}
+

@@ -52,3 +52,7 @@ div.panel.panel-primary.filterable.panel-tabs {
     margin-left: 0;
     padding-left: 0;
 }
+
+.label-warning, .badge-warning {
+    background-color: #f89406;
+}

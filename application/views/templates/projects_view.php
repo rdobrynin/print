@@ -251,11 +251,9 @@
       });
       if ($("#route-task").closest("tr").hasClass('project-task-main')) {
         $('.btn-filter').attr('disabled', 'disabled');
-//        $('.filter-input').attr('disabled', 'disabled');
       }
       else {
         $('.btn-filter').removeAttr('disabled');
-//        $('.filter-input').removeAttr('disabled');
       }
     });
   });
