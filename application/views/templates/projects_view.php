@@ -162,6 +162,17 @@
                 <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                 <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
               </tr>
+              <tr>
+                <td>1</td>
+                <td>Website</td>
+                <td><a href="#"><span class="badge badge-task" id="route-task">1</span></a></td>
+                <td><?php print(date('F j, Y'));?></td>
+                <td><?php print(date('F j, Y'));?></td>
+                <td>Roman Dobrynin</td>
+                <td><span class="label label-info">Complete</span></td>
+                <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+              </tr>
 
             </tbody>
           </table>
@@ -233,11 +244,11 @@
       });
       if ($("#route-task").closest("tr").hasClass('project-task-main')) {
         $('.btn-filter').attr('disabled', 'disabled');
-        $('.filter-input').attr('disabled', 'disabled');
+//        $('.filter-input').attr('disabled', 'disabled');
       }
       else {
         $('.btn-filter').removeAttr('disabled');
-        $('.filter-input').removeAttr('disabled');
+//        $('.filter-input').removeAttr('disabled');
       }
     });
   });
