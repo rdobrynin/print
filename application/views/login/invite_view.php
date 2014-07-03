@@ -1,4 +1,8 @@
-<?php include('head.php');?>
+<?php include('head.php');
+
+
+
+?>
 
 <div id="wrapper">
 

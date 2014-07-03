@@ -39,7 +39,6 @@
 */
 
 $route['default_controller'] = "admin";
-$route['404_override'] = '';
 $route['logout'] = 'admin/logout';
 //$route['signup'] = 'admin/signup';
 $route['signup'] = 'admin/signup';
@@ -50,6 +49,7 @@ $route['test'] = 'dashboard/test';
 $route['comments'] = 'dashboard/comments';
 $route['clients'] = 'dashboard/clients';
 $route['addclient'] = 'dashboard/addclient';
+$route['404_override'] = 'custom404';
 
 
 /* End of file routes.php */
