@@ -4,3 +4,25 @@
     color: inherit;
     background: transparent;
 }
+
+button.btn.btn-danger.btn.delete-phone-client {
+    margin-top: 3px;
+}
+
+div.navbar.navbar-step {
+    display: none;
+}
+
+
+.jumbotron-resp {
+margin-top: 83px;
+    position: relative;
+    display: block;
+}
+
+.jumbotron {
+     padding: 0;
+     margin-bottom: 0;
+    color: inherit;
+    background: transparent;
+}
