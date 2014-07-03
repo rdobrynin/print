@@ -8,19 +8,9 @@
 <!--FORM-->
       <div class="col-md-8">
         <h2>Add client</h2>
-        <div id="rootwizard">
-          <div class="navbar navbar-step">
-            <div class="navbar-inner">
-              <div class="container">
-                <ul>
-                  <li style="display: none;"><a href="#tab1" data-toggle="tab"><p class="lead">add requirement data for company profile</p></a></li>
-                  <li style="display: none;"><a href="#tab2" data-toggle="tab"><p class="lead">add additional data for company profile</p></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content">
-            <div class="tab-pane" id="tab1">
+
+
+
               <p class="lead">add requirement data for company profile</p>
               <form role="form" class="form-horizontal">
                 <div class="form-group">
@@ -55,30 +45,11 @@
                   </div>
                 </div>
                 <div id="items_client"></div>
-
-            </div>
-            <div class="tab-pane" id="tab2">
-              <p class="lead">add additional data for company profile</p>
-              <div class="form-group">
-                <label class="col-sm-2" for="client_homepage">Homepage</label>
-                <div class="col-sm-10"><input type="url" class="form-control" id="client_homepage" placeholder="Homepage url here"></div>
-              </div>
+                <hr>
+                <input type="submit" class="btn btn-primary pull-right" value="Create company">
               </form>
             </div>
-            <div style="float:right; margin-top: 20px; margin-bottom: 20px;">
-              <input type='button' class='btn button-next' name='next' value='Next' />
-            </div>
-            <div style="float:left; margin-top: 20px; margin-bottom: 20px;">
-              <input type='button' class='btn button-previous' name='previous' value='Previous' />
-            </div>
-          </div>
-        </div>
 
-
-
-
-
-      </div>
       <div class="col-md-4 jumbotron-resp">
         <div class="jumbotron">
           <h2>Start your productivity here</h2>
