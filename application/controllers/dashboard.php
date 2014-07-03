@@ -50,6 +50,9 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/users_view', $data);
       $this->load->view('templates/profile_view', $data);
     }
+    elseif($data['user'][0]['role'] == 1) {
+      $this->load->view('templates/profile_view', $data);
+    }
     else {
       show_404();
     }
@@ -75,6 +78,17 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/client_view', $data);
+    $this->load->view('templates/profile_view', $data);
   }
+
+  function addclient() {
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
+    $data['roles'] = $this->admin_model->get_roles();
+    $this->load->view('templates/addclient_view', $data);
+    $this->load->view('templates/profile_view', $data);
+  }
+
 
 }

@@ -49,6 +49,7 @@ $route['users'] = 'dashboard/users';
 $route['test'] = 'dashboard/test';
 $route['comments'] = 'dashboard/comments';
 $route['clients'] = 'dashboard/clients';
+$route['addclient'] = 'dashboard/addclient';
 
 
 /* End of file routes.php */

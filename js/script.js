@@ -32,17 +32,6 @@ $('.closebox').click(function(e){
     });
 });
 
-
-//NOTIFICATION
-
-    var visited = localStorage.getItem('visited');
-    if (!visited) {
-        $('#jGrowl').show();
-        localStorage.setItem('visited', true);
-    }
-    else {
-        $('#jGrowl').hide();
-    }
     $("#mytable #checkall").click(function () {
         if ($("#mytable #checkall").is(':checked')) {
             $("#mytable input[type=checkbox]").each(function () {

@@ -14,7 +14,6 @@
 
   <!-- Add custom CSS here -->
   <link href="css/sidebar.css" rel="stylesheet">
-  <link href="css/j-box.css" rel="stylesheet">
   <link href="css/users.css" rel="stylesheet">
   <link href="css/mini_inbox.css" rel="stylesheet">
   <link href="css/body.css" rel="stylesheet">

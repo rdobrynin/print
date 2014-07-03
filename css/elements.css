@@ -56,3 +56,16 @@ div.panel.panel-primary.filterable.panel-tabs {
 .label-warning, .badge-warning {
     background-color: #f89406;
 }
+
+
+.add-client-btn {
+    padding-top: 2px;
+    position: relative;
+    display: inline;
+    margin-bottom: -6px;
+    top: -2px
+}
+
+button.btn.btn-success.btn-xs {
+    margin-top: -2px;
+}

@@ -1,16 +1,3 @@
-<div id="jGrowl" class="top-right jGrowl">
-  <div class="jGrowl-notification"></div>
-  <div class="notification jGrowl-notification ui-state-highlight with-icon"
-       style="display: block;"><span class="notification-icon"></span><span
-      class="closebox">×</span>
-
-    <h3>Welcome to Brilliant project management</h3>
-
-    <div class="jGrowl-message">This <strong>fluid</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, molestias quod? Amet deleniti eum explicabo fugit ipsa, minima nam nesciunt nihil. Aut dolorem mollitia praesentium quae reprehenderit? Doloremque inventore, reiciendis!
-    </div>
-  </div>
-</div>
-
 <div class=" navbar-collapse navbar-inverse navbar-fixed-top">
   <ul class="navbar navbar-left">
     <li class="sidebar-brand"><span class="avatar-top"><span class="avata-img"><img src="http://placehold.it/50x50"></span></span>
@@ -19,6 +6,7 @@
   </ul>
 
   <ul class="nav navbar-nav navbar-right navbar-user">
+    <li class="add-client pull-left"><a href="addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn">Add client</span></button></a></li>
     <li class="dropdown messages-dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">
