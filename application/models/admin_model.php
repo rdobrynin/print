@@ -45,6 +45,7 @@ class Admin_model extends CI_Model {
       'last_name' => $this->input->post('last_name'),
       'email_address' => $this->input->post('email_address_signup'),
       'password' => $this->input->post('password_signup'),
+      'role' => $this->input->post('role_signup')
     );
     $insert = $this->db->insert('users', $new_member_insert_data);
     return $insert;

@@ -5,7 +5,7 @@
 if (!function_exists('test')) {
   function show_role($role) {
     $result='none';
-    if($role ==4) {
+    if($role == 4) {
       $result = 'administrator';
     }
     else if($role == 3) {

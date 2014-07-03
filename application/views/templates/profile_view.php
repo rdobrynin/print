@@ -37,6 +37,8 @@
            <input type="text"  value="<?php print($user[0]['email_address']);?>" class="form-control" id="email_address" placeholder="Email address">
          </div>
        </div>
+
+       <?php if($user[0]['role'] != 1):;?>
          <div class="col-md-6">
            <div class="form-group">
              <label for="last_name">Role</label>
@@ -50,6 +52,8 @@
              </select>
            </div>
          </div>
+       <?php endif ?>
+
      </div>
       <div class="modal-footer ">
         <span class="pull-right"><a href="#" data-dismiss="modal" class="btn btn-default">Close</a></span>

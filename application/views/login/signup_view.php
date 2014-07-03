@@ -10,6 +10,7 @@
       <input type="text" id="email_address_signup" autocomplete="off"  name="email_address_signup" value="" class="form-control" placeholder="Email" />
       <input type="password" id="password_signup" name="password_signup" value="" placeholder="Password" class="form-control"/>
       <input type="password" id="password_signup_2" name="password_signup_2" value="" placeholder="Password confirmation" class="form-control"/>
+      <input type="hidden" id="role_signup" name="role_signup" value="1" class="form-control"/>
       <button class="btn btn-lg btn-primary btn-block" id="login_btn"> <i class="fa fa-check"></i></button>
       <div style="padding-bottom: 20px;">
         <small class="pull-left">
