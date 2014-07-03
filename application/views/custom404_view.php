@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Admin</title>
-
+  <title>Error404</title>
   <!-- Bootstrap core CSS -->
   <link href="<?php print(base_url());?>css/bootstrap.css" rel="stylesheet">
-
   <!-- Add custom CSS here -->
   <link href="<?php print(base_url());?>css/error.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -43,7 +40,7 @@
           <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
           <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
           <div class="form-group"><label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>
-          <div class="form-group"><button type="submit" style="width: 100%;" class="btn btn-success pull-left">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+          <div class="form-group"><button type="submit" disabled="disabled" style="width: 100%;" class="btn btn-success pull-left">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
 </form>
       </div>
       <div class="modal-footer"></div>
