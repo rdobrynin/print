@@ -8,60 +8,91 @@
 <!--FORM-->
       <div class="col-md-8">
         <h2>Add client</h2>
-
-
-
-              <p class="lead">add requirement data for company profile</p>
               <form role="form" class="form-horizontal">
+                <div class="address-wrapper" style="height: 100%;">
+                  <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
-                  <label class="col-sm-2" for="client_title">Company</label>
-                  <div class="col-sm-10"><input type="email" class="form-control" id="client_title" placeholder="Company title here"></div>
+                  <label class="col-sm-12" for="client_title">Company</label>
+                  <div class="col-sm-10"><input type="email" class="form-control" name="client_title" id="client_title" placeholder="Company title here"></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-12" for="client_description">Description</label>
-                  <div class="col-sm-12"><textarea class="form-control" id="client_description"></textarea></div>
+                  <label class="col-sm-12" for="client_description">Company description</label>
+                  <div class="col-sm-12"><textarea rows="4" cols="50" class="form-control" name="client_description"  id="client_description"></textarea></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-8">Address</label>
-                  <label class="col-sm-4">Index</label>
-                  <div class="col-sm-8"><input type="text" class="form-control" id="client_address" placeholder="Address here"></div>
-                  <div class="col-sm-4"><input type="text" class="form-control" id="client_index" placeholder="Index here"></div>
+                  <label class="col-sm-12" for="client_email">Email</label>
+                  <div class="col-sm-6"><input type="email" class="form-control" name="client_email"  id="client_email" placeholder="Email address here"></div>
+                </div>
+                  <div class="form-group">
+                  <label class="col-sm-12" for="client_url">URL</label>
+                  <div class="col-sm-6"><input type="url" class="form-control" name="client_url"  id="client_url" placeholder="Site url"></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-1" for="client_email">Email</label>
-                  <div class="col-sm-5"><input type="email" class="form-control" id="client_email" placeholder="Email address here"></div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-6">City</label>
-                  <label class="col-sm-6">Country</label>
-                  <div class="col-sm-6"><input type="text" class="form-control" id="client_city" placeholder="City here"></div>
-                  <div class="col-sm-6"><input type="text" class="form-control" id="client_country" placeholder="Country here"></div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-1">Phone</label>
-                  <div class="col-sm-4"><input type="text" class="form-control" id="client_phone" placeholder="Phone number here"></div>
+                  <label class="col-sm-12">Phone</label>
+                  <div class="col-sm-4"><input type="text" class="form-control" name="client_phone" id="client_phone" placeholder="Phone number here"></div>
                   <div class="col-md-1" style="margin-bottom: 10px;">
                     <button class="btn btn-xs btn-success" id="add_phone_client">Add Phone</button>
                   </div>
                 </div>
                 <div id="items_phone_client"></div>
+                  </div>
+<!--                REGIONAL INFO-->
+              <div class="address-wrapper" style="height: 100%;">
+                <p class="lead">Regional information</p>
                 <div class="form-group">
-                  <label class="col-sm-1">Manager</label>
-                  <div class="col-sm-4">
-                    <select id="select-manager" class="form-control">
-                      <option value="1">Roman Dobrynin</option>
-                      <option value="2">Andrei Abozau</option>
-                      <option value="3">Jevgeni Striganov</option>
-                      <option value="4">Alexandr Perch</option>
-                      <option value="5">Aldir Tojama</option>
-                    </select>
-                  </div>
-                  <div class="col-md-1" style="margin-bottom: 10px;">
-                    <button class="btn btn-xs btn-success" id="add_manager_client">Add manager</button>
-                  </div>
+                  <label class="col-sm-8">Address</label>
+                  <label class="col-sm-4">Index</label>
+                  <div class="col-sm-8"><input type="text" class="form-control" name="client_address"  id="client_address" placeholder="Address here"></div>
+                  <div class="col-sm-4"><input type="text" class="form-control" name="client_index"  id="client_index" placeholder="Index here"></div>
                 </div>
-                <div id="items_manager_client"></div>
+                <div class="form-group">
+                  <label class="col-sm-6">City</label>
+                  <label class="col-sm-6">Country</label>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="client_city"  id="client_city" placeholder="City here"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="client_country" id="client_country" placeholder="Country here"></div>
+                </div>
+              </div>
+<!--                CONTACT PERSON INFORMATION-->
+                <div class="address-wrapper" style="height: 100%;">
+                    <p class="lead">Contact persons information</p>
+                  <div class="form-group">
+                    <label class="col-sm-12">Manager</label>
+                    <div class="col-sm-4">
+                      <select id="select-manager" class="form-control">
+                        <option value="1">Roman Dobrynin</option>
+                        <option value="2">Andrei Abozau</option>
+                        <option value="3">Jevgeni Striganov</option>
+                        <option value="4">Alexandr Perch</option>
+                        <option value="5">Aldir Tojama</option>
+                      </select>
+                    </div>
+                    <div class="col-md-1" style="margin-bottom: 10px;">
+                      <button class="btn btn-xs btn-success" id="add_manager_client">Add manager</button>
+                    </div>
+                  </div>
+                  <div id="items_manager_client"></div>
+<!--                  IMPLEMENTOR-->
+                  <div class="form-group">
+                    <label class="col-sm-12">Implementor</label>
+                    <div class="col-sm-4">
+                      <select id="select-implementor" class="form-control">
+                        <option value="1">Roman Dobrynin</option>
+                        <option value="2">Andrei Abozau</option>
+                        <option value="3">Jevgeni Striganov</option>
+                        <option value="4">Alexandr Perch</option>
+                        <option value="5">Aldir Tojama</option>
+                      </select>
+                    </div>
+                    <div class="col-md-1" style="margin-bottom: 10px;">
+                      <button class="btn btn-xs btn-success" id="add_implementor_client">Add implementor</button>
+                    </div>
+                  </div>
+                  <div id="items_implementor_client"></div>
+              </div>
+
                 <hr>
+                <input type="hidden" class="form-control" id="client_curator" name="client_curator" value="<?php print($user[0]['id']);?>">
+                <input type="hidden" class="form-control" id="client_created" name="client_created" value="<?php print(time());?>">
                 <input type="submit" class="btn btn-primary pull-right" value="Create company">
               </form>
             </div>
@@ -82,13 +113,11 @@
   </div>
 </div>
 </div>
-
-
 <?php include('footer.php');?>
 <script>
   $(function () {
     $('#add_phone_client').click(function () {
-      $("#items_phone_client").append('<div class="form-group"><div class="col-sm-1"><label for="client_phone">+</label></div><div class="col-sm-4"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-4" name="client_phone[]"></div><button  class="btn btn-xs btn-danger delete-phone-client">Delete</button></div></div><div>');
+      $("#items_phone_client").append('<div class="form-group"><div class="col-sm-4"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-4" name="client_phone[]"></div><button  class="btn btn-xs btn-danger delete-phone-client">Delete</button></div></div><div>');
     });
     $("body").on("click", ".delete-phone-client", function (e) {
       $(this).parent("div").remove();
@@ -98,12 +127,21 @@
     $('#add_manager_client').click(function () {
       manager_value = $("#select-manager option:selected").val();
       var manager_title = $("#select-manager option:selected").text();
-//      $("#items_manager_client").append('<div class="form-group"><div class="col-sm-1"><label>+</label></div><div class="col-sm-4"><input type="text" placeholder="Add manager" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="client_curator[]"></div><button  class="btn btn-xs btn-danger delete-manager-client">Delete</button></div></div><div>');
-
-      $('#items_manager_client').append('&nbsp;<span><div class="label label-default label-tag delete-manager-client" id="delete-manager-client'+manager_value+'">'+manager_title+'&nbsp;<i class="fa fa-times"></i></div></span>');
+      $('#items_manager_client').append('&nbsp;<span><input type="hidden" name="client_manager[]" value="input_manager_'+ manager_value + '"><div class="label label-default label-tag delete-manager-client" id="delete-manager-client' + manager_value + '">' + manager_title + '&nbsp;<i class="fa fa-times"></i></div></span>');
 
     });
     $("body").on("click", ".delete-manager-client", function (e) {
+      $(this).parent("span").remove();
+    });
+
+
+    $('#add_implementor_client').click(function () {
+      implementor_value = $("#select-implementor option:selected").val();
+      var implementor_title = $("#select-implementor option:selected").text();
+      $('#items_implementor_client').append('&nbsp;<span><input type="hidden" name="client_implementor[]" value="input_implementor_'+ implementor_value + '"><div class="label label-default label-tag delete-implementor-client" id="delete-implementor-client' + implementor_value + '">' + implementor_title + '&nbsp;<i class="fa fa-times"></i></div></span>');
+
+    });
+    $("body").on("click", ".delete-implementor-client", function (e) {
       $(this).parent("span").remove();
     });
   });

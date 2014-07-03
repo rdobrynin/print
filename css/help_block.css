@@ -1,0 +1,47 @@
+.help-block {
+    width: 100%;
+    height: 20px;
+    background-color: #000;
+    z-index: 9999;
+    position: fixed;
+    top: -17px;
+}
+
+div.help-button {
+    margin: 0 auto;
+    width: 140px;
+    top: 10px;
+    position: static;
+    top: 4px;
+    padding-top: 7px;
+    background-color: #000;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+div.help-block-open-btn {
+    margin: 0 auto;
+    width: 140px;
+    top: 110px;
+    position: relative;
+    top: 405px;
+    padding-top: 0px;
+    background-color: #000;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 9px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.90);
+    padding-bottom: 3px;
+}
+
+.help-block-open {
+background-color: rgba(0, 0, 0, 0.90);
+    height: 414px;
+}
