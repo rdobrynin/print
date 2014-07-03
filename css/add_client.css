@@ -26,3 +26,15 @@ margin-top: 83px;
     color: inherit;
     background: transparent;
 }
+
+.label-tag {
+    font-size: 11px !important;
+}
+
+.label-tag i {
+    font-size: 11px;
+    top: 0;
+    cursor: pointer;
+    position: relative;
+    color: #ddd;
+}
