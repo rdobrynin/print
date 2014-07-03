@@ -28,7 +28,7 @@
   <div class="page-404">
     <img src="<?php print(base_url());?>img/page-404.png" alt="">
     <h3>We're sorry, but the page you were looking for doesn't exist.</h3>
-    <p>You can start from the <a href="<?php print(base_url());?>">home page</a></p>
+    <p>You can start from the <a href="javascript:history.go(-1)">Previous Page</a></p>
   </div>
 </div>
 </body>
