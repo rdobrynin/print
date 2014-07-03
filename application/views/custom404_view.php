@@ -10,10 +10,10 @@
   <title>Admin</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/bootstrap.css" rel="stylesheet">
 
   <!-- Add custom CSS here -->
-  <link href="css/error.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/error.css" rel="stylesheet">
   <link
     href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
     rel="stylesheet">
@@ -24,12 +24,19 @@
 </head>
 
 <body>
-asas
+<div class="row">
+  <div class="page-404">
+    <img src="<?php print(base_url());?>img/page-404.png" alt="">
+    <h3>We're sorry, but the page you were looking for doesn't exist.</h3>
+    <p>You can start from the <a href="<?php print(base_url());?>">home page</a></p>
+  </div>
+</div>
+</body>
 
 <!-- JavaScript -->
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/script.js"></script>
+<script src="<?php print(base_url());?>js/jquery-1.10.2.js"></script>
+<script src="<?php print(base_url());?>js/bootstrap.js"></script>
+<script src="<?php print(base_url());?>js/script.js"></script>
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
