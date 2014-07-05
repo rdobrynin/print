@@ -131,6 +131,27 @@ class Dashboard extends CI_Controller {
     redirect(base_url());
   }
 
+  function addclient_form() {
+    $this->load->library('form_validation');
+    $this->form_validation->set_rules('client_title', 'title', 'trim|required|min_length[3]');
+
+    if ($this->form_validation->run() !== false) {
+    redirect(base_url()."addclient");
+    }
+    else {
+      redirect(base_url());
+    }
+//    if ($this->form_validation->run() !== false) {
+//      $this->load->model('admin_model');
+//      if($query=$this->admin_model->create_member()) {
+//        $this->load->view('login/invite_view');
+//      }
+//    }
+//    else {
+//      $this->load->view('login/signup_view');
+//    }
+  }
+
 
 
 }

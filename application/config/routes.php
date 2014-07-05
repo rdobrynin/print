@@ -49,6 +49,7 @@ $route['test'] = 'dashboard/test';
 $route['comments'] = 'dashboard/comments';
 $route['clients'] = 'dashboard/clients';
 $route['addclient'] = 'dashboard/addclient';
+$route['addclient_form'] = 'dashboard/addclient_form';
 $route['404_override'] = 'custom404';
 
 

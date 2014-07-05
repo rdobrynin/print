@@ -7,12 +7,14 @@
 <!--FORM-->
       <div class="col-md-8">
         <h2>Add client</h2>
-              <form role="form" class="form-horizontal">
-                <div class="address-wrapper" style="height: 100%;">
+              <form role="form" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
+        <div class="errors"> <?php echo validation_errors();?></div>
+
+      <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_title">Company</label>
-                  <div class="col-sm-10"><input type="email" class="form-control" name="client_title" id="client_title" placeholder="Company title here"></div>
+                  <div class="col-sm-10"><input type="text" class="form-control" name="client_title" id="client_title" placeholder="Company title here"></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_description">Company description</label>
