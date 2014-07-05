@@ -31,7 +31,7 @@
                   <label class="col-sm-12">Phone</label>
                   <div class="col-sm-4"><input type="text" class="form-control" name="client_phone" id="client_phone" placeholder="Phone number here"></div>
                   <div class="col-md-1" style="margin-bottom: 10px;">
-                    <button class="btn btn-xs btn-success" id="add_phone_client">Add Phone</button>
+                    <div class="btn btn-xs btn-success" id="add_phone_client">Add Phone</div>
                   </div>
                 </div>
                 <div id="items_phone_client"></div>
@@ -49,7 +49,14 @@
                   <label class="col-sm-6">City</label>
                   <label class="col-sm-6">Country</label>
                   <div class="col-sm-6"><input type="text" class="form-control" name="client_city"  id="client_city" placeholder="City here"></div>
-                  <div class="col-sm-6"><input type="text" class="form-control" name="client_country" id="client_country" placeholder="Country here"></div>
+                  <div class="col-sm-6">
+                    <select id="select-country" class="form-control">
+                      <?php  $countries = get_countries(); ?>
+                      <?php  foreach($countries as $ck => $cv): ?>
+                        <option value="<?php  print($ck); ?>"><?php  print($cv); ?></option>
+                      <?php  endforeach; ?>
+                    </select>
+                  </div>
                 </div>
               </div>
 <!--                CONTACT PERSON INFORMATION-->
@@ -67,7 +74,7 @@
                       </select>
                     </div>
                     <div class="col-md-1" style="margin-bottom: 10px;">
-                      <button class="btn btn-xs btn-success" id="add_manager_client">Add manager</button>
+                      <div class="btn btn-xs btn-success" id="add_manager_client">Add manager</div>
                     </div>
                   </div>
                   <div id="items_manager_client"></div>
@@ -84,7 +91,7 @@
                       </select>
                     </div>
                     <div class="col-md-1" style="margin-bottom: 10px;">
-                      <button class="btn btn-xs btn-success" id="add_implementor_client">Add implementor</button>
+                      <div class="btn btn-xs btn-success" id="add_implementor_client">Add implementor</div>
                     </div>
                   </div>
                   <div id="items_implementor_client"></div>
