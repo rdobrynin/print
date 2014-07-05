@@ -11,6 +11,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-switch.min.css" rel="stylesheet">
 
   <!-- Add custom CSS here -->
   <link href="css/sidebar.css" rel="stylesheet">

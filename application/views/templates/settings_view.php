@@ -5,22 +5,28 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h4 class="modal-title custom_align" id="Heading"><i class="fa fa-gear"></i>&nbsp;Settings</h4>
       </div>
-      <?php var_dump($helpblock);?>
 
-      <form role="form" class="form-signin" action="http://localhost/prm/dashboard" method="POST" autocomplete="off">
+      <form role="form" class="form-signin" action="<?php print(base_url());?>dashboard/switch_help" method="POST" autocomplete="off">
       <div class="modal-body">
+   <div class="content">
      <div class="row">
-       <?php if($helpblock=='on'):?>
-         <input type="checkbox" name="helpblock" value="on" checked="checked" />&nbsp;Show help block
-       <?php endif?>
-       <?php if($helpblock==false):?>
-         <input type="checkbox" name="helpblock" value="on" />&nbsp;Show help block
-       <?php endif?>
-     </div>
-      <div class="modal-footer ">
-        <span class="pull-right"><a href="#" data-dismiss="modal" class="btn btn-default">Close</a></span>
-        <button type="submit" class="btn btn-default pull-left">Submit</button>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <?php if($user[0]["helpblock"]==1):?>
+            <input type="checkbox" name="help_block" value="0" checked="checked" />&nbsp;Show help block
+          <?php endif?>
+          <?php if($user[0]["helpblock"]==false):?>
+            <input type="checkbox" name="help_block" value="1" />&nbsp;Show help block
+          <?php endif?>
+
+        </div>
       </div>
+     </div>
+   </div>
+      </div>
+      <div class="modal-footer ">
+        <span class="pull-left"><a href="#" data-dismiss="modal" class="btn btn-default">Close</a></span>
+        <button type="submit" class="btn btn-default pull-right">Submit</button>
       </div>
       </form>
     </div>
@@ -29,15 +35,6 @@
 
 <script>
   $(function () {
-    $("#add").click(function (e) {
-//      $(this).attr('disabled','disabled');
-//Append a new row of code to the "#items" div
-      $("#items").append('<div class="col-md-12"><div class="form-group"><label for="phone">Additional Phone</label><div><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="input[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
-    });
 
-
-    $("body").on("click", ".delete-phone", function (e) {
-      $(this).parent("div").remove();
-    });
   });
 </script>

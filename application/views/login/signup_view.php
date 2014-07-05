@@ -1,6 +1,6 @@
 <?php include('head.php');?>
   <div class="container" id="main_login" style="display: block;">
-    <form class="form-signin" action="http://localhost/prm/signup" method="POST" autocomplete="off">
+    <form class="form-signin" action="<?php print(base_url());?>signup" method="POST" autocomplete="off">
       <div class="errors ">
         <!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
         <?php echo validation_errors();?></div>

@@ -22,8 +22,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
-    $data['helpblock'] =  $this->input->post('helpblock');
-    if($data['helpblock']== 'on') {
+    if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
     $this->load->view('templates/dashboard_view', $data);
@@ -40,7 +39,9 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
-    $this->load->view('templates/help_block_view');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
     $this->load->view('templates/projects_view', $data);
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
@@ -55,12 +56,18 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
+    $this->load->view('templates/head');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
     if ($data['user'][0]['role'] == 4) {
       $this->load->view('templates/users_view', $data);
       $this->load->view('templates/profile_view', $data);
+      $this->load->view('templates/settings_view', $data);
     }
     elseif($data['user'][0]['role'] == 1) {
       $this->load->view('templates/profile_view', $data);
+      $this->load->view('templates/settings_view', $data);
     }
     else {
       show_404();
@@ -115,6 +122,13 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/addclient_view', $data);
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
+  }
+
+
+  function  switch_help() {
+    $this->load->model('dashboard_model');
+    $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
+    redirect(base_url());
   }
 
 
