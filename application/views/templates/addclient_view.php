@@ -8,8 +8,7 @@
       <div class="col-md-8">
         <h2>Add client</h2>
               <form role="form" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
-        <div class="errors"> <?php echo validation_errors();?></div>
-
+                <div class="errors"> <?php echo validation_errors();?></div>
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
