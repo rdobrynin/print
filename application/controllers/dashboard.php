@@ -22,9 +22,13 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
-    $this->load->view('templates/help_block_view');
+    $data['helpblock'] =  $this->input->post('helpblock');
+    if($data['helpblock']== 'on') {
+      $this->load->view('templates/help_block_view');
+    }
     $this->load->view('templates/dashboard_view', $data);
     $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
   }
 
   /**
@@ -39,6 +43,7 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/help_block_view');
     $this->load->view('templates/projects_view', $data);
     $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
   }
 
   /**
@@ -72,9 +77,17 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/comments_view', $data);
   }
 
+  /**
+   * Test temporary
+   */
+
   function test() {
     $this->load->view('templates/test_view');
   }
+
+  /**
+   * Clients
+   */
 
   function clients() {
     $this->load->model('admin_model');
@@ -85,7 +98,12 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/help_block_view');
     $this->load->view('templates/client_view', $data);
     $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
   }
+
+  /**
+   * Add client
+   */
 
   function addclient() {
     $this->load->model('admin_model');
@@ -96,7 +114,9 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/help_block_view');
     $this->load->view('templates/addclient_view', $data);
     $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
   }
+
 
 
 }
