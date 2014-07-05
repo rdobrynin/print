@@ -1,0 +1,15 @@
+.help-content {
+    position: fixed;
+    background-color: #ddd;
+    display: none;
+}
+
+.help-content-open {
+background: transparent;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    display: block;
+}

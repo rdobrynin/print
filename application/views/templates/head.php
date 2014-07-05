@@ -14,6 +14,7 @@
 
   <!-- Add custom CSS here -->
   <link href="css/sidebar.css" rel="stylesheet">
+  <link href="css/help-block.css" rel="stylesheet">
   <link href="css/add_client.css" rel="stylesheet">
   <link href="css/users.css" rel="stylesheet">
   <link href="css/mini_inbox.css" rel="stylesheet">
@@ -27,6 +28,3 @@
 </head>
 
 <body>
-<div class="help-block">
-  <div class="help-button">Table of content</div>
-</div>

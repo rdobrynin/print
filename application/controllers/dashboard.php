@@ -21,6 +21,8 @@ class Dashboard extends CI_Controller {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $this->load->view('templates/head');
+    $this->load->view('templates/help_block_view');
     $this->load->view('templates/dashboard_view', $data);
     $this->load->view('templates/profile_view', $data);
   }
@@ -33,6 +35,8 @@ class Dashboard extends CI_Controller {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $this->load->view('templates/head');
+    $this->load->view('templates/help_block_view');
     $this->load->view('templates/projects_view', $data);
     $this->load->view('templates/profile_view', $data);
   }
@@ -77,6 +81,8 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
+    $this->load->view('templates/head');
+    $this->load->view('templates/help_block_view');
     $this->load->view('templates/client_view', $data);
     $this->load->view('templates/profile_view', $data);
   }
@@ -85,7 +91,9 @@ class Dashboard extends CI_Controller {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
-    $data['roles'] = $this->admin_model->get_roles();
+//    $data['roles'] = $this->admin_model->get_roles();
+    $this->load->view('templates/head');
+    $this->load->view('templates/help_block_view');
     $this->load->view('templates/addclient_view', $data);
     $this->load->view('templates/profile_view', $data);
   }
