@@ -128,7 +128,8 @@ class Dashboard extends CI_Controller {
   function  switch_help() {
     $this->load->model('dashboard_model');
     $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
-    redirect(base_url());
+    $url = $this->input->post('input_url');
+    redirect(base_url().'/'.$url);
   }
 
   function addclient_form() {
