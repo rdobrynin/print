@@ -101,3 +101,33 @@ button.btn.btn-success.btn-xs {
     padding-left: 5px;
     font-size: 14px;
 }
+
+.label-tag {
+    cursor: pointer;
+}
+
+.alert {
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    -webkit-box-shadow: rgba(0,0,0,0.5) 0px 3px 10px, rgba(0,0,0,.75) 0 0 70px inset;
+    -moz-box-shadow: rgba(0,0,0,0.5) 0px 3px 10px, rgba(0,0,0,.75) 0 0 70px inset;
+    box-shadow: rgba(0,0,0,0.5) 0px 3px 10px, rgba(0,0,0,.75) 0 0 70px inset;
+    background: #7d7e7d;
+    background: -moz-linear-gradient(top, #7d7e7d, #0e0e0e);
+    background: -webkit-linear-gradient(top, #7d7e7d, #0e0e0e);
+    background: -ms-linear-gradient(top, #7d7e7d, #0e0e0e);
+    background: -o-linear-gradient(top, #7d7e7d, #0e0e0e);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
+    background: linear-gradient(to bottom, #7d7e7d, #0e0e0e);
+    border-top: 1px solid #666;
+    /* overflow: hidden; */
+    border: 1px solid #000;
+    width: 98%;
+    margin: 0 auto;
+    left: 16px;
+    top: 10px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+}

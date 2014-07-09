@@ -81,9 +81,9 @@
                   <div id="items_manager_client"></div>
 <!--                  IMPLEMENTOR-->
                   <div class="form-group">
-                    <label class="col-sm-12">Implementor</label>
+                    <label class="col-sm-12">Curator</label>
                     <div class="col-sm-4">
-                      <select id="select-implementor" class="form-control">
+                      <select id="select-curator" class="form-control">
                         <option value="1">Roman Dobrynin</option>
                         <option value="2">Andrei Abozau</option>
                         <option value="3">Jevgeni Striganov</option>
@@ -92,10 +92,10 @@
                       </select>
                     </div>
                     <div class="col-md-1" style="margin-bottom: 10px;">
-                      <div class="btn btn-xs btn-success" id="add_implementor_client">Add implementor</div>
+                      <div class="btn btn-xs btn-success" id="add_curator_client">Add curator</div>
                     </div>
                   </div>
-                  <div id="items_implementor_client"></div>
+                  <div id="items_curator_client"></div>
               </div>
 
                 <hr>
@@ -143,13 +143,13 @@
     });
 
 
-    $('#add_implementor_client').click(function () {
-      implementor_value = $("#select-implementor option:selected").val();
-      var implementor_title = $("#select-implementor option:selected").text();
-      $('#items_implementor_client').append('&nbsp;<span><input type="hidden" name="client_implementor[]" value="input_implementor_'+ implementor_value + '"><div class="label label-default label-tag delete-implementor-client" id="delete-implementor-client' + implementor_value + '">' + implementor_title + '&nbsp;<i class="fa fa-times"></i></div></span>');
+    $('#add_curator_client').click(function () {
+      curator_value = $("#select-curator option:selected").val();
+      var curator_title = $("#select-curator option:selected").text();
+      $('#items_curator_client').append('&nbsp;<span><input type="hidden" name="client_curator[]" value="input_curator_'+ curator_value + '"><div class="label label-default label-tag delete-curator-client" id="delete-curator-client' + curator_value + '">' + curator_title + '&nbsp;<i class="fa fa-times"></i></div></span>');
 
     });
-    $("body").on("click", ".delete-implementor-client", function (e) {
+    $("body").on("click", ".delete-curator-client", function (e) {
       $(this).parent("span").remove();
     });
 
