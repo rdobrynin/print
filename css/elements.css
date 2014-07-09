@@ -82,3 +82,14 @@ button.btn.btn-success.btn-xs {
     vertical-align: baseline;
     border-radius: .25em;
 }
+
+.errors {
+    color:red;
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 10000;
+    top: 0;
+    width: 98%;
+    margin: 10px;
+}

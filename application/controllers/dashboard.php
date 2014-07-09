@@ -133,14 +133,24 @@ class Dashboard extends CI_Controller {
 
   function addclient_form() {
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('client_title', 'client_title', 'trim|required|min_length[113]');
+    $this->form_validation->set_rules('client_title', 'Company title', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('client_email', 'Email Address', 'trim|required|valid_email');
+    $this->form_validation->set_rules('client_phone', 'Phone number', 'trim|required|min_length[3]');
 
     if ($this->form_validation->run() !== false) {
     redirect(base_url());
     }
-//    else {
-//      echo 'validation';
-//    }
+    else {
+      $this->load->model('admin_model');
+      $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+      $data['users'] = $this->admin_model->get_users();
+//    $data['roles'] = $this->admin_model->get_roles();
+      $this->load->view('templates/head');
+      $this->load->view('templates/help_block_view');
+      $this->load->view('templates/addclient_view', $data);
+      $this->load->view('templates/profile_view', $data);
+      $this->load->view('templates/settings_view', $data);
+    }
 //    if ($this->form_validation->run() !== false) {
 //      $this->load->model('admin_model');
 //      if($query=$this->admin_model->create_member()) {

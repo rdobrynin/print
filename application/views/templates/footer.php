@@ -13,13 +13,15 @@
   //        $("#wrapper").toggleClass("active");
   //    });
 
+  $(function () {
+    $('.help-button').click(function () {
+      $('.help-block').toggleClass('help-block-open');
+      $('.help-content').toggleClass('help-content-open');
+      $('.help-button').toggleClass('help-block-open-btn');
+    });
 
-  $('.help-button').click(function () {
-    $('.help-block').toggleClass('help-block-open');
-    $('.help-content').toggleClass('help-content-open');
-    $('.help-button').toggleClass('help-block-open-btn');
+  });
 
-  })
 
 
 

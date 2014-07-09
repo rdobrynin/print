@@ -1,3 +1,4 @@
+<div class="errors alert alert-danger alert-dismissible" role="alert"><?php echo validation_errors();?></div>
 <?php include('navtop_view.php');?>
 <?php include('sidebar_view.php');?>
 <!-- Page content -->
@@ -8,7 +9,7 @@
       <div class="col-md-8">
         <h2>Add client</h2>
               <form role="form" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
-                <div class="errors"> <?php echo validation_errors();?></div>
+
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
@@ -21,11 +22,11 @@
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_email">Email</label>
-                  <div class="col-sm-6"><input type="email" class="form-control" name="client_email"  id="client_email" placeholder="Email address here"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="client_email"  id="client_email" placeholder="Email address here"></div>
                 </div>
                   <div class="form-group">
                   <label class="col-sm-12" for="client_url">URL</label>
-                  <div class="col-sm-6"><input type="url" class="form-control" name="client_url"  id="client_url" placeholder="Site url"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="client_url"  id="client_url" placeholder="Site url"></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12">Phone</label>
@@ -100,7 +101,7 @@
                 <hr>
                 <input type="hidden" class="form-control" id="client_curator" name="client_curator" value="<?php print($user[0]['id']);?>">
                 <input type="hidden" class="form-control" id="client_created" name="client_created" value="<?php print(time());?>">
-                <input type="submit" class="btn btn-primary pull-right" value="Create company">
+                <input type="submit" class="btn btn-primary pull-right" id="create_company" value="Create company">
               </form>
             </div>
 
@@ -151,5 +152,16 @@
     $("body").on("click", ".delete-implementor-client", function (e) {
       $(this).parent("span").remove();
     });
+
+
+      res = $('.errors').text();
+      if(res.length > 0 ) {
+        $('.errors').show();
+      }
+      else {
+        $('.errors').hide();
+      }
+
+
   });
 </script>
