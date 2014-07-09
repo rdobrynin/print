@@ -162,6 +162,10 @@
         $('.errors').hide();
       }
 
+    $('.errors').click(function () {
+      $(this).slideToggle("fast");
+    });
+
 
   });
 </script>

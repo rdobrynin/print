@@ -92,4 +92,5 @@ button.btn.btn-success.btn-xs {
     top: 0;
     width: 98%;
     margin: 10px;
+    cursor: pointer;
 }
