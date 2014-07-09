@@ -136,6 +136,9 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('client_title', 'Company title', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('client_email', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('client_phone', 'Phone number', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('client_address', 'Address', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('client_city', 'City', 'trim|required');
+    $this->form_validation->set_rules('client_country', 'Country', 'trim|required');
 
     if ($this->form_validation->run() !== false) {
     redirect(base_url());

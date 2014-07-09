@@ -13,7 +13,7 @@
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
-                  <label class="col-sm-12" for="client_title">Company</label>
+                  <label class="col-sm-12" for="client_title">Company<span class="req">*</span></label>
                   <div class="col-sm-10"><input type="text" class="form-control" name="client_title" id="client_title" placeholder="Company title here"></div>
                 </div>
                 <div class="form-group">
@@ -21,7 +21,7 @@
                   <div class="col-sm-12"><textarea rows="4" cols="50" class="form-control" name="client_description"  id="client_description"></textarea></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-12" for="client_email">Email</label>
+                  <label class="col-sm-12" for="client_email">Email<span class="req">*</span></label>
                   <div class="col-sm-6"><input type="text" class="form-control" name="client_email"  id="client_email" placeholder="Email address here"></div>
                 </div>
                   <div class="form-group">
@@ -29,7 +29,7 @@
                   <div class="col-sm-6"><input type="text" class="form-control" name="client_url"  id="client_url" placeholder="Site url"></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-12">Phone</label>
+                  <label class="col-sm-12">Phone<span class="req">*</span></label>
                   <div class="col-sm-4"><input type="text" class="form-control" name="client_phone" id="client_phone" placeholder="Phone number here"></div>
                   <div class="col-md-1" style="margin-bottom: 10px;">
                     <div class="btn btn-xs btn-success" id="add_phone_client">Add Phone</div>
@@ -41,14 +41,14 @@
               <div class="address-wrapper" style="height: 100%;">
                 <p class="lead">Regional information</p>
                 <div class="form-group">
-                  <label class="col-sm-8">Address</label>
+                  <label class="col-sm-8">Address<span class="req">*</span></label>
                   <label class="col-sm-4">Index</label>
                   <div class="col-sm-8"><input type="text" class="form-control" name="client_address"  id="client_address" placeholder="Address here"></div>
                   <div class="col-sm-4"><input type="text" class="form-control" name="client_index"  id="client_index" placeholder="Index here"></div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-6">City</label>
-                  <label class="col-sm-6">Country</label>
+                  <label class="col-sm-6">City<span class="req">*</span></label>
+                  <label class="col-sm-6">Country<span class="req">*</span></label>
                   <div class="col-sm-6"><input type="text" class="form-control" name="client_city"  id="client_city" placeholder="City here"></div>
                   <div class="col-sm-6">
                     <select id="select-country" class="form-control">
