@@ -30,7 +30,6 @@ class Dashboard extends CI_Controller {
 
     $this->load->view('templates/dashboard_view', $data);
     $this->load->view('templates/footer');
-    $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
   }
 
@@ -47,7 +46,6 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/help_block_view');
     }
     $this->load->view('templates/projects_view', $data);
-    $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
   }
 
@@ -66,11 +64,9 @@ class Dashboard extends CI_Controller {
     }
     if ($data['user'][0]['role'] == 4) {
       $this->load->view('templates/users_view', $data);
-      $this->load->view('templates/profile_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
     elseif($data['user'][0]['role'] == 1) {
-      $this->load->view('templates/profile_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
     else {
@@ -92,7 +88,6 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/navtop_view',$data);
     $this->load->view('templates/sidebar_view');
     $this->load->view('templates/comments_view', $data);
-    $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
     $this->load->view('templates/footer');
   }
@@ -121,7 +116,6 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/navtop_view',$data);
     $this->load->view('templates/sidebar_view');
     $this->load->view('templates/client_view', $data);
-    $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
     $this->load->view('templates/footer');
   }
@@ -140,7 +134,6 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/help_block_view');
     }
     $this->load->view('templates/addclient_view', $data);
-    $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
   }
 
@@ -174,7 +167,6 @@ class Dashboard extends CI_Controller {
         $this->load->view('templates/help_block_view');
       }
       $this->load->view('templates/addclient_view', $data);
-      $this->load->view('templates/profile_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
 //    if ($this->form_validation->run() !== false) {
@@ -187,6 +179,19 @@ class Dashboard extends CI_Controller {
 //      $this->load->view('login/signup_view');
 //    }
   }
+
+  function profile() {
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
+    $this->load->view('templates/head');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
+    $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
+  }
+
 
 
   function update_profile() {
@@ -203,7 +208,15 @@ class Dashboard extends CI_Controller {
       }
     }
     else {
-     echo "wrong";
+      $this->load->model('admin_model');
+      $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+      $data['users'] = $this->admin_model->get_users();
+      $this->load->view('templates/head');
+      if($data['user'][0]['helpblock']==1) {
+        $this->load->view('templates/help_block_view');
+      }
+      $this->load->view('templates/profile_view', $data);
+      $this->load->view('templates/settings_view', $data);
     }
   }
 
