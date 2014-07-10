@@ -118,6 +118,12 @@
     $('.errors').click(function () {
       $(this).slideToggle("fast");
     });
+    $('body').click(function () {
+      $('.errors').slideUp( "fast");
+    });
+
+
+
 
 
   });

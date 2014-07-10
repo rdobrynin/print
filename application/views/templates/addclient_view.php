@@ -166,6 +166,9 @@
       $(this).slideToggle("fast");
     });
 
+    $('body').click(function () {
+      $('.errors').slideUp( "fast");
+    });
 
   });
 </script>
