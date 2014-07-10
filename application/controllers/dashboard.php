@@ -154,7 +154,9 @@ class Dashboard extends CI_Controller {
       $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();
       $this->load->view('templates/head');
-      $this->load->view('templates/help_block_view');
+      if($data['user'][0]['helpblock']==1) {
+        $this->load->view('templates/help_block_view');
+      }
       $this->load->view('templates/addclient_view', $data);
       $this->load->view('templates/profile_view', $data);
       $this->load->view('templates/settings_view', $data);
