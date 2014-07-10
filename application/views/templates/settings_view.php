@@ -18,10 +18,6 @@
           <?php if($user[0]["helpblock"]==false):?>
             <input type="checkbox" name="help_block" value="1" />&nbsp;Show help block
           <?php endif?>
-          <?php $product_id = $this->uri->segment(1, 0);
-          var_dump($product_id);
-          ?>
-
         </div>
       </div>
      </div>

@@ -61,7 +61,7 @@
 <div id="page-content-wrapper">
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
-    <h3>Administer projects</h3>
+    <h3>Administer projects&nbsp;<span class="curr-project"></span></h3>
       <div class="row">
         <div class="panel panel-primary filterable">
           <div class="panel-heading">

@@ -102,7 +102,9 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
-    $this->load->view('templates/help_block_view');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
     $this->load->view('templates/client_view', $data);
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
@@ -118,7 +120,9 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
-    $this->load->view('templates/help_block_view');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
     $this->load->view('templates/addclient_view', $data);
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
@@ -129,7 +133,7 @@ class Dashboard extends CI_Controller {
     $this->load->model('dashboard_model');
     $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
     $url = $this->input->post('input_url');
-    redirect(base_url().'/'.$url);
+    redirect(base_url().$url);
   }
 
   function addclient_form() {
