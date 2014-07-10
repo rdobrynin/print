@@ -1,8 +1,3 @@
-<?php include('head.php');?>
-<?php include('navtop_view.php');?>
-<?php include('sidebar_view.php');?>
-
-
 <!-- Page content -->
 <div id="page-content-wrapper">
 
@@ -151,4 +146,3 @@
 </div>
 </div>
 
-<?php include('footer.php');?>

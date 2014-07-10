@@ -15,9 +15,13 @@ div.navbar.navbar-step {
 
 
 .jumbotron-resp {
-margin-top: 36px;
     position: relative;
     display: block;
+}
+
+.jumbotron-resp {
+    position: fixed;
+    right: -30px;
 }
 
 .jumbotron {

@@ -25,7 +25,11 @@ class Dashboard extends CI_Controller {
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
+    $this->load->view('templates/navtop_view', $data);
+    $this->load->view('templates/sidebar_view');
+
     $this->load->view('templates/dashboard_view', $data);
+    $this->load->view('templates/footer');
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
   }
@@ -81,7 +85,16 @@ class Dashboard extends CI_Controller {
   function comments() {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $this->load->view('templates/head');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
+    $this->load->view('templates/navtop_view',$data);
+    $this->load->view('templates/sidebar_view');
     $this->load->view('templates/comments_view', $data);
+    $this->load->view('templates/profile_view', $data);
+    $this->load->view('templates/settings_view', $data);
+    $this->load->view('templates/footer');
   }
 
   /**
@@ -105,9 +118,12 @@ class Dashboard extends CI_Controller {
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
+    $this->load->view('templates/navtop_view',$data);
+    $this->load->view('templates/sidebar_view');
     $this->load->view('templates/client_view', $data);
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
+    $this->load->view('templates/footer');
   }
 
   /**
@@ -170,6 +186,25 @@ class Dashboard extends CI_Controller {
 //    else {
 //      $this->load->view('login/signup_view');
 //    }
+  }
+
+
+  function update_profile() {
+    $this->load->library('form_validation');
+    $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
+    $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
+
+    if ($this->form_validation->run() !== false) {
+      $this->load->model('admin_model');
+      if($query=$this->admin_model->create_member()) {
+        $this->load->view('login/invite_view');
+      }
+    }
+    else {
+     echo "wrong";
+    }
   }
 
 

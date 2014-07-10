@@ -21,3 +21,12 @@
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
+
+
+.add_well {
+    background-color: #dddddd;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display:inline-block;
+}
