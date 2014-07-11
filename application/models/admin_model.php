@@ -8,6 +8,13 @@ class Admin_model extends CI_Model {
     parent::__construct();
   }
 
+  /**
+   * Verify user
+   * @param $email
+   * @param $password
+   * @return bool
+   */
+
   public function verify_user($email, $password) {
     $query = $this
       ->db
@@ -22,6 +29,12 @@ class Admin_model extends CI_Model {
       return FALSE;
     }
   }
+
+  /**
+   * Check email
+   * @param $email
+   * @return bool
+   */
 
   public function check_email($email) {
     $query = $this
@@ -39,6 +52,11 @@ class Admin_model extends CI_Model {
   }
 
 
+  /**
+   * Create member
+   * @return mixed
+   */
+
   public function create_member() {
     $new_member_insert_data = array (
       'first_name' => $this->input->post('first_name'),
@@ -50,6 +68,12 @@ class Admin_model extends CI_Model {
     $insert = $this->db->insert('users', $new_member_insert_data);
     return $insert;
   }
+
+  /**
+   * Update member
+   * @param $id
+   * @return mixed
+   */
 
   public function update_member($id) {
     $data = array (
@@ -67,6 +91,12 @@ class Admin_model extends CI_Model {
     return $update;
   }
 
+  /**
+   * Insert member phone
+   * @param $id
+   * @return array
+   */
+
   public function insert_member_phone($id) {
     $phone_array = $this->input->post('add_phone');
     $update = array();
@@ -80,6 +110,26 @@ class Admin_model extends CI_Model {
     return $update;
   }
 
+  /**
+   * get user phones
+   * @param $id
+   * @return mixed
+   */
+
+
+  public function get_phones($id) {
+    $query = $this
+      ->db
+      ->where('id', $id)
+      ->get('users_phones');
+    return $query->result_array();
+  }
+
+  /**
+   * get user();
+   * @param $username
+   * @return mixed
+   */
 
   public function get_user($username) {
     $query = $this
@@ -89,6 +139,12 @@ class Admin_model extends CI_Model {
     return $query->result_array();
   }
 
+  /**
+   * get ID of user
+   * @param $id
+   * @return mixed
+   */
+
   public function get_user_id($id) {
     $query = $this
       ->db
@@ -97,12 +153,22 @@ class Admin_model extends CI_Model {
     return $query->result_array();
   }
 
+  /**
+   * get users();
+   * @return mixed
+   */
+
   public function get_users() {
     $query = $this
       ->db
       ->get('users');
     return $query->result_array();
   }
+
+  /**
+   * get roles();
+   * @return mixed
+   */
 
   public function get_roles() {
     $query = $this
