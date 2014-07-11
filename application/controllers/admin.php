@@ -26,9 +26,11 @@ class Admin extends CI_Controller {
        ->verify_user(
          $this->input->post('email_address'),
          $this->input->post('password'));
+
+
       if($res !== false) {
 //person has account
-        $_SESSION['username'] = $this->input->post('email_address');
+        $_SESSION['username'] = $res->id;
         redirect('dashboard');
       }
       else {

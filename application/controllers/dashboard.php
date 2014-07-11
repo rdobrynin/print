@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller {
 
   public function index() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -39,7 +39,7 @@ class Dashboard extends CI_Controller {
 
   function projects() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -55,7 +55,7 @@ class Dashboard extends CI_Controller {
 
   function users() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
@@ -80,7 +80,7 @@ class Dashboard extends CI_Controller {
 
   function comments() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -106,7 +106,7 @@ class Dashboard extends CI_Controller {
 
   function clients() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
@@ -126,7 +126,7 @@ class Dashboard extends CI_Controller {
 
   function addclient() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
@@ -159,7 +159,7 @@ class Dashboard extends CI_Controller {
     }
     else {
       $this->load->model('admin_model');
-      $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+      $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();
       $this->load->view('templates/head');
@@ -182,7 +182,7 @@ class Dashboard extends CI_Controller {
 
   function profile() {
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -201,7 +201,7 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
     $this->load->model('admin_model');
-    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $id = $data['user'][0]['id'];
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
@@ -211,7 +211,7 @@ class Dashboard extends CI_Controller {
     }
     else {
       $this->load->model('admin_model');
-      $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+      $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
       $this->load->view('templates/head');
       if($data['user'][0]['helpblock']==1) {
