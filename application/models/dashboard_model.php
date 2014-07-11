@@ -13,13 +13,13 @@ class Dashboard_model extends CI_Model {
    * @param $email
    * @return bool
    */
-  public function settings_help($email, $input) {
+  public function settings_help($id, $input) {
     $data = array(
-      'email_address' => $email,
+      'id' => $id,
       'helpblock' =>  $input
     );
 
-    $this->db->where('email_address', $email);
+    $this->db->where('id', $id);
     $update =$this->db->update('users', $data);
     return $update;
 
