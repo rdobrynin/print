@@ -40,7 +40,6 @@
 
 $route['default_controller'] = "admin";
 $route['logout'] = 'admin/logout';
-//$route['signup'] = 'admin/signup';
 $route['signup'] = 'admin/signup';
 $route['forgot'] = 'admin/forgot';
 $route['projects'] = 'dashboard/projects';

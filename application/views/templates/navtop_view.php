@@ -6,9 +6,9 @@
   </ul>
 <div class="show-info"><div class="show-info-content">You have successfully update your profile</div><div class="expandable-image"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
-    <li class="add-client pull-left"><a href="addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn">Add client</span></button></a></li>
+    <li class="add-client pull-left"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn">Add client</span></button></a></li>
     <li class="dropdown messages-dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+      <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li class="dropdown-header">7 New Messages</li>
         <li class="message-preview">
@@ -42,7 +42,7 @@
       </ul>
     </li>
     <li class="dropdown alerts-dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
+      <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a href="#">Default <span class="label label-default">Default</span></a></li>
         <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
@@ -55,7 +55,7 @@
       </ul>
     </li>
     <li class="dropdown user-dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+      <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
         <?php print($user[0]['first_name'].' '. $user[0]['last_name'])?>
         <b class="caret"></b></a>
       <ul class="dropdown-menu dropdown-user">
@@ -64,10 +64,10 @@
         <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
         <li><a data-toggle="modal" href="#settings"><i class="fa fa-gear"></i> Settings</a></li>
         <?php if($user[0]['role']==4):?>
-          <li><a href="users"><i class="fa fa-users"></i> Administer users</a></li>
+          <li><a href="<?php print(base_url());?>users"><i class="fa fa-users"></i> Administer users</a></li>
         <? endif?>
         <li class="divider"></li>
-        <li id="logout"><a href="logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+        <li id="logout"><a href="<?php print(base_url());?>logout"><i class="fa fa-power-off"></i> Log Out</a></li>
       </ul>
     </li>
   </ul>

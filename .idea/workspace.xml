@@ -7,8 +7,13 @@
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elements.css" afterPath="$PROJECT_DIR$/css/elements.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login/footer.php" afterPath="$PROJECT_DIR$/application/views/login/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login/head.php" afterPath="$PROJECT_DIR$/application/views/login/head.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/head.php" afterPath="$PROJECT_DIR$/application/views/templates/head.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/navtop_view.php" afterPath="$PROJECT_DIR$/application/views/templates/navtop_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/profile_view.php" afterPath="$PROJECT_DIR$/application/views/templates/profile_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/sidebar_view.php" afterPath="$PROJECT_DIR$/application/views/templates/sidebar_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,36 +35,13 @@
     <favorites_list name="print" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5445026">
+    <splitter split-orientation="horizontal" split-proportion="0.2736792">
       <split-first>
         <leaf>
-          <file leaf-file-name="profile_view.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="95" column="30" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.6482593" vertical-offset="1296" max-vertical-offset="3389">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#i#0;n#a#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                    <marker date="1405072139309" expanded="true" signature="5254:5289" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="navtop_view.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="53" selection-start="1589" selection-end="1589" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="2201">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="elements.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/elements.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="166" column="18" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0" vertical-offset="2524" max-vertical-offset="4154">
+                <state line="48" column="89" selection-start="2833" selection-end="2833" vertical-scroll-proportion="-12.0" vertical-offset="540" max-vertical-offset="2178">
                   <folding />
                 </state>
               </provider>
@@ -68,34 +50,34 @@
           <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="20" selection-start="665" selection-end="665" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="2129">
+                <state line="2" column="1" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2106">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dashboard_model.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/models/dashboard_model.php">
+          <file leaf-file-name="elements.css" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/css/elements.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="1319">
+                <state line="160" column="17" selection-start="3520" selection-end="3520" vertical-scroll-proportion="0.15479116" vertical-offset="2916" max-vertical-offset="4324">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin_model.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
+          <file leaf-file-name="custom404.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/custom404.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="81" column="21" selection-start="2167" selection-end="2167" vertical-scroll-proportion="-20.0" vertical-offset="918" max-vertical-offset="2597">
+                <state line="14" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1044">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="users.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/users.css">
+          <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/config/routes.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="18" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="630">
+                <state line="35" column="41" selection-start="1303" selection-end="1303" vertical-scroll-proportion="-15.296296" vertical-offset="217" max-vertical-offset="1818">
                   <folding />
                 </state>
               </provider>
@@ -104,7 +86,43 @@
           <file leaf-file-name="dashboard.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="209" column="7" selection-start="7140" selection-end="7140" vertical-scroll-proportion="-20.0" vertical-offset="3222" max-vertical-offset="4883">
+                <state line="32" column="56" selection-start="916" selection-end="916" vertical-scroll-proportion="-7.8545456" vertical-offset="144" max-vertical-offset="4832">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="head.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/login/head.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="45" selection-start="258" selection-end="258" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1188">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/login/footer.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="39" selection-start="60" selection-end="60" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="1098">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="head.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/templates/head.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="20" selection-start="36" selection-end="36" vertical-scroll-proportion="-0.3272727" vertical-offset="0" max-vertical-offset="1322">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sidebar_view.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="36" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1962">
                   <folding />
                 </state>
               </provider>
@@ -117,7 +135,7 @@
           <file leaf-file-name="addclient_view.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/addclient_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="98" column="20" selection-start="5986" selection-end="5986" vertical-scroll-proportion="0.62665063" vertical-offset="1422" max-vertical-offset="4361">
+                <state line="103" column="117" selection-start="6398" selection-end="6398" vertical-scroll-proportion="0.9567827" vertical-offset="1057" max-vertical-offset="4001">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -155,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/login/head_login.php" />
         <option value="$PROJECT_DIR$/application/views/login/forgot_view.php" />
         <option value="$PROJECT_DIR$/application/views/login/login_view.php" />
         <option value="$PROJECT_DIR$/application/libraries/user.php" />
@@ -173,7 +190,6 @@
         <option value="$PROJECT_DIR$/application/views/projects_view.php" />
         <option value="$PROJECT_DIR$/css/body.css" />
         <option value="$PROJECT_DIR$/application/views/templates/test_view.php" />
-        <option value="$PROJECT_DIR$/application/views/login/footer.php" />
         <option value="$PROJECT_DIR$/application/views/templates/users_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/add_role_view.php" />
         <option value="$PROJECT_DIR$/css/task_table.css" />
@@ -182,30 +198,32 @@
         <option value="$PROJECT_DIR$/application/views/login/invite_view.php" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/application/controllers/custom404.php" />
-        <option value="$PROJECT_DIR$/application/views/login/head.php" />
         <option value="$PROJECT_DIR$/css/error.css" />
         <option value="$PROJECT_DIR$/application/views/custom404_view.php" />
         <option value="$PROJECT_DIR$/css/help_block.css" />
         <option value="$PROJECT_DIR$/application/views/templates/projects_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/settings_view.php" />
         <option value="$PROJECT_DIR$/css/login.css" />
-        <option value="$PROJECT_DIR$/application/views/templates/head.php" />
         <option value="$PROJECT_DIR$/css/add_client.css" />
         <option value="$PROJECT_DIR$/js/project.js" />
         <option value="$PROJECT_DIR$/application/views/templates/footer.php" />
         <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/client_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/comments_view.php" />
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/css/users.css" />
         <option value="$PROJECT_DIR$/application/views/templates/addclient_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/models/admin_model.php" />
         <option value="$PROJECT_DIR$/application/models/dashboard_model.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/profile_view.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/views/login/head.php" />
+        <option value="$PROJECT_DIR$/application/views/login/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/head.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/sidebar_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/templates/navtop_view.php" />
         <option value="$PROJECT_DIR$/css/elements.css" />
-        <option value="$PROJECT_DIR$/application/views/templates/profile_view.php" />
       </list>
     </option>
   </component>
@@ -507,10 +525,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="2495" height="1416" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10607915" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,24 +644,9 @@
         <state line="28" column="27" selection-start="889" selection-end="889" vertical-scroll-proportion="0.021608643" vertical-offset="486" max-vertical-offset="7331" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.45378152" vertical-offset="0" max-vertical-offset="1913" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/login/invite_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="216" selection-end="216" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1031" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="366" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1121" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/custom404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.30252102" vertical-offset="0" max-vertical-offset="1067" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/error.css">
@@ -693,17 +696,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/projects_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="57" selection-start="13734" selection-end="13734" vertical-scroll-proportion="0.0" vertical-offset="4752" max-vertical-offset="4986" />
+        <state line="264" column="57" selection-start="13734" selection-end="13734" vertical-scroll-proportion="0.0" vertical-offset="4752" max-vertical-offset="4986">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/settings_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="756" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="49" selection-start="339" selection-end="339" vertical-scroll-proportion="0.1944778" vertical-offset="54" max-vertical-offset="1211" />
+        <state line="32" column="8" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="756">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
@@ -713,7 +715,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.56182474" vertical-offset="0" max-vertical-offset="1625" />
+        <state line="26" column="0" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.56182474" vertical-offset="0" max-vertical-offset="1625">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/login.css">
@@ -735,21 +739,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="6" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.6914766" vertical-offset="0" max-vertical-offset="1391" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/users.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="18" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1436">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="34" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.27731094" vertical-offset="507" max-vertical-offset="1859">
           <folding />
         </state>
       </provider>
@@ -798,10 +790,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="665" selection-end="665" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="2129">
-          <folding />
+        <state line="68" column="38" selection-start="3480" selection-end="3480" vertical-scroll-proportion="2.6666667" vertical-offset="1296" max-vertical-offset="3389">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1405072139309" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -812,30 +809,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="7" selection-start="7140" selection-end="7140" vertical-scroll-proportion="-20.0" vertical-offset="3222" max-vertical-offset="4883">
+        <state line="35" column="41" selection-start="1303" selection-end="1303" vertical-scroll-proportion="-15.296296" vertical-offset="217" max-vertical-offset="1818">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="53" selection-start="1589" selection-end="1589" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="2201">
+        <state line="2" column="1" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2129">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/elements.css">
+    <entry file="file://$PROJECT_DIR$/application/controllers/custom404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="18" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0" vertical-offset="2524" max-vertical-offset="4154">
+        <state line="14" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="45" selection-start="258" selection-end="258" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="39" selection-start="60" selection-end="60" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="36" selection-end="36" vertical-scroll-proportion="-0.3272727" vertical-offset="0" max-vertical-offset="1322">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="36" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1962">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/addclient_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="20" selection-start="5986" selection-end="5986" vertical-scroll-proportion="0.62665063" vertical-offset="1422" max-vertical-offset="4361">
+        <state line="103" column="117" selection-start="6398" selection-end="6398" vertical-scroll-proportion="0.9567827" vertical-offset="1057" max-vertical-offset="4001">
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -846,15 +871,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="30" selection-start="4786" selection-end="4786" vertical-scroll-proportion="0.6482593" vertical-offset="1296" max-vertical-offset="3389">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <marker date="1405072139309" expanded="true" signature="5254:5289" placeholder="..." />
-          </folding>
+        <state line="32" column="56" selection-start="916" selection-end="916" vertical-scroll-proportion="-7.8545456" vertical-offset="144" max-vertical-offset="4832">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="89" selection-start="2833" selection-end="2833" vertical-scroll-proportion="-12.0" vertical-offset="540" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="17" selection-start="3520" selection-end="3520" vertical-scroll-proportion="0.15479116" vertical-offset="2916" max-vertical-offset="4324">
+          <folding />
         </state>
       </provider>
     </entry>

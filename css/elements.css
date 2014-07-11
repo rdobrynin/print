@@ -182,3 +182,7 @@ div.show-info-content {
     height: auto;
     padding-top: 18px;
 }
+
+.dropdown {
+    cursor: pointer;
+}

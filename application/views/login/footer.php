@@ -1,8 +1,8 @@
 
 <!-- JavaScript -->
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/script.js"></script>
+<script src="<?php print(base_url());?>js/jquery-1.10.2.js"></script>
+<script src="<?php print(base_url());?>js/bootstrap.js"></script>
+<script src="<?php print(base_url());?>js/script.js"></script>
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>

@@ -10,21 +10,21 @@
   <title>Brilliant project management</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/bootstrap-switch.min.css" rel="stylesheet">
-  <link href="css/bootstrap-select-min.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/bootstrap.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/bootstrap-switch.min.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/bootstrap-select-min.css" rel="stylesheet">
 
   <!-- Add custom CSS here -->
-  <link href="css/sidebar.css" rel="stylesheet">
-  <link href="css/help-block.css" rel="stylesheet">
-  <link href="css/add_client.css" rel="stylesheet">
-  <link href="css/users.css" rel="stylesheet">
-  <link href="css/mini_inbox.css" rel="stylesheet">
-  <link href="css/body.css" rel="stylesheet">
-  <link href="css/comments.css" rel="stylesheet">
-  <link href="css/elements.css" rel="stylesheet">
-  <link href="css/task_table.css" rel="stylesheet">
-  <link href="css/help_block.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/sidebar.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/help-block.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/add_client.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/users.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/mini_inbox.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/body.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/comments.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/elements.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/task_table.css" rel="stylesheet">
+  <link href="<?php print(base_url());?>css/help_block.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 </head>
