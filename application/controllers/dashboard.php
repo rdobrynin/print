@@ -160,21 +160,26 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('city', 'City', 'trim|required');
     $this->form_validation->set_rules('country', 'Country', 'trim|required');
-
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
-      if($query=$this->admin_model->create_client()) {
-        $this->load->model('admin_model');
-        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-        $data['users'] = $this->admin_model->get_users();
-        $data['response'] = 'Company successfully created';
-        $this->load->view('templates/head');
-        if($data['user'][0]['helpblock']==1) {
-          $this->load->view('templates/help_block_view');
-        }
-        $this->load->view('templates/success_view', $data);
-        $this->load->view('templates/settings_view', $data);
+      $title = $this->admin_model->verify_client($this->input->post('title'));
+     if($title) {
+      print "full";
+     }
+      else {
+        if($query=$this->admin_model->create_client()) {
+          $this->load->model('admin_model');
+          $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+          $data['users'] = $this->admin_model->get_users();
+          $data['response'] = 'Company successfully created';
+          $this->load->view('templates/head');
+          if($data['user'][0]['helpblock']==1) {
+            $this->load->view('templates/help_block_view');
+          }
+          $this->load->view('templates/success_view', $data);
+          $this->load->view('templates/settings_view', $data);
 
+        }
       }
     }
     else {

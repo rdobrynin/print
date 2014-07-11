@@ -7,6 +7,7 @@
     <div class="row">
 <!--FORM-->
       <div class="col-md-8">
+        <div id="check_login"></div>
         <h2>Add client</h2>
               <form role="form" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
 

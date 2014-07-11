@@ -148,6 +148,24 @@ class Admin_model extends CI_Model {
   }
 
   /**
+   * Verify company title
+   * @param $title
+   * @return mixed
+   */
+
+
+
+  public function verify_client($title) {
+    $query = $this
+      ->db
+      ->where('title', $title)
+      ->get('client');
+    error_reporting(0);
+    return $query->result();
+
+  }
+
+  /**
    * get user();
    * @param $username
    * @return mixed

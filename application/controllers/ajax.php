@@ -25,6 +25,28 @@ class Ajax extends CI_Controller {
 
   }
 
+
+  /**
+   * Check client on input blur
+   */
+  public function check_client() {
+    $title = $this->input->post('title');
+    $this->load->model('admin_model');
+    $check_title= $this->admin_model->verify_client($title);
+    $returnText = '';
+    // Делаем простую проверку, замените на свою
+    if($title !== $check_title[0]['title']){
+      $returnText = '<span style="color:#1e6cff;">Company address is not taken</span>';
+    } else {
+      var_dump($title);
+      $returnText = '<span style="color:red;">This company already registered</span>';
+
+    }
+    // Возвращаем ответ
+    print $returnText;
+
+  }
+
 }
 
 
