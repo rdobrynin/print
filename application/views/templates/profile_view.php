@@ -79,8 +79,9 @@
                 </div>
               </div>
             </div>
-            <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-default">Back</a></span>
-            <button type="submit" class="btn btn-default pull-right">Submit</button>
+            <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
+            <input type="hidden" value="<?php print(time());?>" name="date_edited">
+            <button type="submit" class="btn btn-primary pull-right">Submit</button>
           </div>
 
       </form>

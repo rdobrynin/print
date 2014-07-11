@@ -200,11 +200,13 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
-
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user($_SESSION['username']);
+    $id = $data['user'][0]['id'];
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
-      if($query=$this->admin_model->create_member()) {
-        $this->load->view('login/invite_view');
+      if($query=$this->admin_model->update_member($id)) {
+        redirect(base_url().'profile');
       }
     }
     else {
@@ -219,7 +221,6 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/settings_view', $data);
     }
   }
-
 
 
 }

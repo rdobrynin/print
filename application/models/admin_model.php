@@ -51,6 +51,22 @@ class Admin_model extends CI_Model {
     return $insert;
   }
 
+  public function update_member($id) {
+    $data = array (
+      'first_name' => $this->input->post('first_name'),
+      'last_name' => $this->input->post('last_name'),
+      'phone' => $this->input->post('phone'),
+      'email_address' => $this->input->post('email_address'),
+      'skype_address' => $this->input->post('skype_address'),
+      'facebook_address' => $this->input->post('facebook_address'),
+      'linkedin_address' => $this->input->post('facebook_address'),
+      'date_edited' => $this->input->post('date_edited'),
+    );
+    $this->db->where('id', $id);
+    $update = $this->db->update('users', $data);
+    return $update;
+  }
+
   public function get_user($username) {
     $query = $this
       ->db

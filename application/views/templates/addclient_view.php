@@ -101,6 +101,7 @@
                 <hr>
                 <input type="hidden" class="form-control" id="client_curator" name="client_curator" value="<?php print($user[0]['id']);?>">
                 <input type="hidden" class="form-control" id="client_created" name="client_created" value="<?php print(time());?>">
+                <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
                 <input type="submit" class="btn btn-primary pull-right" id="create_company" value="Create company">
               </form>
             </div>
