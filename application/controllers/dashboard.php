@@ -137,6 +137,9 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/settings_view', $data);
   }
 
+  /**
+   * switch help block
+   */
 
   function  switch_help() {
     $this->load->model('dashboard_model');
@@ -145,23 +148,39 @@ class Dashboard extends CI_Controller {
     redirect(base_url().$url);
   }
 
+  /**
+   * Add client form
+   */
+
   function addclient_form() {
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('client_title', 'Company title', 'trim|required|min_length[3]');
-    $this->form_validation->set_rules('client_email', 'Email Address', 'trim|required|valid_email');
-    $this->form_validation->set_rules('client_phone', 'Phone number', 'trim|required|min_length[3]');
-    $this->form_validation->set_rules('client_address', 'Address', 'trim|required|min_length[3]');
-    $this->form_validation->set_rules('client_city', 'City', 'trim|required');
-    $this->form_validation->set_rules('client_country', 'Country', 'trim|required');
+    $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
+    $this->form_validation->set_rules('phone', 'Phone number', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('city', 'City', 'trim|required');
+    $this->form_validation->set_rules('country', 'Country', 'trim|required');
 
     if ($this->form_validation->run() !== false) {
-    redirect(base_url());
+      $this->load->model('admin_model');
+      if($query=$this->admin_model->create_client()) {
+        $this->load->model('admin_model');
+        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+        $data['users'] = $this->admin_model->get_users();
+        $data['response'] = 'Company successfully created';
+        $this->load->view('templates/head');
+        if($data['user'][0]['helpblock']==1) {
+          $this->load->view('templates/help_block_view');
+        }
+        $this->load->view('templates/success_view', $data);
+        $this->load->view('templates/settings_view', $data);
+
+      }
     }
     else {
       $this->load->model('admin_model');
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
-//    $data['roles'] = $this->admin_model->get_roles();
       $this->load->view('templates/head');
       if($data['user'][0]['helpblock']==1) {
         $this->load->view('templates/help_block_view');
@@ -169,16 +188,12 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/addclient_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
-//    if ($this->form_validation->run() !== false) {
-//      $this->load->model('admin_model');
-//      if($query=$this->admin_model->create_member()) {
-//        $this->load->view('login/invite_view');
-//      }
-//    }
-//    else {
-//      $this->load->view('login/signup_view');
-//    }
   }
+
+
+  /**
+   * Profile view
+   */
 
   function profile() {
     $this->load->model('admin_model');
@@ -193,7 +208,9 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/settings_view', $data);
   }
 
-
+  /**
+   * Update profile
+   */
 
   function update_profile() {
     $this->load->library('form_validation');
@@ -230,6 +247,4 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/settings_view', $data);
     }
   }
-
-
 }

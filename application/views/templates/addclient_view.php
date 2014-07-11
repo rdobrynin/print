@@ -14,23 +14,23 @@
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_title">Company<span class="req">*</span></label>
-                  <div class="col-sm-10"><input type="text" class="form-control" name="client_title" id="client_title" placeholder="Company title here"></div>
+                  <div class="col-sm-10"><input type="text" class="form-control" name="title" id="client_title" placeholder="Company title here"></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_description">Company description</label>
-                  <div class="col-sm-12"><textarea rows="4" cols="50" class="form-control" name="client_description"  id="client_description"></textarea></div>
+                  <div class="col-sm-12"><textarea rows="4" cols="50" class="form-control" name="description"  id="client_description"></textarea></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_email">Email<span class="req">*</span></label>
-                  <div class="col-sm-6"><input type="text" class="form-control" name="client_email"  id="client_email" placeholder="Email address here"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="email"  id="client_email" placeholder="Email address here"></div>
                 </div>
                   <div class="form-group">
                   <label class="col-sm-12" for="client_url">URL</label>
-                  <div class="col-sm-6"><input type="text" class="form-control" name="client_url"  id="client_url" placeholder="Site url"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="url"  id="client_url" placeholder="Site url"></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12">Phone<span class="req">*</span></label>
-                  <div class="col-sm-4"><input type="text" class="form-control" name="client_phone" id="client_phone" placeholder="Phone number here"></div>
+                  <div class="col-sm-4"><input type="text" class="form-control" name="phone" id="client_phone" placeholder="Phone number here"></div>
                   <div class="col-md-1" style="margin-bottom: 10px;">
                     <div class="btn btn-xs btn-success" id="add_phone_client">Add Phone</div>
                   </div>
@@ -43,18 +43,18 @@
                 <div class="form-group">
                   <label class="col-sm-8">Address<span class="req">*</span></label>
                   <label class="col-sm-4">Index</label>
-                  <div class="col-sm-8"><input type="text" class="form-control" name="client_address"  id="client_address" placeholder="Address here"></div>
-                  <div class="col-sm-4"><input type="text" class="form-control" name="client_index"  id="client_index" placeholder="Index here"></div>
+                  <div class="col-sm-8"><input type="text" class="form-control" name="address"  id="client_address" placeholder="Address here"></div>
+                  <div class="col-sm-4"><input type="text" class="form-control" name="index"  id="client_index" placeholder="Index here"></div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-6">City<span class="req">*</span></label>
                   <label class="col-sm-6">Country<span class="req">*</span></label>
-                  <div class="col-sm-6"><input type="text" class="form-control" name="client_city"  id="client_city" placeholder="City here"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="city"  id="client_city" placeholder="City here"></div>
                   <div class="col-sm-6">
-                    <select id="select-country" class="form-control">
+                    <select id="select-country" name="country" class="form-control">
                       <?php  $countries = get_countries(); ?>
                       <?php  foreach($countries as $ck => $cv): ?>
-                        <option value="<?php  print($ck); ?>"><?php  print($cv); ?></option>
+                        <option value="<?php  print($cv); ?>"><?php  print($cv); ?></option>
                       <?php  endforeach; ?>
                     </select>
                   </div>
@@ -99,8 +99,8 @@
               </div>
 
                 <hr>
-                <input type="hidden" class="form-control" id="client_curator" name="client_curator" value="<?php print($user[0]['id']);?>">
-                <input type="hidden" class="form-control" id="client_created" name="client_created" value="<?php print(time());?>">
+                <input type="hidden" class="form-control" id="client_curator" name="curator" value="<?php print($user[0]['id']);?>">
+
                 <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
                 <input type="submit" class="btn btn-primary pull-right" id="create_company" value="Create company">
               </form>

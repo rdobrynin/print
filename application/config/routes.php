@@ -48,6 +48,7 @@ $route['profile'] = 'dashboard/profile';
 $route['test'] = 'dashboard/test';
 $route['comments'] = 'dashboard/comments';
 $route['clients'] = 'dashboard/clients';
+$route['success'] = 'dashboard/success';
 $route['addclient'] = 'dashboard/addclient';
 $route['addclient_form'] = 'dashboard/addclient_form';
 $route['update_profile'] = 'dashboard/update_profile';

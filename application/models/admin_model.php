@@ -58,14 +58,36 @@ class Admin_model extends CI_Model {
    */
 
   public function create_member() {
-    $new_member_insert_data = array (
+    $data = array (
       'first_name' => $this->input->post('first_name'),
       'last_name' => $this->input->post('last_name'),
       'email_address' => $this->input->post('email_address_signup'),
       'password' => $this->input->post('password_signup'),
       'role' => $this->input->post('role_signup')
     );
-    $insert = $this->db->insert('users', $new_member_insert_data);
+    $insert = $this->db->insert('users', $data);
+    return $insert;
+  }
+
+  /**
+   * Create company
+   * @return mixed
+   */
+
+  public function create_client() {
+    $data = array (
+      'title' => $this->input->post('title'),
+      'description' => $this->input->post('description'),
+      'email' => $this->input->post('email'),
+      'url' => $this->input->post('url'),
+      'phone' => $this->input->post('phone'),
+      'address' => $this->input->post('address'),
+      'index' => $this->input->post('index'),
+      'city' => $this->input->post('city'),
+      'country' => $this->input->post('country'),
+      'curator' => $this->input->post('curator')
+    );
+    $insert = $this->db->insert('client', $data);
     return $insert;
   }
 
