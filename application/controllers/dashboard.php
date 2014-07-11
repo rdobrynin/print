@@ -183,6 +183,7 @@ class Dashboard extends CI_Controller {
   function profile() {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+    $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {

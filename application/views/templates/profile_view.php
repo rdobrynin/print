@@ -29,8 +29,18 @@
                 <label for="phone">Phone</label>
                 <input type="text"  value="<?php print($user[0]['phone']);?>" class="form-control" name= "phone" id="last_name" placeholder="Phone number">
               </div>
-
-            </div>
+<!--                additional phones-->
+                <div class="form-group">
+                  <div class="col-md-12" style="padding-left: 30px;">
+                    <?php foreach ($phones as $k => $phone): ?>
+                      <?php if (isset($phone['phone'])): ?>
+                        <span><input type="hidden" name="<?php print($phone['pid']);?>">
+                        <span class="label label-default label-tag delete-add-phone" style="margin-left: 10px;"><i class="fa fa-phone"></i>&nbsp;<?php print($phone['phone']); ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
+                      <?php endif; ?>
+                    <?php endforeach ?>
+                  </div>
+                </div>
+              </div>
             <div class="col-md-12" style="margin-bottom: 10px;">
               <div class="btn btn-success" id="add">Add Phone</div>
             </div>
@@ -57,7 +67,7 @@
                 </div>
               </div>
             <?php endif ?>
-</div>
+          </div>
             <div class="address-wrapper" style="height: 100%;">
               <p  class="lead">Additional information</p>
               <div class="form-group">
@@ -96,6 +106,10 @@
 <?php include('footer.php');?>
 <script>
   $(function () {
+
+    $("body").on("click", ".delete-add-phone", function (e) {
+      $(this).parent("span").remove();
+    });
     if (window.location.hash == "#updated") {
       $('.show-info').show();
       $('.show-info').delay(2500).fadeOut();
@@ -125,10 +139,6 @@
     $('body').click(function () {
       $('.errors').slideUp( "fast");
     });
-
-
-
-
 
   });
 </script>

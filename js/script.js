@@ -4,13 +4,7 @@ $(function() {
         $('li').removeClass('active');
         $(this).parent().addClass('active');
     });
-
-
-
-
             $("#back-top").hide();
-
-
                 $(window).scroll(function () {
                     if ($(this).scrollTop() > 100) {
                         $('#back-top').fadeIn();
