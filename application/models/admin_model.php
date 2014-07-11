@@ -67,6 +67,20 @@ class Admin_model extends CI_Model {
     return $update;
   }
 
+  public function insert_member_phone($id) {
+    $phone_array = $this->input->post('add_phone');
+    $update = array();
+    foreach ($phone_array as $phone) {
+      $data = array(
+        'id' => $id,
+        'phone' => $phone,
+      );
+      $update = $this->db->insert('users_phones', $data);
+    }
+    return $update;
+  }
+
+
   public function get_user($username) {
     $query = $this
       ->db

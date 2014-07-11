@@ -205,9 +205,17 @@ class Dashboard extends CI_Controller {
     $id = $data['user'][0]['id'];
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
-      if($query=$this->admin_model->update_member($id)) {
+      $phone_add = $this->input->post('add_phone');
+      if(!empty($phone_add[0])) {
+        if($query=$this->admin_model->insert_member_phone($id) && $query=$this->admin_model->update_member($id));
         redirect(base_url().'profile#updated');
       }
+      else {
+        if($query=$this->admin_model->update_member($id)) {
+          redirect(base_url().'profile#updated');
+        }
+      }
+
     }
     else {
       $this->load->model('admin_model');

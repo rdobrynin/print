@@ -104,7 +104,7 @@
     $("#add").click(function (e) {
 //      $(this).attr('disabled','disabled');
 //Append a new row of code to the "#items" div
-      $("#items").append('<div class="col-md-12"><div class="form-group"><label for="phone">Additional Phone</label><div><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
+      $("#items").append('<div class="col-md-12"><div class="form-group"><label for="phone">Additional Phone</label><div><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
     });
 
 
