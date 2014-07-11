@@ -206,7 +206,7 @@ class Dashboard extends CI_Controller {
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
       if($query=$this->admin_model->update_member($id)) {
-        redirect(base_url().'profile');
+        redirect(base_url().'profile#updated');
       }
     }
     else {

@@ -96,6 +96,11 @@
 <?php include('footer.php');?>
 <script>
   $(function () {
+    if (window.location.hash == "#updated") {
+//      $('#modal_delete_vm').modal('show');
+      console.log('test');
+    }
+
     $("#add").click(function (e) {
 //      $(this).attr('disabled','disabled');
 //Append a new row of code to the "#items" div
