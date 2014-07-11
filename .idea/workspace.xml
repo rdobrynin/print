@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/addclient_view.php" afterPath="$PROJECT_DIR$/application/views/templates/addclient_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin_model.php" afterPath="$PROJECT_DIR$/application/models/admin_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/ajax.php" afterPath="$PROJECT_DIR$/application/controllers/ajax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login/footer.php" afterPath="$PROJECT_DIR$/application/views/login/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,19 +31,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.4921466">
       <split-first>
         <leaf>
-          <file leaf-file-name="dashboard.php" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="dashboard.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="152" column="5" selection-start="4396" selection-end="4396" vertical-scroll-proportion="-27.518518" vertical-offset="1993" max-vertical-offset="5382">
+                <state line="167" column="54" selection-start="5285" selection-end="5285" vertical-scroll-proportion="0.64444447" vertical-offset="2484" max-vertical-offset="5544">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin_model.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="admin_model.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="157" column="41" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.51111114" vertical-offset="2412" max-vertical-offset="4734">
+                <state line="166" column="0" selection-start="3679" selection-end="3679" vertical-scroll-proportion="-21.333334" vertical-offset="2412" max-vertical-offset="4734">
                   <folding />
                 </state>
               </provider>
@@ -107,7 +102,7 @@
           <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="24" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2709">
+                <state line="21" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2709">
                   <folding />
                 </state>
               </provider>
@@ -125,7 +120,7 @@
           <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/config/routes.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="34" selection-start="1503" selection-end="1503" vertical-scroll-proportion="-5.3333335" vertical-offset="612" max-vertical-offset="1859">
+                <state line="42" column="34" selection-start="1503" selection-end="1503" vertical-scroll-proportion="-5.3333335" vertical-offset="612" max-vertical-offset="1836">
                   <folding />
                 </state>
               </provider>
@@ -221,10 +216,10 @@
         <option value="$PROJECT_DIR$/application/views/login/footer.php" />
         <option value="$PROJECT_DIR$/application/views/templates/addclient_view.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/application/controllers/ajax.php" />
         <option value="$PROJECT_DIR$/application/models/admin_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
       </list>
     </option>
   </component>
@@ -529,8 +524,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10607915" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -818,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="34" selection-start="1503" selection-end="1503" vertical-scroll-proportion="-5.3333335" vertical-offset="612" max-vertical-offset="1859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/my_script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="45" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1652">
@@ -873,20 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="5" selection-start="4396" selection-end="4396" vertical-scroll-proportion="-27.518518" vertical-offset="1993" max-vertical-offset="5382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2709">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="61" selection-start="382" selection-end="382" vertical-scroll-proportion="-4.0" vertical-offset="108" max-vertical-offset="1728">
@@ -899,9 +873,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2709">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="41" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.51111114" vertical-offset="2412" max-vertical-offset="4734">
+        <state line="166" column="0" selection-start="3679" selection-end="3679" vertical-scroll-proportion="-21.333334" vertical-offset="2412" max-vertical-offset="4734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="34" selection-start="1503" selection-end="1503" vertical-scroll-proportion="-5.3333335" vertical-offset="612" max-vertical-offset="1859">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="54" selection-start="5285" selection-end="5285" vertical-scroll-proportion="0.64444447" vertical-offset="2484" max-vertical-offset="5544">
           <folding />
         </state>
       </provider>

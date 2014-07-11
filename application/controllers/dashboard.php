@@ -164,7 +164,16 @@ class Dashboard extends CI_Controller {
       $this->load->model('admin_model');
       $title = $this->admin_model->verify_client($this->input->post('title'));
      if($title) {
-      print "full";
+       $this->load->model('admin_model');
+       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+       $data['users'] = $this->admin_model->get_users();
+//    $data['roles'] = $this->admin_model->get_roles();
+       $this->load->view('templates/head');
+       if($data['user'][0]['helpblock']==1) {
+         $this->load->view('templates/help_block_view');
+       }
+       $this->load->view('templates/addclient_view', $data);
+       $this->load->view('templates/settings_view', $data);
      }
       else {
         if($query=$this->admin_model->create_client()) {
