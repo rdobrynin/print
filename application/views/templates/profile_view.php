@@ -81,7 +81,7 @@
             </div>
             <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
             <input type="hidden" value="<?php print(time());?>" name="date_edited">
-            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+            <button type="submit" id="profile-update-btn" class="btn btn-primary pull-right">Submit</button>
           </div>
 
       </form>
@@ -97,8 +97,8 @@
 <script>
   $(function () {
     if (window.location.hash == "#updated") {
-//      $('#modal_delete_vm').modal('show');
-      console.log('test');
+      $('.show-info').show();
+      $('.show-info').delay(2500).fadeOut();
     }
 
     $("#add").click(function (e) {

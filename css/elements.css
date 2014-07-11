@@ -149,3 +149,36 @@ div.alert.inbox a:hover, div.alert.inbox {
     font-size: 12px;
     /* padding: 15px; */
 }
+
+.show-info {
+    width: 300px;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    margin: 0 auto;
+    /* overflow: overlay; */
+    right: 30px;
+    z-index: 999;
+    top: 30px;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 3px 2px 5px #0A0A0A;
+    background: rgba(0, 0, 0, 0.80);
+    display: none;
+}
+
+.expandable-image {
+    position: absolute;
+    top: 68px;
+    left: -50px;
+    width: 52px;
+    height: 52px;
+    background: url("../img/positive_48.png") no-repeat;
+}
+
+div.show-info-content {
+    color: #fff;
+    /* vertical-align: text-bottom; */
+    height: auto;
+    padding-top: 18px;
+}

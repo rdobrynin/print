@@ -4,7 +4,7 @@
     </li>
     <span class="avatar-name">Admin</span>
   </ul>
-
+<div class="show-info"><div class="show-info-content">You have successfully update your profile</div><div class="expandable-image"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
     <li class="add-client pull-left"><a href="addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn">Add client</span></button></a></li>
     <li class="dropdown messages-dropdown">
