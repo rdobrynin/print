@@ -34,7 +34,6 @@ class Ajax extends CI_Controller {
     $this->load->model('admin_model');
     $check_title= $this->admin_model->verify_client($title);
     $returnText = '';
-    // Делаем простую проверку, замените на свою
     if($title !== $check_title[0]['title']){
       $returnText = '<span style="color:#1e6cff;">Company address is not taken</span>';
     } else {
@@ -45,6 +44,18 @@ class Ajax extends CI_Controller {
     // Возвращаем ответ
     print $returnText;
 
+  }
+
+
+  /**
+   * Success modal
+   */
+
+  public function success() {
+    $result =  $_POST['result'];
+    $url = base_url();
+    $status = array("URL"=>$url, "RESULT"=>$result);
+    echo json_encode ($status) ;
   }
 
 }

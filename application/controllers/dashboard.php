@@ -97,7 +97,7 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-    $this->load->view('templates/test_view');
+//    $this->load->view('templates/success_view');
   }
 
   /**
@@ -181,6 +181,7 @@ class Dashboard extends CI_Controller {
           $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
           $data['users'] = $this->admin_model->get_users();
           $data['response'] = 'Company successfully created';
+          $data['result'] = 'addclient';
           $this->load->view('templates/head');
           if($data['user'][0]['helpblock']==1) {
             $this->load->view('templates/help_block_view');
@@ -240,11 +241,15 @@ class Dashboard extends CI_Controller {
       $phone_add = $this->input->post('add_phone');
       if(!empty($phone_add[0])) {
         if($query=$this->admin_model->insert_member_phone($id) && $query=$this->admin_model->update_member($id));
-        redirect(base_url().'profile#updated');
+        $data['response'] = 'Profile successfully updated';
+        $data['result'] = 'profile';
+        $this->load->view('templates/success_view', $data);
       }
       else {
         if($query=$this->admin_model->update_member($id)) {
-          redirect(base_url().'profile#updated');
+          $data['response'] = 'Profile successfully updated';
+          $data['result'] = 'profile';
+          $this->load->view('templates/success_view', $data);
         }
       }
 
