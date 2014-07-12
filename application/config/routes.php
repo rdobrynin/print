@@ -50,6 +50,7 @@ $route['comments'] = 'dashboard/comments';
 $route['clients'] = 'dashboard/clients';
 $route['success'] = 'dashboard/success';
 $route['addclient'] = 'dashboard/addclient';
+$route['delete_client'] = 'dashboard/delete_client';
 $route['addclient_form'] = 'dashboard/addclient_form';
 $route['update_profile'] = 'dashboard/update_profile';
 $route['404_override'] = 'custom404';

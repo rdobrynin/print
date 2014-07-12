@@ -31,20 +31,21 @@
               </div>
 <!--                additional phones-->
                 <div class="form-group">
-                  <div class="col-md-12" style="padding-left: 30px;">
+                  <div class="col-md-12" style="padding-left: 20px;">
                     <?php foreach ($phones as $k => $phone): ?>
                       <?php if (isset($phone['phone'])): ?>
-                        <span><input type="hidden" name="<?php print($phone['pid']);?>">
+                        <span><input type="hidden" name="<?php print($phone['id']);?>">
                         <span class="label label-default label-tag delete-add-phone" style="margin-left: 10px;"><i class="fa fa-phone"></i>&nbsp;<?php print($phone['phone']); ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
                       <?php endif; ?>
                     <?php endforeach ?>
                   </div>
                 </div>
               </div>
-            <div class="col-md-12" style="margin-bottom: 10px;">
-              <div class="btn btn-success" id="add">Add Phone</div>
+            <div class="col-md-12" style="margin-bottom: 10px; margin-left: -14px;">
+              <div class="btn btn-xs btn-success" id="add">Add Phone</div>
             </div>
             <div id="items"></div>
+             <div id="items_remove"></div>
               <div class="form-group">
             <div class="col-md-12">
                 <label for="email_address">Email</label>

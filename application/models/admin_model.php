@@ -51,7 +51,6 @@ class Admin_model extends CI_Model {
     }
   }
 
-
   /**
    * Create member
    * @return mixed
@@ -85,9 +84,20 @@ class Admin_model extends CI_Model {
       'index' => $this->input->post('index'),
       'city' => $this->input->post('city'),
       'country' => $this->input->post('country'),
-      'curator' => $this->input->post('curator')
+      'creator' => $this->input->post('curator')
     );
     $insert = $this->db->insert('client', $data);
+    return $insert;
+  }
+
+  /**
+   * Delete company
+   * @return mixed
+   */
+
+  public function delete_client($cid) {
+    $this->db->where('cid', $cid);
+    $insert = $this->db->delete('client');
     return $insert;
   }
 
@@ -124,7 +134,7 @@ class Admin_model extends CI_Model {
     $update = array();
     foreach ($phone_array as $phone) {
       $data = array(
-        'id' => $id,
+        'pid' => $id,
         'phone' => $phone,
       );
       $update = $this->db->insert('users_phones', $data);
@@ -142,7 +152,7 @@ class Admin_model extends CI_Model {
   public function get_phones($id) {
     $query = $this
       ->db
-      ->where('id', $id)
+      ->where('pid', $id)
       ->get('users_phones');
     return $query->result_array();
   }
@@ -152,8 +162,6 @@ class Admin_model extends CI_Model {
    * @param $title
    * @return mixed
    */
-
-
 
   public function verify_client($title) {
     $query = $this
@@ -176,6 +184,21 @@ class Admin_model extends CI_Model {
       ->db
     ->where('email_address', $username)
       ->get('users');
+    return $query->result_array();
+  }
+
+
+  /**
+   * get own client ();
+   * @param $username
+   * @return mixed
+   */
+
+  public function get_own_client($id) {
+    $query = $this
+      ->db
+      ->where('creator', $id)
+      ->get('client');
     return $query->result_array();
   }
 
