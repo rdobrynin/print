@@ -132,6 +132,7 @@ class Dashboard extends CI_Controller {
 
   function addclient() {
     $this->load->model('admin_model');
+    $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();
@@ -149,11 +150,16 @@ class Dashboard extends CI_Controller {
 
   function delete_client() {
     $cid=$this->input->post('cid');
-    $this->load->model('admin_model');
-    $this->admin_model->delete_client($cid);
-    $data['response'] = 'Removing company ...';
-    $data['result'] = 'clients';
-    $this->load->view('templates/success_view', $data);
+    if(!empty($cid)) {
+      $this->load->model('admin_model');
+      $this->admin_model->delete_client($cid);
+      $data['response'] = 'Removing company ...';
+      $data['result'] = 'clients';
+      $this->load->view('templates/success_view', $data);
+    }
+    else {
+      $this->load->view('custom404_view');
+    }
   }
 
   /**
@@ -184,6 +190,7 @@ class Dashboard extends CI_Controller {
       $title = $this->admin_model->verify_client($this->input->post('title'));
      if($title) {
        $this->load->model('admin_model');
+       $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
        $data['users'] = $this->admin_model->get_users();
 //    $data['roles'] = $this->admin_model->get_roles();

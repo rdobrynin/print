@@ -102,4 +102,30 @@ $('.closebox').click(function(e){
             $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="'+ $table.find('.filters th').length +'">No result found</td></tr>'));
         }
     });
+
+    $('.test').click(function () {
+        pathArray = window.location.href.split( '/' );
+        protocol = pathArray[0];
+        name = pathArray[3];
+        host = pathArray[2];
+        url = protocol+'//'+host+'/'+name;
+        window.location.href = url+'/delete_client/?cid=57';
+//alert(url+'?action=delete_client&cid=57');
+//        window.location.href = url;
+
+
+        var destroydiskpid = false;
+        var vmpid = false;
+        $('.destroy_disk_href').click(function(){
+            destroydiskpid = $(this).data('destroydiskpid');
+            vmpid = $(this).data('vmpid');
+        });
+        $('#destroy_disk_btn').click(function(){
+            if(destroydiskpid != false){
+                $(this).attr("disabled","disabled");
+//                window.location.href = url+'?action=delete_client&cid=57';
+            }
+        });
+
+    });
 });

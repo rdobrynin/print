@@ -23,11 +23,4 @@
 </div>
 
 
-<script>
-  $(function () {
-
-  });
-</script>
-
-
 

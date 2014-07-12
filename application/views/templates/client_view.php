@@ -44,7 +44,7 @@
             <td><?php print($cv['created']);?></td>
             <td> <form action="<?php print(base_url());?>delete_client" method="POST">
                 <input type="hidden" name="cid" value="<?php print($cv['cid']);?>">
-                <span class="pull-left"><button class="btn btn-xs btn-danger">delete</button></span>
+                <span class="pull-left"><input type="submit" value="delete" class="btn btn-xs btn-danger"></span>
               </form>
               <span class="pull-right"><button class="btn btn-xs btn-success">edit</button></span></td>
           </tr>
@@ -63,13 +63,3 @@
   </div>
 </div>
 </div>
-
-
-<script>
-  $(function () {
-
-  });
-</script>
-
-
-
