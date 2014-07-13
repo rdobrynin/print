@@ -7,19 +7,15 @@ class Ajax extends CI_Controller {
   public function check_email() {
 // Тут мы получаем переданные нам данные из предыдущего файла
     $userLogin = $this->input->post('email_address');
-
-
     $this->load->model('admin_model');
     $check_mail= $this->admin_model->check_email($userLogin);
     $returnText = '';
-
     // Делаем простую проверку, замените на свою
     if($userLogin == $check_mail[0]->email_address){
       $returnText = '<span style="color:#1e6cff;">Email address is correct</span>';
     } else {
       $returnText = '<span style="color:red;">Email address is not correct</span>';
     }
-
     // Возвращаем ответ
     echo $returnText;
 
@@ -60,8 +56,6 @@ class Ajax extends CI_Controller {
 
   public function addclient() {
     $result = array();
-
-
     $this->load->library('form_validation');
     $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
@@ -69,9 +63,6 @@ class Ajax extends CI_Controller {
     $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('city', 'City', 'trim|required');
     $this->form_validation->set_rules('country', 'Country', 'trim|required');
-
-
-
     if ($this->form_validation->run() !== false) {
       $this->load->model('admin_model');
       $query = $this->admin_model->create_client();
@@ -93,9 +84,7 @@ class Ajax extends CI_Controller {
         $result['error'] = 1;
         $result['result'] = 'Error in Database';
       }
-
     }
-
     else {
       $result['error'] = 1;
       $result['result'] = validation_errors();
