@@ -207,8 +207,6 @@
       $('.show-info-error').children( ".show-info-content").html(msg.result);
       $('.show-info-error').delay(3500).fadeOut();
           }
-
-
         }
       });
       });
@@ -227,10 +225,10 @@
             $('#create_company').attr('disabled','disabled');
             $('#check_client').show();
             $("#check_client").empty().append(msg.result);
-            $('#check_client').delay(3500).fadeOut();
           }
           else {
             $('#create_company').removeAttr('disabled');
+            $('#check_client').hide();
           }
 
 

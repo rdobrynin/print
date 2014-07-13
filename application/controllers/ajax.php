@@ -61,8 +61,7 @@ class Ajax extends CI_Controller {
   public function addclient() {
     $result = array();
 
-    $this->load->model('admin_model');
-    $query = $this->admin_model->create_client();
+
     $this->load->library('form_validation');
     $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
@@ -74,7 +73,8 @@ class Ajax extends CI_Controller {
 
 
     if ($this->form_validation->run() !== false) {
-
+      $this->load->model('admin_model');
+      $query = $this->admin_model->create_client();
       if ($query){  //&& any other condition
         $result['title'] = $_POST['title'];
         $result['email'] = $_POST['email'];
