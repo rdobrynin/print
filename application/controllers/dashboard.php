@@ -230,6 +230,27 @@ class Dashboard extends CI_Controller {
     }
   }
 
+  /**
+   * Team view
+   */
+
+  function team() {
+    $this->load->model('admin_model');
+    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+    $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+    $data['users'] = $this->admin_model->get_users();
+    $this->load->view('templates/head');
+    if($data['user'][0]['helpblock']==1) {
+      $this->load->view('templates/help_block_view');
+    }
+    $this->load->view('templates/navtop_view', $data);
+    $this->load->view('templates/sidebar_view', $data);
+
+    $this->load->view('templates/team_view', $data);
+    $this->load->view('templates/footer');
+    $this->load->view('templates/settings_view', $data);
+  }
+
 
   /**
    * Profile view

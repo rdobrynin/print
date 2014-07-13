@@ -196,3 +196,5 @@ div.show-info-content {
 .dropdown {
     cursor: pointer;
 }
+
+li {list-style-type: none;}

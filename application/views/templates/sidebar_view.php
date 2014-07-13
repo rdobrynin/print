@@ -13,7 +13,7 @@
       </li>
       <li class="<? $url_arg=='tasks' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-tasks"></i>&nbsp;<span class="left-resp-menu">Tasks</span></a><span class="badge badge-resp">8</span>
       </li>
-      <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu">Team</span></a>
+      <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>team"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu">Team</span></a>
       </li>
       <li class="<? $url_arg=='chart' ? print('active') : print('') ?>"><a href="#"><i class="glyphicon glyphicon-stats"></i>&nbsp;<span class="left-resp-menu">Chart</span></a>
       </li>
