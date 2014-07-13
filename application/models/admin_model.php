@@ -169,7 +169,7 @@ class Admin_model extends CI_Model {
       ->where('title', $title)
       ->get('client');
     error_reporting(0);
-    return $query->result();
+    return $query->result_array();
 
   }
 

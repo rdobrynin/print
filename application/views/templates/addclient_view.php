@@ -7,7 +7,6 @@
     <div class="row">
 <!--FORM-->
       <div class="col-md-8">
-        <div id="check_login"></div>
         <h2>Add client</h2>
               <form role="form" id="add-clientForm" class="form-horizontal">
 
@@ -15,8 +14,9 @@
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_title">Company<span class="req">*</span></label>
-                  <div class="col-sm-10"><input type="text" class="form-control" name="title" id="client_title" placeholder="Company title here"></div>
+                  <div class="col-sm-5"><input type="text" class="form-control" name="title" id="client_title" placeholder="Company title here">      <span id="check_client" class="label label-danger"></span></div>
                 </div>
+
                 <div class="form-group">
                   <label class="col-sm-12" for="client_description">Company description</label>
                   <div class="col-sm-12"><textarea rows="4" cols="50" class="form-control" name="description"  id="client_description"></textarea></div>
@@ -55,6 +55,9 @@
                     <select id="select-country" name="country" class="form-control">
                       <?php  $countries = get_countries(); ?>
                       <?php  foreach($countries as $ck => $cv): ?>
+                        <?php if ($ck == 'EE'): ?>
+                          <option selected="selected" value="<?php  print($cv); ?>"><?php  print($cv); ?></option>
+                        <?php endif ?>
                         <option value="<?php  print($cv); ?>"><?php  print($cv); ?></option>
                       <?php  endforeach; ?>
                     </select>
@@ -194,12 +197,48 @@
         data: form_data,
         dataType: 'json',
         success: function (msg) {
-//            console.log(msg.title+"\n"+msg.email+"\n"+msg.description+"\n"+msg.url+"\n"+msg.address+"\n"+msg.index+"\n"+msg.phone+"\n"+msg.city+"\n"+msg.curator);
-          console.log(msg.error);
+    if(msg.error==0) {
+      $('.show-info').show();
+      $('.show-info').children( ".show-info-content").html(msg.result);
+      $('.show-info').delay(3500).fadeOut();
+    }
+          else if(msg.error==1){
+      $('.show-info-error').show();
+      $('.show-info-error').children( ".show-info-content").html(msg.result);
+      $('.show-info-error').delay(3500).fadeOut();
+          }
+
 
         }
       });
       });
+
+    $( "#client_title" ).blur(function() {
+      var form_data = {
+        title: $('#client_title').val()
+      };
+      $.ajax({
+        url: "<?php echo site_url('ajax/check_client'); ?>",
+        type: 'POST',
+        data: form_data,
+        dataType: 'json',
+        success: function (msg) {
+          if(msg.result!=null) {
+            $('#create_company').attr('disabled','disabled');
+            $('#check_client').show();
+            $("#check_client").empty().append(msg.result);
+            $('#check_client').delay(3500).fadeOut();
+          }
+          else {
+            $('#create_company').removeAttr('disabled');
+          }
+
+
+
+        }
+      });
+    });
+
 
   });
 </script>

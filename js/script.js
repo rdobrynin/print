@@ -1,23 +1,6 @@
 $(function() {
 
 
-    $( "#client_title" ).blur(function() {
-        var title = $("#client_title").val();
-        var html = $.ajax({
-            type: "POST",
-            // Тут в качестве параметра url мы указываем на
-            // controller который будет обрабатывать наши данные
-            url: "ajax/check_client",
-            data: ({
-                'title' : title
-            }),
-            dataType: "html",
-            async: false
-        }).responseText;
-        $('#check_login').show();
-//        $('.errors').hide();
-        $("#check_login").empty().append(html);
-    });
 
 
     $("li a").click(function(e) {

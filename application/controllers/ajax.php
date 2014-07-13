@@ -33,16 +33,15 @@ class Ajax extends CI_Controller {
     $title = $this->input->post('title');
     $this->load->model('admin_model');
     $check_title= $this->admin_model->verify_client($title);
-    $returnText = '';
-    if($title !== $check_title[0]['title']){
-      $returnText = '<span style="color:#1e6cff;">Company address is not taken</span>';
-    } else {
-      var_dump($title);
-      $returnText = '<span style="color:red;">This company already registered</span>';
-
+    $result = array();
+    if($title === $check_title[0]['title']){
+      $result['result'] ='"'.$title.'"'. ' is already registered';
     }
-    // Возвращаем ответ
-    print $returnText;
+    else {
+      $result['result'] = null;
+    }
+
+    echo json_encode($result);
 
   }
 
@@ -88,15 +87,18 @@ class Ajax extends CI_Controller {
         $result['country'] = $_POST['country'];
         $result['curator'] = $_POST['curator'];
         $result['error'] = 0;
+        $result['result'] = "<ul><li> Company ".$_POST['title']."</li><li> Email ".$_POST['email']."</li><li> Description ".substr($_POST['description'],1,50)."</li><li> URL ".$_POST['url']."</li><li> Phone ".$_POST['phone']."</li><li> Address ".$_POST['address']."</li><li> Index ".$_POST['index']."</li><li> City ".$_POST['city']."</li><li>Country ".$_POST['country']."</li></ul><div>Was successfully created</div>";
       }
       else {
         $result['error'] = 1;
+        $result['result'] = 'Error in Database';
       }
 
     }
 
     else {
-      $result['error'] = validation_errors();
+      $result['error'] = 1;
+      $result['result'] = validation_errors();
     }
 
 
