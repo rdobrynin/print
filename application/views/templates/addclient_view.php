@@ -209,6 +209,7 @@
           }
         }
       });
+      $(this).closest('form').find("input[type=text], textarea").val("");
       });
 
     $( "#client_title" ).blur(function() {
