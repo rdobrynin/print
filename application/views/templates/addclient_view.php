@@ -9,7 +9,7 @@
       <div class="col-md-8">
         <div id="check_login"></div>
         <h2>Add client</h2>
-              <form role="form" id="add-clientForm" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
+              <form role="form" id="add-clientForm" class="form-horizontal">
 
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
@@ -99,11 +99,13 @@
                   <div id="items_curator_client"></div>
               </div>
 
+                <div id="contact_form">
+                </div>
                 <hr>
-                <input type="hidden" class="form-control" id="client_curator" name="curator" value="<?php print($user[0]['id']);?>">
+                <input type="hidden" class="form-control" id="client_owner" name="curator" value="<?php print($user[0]['id']);?>">
 
                 <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
-                <input type="submit" class="btn btn-primary pull-right" id="create_company" value="Create company">
+                <button type="button"  class="btn btn-primary pull-right" id="create_company">Change Content</button>
               </form>
             </div>
 
@@ -172,27 +174,32 @@
       $('.errors').slideUp( "fast");
     });
 
+//    AJAX CREATE COMPANY
+    $('#create_company').click(function () {
+      var form_data = {
+        title: $('#client_title').val(),
+        description: $('#client_description').val(),
+        email: $('#client_email').val(),
+        phone: $('#client_phone').val(),
+        address: $('#client_address').val(),
+        index: $('#client_index').val(),
+        url: $('#client_url').val(),
+        city: $('#client_city').val(),
+        country: $('#select-country option:selected').val(),
+        curator: $('#client_owner').val()
+      };
+      $.ajax({
+        url: "<?php echo site_url('ajax/addclient'); ?>",
+        type: 'POST',
+        data: form_data,
+        dataType: 'json',
+        success: function (msg) {
+//            console.log(msg.title+"\n"+msg.email+"\n"+msg.description+"\n"+msg.url+"\n"+msg.address+"\n"+msg.index+"\n"+msg.phone+"\n"+msg.city+"\n"+msg.curator);
+          console.log(msg.error);
 
-    $.ajax({
-      type: "post",
-      url: "ajax/addclient",
-      cache: false,
-      data: $('#add-clientForm').serialize(),
-      success: function(json){
-        try{
-          var obj = jQuery.parseJSON(json);
-          url_path = obj['URL'];
-          url_result = obj['RESULT'];
-        }catch(e) {
-          alert('Exception while request..');
         }
-      },
-      error: function(){
-        alert('Error while request..');
-      }
-    });
-
-
+      });
+      });
 
   });
 </script>

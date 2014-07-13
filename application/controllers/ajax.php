@@ -60,12 +60,48 @@ class Ajax extends CI_Controller {
 
 
   public function addclient() {
-    $result =  $_POST['result'];
+    $result = array();
 
-    $status = array(
-      "URL"=>$url,
-      "RESULT"=>$result);
-    echo json_encode ($status) ;
+    $this->load->model('admin_model');
+    $query = $this->admin_model->create_client();
+    $this->load->library('form_validation');
+    $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
+    $this->form_validation->set_rules('phone', 'Phone number', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('city', 'City', 'trim|required');
+    $this->form_validation->set_rules('country', 'Country', 'trim|required');
+
+
+
+    if ($this->form_validation->run() !== false) {
+
+      if ($query){  //&& any other condition
+        $result['title'] = $_POST['title'];
+        $result['email'] = $_POST['email'];
+        $result['description'] = $_POST['description'];
+        $result['url'] = $_POST['url'];
+        $result['phone'] = $_POST['phone'];
+        $result['title'] = $_POST['address'];
+        $result['index'] = $_POST['index'];
+        $result['city'] = $_POST['city'];
+        $result['country'] = $_POST['country'];
+        $result['curator'] = $_POST['curator'];
+        $result['error'] = 0;
+      }
+      else {
+        $result['error'] = 1;
+      }
+
+    }
+
+    else {
+      $result['error'] = validation_errors();
+    }
+
+
+    echo json_encode($result); //At the end of the function.
+
   }
 
 }
