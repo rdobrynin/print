@@ -124,6 +124,38 @@ class Admin_model extends CI_Model {
   }
 
   /**
+   * Change status to online
+   * @param $id
+   * @return mixed
+   */
+
+  public function online_status($id) {
+    $data = array (
+      'status' => 1
+    );
+    $this->db->where('id', $id);
+    $update = $this->db->update('users', $data);
+    return $update;
+  }
+
+  /**
+   * Change status to offline
+   * @param $id
+   * @return mixed
+   */
+
+  public function offline_status($id) {
+    $data = array (
+      'status' => 0
+    );
+    $this->db->where('id', $id);
+    $update = $this->db->update('users', $data);
+    return $update;
+  }
+
+
+
+  /**
    * Insert member phone
    * @param $id
    * @return array

@@ -26,9 +26,9 @@ class Admin extends CI_Controller {
        ->verify_user(
          $this->input->post('email_address'),
          $this->input->post('password'));
-
-
       if($res !== false) {
+        $this->load->model('admin_model');
+        $this->admin_model->online_status($res->id);
 //person has account
         $_SESSION['username'] = $res->id;
         redirect('dashboard');
@@ -42,6 +42,9 @@ class Admin extends CI_Controller {
 
 // logout and session destroy
   function logout() {
+    $this->load->model('admin_model');
+    $id=$this->admin_model->get_user_id($_SESSION['username']);
+    $this->admin_model->offline_status($id[0]['id']);
     session_destroy();
     $this->load->view('login/login_view');
   }
