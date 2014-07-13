@@ -9,7 +9,7 @@
       <div class="col-md-8">
         <div id="check_login"></div>
         <h2>Add client</h2>
-              <form role="form" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
+              <form role="form" id="add-clientForm" class="form-horizontal" action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="on">
 
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
@@ -173,7 +173,24 @@
     });
 
 
-
+    $.ajax({
+      type: "post",
+      url: "ajax/addclient",
+      cache: false,
+      data: $('#add-clientForm').serialize(),
+      success: function(json){
+        try{
+          var obj = jQuery.parseJSON(json);
+          url_path = obj['URL'];
+          url_result = obj['RESULT'];
+        }catch(e) {
+          alert('Exception while request..');
+        }
+      },
+      error: function(){
+        alert('Error while request..');
+      }
+    });
 
 
 

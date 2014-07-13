@@ -58,6 +58,16 @@ class Ajax extends CI_Controller {
     echo json_encode ($status) ;
   }
 
+
+  public function addclient() {
+    $result =  $_POST['result'];
+
+    $status = array(
+      "URL"=>$url,
+      "RESULT"=>$result);
+    echo json_encode ($status) ;
+  }
+
 }
 
 
