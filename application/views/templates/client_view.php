@@ -63,3 +63,9 @@
   </div>
 </div>
 </div>
+<?php include('footer.php');?>
+<script>
+  $(function () {
+
+  });
+</script>

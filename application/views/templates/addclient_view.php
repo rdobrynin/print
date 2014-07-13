@@ -172,5 +172,10 @@
       $('.errors').slideUp( "fast");
     });
 
+
+
+
+
+
   });
 </script>

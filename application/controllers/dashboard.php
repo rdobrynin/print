@@ -92,9 +92,8 @@ class Dashboard extends CI_Controller {
     }
     $this->load->view('templates/navtop_view',$data);
     $this->load->view('templates/sidebar_view', $data);
-    $this->load->view('templates/comments_view', $data);
     $this->load->view('templates/settings_view', $data);
-    $this->load->view('templates/footer');
+    $this->load->view('templates/comments_view', $data);
   }
 
   /**
@@ -121,9 +120,9 @@ class Dashboard extends CI_Controller {
     }
     $this->load->view('templates/navtop_view',$data);
     $this->load->view('templates/sidebar_view', $data);
-    $this->load->view('templates/client_view', $data);
     $this->load->view('templates/settings_view', $data);
-    $this->load->view('templates/footer');
+    $this->load->view('templates/client_view', $data);
+
   }
 
   /**
