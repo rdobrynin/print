@@ -21,6 +21,40 @@
       }
     })());
 
+
+
+    $(function () {
+      setInterval(function() {
+        current_time = $.now();
+        $.ajax({
+          url: "<?php echo site_url('ajax/check_online'); ?>",
+          type: 'GET',
+          dataType: 'json',
+          success: function (msg) {
+            msg.status.forEach(function(entry) {
+              var name = entry['first_name'] + ' ' + entry['last_name'];
+              var id = entry['id'];
+              var time = entry['status_time'];
+              var status = entry['status'];
+              if(current_time <(entry['status_time']+100)) {
+//           ONLINE
+                if(entry['status']=='1') {
+            $('.show-info-online').show();
+            $('.show-info-online').children( ".show-info-content-online").html('<span class="label label-xs label-success label-round"></span>'+name+' is online');
+            $('.show-info-online').delay(2500).fadeOut();
+                }
+                else if(entry['status']=='0') {
+                  $('.show-info-online').show();
+                  $('.show-info-online').children( ".show-info-content-online").html('<span class="label label-xs label-primary label-round"></span>'+name+' is offline');
+                  $('.show-info-online').delay(2500).fadeOut();
+                }
+              }
+            });
+          }
+        });
+      }, 5900);
+    });
+
   });
 </script>
 </body>

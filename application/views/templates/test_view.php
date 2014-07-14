@@ -10,36 +10,3 @@
 </div>
 
 <?php include('footer.php'); ?>
-
-<script>
-  $(function () {
-    setInterval(function() {
-      current_time = $.now();
-    $.ajax({
-      url: "<?php echo site_url('ajax/check_online'); ?>",
-      type: 'GET',
-      dataType: 'json',
-      success: function (msg) {
-       msg.status.forEach(function(entry) {
-         var name = entry['first_name'] + ' ' + entry['last_name'];
-         var id = entry['id'];
-         var time = entry['status_time'];
-         var status = entry['status'];
-         if(current_time <(entry['status_time']+100)) {
-//           ONLINE
-           if(entry['status']=='1') {
-             console.log(entry);
-           }
-           else if(entry['status']=='0') {
-             console.log(entry);
-           }
-         }
-
-
-
-        });
-      }
-    });
-    }, 5900);
-  });
-</script>
