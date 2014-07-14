@@ -12,7 +12,6 @@
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
     <div class="row">
-
     </div>
     <p id="back-top">
       <a href="#top"><span></span><i style="font-size: 30px;" class="fa fa-arrow-circle-up"></i><span></span></a>

@@ -252,3 +252,7 @@ li {
     cursor: inherit;
     display: block;
 }
+
+.note-sound {
+    display: block;
+}
