@@ -22,7 +22,6 @@
     })());
 
 
-    $(function () {
       setInterval(function() {
         current_time = $.now();
         $.ajax({
@@ -44,8 +43,9 @@
                   });
                   // Call our addSource function, and pass in the audio element
                   // and the path(s) to your audio.
-                  addSource(audio, 'img/icq.ogg');
-                  addSource(audio, 'img/icq.mp3');
+                  addSource(audio, 'img/icq_online.ogg');
+                  addSource(audio, 'img/icq_online.mp3');
+
                   // When some event is fired...
                     // Add the audio + source elements to the page.
                     audio.appendTo('.note-sound');
@@ -61,27 +61,7 @@
             $('.show-info-online').delay(2500).fadeOut();
                 }
                 else if(entry['status']=='0') {
-                  var audio = $('<audio />', {
-                    autoPlay : 'autoplay',
-                    controls : 'controls'
-                  });
 
-                  // Call our addSource function, and pass in the audio element
-                  // and the path(s) to your audio.
-                  addSource(audio, 'img/icq.ogg');
-                  addSource(audio, 'img/icq.mp3');
-
-                  // When some event is fired...
-
-                  // Add the audio + source elements to the page.
-                  audio.appendTo('.note-sound');
-                  // Fadeout the anchor tag to keep the user from clicking it again.
-                  $(this).fadeOut('slow');
-                  // Adds a source element, and appends it to the audio element, represented
-                  // by elem.
-                  function addSource(elem, path) {
-                    $('<source />').attr('src', path).appendTo(elem);
-                  }
                   $('.show-info-online').show();
                   $('.show-info-online').children( ".show-info-content-online").html('<span class="label label-xs label-primary label-round"></span>'+name+' is offline');
                   $('.show-info-online').delay(2500).fadeOut();
@@ -91,7 +71,7 @@
           }
         });
       }, 5900);
-    });
+
 
   });
 </script>
