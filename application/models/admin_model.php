@@ -132,7 +132,7 @@ class Admin_model extends CI_Model {
   public function online_status($id) {
     $data = array (
       'status' => 1,
-      'status_time' => time()
+      'status_time' => time()+6
     );
     $this->db->where('id', $id);
     $update = $this->db->update('users', $data);
