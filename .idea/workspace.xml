@@ -9,6 +9,7 @@
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin_model.php" afterPath="$PROJECT_DIR$/application/models/admin_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/test_view.php" afterPath="$PROJECT_DIR$/application/views/templates/test_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,7 +95,7 @@
       <file leaf-file-name="test_view.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/templates/test_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="7" selection-start="809" selection-end="809" vertical-scroll-proportion="0.75630254" vertical-offset="0" max-vertical-offset="1499">
+            <state line="33" column="32" selection-start="916" selection-end="916" vertical-scroll-proportion="0.71308523" vertical-offset="0" max-vertical-offset="1607">
               <folding />
             </state>
           </provider>
@@ -112,7 +113,7 @@
       <file leaf-file-name="admin_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="29" selection-start="3472" selection-end="3472" vertical-scroll-proportion="-20.0" vertical-offset="2160" max-vertical-offset="5819">
+            <state line="150" column="31" selection-start="3474" selection-end="3474" vertical-scroll-proportion="-20.0" vertical-offset="2160" max-vertical-offset="5819">
               <folding />
             </state>
           </provider>
@@ -867,13 +868,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
+    <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="16" selection-start="1570" selection-end="1570" vertical-scroll-proportion="-5.321429" vertical-offset="723" max-vertical-offset="2990">
-          <folding>
-            <marker date="1405336297088" expanded="false" signature="539:553" placeholder="..." />
-            <marker date="1405336297088" expanded="false" signature="636:646" placeholder="..." />
-          </folding>
+        <state line="150" column="31" selection-start="3474" selection-end="3474" vertical-scroll-proportion="-20.0" vertical-offset="2160" max-vertical-offset="5819">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -884,16 +882,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="29" selection-start="3472" selection-end="3472" vertical-scroll-proportion="-20.0" vertical-offset="2160" max-vertical-offset="5819">
-          <folding />
+        <state line="65" column="16" selection-start="1570" selection-end="1570" vertical-scroll-proportion="-5.321429" vertical-offset="723" max-vertical-offset="2990">
+          <folding>
+            <marker date="1405336297088" expanded="false" signature="539:553" placeholder="..." />
+            <marker date="1405336297088" expanded="false" signature="636:646" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/test_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="7" selection-start="809" selection-end="809" vertical-scroll-proportion="0.75630254" vertical-offset="0" max-vertical-offset="1499">
+        <state line="33" column="32" selection-start="916" selection-end="916" vertical-scroll-proportion="0.71308523" vertical-offset="0" max-vertical-offset="1607">
           <folding />
         </state>
       </provider>

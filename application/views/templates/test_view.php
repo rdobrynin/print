@@ -26,7 +26,13 @@
          var time = entry['status_time'];
          var status = entry['status'];
          if(current_time <(entry['status_time']+100)) {
-           console.log(entry);
+//           ONLINE
+           if(entry['status']=='1') {
+             console.log(entry);
+           }
+           else if(entry['status']=='0') {
+             console.log(entry);
+           }
          }
 
 
