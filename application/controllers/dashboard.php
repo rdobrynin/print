@@ -14,41 +14,41 @@ class Dashboard extends CI_Controller {
   }
 
 
-//  function _remap($method) {
-//    // $method contains the second segment of your URI
-//    switch ($method) {
-//      case 'dashboard':
-//        $this->index();
-//        break;
-//      case 'profile':
-//        $this->profile();
-//        break;
-//      case 'update_profile':
-//        $this->update_profile();
-//        break;
-//      case 'comments':
-//        $this->comments();
-//        break;
-//      case 'team':
-//        $this->team();
-//        break;
-//      case 'users':
-//        $this->users();
-//        break;
-//      case 'switch_help':
-//        $this->switch_help();
-//        break;
-//      case 'clients':
-//        $this->clients();
-//        break;
-//      case 'addclient':
-//        $this->addclient();
-//        break;
-//      default:
-//        $this->error();
-//        break;
-//    }
-//  }
+  function _remap($method) {
+    // $method contains the second segment of your URI
+    switch ($method) {
+      case 'index':
+        $this->index();
+        break;
+      case 'profile':
+        $this->profile();
+        break;
+      case 'projects':
+        $this->projects();
+        break;
+      case 'update_profile':
+        $this->update_profile();
+        break;
+      case 'comments':
+        $this->comments();
+        break;
+      case 'team':
+        $this->team();
+        break;
+      case 'users':
+        $this->users();
+        break;
+      case 'switch_help':
+        $this->switch_help();
+        break;
+      case 'clients':
+        $this->clients();
+        break;
+      case 'addclient':
+        $this->addclient();
+        break;
+    }
+  }
 
 
   /**
@@ -298,7 +298,6 @@ class Dashboard extends CI_Controller {
     $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
-    $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -313,11 +312,9 @@ class Dashboard extends CI_Controller {
    */
 
   function update_profile() {
-
     $first = $this->input->post('first_name');
     $last = $this->input->post('last_name');
     $email = $this->input->post('email_address');
-
     if ($first == FALSE && $last == FALSE && $email == FALSE) {
       $this->error();
     }
@@ -363,7 +360,6 @@ class Dashboard extends CI_Controller {
       }
     }
   }
-
 
   function error() {
     $this->load->view('custom404_view');

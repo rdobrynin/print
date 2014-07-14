@@ -8,7 +8,7 @@
       <!--FORM-->
       <div class="col-md-8">
         <h2>Profile view</h2>
-      <form role="form" class="form-horizontal"  action="<?php print(base_url());?>update_profile" method="POST" autocomplete="off">
+      <form role="form" class="form-horizontal"  action="<?php print(base_url());?>update_profile" method="POST" autocomplete="on">
           <div class="row">
             <div class="address-wrapper" style="height: 100%;">
               <p  class="lead">Requirement information</p>
@@ -97,6 +97,24 @@
 
       </form>
         </div>
+      <div class="col-md-4">
+        <h2>Profile Picture</h2>
+        <div class="address-wrapper" style="height: 100%;">
+
+<div class="row">
+<div class="col-md-12">
+  <form role="form" class="form-horizontal"  action="<?php print(base_url());?>user_avatar" method="POST">
+    <span class="pull-left btn btn-default btn-file"><input type="file" title="Search for a file to add" style="padding: 7px;" name="userfile" size="20" />Browse</span>
+    <span class="pull-right"><input type="submit" class="btn btn-success" value="Upload avatar" /></span>
+  </form>
+</div>
+
+
+</div>
+      </div>
+      </div>
+
+
       </div>
       <p id="back-top">
         <a href="#top"><span></span><i style="font-size: 30px;" class="fa fa-arrow-circle-up"></i><span></span></a>

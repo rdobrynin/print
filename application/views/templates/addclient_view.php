@@ -8,7 +8,7 @@
 <!--FORM-->
       <div class="col-md-8">
         <h2>Add client</h2>
-              <form role="form" id="add-clientForm" class="form-horizontal">
+              <form role="form" id="add-clientForm" class="form-horizontal"  action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="off">
 
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
@@ -108,7 +108,7 @@
                 <input type="hidden" class="form-control" id="client_owner" name="curator" value="<?php print($user[0]['id']);?>">
 
                 <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
-                <button type="button"  class="btn btn-primary pull-right" id="create_company">Change Content</button>
+                <input type="submit"  class="btn btn-primary pull-right" id="create_company" value="Create company">
               </form>
             </div>
 
@@ -178,39 +178,39 @@
     });
 
 //    AJAX CREATE COMPANY
-    $('#create_company').click(function () {
-      var form_data = {
-        title: $('#client_title').val(),
-        description: $('#client_description').val(),
-        email: $('#client_email').val(),
-        phone: $('#client_phone').val(),
-        address: $('#client_address').val(),
-        index: $('#client_index').val(),
-        url: $('#client_url').val(),
-        city: $('#client_city').val(),
-        country: $('#select-country option:selected').val(),
-        curator: $('#client_owner').val()
-      };
-      $.ajax({
-        url: "<?php echo site_url('ajax/addclient'); ?>",
-        type: 'POST',
-        data: form_data,
-        dataType: 'json',
-        success: function (msg) {
-    if(msg.error==0) {
-      $('.show-info').show();
-      $('.show-info').children( ".show-info-content").html(msg.result);
-      $('.show-info').delay(3500).fadeOut();
-    }
-          else if(msg.error==1){
-      $('.show-info-error').show();
-      $('.show-info-error').children( ".show-info-content").html(msg.result);
-      $('.show-info-error').delay(3500).fadeOut();
-          }
-        }
-      });
-      $(this).closest('form').find("input[type=text], textarea").val("");
-      });
+<!--    $('#create_company').click(function () {-->
+<!--      var form_data = {-->
+<!--        title: $('#client_title').val(),-->
+<!--        description: $('#client_description').val(),-->
+<!--        email: $('#client_email').val(),-->
+<!--        phone: $('#client_phone').val(),-->
+<!--        address: $('#client_address').val(),-->
+<!--        index: $('#client_index').val(),-->
+<!--        url: $('#client_url').val(),-->
+<!--        city: $('#client_city').val(),-->
+<!--        country: $('#select-country option:selected').val(),-->
+<!--        curator: $('#client_owner').val()-->
+<!--      };-->
+<!--      $.ajax({-->
+<!--        url: "--><?php //echo site_url('ajax/addclient'); ?><!--",-->
+<!--        type: 'POST',-->
+<!--        data: form_data,-->
+<!--        dataType: 'json',-->
+<!--        success: function (msg) {-->
+<!--    if(msg.error==0) {-->
+<!--      $('.show-info').show();-->
+<!--      $('.show-info').children( ".show-info-content").html(msg.result);-->
+<!--      $('.show-info').delay(3500).fadeOut();-->
+<!--    }-->
+<!--          else if(msg.error==1){-->
+<!--      $('.show-info-error').show();-->
+<!--      $('.show-info-error').children( ".show-info-content").html(msg.result);-->
+<!--      $('.show-info-error').delay(3500).fadeOut();-->
+<!--          }-->
+<!--        }-->
+<!--      });-->
+<!--      $(this).closest('form').find("input[type=text], textarea").val("");-->
+<!--      });-->
 
     $( "#client_title" ).blur(function() {
       var form_data = {

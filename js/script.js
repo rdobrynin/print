@@ -1,8 +1,5 @@
 $(function() {
 
-
-
-
     $("li a").click(function(e) {
         $('li').removeClass('active');
         $(this).parent().addClass('active');
