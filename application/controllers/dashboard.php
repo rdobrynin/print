@@ -26,6 +26,9 @@ class Dashboard extends CI_Controller {
       case 'projects':
         $this->projects();
         break;
+      case 'addclient_form':
+        $this->addclient_form();
+        break;
       case 'update_profile':
         $this->update_profile();
         break;
