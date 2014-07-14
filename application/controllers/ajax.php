@@ -54,6 +54,29 @@ class Ajax extends CI_Controller {
   }
 
 
+  /**
+   * Check online status
+   */
+
+  public function check_online() {
+
+    $query = $this->db->get('users');
+   $result= $query->result_array();
+
+    if($result){
+      $status=array();
+      foreach($result as $ok=>$ov) {
+        array_push($status, $ov);
+      }
+      $status['status'] =$status;
+    }else{
+      $status['result'] = false;
+    }
+    echo json_encode ($status);
+  }
+
+
+
   public function addclient() {
     $result = array();
     $this->load->library('form_validation');

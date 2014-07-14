@@ -23,6 +23,9 @@ class Dashboard extends CI_Controller {
       case 'profile':
         $this->profile();
         break;
+      case 'test':
+        $this->test();
+        break;
       case 'projects':
         $this->projects();
         break;
@@ -142,7 +145,7 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-//    $this->load->view('templates/success_view');
+    $this->load->view('templates/test_view');
   }
 
   /**

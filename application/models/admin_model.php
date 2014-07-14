@@ -131,7 +131,8 @@ class Admin_model extends CI_Model {
 
   public function online_status($id) {
     $data = array (
-      'status' => 1
+      'status' => 1,
+      'status_time' => time()
     );
     $this->db->where('id', $id);
     $update = $this->db->update('users', $data);
@@ -146,7 +147,8 @@ class Admin_model extends CI_Model {
 
   public function offline_status($id) {
     $data = array (
-      'status' => 0
+      'status' => 0,
+      'status_time' => time()
     );
     $this->db->where('id', $id);
     $update = $this->db->update('users', $data);
