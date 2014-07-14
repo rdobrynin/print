@@ -14,11 +14,11 @@
         <ul>
           <?php if (($u['status'] == 1)): ?>
             <li><span
-                class="label label-xs label-success">online</span>&nbsp;<?php print($u['first_name'] . ' ' . $u['last_name']); ?>
+                class="label label-xs label-success label-round"></span><?php print($u['first_name'] . ' ' . $u['last_name']); ?>
             </li>
           <?php else: ?>
             <li><span
-                class="label label-xs label-default">offline</span>&nbsp;<?php print($u['first_name'] . ' ' . $u['last_name']); ?>
+                class="label label-xs label-default label-round"></span><?php print($u['first_name'] . ' ' . $u['last_name']); ?>
             </li>
           <?php endif; ?>
         </ul>

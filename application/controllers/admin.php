@@ -46,7 +46,7 @@ class Admin extends CI_Controller {
     $id=$this->admin_model->get_user_id($_SESSION['username']);
     $this->admin_model->offline_status($id[0]['id']);
     session_destroy();
-    $this->load->view('login/login_view');
+    redirect(base_url());
   }
 
   function signup() {
