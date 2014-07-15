@@ -14,47 +14,47 @@ class Dashboard extends CI_Controller {
   }
 
 
-  function _remap($method) {
-    // $method contains the second segment of your URI
-    switch ($method) {
-      case 'index':
-        $this->index();
-        break;
-      case 'profile':
-        $this->profile();
-        break;
-      case 'test':
-        $this->test();
-        break;
-      case 'projects':
-        $this->projects();
-        break;
-      case 'addclient_form':
-        $this->addclient_form();
-        break;
-      case 'update_profile':
-        $this->update_profile();
-        break;
-      case 'comments':
-        $this->comments();
-        break;
-      case 'team':
-        $this->team();
-        break;
-      case 'users':
-        $this->users();
-        break;
-      case 'switch_help':
-        $this->switch_help();
-        break;
-      case 'clients':
-        $this->clients();
-        break;
-      case 'addclient':
-        $this->addclient();
-        break;
-    }
-  }
+//  function _remap($method) {
+//    // $method contains the second segment of your URI
+//    switch ($method) {
+//      case 'index':
+//        $this->index();
+//        break;
+//      case 'profile':
+//        $this->profile();
+//        break;
+//      case 'test':
+//        $this->test();
+//        break;
+//      case 'projects':
+//        $this->projects();
+//        break;
+//      case 'addclient_form':
+//        $this->addclient_form();
+//        break;
+//      case 'update_profile':
+//        $this->update_profile();
+//        break;
+//      case 'comments':
+//        $this->comments();
+//        break;
+//      case 'team':
+//        $this->team();
+//        break;
+//      case 'users':
+//        $this->users();
+//        break;
+//      case 'switch_help':
+//        $this->switch_help();
+//        break;
+//      case 'clients':
+//        $this->clients();
+//        break;
+//      case 'addclient':
+//        $this->addclient();
+//        break;
+//    }
+//  }
 
 
   /**
