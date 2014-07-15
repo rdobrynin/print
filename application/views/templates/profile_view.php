@@ -103,10 +103,12 @@
 
 <div class="row">
 <div class="col-md-12">
-  <form role="form" class="form-horizontal"  action="<?php print(base_url());?>user_avatar" method="POST">
-    <span class="pull-left btn btn-default btn-file"><input type="file" title="Search for a file to add" style="padding: 7px;" name="userfile" size="20" />Browse</span>
-    <span class="pull-right"><input type="submit" class="btn btn-success" value="Upload avatar" /></span>
-  </form>
+    <?php echo form_open_multipart('upload/do_upload');?>
+    <input type="file" name="userfile" size="20" />
+    <br /><br />
+    <input type="submit" value="upload" />
+
+    </form>
 </div>
 
 
