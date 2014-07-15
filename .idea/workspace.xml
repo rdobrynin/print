@@ -7,6 +7,7 @@
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/upload.php" afterPath="$PROJECT_DIR$/application/controllers/upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +65,7 @@
       <file leaf-file-name="upload.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.45378152" vertical-offset="0" max-vertical-offset="1445">
+            <state line="25" column="61" selection-start="689" selection-end="689" vertical-scroll-proportion="0.5402161" vertical-offset="0" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
@@ -870,7 +871,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.45378152" vertical-offset="0" max-vertical-offset="1445">
+        <state line="25" column="61" selection-start="689" selection-end="689" vertical-scroll-proportion="0.5402161" vertical-offset="0" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
