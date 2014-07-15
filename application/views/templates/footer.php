@@ -34,6 +34,7 @@
           return false;
       });
 
+
       function refresh_files() {
           $.get('./uploads/avatar/')
               .success(function (data){

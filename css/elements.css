@@ -256,3 +256,8 @@ li {
 .note-sound {
     display: block;
 }
+
+
+#files address, #files h1 {
+    display: none;
+}

@@ -14,7 +14,8 @@
                 <label for="userfile">File</label>
                 <input type="file" name="userfile" id="userfile" size="20" />
 <input type="hidden" value="<?php print($user[0]['id']);?>" name="user_id" id="user_id">
-                <input type="submit" name="submit" id="submit" />
+                <br />
+                <input type="submit" class="btn btn-info" name="submit" id="submit" />
             </form>
             <h2>Files</h2>
             <div id="files"></div>
