@@ -126,7 +126,7 @@ class Ajax extends CI_Controller {
         $file_element_name = 'userfile';
         if (empty($_POST['user_id'])) {
             $status = "error";
-            $msg = "error";
+            $msg = "Something wrong...";
         }
 
         if ($status != "error") {
