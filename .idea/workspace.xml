@@ -2,12 +2,13 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/application/views/templates/users_view.php" line="62" />
-    <bookmark url="file://$PROJECT_DIR$/application/views/templates/team_view.php" line="35" />
   </component>
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/footer.php" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sidebar.css" afterPath="$PROJECT_DIR$/css/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/team_view.php" afterPath="$PROJECT_DIR$/application/views/templates/team_view.php" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,19 +31,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/test_view.php">
+      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="252">
+            <state line="27" column="30" selection-start="972" selection-end="972" vertical-scroll-proportion="0.1944778" vertical-offset="324" max-vertical-offset="2273">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
+      <file leaf-file-name="sidebar.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/sidebar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="55" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.71908766" vertical-offset="661" max-vertical-offset="2579">
+            <state line="356" column="25" selection-start="6133" selection-end="6133" vertical-scroll-proportion="0.0" vertical-offset="6302" max-vertical-offset="9482">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="team_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/team_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="6" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-21.333334" vertical-offset="18" max-vertical-offset="1427">
               <folding />
             </state>
           </provider>
@@ -79,15 +89,6 @@
         <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="76" column="0" selection-start="4323" selection-end="4543" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="1476">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/head.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1588" selection-end="1588" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -165,8 +166,6 @@
         <option value="$PROJECT_DIR$/application/views/templates/client_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/comments_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/sidebar_view.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/team_view.php" />
-        <option value="$PROJECT_DIR$/css/sidebar.css" />
         <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/views/custom404_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/addclient_view.php" />
@@ -184,6 +183,8 @@
         <option value="$PROJECT_DIR$/css/add_client.css" />
         <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/templates/footer.php" />
+        <option value="$PROJECT_DIR$/css/sidebar.css" />
+        <option value="$PROJECT_DIR$/application/views/templates/team_view.php" />
       </list>
     </option>
   </component>
@@ -716,18 +717,6 @@
         <state line="22" column="30" selection-start="1115" selection-end="1115" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="1278" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/team_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="405" column="19" selection-start="6899" selection-end="6899" vertical-scroll-proportion="0.0" vertical-offset="6662" max-vertical-offset="9464" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="50" selection-start="4225" selection-end="4225" vertical-scroll-proportion="-8.8" vertical-offset="1820" max-vertical-offset="7303" />
@@ -851,9 +840,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="356" column="25" selection-start="6133" selection-end="6133" vertical-scroll-proportion="0.0" vertical-offset="6302" max-vertical-offset="9482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/team_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="6" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-21.333334" vertical-offset="18" max-vertical-offset="1427">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="55" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.71908766" vertical-offset="661" max-vertical-offset="2579">
+        <state line="27" column="30" selection-start="972" selection-end="972" vertical-scroll-proportion="0.1944778" vertical-offset="324" max-vertical-offset="2273">
           <folding />
         </state>
       </provider>

@@ -21,6 +21,9 @@
       }
     })());
 
+      /**
+       * AJAX online/offline status
+       */
 
       setInterval(function() {
         current_time = $.now();
@@ -37,49 +40,31 @@
               if(current_time <(entry['status_time']+100)) {
 //           ONLINE
                 if(entry['status']=='1') {
-                  var audio = $('<audio />', {
-                    autoPlay : 'autoplay',
-                    controls : 'controls'
-                  });
-                  // Call our addSource function, and pass in the audio element
-                  // and the path(s) to your audio.
-                  addSource(audio, 'sound/online.ogg');
-                  addSource(audio, 'sound/online.mp3');
-
-                  // When some event is fired...
-                    // Add the audio + source elements to the page.
-                    audio.appendTo('.note-sound');
-                    // Fadeout the anchor tag to keep the user from clicking it again.
-//                    $(this).fadeOut('slow');
-                  // Adds a source element, and appends it to the audio element, represented
-                  // by elem.
-                  function addSource(elem, path) {
-                    $('<source />').attr('src', path).appendTo(elem);
-                  }
+//                  var audio = $('<audio />', {
+//                    autoPlay : 'autoplay',
+//                    controls : 'controls'
+//                  });
+//                  addSource(audio, 'sound/online.ogg');
+//                  addSource(audio, 'sound/online.mp3');
+//                    audio.appendTo('.note-sound');
+//                  function addSource(elem, path) {
+//                    $('<source />').attr('src', path).appendTo(elem);
+//                  }
             $('.show-info-online').show();
             $('.show-info-online').children( ".show-info-content-online").html('<span class="label label-xs label-success label-round"></span>'+name+' is online');
             $('.show-info-online').delay(2500).fadeOut();
                 }
                 else if(entry['status']=='0') {
-                  var audio = $('<audio />', {
-                    autoPlay : 'autoplay',
-                    controls : 'controls'
-                  });
-                  // Call our addSource function, and pass in the audio element
-                  // and the path(s) to your audio.
-                  addSource(audio, 'sound/online.ogg');
-                  addSource(audio, 'sound/online.mp3');
-
-                  // When some event is fired...
-                  // Add the audio + source elements to the page.
-                  audio.appendTo('.note-sound');
-                  // Fadeout the anchor tag to keep the user from clicking it again.
-//                    $(this).fadeOut('slow');
-                  // Adds a source element, and appends it to the audio element, represented
-                  // by elem.
-                  function addSource(elem, path) {
-                    $('<source />').attr('src', path).appendTo(elem);
-                  }
+//                  var audio = $('<audio />', {
+//                    autoPlay : 'autoplay',
+//                    controls : 'controls'
+//                  });
+//                  addSource(audio, 'sound/online.ogg');
+//                  addSource(audio, 'sound/online.mp3');
+//                  audio.appendTo('.note-sound');
+//                  function addSource(elem, path) {
+//                    $('<source />').attr('src', path).appendTo(elem);
+//                  }
                   $('.show-info-online').show();
                   $('.show-info-online').children( ".show-info-content-online").html('<span class="label label-xs label-primary label-round"></span>'+name+' is offline');
                   $('.show-info-online').delay(2500).fadeOut();
@@ -89,8 +74,6 @@
           }
         });
       }, 5900);
-
-
   });
 </script>
 </body>
