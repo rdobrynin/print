@@ -1,17 +1,47 @@
 <!-- JavaScript -->
-<script src="js/jquery-1.10.2.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-switch.min.js"></script>
 <script src="js/jquery.bootstrap.wizard.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
+<script src="js/ajaxfileupload.js"></script>
 <script src="js/script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular-route.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular-resource.min.js"></script>
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
   $(function () {
+      $('#upload_file').submit(function() {
+          $.ajaxFileUpload({
+              url             :"<?php print(base_url());?>ajax/do_upload",
+              secureuri       :false,
+              fileElementId   :'userfile',
+              dataType        : 'json',
+              data            : {
+                  'title'             : $('#title').val(),
+                  'user_id'             : $('#user_id').val()
+              },
+              success : function (data, status)
+              {
+                  if(data.status != 'error')
+                  {
+                      $('#files').html('<p>Reloading files...</p>');
+                      refresh_files();
+                      $('#title').val('');
+                  }
+                  alert(data.msg);
+              }
+          });
+          return false;
+      });
+
+      function refresh_files() {
+          $.get('./uploads/avatar/')
+              .success(function (data){
+                  $('#files').html(data);
+              });
+      }
+      refresh_files();
+
     $(".help-button").click((function() {
       var i = 0;
       return function() {

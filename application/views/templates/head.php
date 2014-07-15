@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +12,6 @@
   <!-- Bootstrap core CSS -->
   <link href="<?php print(base_url());?>css/bootstrap.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/bootstrap-switch.min.css" rel="stylesheet">
-  <link href="<?php print(base_url());?>css/bootstrap-select-min.css" rel="stylesheet">
 
   <!-- Add custom CSS here -->
   <link href="<?php print(base_url());?>css/sidebar.css" rel="stylesheet">

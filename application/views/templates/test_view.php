@@ -2,21 +2,25 @@
 <div class="container">
   <div id="page-content-wrapper">
     <div class="page-content inset">
-      <div class="row">
-        <?php echo $error;?>
 
-        <?php echo form_open_multipart('dashboard/test/do_upload');?>
 
-        <input type="file" name="userfile" size="20" />
+        <div id="wrapper">
 
-        <br /><br />
+            <h1>Upload File</h1>
+            <form method="post" action="" id="upload_file">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" value="" />
 
-        <input type="submit" value="upload" />
+                <label for="userfile">File</label>
+                <input type="file" name="userfile" id="userfile" size="20" />
+<input type="hidden" value="<?php print($user[0]['id']);?>" name="user_id" id="user_id">
+                <input type="submit" name="submit" id="submit" />
+            </form>
+            <h2>Files</h2>
+            <div id="files"></div>
+        </div>
 
-        </form>
-      </div>
-    </div>
+        </div>
   </div>
 </div>
-
 <?php include('footer.php'); ?>

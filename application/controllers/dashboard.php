@@ -145,7 +145,9 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-    $this->load->view('templates/test_view');
+      $this->load->model('admin_model');
+      $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+    $this->load->view('templates/test_view', $data);
 
   }
 

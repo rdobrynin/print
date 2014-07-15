@@ -18,8 +18,8 @@ class Files_model extends CI_Model {
 
     public function insert_avatar($filename, $title, $user_id) {
         $data = array (
-            'filename' => 1,
-            'title' => 1,
+            'filename' => $filename,
+            'title_avatar' => $title,
             'fid'=>$user_id
         );
         $result = $this->db->insert('files', $data);
