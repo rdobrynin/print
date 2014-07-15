@@ -146,6 +146,7 @@ class Dashboard extends CI_Controller {
 
   function test() {
     $this->load->view('templates/test_view');
+
   }
 
   /**
