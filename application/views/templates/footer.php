@@ -17,7 +17,6 @@
               fileElementId   :'userfile',
               dataType        : 'json',
               data            : {
-                  'title'             : $('#title').val(),
                   'user_id'             : $('#user_id').val()
               },
               success : function (data, status)
@@ -26,7 +25,6 @@
                   {
                       $('#files').html('<p>Reloading files...</p>');
                       refresh_files();
-                      $('#title').val('');
                   }
                   alert(data.msg);
               }

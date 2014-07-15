@@ -124,9 +124,9 @@ class Ajax extends CI_Controller {
         $status = "";
         $msg = "";
         $file_element_name = 'userfile';
-        if (empty($_POST['title'])) {
+        if (empty($_POST['user_id'])) {
             $status = "error";
-            $msg = "Please enter a title";
+            $msg = "error";
         }
 
         if ($status != "error") {
@@ -143,7 +143,7 @@ class Ajax extends CI_Controller {
             }
             else {
                 $data = $this->upload->data();
-                $file_id = $this->files_model->insert_avatar($data['file_name'],  $_POST['title'], $_POST['user_id']);
+                $file_id = $this->files_model->insert_avatar($data['file_name'], $_POST['user_id']);
                 if($file_id) {
                     $status = "success";
                     $msg = "File successfully uploaded";
