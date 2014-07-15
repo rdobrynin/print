@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/uploadform_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/uploadsuccess_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/test_view.php" afterPath="$PROJECT_DIR$/application/views/templates/test_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/upload.php" afterPath="$PROJECT_DIR$/application/controllers/upload.php" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +42,12 @@
         <entry file="file://$PROJECT_DIR$/application/views/templates/uploadform_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="1211">
-              <folding />
+              <folding>
+                <marker date="1405419348828" expanded="true" signature="52:423" placeholder="..." />
+                <marker date="1405419348828" expanded="true" signature="86:416" placeholder="..." />
+                <marker date="1405419348828" expanded="true" signature="123:407" placeholder="..." />
+                <marker date="1405419348828" expanded="true" signature="147:396" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +64,7 @@
       <file leaf-file-name="upload.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="38" selection-start="554" selection-end="554" vertical-scroll-proportion="0.47539017" vertical-offset="0" max-vertical-offset="1445">
+            <state line="21" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.45378152" vertical-offset="0" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
@@ -860,13 +859,18 @@
     <entry file="file://$PROJECT_DIR$/application/views/templates/uploadform_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="1211">
-          <folding />
+          <folding>
+            <marker date="1405419348828" expanded="true" signature="52:423" placeholder="..." />
+            <marker date="1405419348828" expanded="true" signature="86:416" placeholder="..." />
+            <marker date="1405419348828" expanded="true" signature="123:407" placeholder="..." />
+            <marker date="1405419348828" expanded="true" signature="147:396" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="554" selection-end="554" vertical-scroll-proportion="0.47539017" vertical-offset="0" max-vertical-offset="1445">
+        <state line="21" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.45378152" vertical-offset="0" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
