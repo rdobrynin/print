@@ -26,7 +26,9 @@
                       $('#files').html('<p>Reloading files...</p>');
                       refresh_files();
                   }
-                  alert(data.msg);
+                  $('.show-info').show();
+                  $('.show-info').children( ".show-info-content").html(data.msg);
+                  $('.show-info').delay(2500).fadeOut();
               }
           });
           return false;

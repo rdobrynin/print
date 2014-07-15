@@ -4,7 +4,7 @@
     </li>
     <span class="avatar-name">Admin</span>
   </ul>
-<div class="show-info"><div class="show-info-content">You have successfully update your profile</div><div class="expandable-image"></div></div>
+<div class="show-info"><div class="show-info-content"></div><div class="expandable-image"></div></div>
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
   <div class="show-info-online"><div class="show-info-content-online"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">

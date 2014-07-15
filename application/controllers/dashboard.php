@@ -7,7 +7,9 @@ class Dashboard extends CI_Controller {
   public function __construct() {
     session_start();
     parent::__construct();
-
+      $this->load->model('admin_model');
+      $this->load->model('dashboard_model');
+      $this->load->model('files_model');
     if(!isset($_SESSION['username'])) {
       redirect('admin');
     }
@@ -62,7 +64,6 @@ class Dashboard extends CI_Controller {
    */
 
   public function index() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -83,7 +84,6 @@ class Dashboard extends CI_Controller {
    */
 
   function projects() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -102,7 +102,6 @@ class Dashboard extends CI_Controller {
    */
 
   function users() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
@@ -127,7 +126,6 @@ class Dashboard extends CI_Controller {
    */
 
   function comments() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $this->load->view('templates/head');
@@ -145,10 +143,7 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-      $this->load->model('admin_model');
-      $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-    $this->load->view('templates/test_view', $data);
-
+    $this->load->view('templates/test_view');
   }
 
   /**
@@ -156,7 +151,6 @@ class Dashboard extends CI_Controller {
    */
 
   function clients() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -177,7 +171,6 @@ class Dashboard extends CI_Controller {
    */
 
   function addclient() {
-    $this->load->model('admin_model');
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -197,7 +190,6 @@ class Dashboard extends CI_Controller {
   function delete_client() {
     $cid=$this->input->post('cid');
     if(!empty($cid)) {
-      $this->load->model('admin_model');
       $this->admin_model->delete_client($cid);
       $data['response'] = 'Removing company ...';
       $data['result'] = 'clients';
@@ -213,7 +205,6 @@ class Dashboard extends CI_Controller {
    */
 
   function  switch_help() {
-    $this->load->model('dashboard_model');
     $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
     $url = $this->input->post('input_url');
     redirect(base_url().$url);
@@ -232,10 +223,8 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('city', 'City', 'trim|required');
     $this->form_validation->set_rules('country', 'Country', 'trim|required');
     if ($this->form_validation->run() !== false) {
-      $this->load->model('admin_model');
       $title = $this->admin_model->verify_client($this->input->post('title'));
      if($title) {
-       $this->load->model('admin_model');
        $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
        $data['users'] = $this->admin_model->get_users();
@@ -249,7 +238,6 @@ class Dashboard extends CI_Controller {
      }
       else {
         if($query=$this->admin_model->create_client()) {
-          $this->load->model('admin_model');
           $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
           $data['users'] = $this->admin_model->get_users();
           $data['response'] = 'Company creating...';
@@ -265,7 +253,6 @@ class Dashboard extends CI_Controller {
       }
     }
     else {
-      $this->load->model('admin_model');
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
       $this->load->view('templates/head');
@@ -282,7 +269,6 @@ class Dashboard extends CI_Controller {
    */
 
   function team() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -304,7 +290,6 @@ class Dashboard extends CI_Controller {
    */
 
   function profile() {
-    $this->load->model('admin_model');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -357,7 +342,6 @@ class Dashboard extends CI_Controller {
 
       }
       else {
-        $this->load->model('admin_model');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
         $this->load->view('templates/head');
