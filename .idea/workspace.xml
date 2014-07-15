@@ -7,11 +7,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/icq_online.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/icq_online.ogg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/footer.php" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +42,7 @@
       <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="47" selection-start="2792" selection-end="2792" vertical-scroll-proportion="0.3517407" vertical-offset="823" max-vertical-offset="2579">
+            <state line="70" column="55" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.71908766" vertical-offset="661" max-vertical-offset="2579">
               <folding />
             </state>
           </provider>
@@ -857,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="47" selection-start="2792" selection-end="2792" vertical-scroll-proportion="0.3517407" vertical-offset="823" max-vertical-offset="2579">
+        <state line="70" column="55" selection-start="3182" selection-end="3182" vertical-scroll-proportion="0.71908766" vertical-offset="661" max-vertical-offset="2579">
           <folding />
         </state>
       </provider>

@@ -43,8 +43,8 @@
                   });
                   // Call our addSource function, and pass in the audio element
                   // and the path(s) to your audio.
-                  addSource(audio, 'sound/icq_online.ogg');
-                  addSource(audio, 'sound/icq_online.mp3');
+                  addSource(audio, 'sound/online.ogg');
+                  addSource(audio, 'sound/online.mp3');
 
                   // When some event is fired...
                     // Add the audio + source elements to the page.
@@ -67,8 +67,8 @@
                   });
                   // Call our addSource function, and pass in the audio element
                   // and the path(s) to your audio.
-                  addSource(audio, 'sound/icq_online.ogg');
-                  addSource(audio, 'sound/icq_online.mp3');
+                  addSource(audio, 'sound/online.ogg');
+                  addSource(audio, 'sound/online.mp3');
 
                   // When some event is fired...
                   // Add the audio + source elements to the page.
