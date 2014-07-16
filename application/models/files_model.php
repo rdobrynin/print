@@ -21,7 +21,7 @@ class Files_model extends CI_Model {
             'filename' => $filename,
             'fid'=>$user_id
         );
-        $result = $this->db->insert('avatars', $data);
+        $result = $this->db->update('avatars', $data);
         return $result;
     }
 }

@@ -1,6 +1,6 @@
 <div class=" navbar-collapse navbar-inverse navbar-fixed-top">
   <ul class="navbar navbar-left">
-    <li class="sidebar-brand"><span class="avatar-top"><span class="avata-img"><img src="http://placehold.it/50x50"></span></span>
+    <li class="sidebar-brand"><span class="avatar-top"><span class="avatar-img"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45" width="45"></span></span>
     </li>
     <span class="avatar-name">Admin</span>
   </ul>
@@ -74,7 +74,3 @@
     </li>
   </ul>
 </div>
-<!--<audio controls="controls" style="display: none;">-->
-<!--  <source src="--><?php //print(base_url());?><!--img/icq.ogg" />-->
-<!--  <source src="--><?php //print(base_url());?><!--img/icq.mp3" />-->
-<!--</audio>-->

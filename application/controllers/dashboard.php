@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller {
       $this->load->model('admin_model');
       $this->load->model('dashboard_model');
       $this->load->model('files_model');
+      $data['avatar'] = $this->admin_model->get_user_id($_SESSION['username']);
     if(!isset($_SESSION['username'])) {
       redirect('admin');
     }
@@ -67,6 +68,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -87,6 +89,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -105,6 +108,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -128,6 +132,7 @@ class Dashboard extends CI_Controller {
   function comments() {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -143,7 +148,8 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-    $this->load->view('templates/test_view');
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
+    $this->load->view('templates/test_view',$data);
   }
 
   /**
@@ -155,6 +161,7 @@ class Dashboard extends CI_Controller {
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -174,6 +181,7 @@ class Dashboard extends CI_Controller {
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
 //    $data['roles'] = $this->admin_model->get_roles();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -228,7 +236,7 @@ class Dashboard extends CI_Controller {
        $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
        $data['users'] = $this->admin_model->get_users();
-//    $data['roles'] = $this->admin_model->get_roles();
+       $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
        $this->load->view('templates/head');
        if($data['user'][0]['helpblock']==1) {
          $this->load->view('templates/help_block_view');
@@ -269,6 +277,7 @@ class Dashboard extends CI_Controller {
    */
 
   function team() {
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -294,6 +303,7 @@ class Dashboard extends CI_Controller {
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
     $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
@@ -317,6 +327,7 @@ class Dashboard extends CI_Controller {
       $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
+
       $this->load->model('admin_model');
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $id = $data['user'][0]['id'];

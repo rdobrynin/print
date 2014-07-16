@@ -30,7 +30,26 @@ class Admin_model extends CI_Model {
     }
   }
 
-  /**
+    /**
+     * get avatar
+     * @param $email
+     * @param $password
+     * @return bool
+     */
+
+    public function get_avatar($id) {
+        $query = $this->db->where('fid', $id)->get('avatars');
+        if ($query->num_rows > 0) {
+            $result = $query->result_array();
+            return $result[0]['filename'];
+        }
+        else {
+            return FALSE;
+        }
+    }
+
+
+    /**
    * Check email
    * @param $email
    * @return bool

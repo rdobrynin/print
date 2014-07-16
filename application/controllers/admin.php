@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
   function __construct() {
     parent::__construct();
     session_start();
+      $this->load->model('admin_model');
   }
 
   public function index() {
@@ -20,14 +21,12 @@ class Admin extends CI_Controller {
     $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]');
 
     if ($this->form_validation->run() !== false) {
-      $this->load->model('admin_model');
      $res = $this
        ->admin_model
        ->verify_user(
          $this->input->post('email_address'),
          $this->input->post('password'));
       if($res !== false) {
-        $this->load->model('admin_model');
         $this->admin_model->online_status($res->id);
 //person has account
         $_SESSION['username'] = $res->id;
@@ -42,7 +41,6 @@ class Admin extends CI_Controller {
 
 // logout and session destroy
   function logout() {
-    $this->load->model('admin_model');
     $id=$this->admin_model->get_user_id($_SESSION['username']);
     $this->admin_model->offline_status($id[0]['id']);
     session_destroy();

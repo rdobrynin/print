@@ -127,18 +127,23 @@
                     <div class="row">
                         <div class="col-md-12">
                             <form method="post" action="" id="upload_file">
-                                <label for="userfile">File</label>
+                                <label for="userfile">Upload</label>
                                 <input type="file" name="userfile" id="userfile" size="20"/>
                                 <input type="hidden" value="<?php print($user[0]['id']); ?>" name="user_id" id="user_id">
                                 <br/>
                                 <input type="submit" class="btn btn-info" name="submit" id="submit"/>
                             </form>
-                            <h2>Files</h2>
+                            <?php if ($avatar != FALSE): ?>
+                                <div id="avatar-true">
+                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100" width="100"></span>
+                                </div>
 
+                            <?php endif ?>
                             <div id="files"></div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <p id="back-top">
@@ -169,7 +174,7 @@
         });
 //        Add email
         $("#add_email").click(function (e) {
-            $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
+            $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="email" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
         });
         $("body").on("click", ".delete-email", function (e) {
             $(this).parent("div").remove();

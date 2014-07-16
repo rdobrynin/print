@@ -266,3 +266,19 @@ li {
     position: relative;
 }
 
+span.avatar-wrapper {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    overflow: auto;
+}
+
+button#delete-avatar-btn {
+    position: relative;
+    top: -13px;
+    background: transparent;
+    right: -30px;
+}
+

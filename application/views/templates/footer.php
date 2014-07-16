@@ -22,7 +22,7 @@
               success : function (data, status)
               {
                   if(data.status != 'error') {
-                      $('#files').html('<p>Reloading files...</p>');
+                      $('#files').html('<p>Reloading file...</p>');
                       refresh_files();
                   }
                   $('.show-info').show();
@@ -37,7 +37,7 @@
       function refresh_files() {
           $.get('./uploads/avatar/')
               .success(function (data){
-                  $('#files').html(data);
+//                  $('#files').html(data);
               });
       }
       refresh_files();
