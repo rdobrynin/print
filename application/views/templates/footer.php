@@ -22,7 +22,9 @@
               success : function (data, status)
               {
                   if(data.status != 'error') {
-                      $('#files').html('<p>Reloading file...</p>');
+                      $('.avatar-wrapper').show();
+//                      $('.avatar-wrapper-ajax').show();
+//                      $('.avatar-wrapper-ajax').html('<img src="uploads/avatar/'+data.status+'" alt="Smiley face" height="100">');
                       refresh_files();
                   }
                   $('.show-info').show();
@@ -37,7 +39,7 @@
       function refresh_files() {
           $.get('./uploads/avatar/')
               .success(function (data){
-//                  $('#files').html(data);
+//                  $('.avatar-wrapper-ajax').show();
               });
       }
       refresh_files();

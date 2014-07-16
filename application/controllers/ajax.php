@@ -164,7 +164,8 @@ class Ajax extends CI_Controller {
                 }
 
                 if($file_id) {
-                    $status = "success";
+
+                    $status = $search[0]['filename'];
                     $msg = "File successfully uploaded";
                 }
                 else {

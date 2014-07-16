@@ -275,6 +275,15 @@ span.avatar-wrapper {
     overflow: hidden;
 }
 
+.avatar-wrapper-ajax {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+
+}
+
+
 button#delete-avatar-btn {
     position: relative;
     top: -13px;
