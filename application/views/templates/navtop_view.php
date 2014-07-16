@@ -1,6 +1,6 @@
 <div class=" navbar-collapse navbar-inverse navbar-fixed-top">
   <ul class="navbar navbar-left">
-    <li class="sidebar-brand"><span class="avatar-top"><span class="avatar-img"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45" width="45"></span></span>
+    <li class="sidebar-brand"><span class="avatar-top"><span class="avatar-img"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45"></span></span>
     </li>
     <span class="avatar-name">Admin</span>
   </ul>

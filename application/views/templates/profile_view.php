@@ -135,7 +135,7 @@
                             </form>
                             <?php if ($avatar != FALSE): ?>
                                 <div id="avatar-true">
-                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100" width="100"></span>
+                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
                                 </div>
 
                             <?php endif ?>
