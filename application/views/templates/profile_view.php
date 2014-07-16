@@ -133,15 +133,12 @@
                                 <br/>
                                 <input type="submit" class="btn btn-info" name="submit" id="submit"/>
                             </form>
-                            <span class="avatar-wrapper-ajax pull-right" style="display: none;"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
+
                             <?php if ($avatar != FALSE): ?>
                                 <div id="avatar-true">
-                                    <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
+                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
                                 </div>
-                            <?php else: ?>
-                                <div id="avatar-false">
-                                    <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>" alt="Smiley face" height="100"></span>
-                                </div>
+
                             <?php endif ?>
                             <div id="files"></div>
                         </div>

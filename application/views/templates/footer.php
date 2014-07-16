@@ -10,7 +10,7 @@
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
   $(function () {
-      $('#submit').submit(function() {
+      $('#upload_file').submit(function() {
           $.ajaxFileUpload({
               url             :"<?php print(base_url());?>ajax/do_upload",
               secureuri       :false,
@@ -22,9 +22,7 @@
               success : function (data, status)
               {
                   if(data.status != 'error') {
-                      $('.avatar-wrapper').show();
-//                      $('.avatar-wrapper-ajax').show();
-//                      $('.avatar-wrapper-ajax').html('<img src="uploads/avatar/'+data.status+'" alt="Smiley face" height="100">');
+                      $('#files').html('<p>Reloading file...</p>');
                       refresh_files();
                   }
                   $('.show-info').show();
@@ -39,7 +37,7 @@
       function refresh_files() {
           $.get('./uploads/avatar/')
               .success(function (data){
-//                  $('.avatar-wrapper-ajax').show();
+//                  $('#files').html(data);
               });
       }
       refresh_files();
