@@ -112,7 +112,6 @@ class Admin_model extends CI_Model {
       'first_name' => $this->input->post('first_name'),
       'last_name' => $this->input->post('last_name'),
       'phone' => $this->input->post('phone'),
-      'email_address' => $this->input->post('email_address'),
       'skype_address' => $this->input->post('skype_address'),
       'facebook_address' => $this->input->post('facebook_address'),
       'linkedin_address' => $this->input->post('facebook_address'),
@@ -171,7 +170,9 @@ class Admin_model extends CI_Model {
         'pid' => $id,
         'phone' => $phone,
       );
-      $update = $this->db->insert('users_phones', $data);
+        if($phone !='') {
+            $update = $this->db->insert('users_phones', $data);
+        }
     }
     return $update;
   }

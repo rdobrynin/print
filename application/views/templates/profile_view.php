@@ -45,13 +45,13 @@
                                 </div>
                             </div>
                             <div class="col-md-12" style="margin-bottom: 10px; margin-left: -14px;">
-                                <div class="btn btn-xs btn-success" id="add">Add Phone</div>
+                                <div class="btn btn-xs btn-success" id="add_phone">Add Phone</div>
                             </div>
                             <div id="items"></div>
                             <div id="items_remove"></div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <label for="email_address">Email</label>
+                                    <label for="email_address">Add email</label>
                                     <input type="text" value="<?php print($user[0]['email_address']); ?>" class="form-control" name="email_address" id="email_address" placeholder="Email address">
                                 </div>
                             </div>
@@ -137,8 +137,8 @@
             $('.show-info').show();
             $('.show-info').delay(2500).fadeOut();
         }
-        $("#add").click(function (e) {
-            $("#items").append('<div class="col-md-12"><div class="form-group"><label for="phone">Additional Phone</label><div><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
+        $("#add_phone").click(function (e) {
+            $("#items").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
         });
         $("body").on("click", ".delete-phone", function (e) {
             $(this).parent("div").remove();

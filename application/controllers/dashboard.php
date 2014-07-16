@@ -308,15 +308,13 @@ class Dashboard extends CI_Controller {
   function update_profile() {
     $first = $this->input->post('first_name');
     $last = $this->input->post('last_name');
-    $email = $this->input->post('email_address');
-    if ($first == FALSE && $last == FALSE && $email == FALSE) {
+    if ($first == FALSE && $last == FALSE) {
       $this->error();
     }
     else {
       $this->load->library('form_validation');
       $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
-      $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
       $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
       $this->load->model('admin_model');
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -324,9 +322,10 @@ class Dashboard extends CI_Controller {
       if ($this->form_validation->run() !== FALSE) {
         $this->load->model('admin_model');
         $phone_add = $this->input->post('add_phone');
+
         if (!empty($phone_add[0])) {
           if ($query = $this->admin_model->insert_member_phone($id) && $query = $this->admin_model->update_member($id)) {
-            ;
+
           }
           $data['response'] = 'Profile successfully updated';
           $data['result'] = 'profile';
