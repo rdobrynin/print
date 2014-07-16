@@ -19,15 +19,15 @@
                                     <label for="first_name">First name</label>
                                     <input type="text" value="<?php print($user[0]['first_name']); ?>" class="form-control" name="first_name" id="first_name" placeholder="First name">
                                 </div>
-                            </div>
-                            <div class="form-group">
+
+
                                 <div class="col-md-6">
                                     <label for="last_name">Last name</label>
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="phone">Phone</label>
                                     <input type="text" value="<?php print($user[0]['phone']); ?>" class="form-control" name="phone" id="last_name" placeholder="Phone number">
                                 </div>
@@ -55,6 +55,18 @@
                                 <div class="col-md-12" style="margin-bottom: 10px;">
                                     <p><span class="label label-primary label-xs">Primary email:</span>  <span><?php print($user['0']['email_address']); ?></span></p>
                                     </div>
+                                <!--                additional emails-->
+                                <div class="form-group">
+                                    <div class="col-md-12" style="padding-left: 20px;">
+                                        <?php foreach ($emails as $k => $email): ?>
+                                            <?php if (isset($email['email'])): ?>
+                                                <span><input type="hidden" name="<?php print($email['id']); ?>">
+                        <span class="label label-default label-tag delete-add-email" style="margin-left: 10px;"><i class="fa fa-mail"></i>&nbsp;<?php print($email['email']); ?>
+                            &nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
+                                            <?php endif; ?>
+                                        <?php endforeach ?>
+                                    </div>
+                                </div>
                                 </div>
                             <div class="form-group">
                                 <div class="col-md-12" style="margin-bottom: 10px;">
@@ -139,6 +151,9 @@
 <script>
     $(function () {
         $("body").on("click", ".delete-add-phone", function (e) {
+            $(this).parent("span").remove();
+        });
+        $("body").on("click", ".delete-add-email", function (e) {
             $(this).parent("span").remove();
         });
         if (window.location.hash == "#updated") {

@@ -292,6 +292,7 @@ class Dashboard extends CI_Controller {
   function profile() {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
+    $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
@@ -322,6 +323,7 @@ class Dashboard extends CI_Controller {
       if ($this->form_validation->run() !== FALSE) {
         $this->load->model('admin_model');
         $phone_add = $this->input->post('add_phone');
+        $email_add = $this->input->post('add_email');
 
         if (!empty($phone_add[0])) {
           if ($query = $this->admin_model->insert_member_phone($id) && $query = $this->admin_model->update_member($id)) {
@@ -331,6 +333,14 @@ class Dashboard extends CI_Controller {
           $data['result'] = 'profile';
           $this->load->view('templates/success_view', $data);
         }
+          elseif (!empty($email_add[0])) {
+              if ($query = $this->admin_model->insert_member_email($id) && $query = $this->admin_model->update_member($id)) {
+
+              }
+              $data['response'] = 'Profile successfully updated';
+              $data['result'] = 'profile';
+              $this->load->view('templates/success_view', $data);
+          }
         else {
           if ($query = $this->admin_model->update_member($id)) {
             $data['response'] = 'Profile updating ...';

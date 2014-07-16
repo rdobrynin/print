@@ -164,18 +164,39 @@ class Admin_model extends CI_Model {
 
   public function insert_member_phone($id) {
     $phone_array = $this->input->post('add_phone');
-    $update = array();
+    $insert = array();
     foreach ($phone_array as $phone) {
       $data = array(
         'pid' => $id,
         'phone' => $phone,
       );
         if($phone !='') {
-            $update = $this->db->insert('users_phones', $data);
+            $insert = $this->db->insert('users_phones', $data);
         }
     }
-    return $update;
+    return $insert;
   }
+
+    /**
+     * Insert member email
+     * @param $id
+     * @return array
+     */
+
+    public function insert_member_email($id) {
+        $email_array = $this->input->post('add_email');
+        $insert = array();
+        foreach ($email_array as $email) {
+            $data = array(
+                'eid' => $id,
+                'email' => $email,
+            );
+            if($email !='') {
+                $insert = $this->db->insert('users_emails', $data);
+            }
+        }
+        return $insert;
+    }
 
   /**
    * get user phones
@@ -191,6 +212,21 @@ class Admin_model extends CI_Model {
       ->get('users_phones');
     return $query->result_array();
   }
+
+    /**
+     * get user emails
+     * @param $id
+     * @return mixed
+     */
+
+
+    public function get_emails($id) {
+        $query = $this
+            ->db
+            ->where('eid', $id)
+            ->get('users_emails');
+        return $query->result_array();
+    }
 
   /**
    * Verify company title
