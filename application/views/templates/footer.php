@@ -10,7 +10,7 @@
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
   $(function () {
-      $('#upload_file').submit(function() {
+      $('#submit').submit(function() {
           $.ajaxFileUpload({
               url             :"<?php print(base_url());?>ajax/do_upload",
               secureuri       :false,

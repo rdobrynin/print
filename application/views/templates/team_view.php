@@ -10,6 +10,7 @@
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content">
     <div class="row">
+        <?php var_dump($avatars); ?>
       <?php foreach ($users as $ak => $u): ?>
         <ul>
           <?php if (($u['status'] == 1)): ?>

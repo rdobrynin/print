@@ -279,11 +279,22 @@ class Dashboard extends CI_Controller {
 
   function team() {
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $data['avatars'] = $this->admin_model->get_avatars();
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+      $users = $this->admin_model->get_users();
     $data['users'] = $this->admin_model->get_users();
-    $this->load->view('templates/head');
+      $data['avatars'] = $this->admin_model->get_avatars();
+      foreach($users as $uv) {
+
+                  $data['avatars']['test'][]=$uv['id'];
+                  $data['avatars']['test'][]=$uv['status'];
+                  $data['avatars']['test'][]=$uv['first_name'];
+
+
+
+      }
+
+      $this->load->view('templates/head');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }

@@ -56,13 +56,8 @@ class Admin_model extends CI_Model {
     public function get_avatars() {
         $query = $this->db
             ->get('avatars');
-        if ($query->num_rows > 0) {
             $result = $query->result_array();
             return $result;
-        }
-        else {
-            return FALSE;
-        }
     }
 
 
