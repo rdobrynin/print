@@ -44,16 +44,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12" style="margin-bottom: 10px; margin-left: -14px;">
+                            <div class="form-group">
+                            <div class="col-md-12" style="margin-bottom: 10px;">
                                 <div class="btn btn-xs btn-success" id="add_phone">Add Phone</div>
                             </div>
-                            <div id="items"></div>
-                            <div id="items_remove"></div>
+                                <div id="items_phone"></div>
+                                <div id="items_remove_phone"></div>
+                            </div>
                             <div class="form-group">
-                                <div class="col-md-12">
-                                    <label for="email_address">Add email</label>
-                                    <input type="text" value="<?php print($user[0]['email_address']); ?>" class="form-control" name="email_address" id="email_address" placeholder="Email address">
+                                <div class="col-md-12" style="margin-bottom: 10px;">
+                                    <p><span class="label label-primary label-xs">Primary email:</span>  <span><?php print($user['0']['email_address']); ?></span></p>
+                                    </div>
                                 </div>
+                            <div class="form-group">
+                                <div class="col-md-12" style="margin-bottom: 10px;">
+                                    <div class="btn btn-xs btn-success" id="add_email">Add Email</div>
+                                </div>
+                                <div id="items_email"></div>
+                                <div id="items_remove_email"></div>
                             </div>
 
                             <?php if ($user[0]['role'] != 1):; ?>
@@ -137,10 +145,18 @@
             $('.show-info').show();
             $('.show-info').delay(2500).fadeOut();
         }
+//        Add phone
         $("#add_phone").click(function (e) {
-            $("#items").append('<div class="col-md-12" style="padding-left: 0;"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
+            $("#items_phone").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
         });
         $("body").on("click", ".delete-phone", function (e) {
+            $(this).parent("div").remove();
+        });
+//        Add email
+        $("#add_email").click(function (e) {
+            $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
+        });
+        $("body").on("click", ".delete-email", function (e) {
             $(this).parent("div").remove();
         });
         res = $('.errors').text();
