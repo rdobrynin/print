@@ -148,8 +148,8 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-      $id = $this->admin_model->get_user_id($_SESSION['username']);
-      $data['avatar'] = $this->files_model->search_avatar($id[0]['id']);
+
+      $data['avatar'] = $this->admin_model->check_email('roman.dobrynin@gmail.com');
     $this->load->view('templates/test_view',$data);
   }
 

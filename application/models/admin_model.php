@@ -78,13 +78,9 @@ class Admin_model extends CI_Model {
       ->where('email_address', $email)
       ->limit('1')
       ->get('users');
-    if ($query->num_rows > 0) {
-      return $query->result();
-    }
-    else {
+      $result = $query->result_array();
       error_reporting(0);
-      return FALSE;
-    }
+      return $result;
   }
 
   /**

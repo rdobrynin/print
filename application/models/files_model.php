@@ -54,8 +54,6 @@ class Files_model extends CI_Model {
      */
 
     public function search_avatar($user_id) {
-
-
         $query = $this
             ->db
             ->where('fid', $user_id)

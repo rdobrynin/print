@@ -7,11 +7,32 @@
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
-  //    $("#menu-toggle").click(function(e) {
-  //        e.preventDefault();
-  //        $("#wrapper").toggleClass("active");
-  //    });
+    $(function () {
+        $("#email_address").blur(function () {
+            var email_address = $(this).val();
+            var postData = {
+                "email_address": email_address
+            };
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url('ajax/check_email') ?>",
+                data: postData,
+                dataType: 'json',
+                success: function (data, status) {
+                    if (data.avatar !== null) {
+                        $('#avatar-login').hide();
+                        $('#avatar-login-original').show();
+                        $("#avatar-login-original").html('<img src="uploads/avatar/'+data.avatar+'" height="100">');
+                    }
+                    else if (data.avatar == null) {
+                        $('#avatar-login').show();
+                        $('#avatar-login-original').hide();
+                    }
+                }
+            });
+        });
 
+    });
 </script>
 </body>
 

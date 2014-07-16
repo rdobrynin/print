@@ -63,3 +63,29 @@ body {
 .errors {
     color: red;
 }
+
+div#avatar-login {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: rgb(228, 228, 228);
+}
+
+div#avatar-login-original {
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: rgb(228, 228, 228);
+}

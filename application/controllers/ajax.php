@@ -3,23 +3,6 @@
 }
 
 class Ajax extends CI_Controller {
-// check email
-  public function check_email() {
-// Тут мы получаем переданные нам данные из предыдущего файла
-    $userLogin = $this->input->post('email_address');
-    $this->load->model('admin_model');
-    $check_mail= $this->admin_model->check_email($userLogin);
-    $returnText = '';
-    // Делаем простую проверку, замените на свою
-    if($userLogin == $check_mail[0]->email_address){
-      $returnText = '<span style="color:#1e6cff;">Email address is correct</span>';
-    } else {
-      $returnText = '<span style="color:red;">Email address is not correct</span>';
-    }
-    // Возвращаем ответ
-    echo $returnText;
-
-  }
 
 
   /**
@@ -40,6 +23,33 @@ class Ajax extends CI_Controller {
     echo json_encode($result);
 
   }
+
+
+    /**
+     * Check email
+     */
+    public function check_email() {
+        $this->load->model('admin_model');
+        $this->load->model('files_model');
+        $email = $_POST['email_address'];
+        $check_email= $this->admin_model->check_email($email);
+        $getuser= $this->admin_model->get_user($email);
+        $id =  $getuser[0]['id'];
+        $avatar= $this->files_model->search_avatar($id);
+        $result = array();
+        if($email !== $check_email[0]['email_address']){
+            $result['result'] = false;
+            $result['avatar'] = $avatar[0]['filename'];
+        }
+        else {
+            $result['result'] =true;
+            $result['id'] = $id;
+            $result['avatar'] = $avatar[0]['filename'];
+        }
+
+        echo json_encode($result);
+
+    }
 
 
   /**
