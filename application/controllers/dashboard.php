@@ -148,7 +148,8 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-    $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
+      $id = $this->admin_model->get_user_id($_SESSION['username']);
+      $data['avatar'] = $this->files_model->search_avatar($id[0]['id']);
     $this->load->view('templates/test_view',$data);
   }
 
@@ -278,6 +279,7 @@ class Dashboard extends CI_Controller {
 
   function team() {
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
+    $data['avatars'] = $this->admin_model->get_avatars();
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();

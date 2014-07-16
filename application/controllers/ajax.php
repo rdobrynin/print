@@ -143,7 +143,16 @@ class Ajax extends CI_Controller {
             }
             else {
                 $data = $this->upload->data();
-                $file_id = $this->files_model->insert_avatar($data['file_name'], $_POST['user_id']);
+//                search avatar if not found we insert new one
+                $search = $this->files_model->search_avatar($_POST['user_id']);
+
+                if(!empty($search)) {
+                    $file_id = $this->files_model->update_avatar($data['file_name'], $_POST['user_id']);
+                }
+                else {
+                    $file_id = $this->files_model->insert_avatar($data['file_name'], $_POST['user_id']);
+                }
+
                 if($file_id) {
                     $status = "success";
                     $msg = "File successfully uploaded";

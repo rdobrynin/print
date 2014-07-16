@@ -48,6 +48,23 @@ class Admin_model extends CI_Model {
         }
     }
 
+    /**
+     * get avatars
+     * @return bool
+     */
+
+    public function get_avatars() {
+        $query = $this->db
+            ->get('avatars');
+        if ($query->num_rows > 0) {
+            $result = $query->result_array();
+            return $result;
+        }
+        else {
+            return FALSE;
+        }
+    }
+
 
     /**
    * Check email
@@ -81,7 +98,8 @@ class Admin_model extends CI_Model {
       'last_name' => $this->input->post('last_name'),
       'email_address' => $this->input->post('email_address_signup'),
       'password' => $this->input->post('password_signup'),
-      'role' => $this->input->post('role_signup')
+      'role' => $this->input->post('role_signup'),
+      'avatar' =>'placeholder_user.jpg',
     );
     $insert = $this->db->insert('users', $data);
     return $insert;

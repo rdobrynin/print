@@ -9,6 +9,24 @@ class Files_model extends CI_Model {
   }
 
     /**
+     * Update Avatar
+     * @param $filename
+     * @param $title
+     * @param $user_id
+     * @return mixed
+     */
+
+    public function update_avatar($filename, $user_id) {
+        $data = array (
+            'filename' => $filename,
+            'fid'=>$user_id
+        );
+        $this->db->where('fid', $user_id);
+        $result = $this->db->update('avatars', $data);
+        return $result;
+    }
+
+    /**
      * Insert Avatar
      * @param $filename
      * @param $title
@@ -21,7 +39,28 @@ class Files_model extends CI_Model {
             'filename' => $filename,
             'fid'=>$user_id
         );
-        $result = $this->db->update('avatars', $data);
+        $this->db->where('fid', $user_id);
+        $result = $this->db->insert('avatars', $data);
         return $result;
+    }
+
+
+    /**
+     * Search Avatar
+     * @param $filename
+     * @param $title
+     * @param $user_id
+     * @return mixed
+     */
+
+    public function search_avatar($user_id) {
+
+
+        $query = $this
+            ->db
+            ->where('fid', $user_id)
+            ->get('avatars');
+        return $query->result_array();
+
     }
 }

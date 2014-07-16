@@ -282,3 +282,12 @@ button#delete-avatar-btn {
     right: -30px;
 }
 
+span.avatar-content {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 56px;
+    display: block;
+}
+
