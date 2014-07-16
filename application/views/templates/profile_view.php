@@ -138,7 +138,7 @@
             $('.show-info').delay(2500).fadeOut();
         }
         $("#add_phone").click(function (e) {
-            $("#items").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
+            $("#items").append('<div class="col-md-12" style="padding-left: 0;"><div class="form-group"><div class="col-md-3"><input type="text" placeholder="Additional phone number" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_phone[]"></div><button  class="btn btn-danger btn-xs delete-phone">Delete</button></div></div></div><div>');
         });
         $("body").on("click", ".delete-phone", function (e) {
             $(this).parent("div").remove();

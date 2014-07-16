@@ -261,3 +261,8 @@ li {
 #files address, #files h1 {
     display: none;
 }
+.delete-phone {
+    top: 12px;
+    position: relative;
+}
+
