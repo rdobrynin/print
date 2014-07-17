@@ -410,25 +410,6 @@ i.fa-clock-o {
     padding: 10px;
 }
 
-p#back-top {
-    width: 100px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-    float: right;
-}
-
-
-p#back-top i{
-    color: #717171;
-}
-
-p#back-top a {
-    color:  #ddd;
-    text-decoration: none;
-}
 
 .dropdown-menu > li > a {
     display: block;

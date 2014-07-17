@@ -26,3 +26,16 @@ body {
 div.navbar-collapse.navbar-inverse.navbar-fixed-top {
     width: 99%;
 }
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 47px;
+    display: none;
+    background-color: rgba(50, 118, 177,0.8);
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 37px;
+}
