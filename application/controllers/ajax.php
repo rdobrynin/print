@@ -85,9 +85,11 @@ class Ajax extends CI_Controller {
     echo json_encode ($status);
   }
 
+    /**
+     * Add client
+     */
 
-
-  public function addclient() {
+    public function addclient() {
     $result = array();
     $this->load->library('form_validation');
     $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
@@ -128,11 +130,16 @@ class Ajax extends CI_Controller {
 
   }
 
+    /**
+     * Upload avatar
+     */
+
 
     function do_upload() {
         $this->load->model('files_model');
         $status = "";
         $msg = "";
+        $del = "";
         $file_element_name = 'userfile';
         if (empty($_POST['user_id'])) {
             $status = "error";
@@ -157,6 +164,13 @@ class Ajax extends CI_Controller {
                 $search = $this->files_model->search_avatar($_POST['user_id']);
 
                 if(!empty($search)) {
+                    $old_file =   './uploads/avatar/'.$search[0]['filename'];
+                    if(unlink($old_file)) {
+                        $del= 'ok';
+                    }
+                    else {
+                        $del= 'no';
+                    }
                     $file_id = $this->files_model->update_avatar($data['file_name'], $_POST['user_id']);
                 }
                 else {
@@ -176,7 +190,7 @@ class Ajax extends CI_Controller {
             }
             @unlink($_FILES[$file_element_name]);
         }
-        echo json_encode(array('status' => $status, 'msg' => $msg));
+        echo json_encode(array('status' => $status, 'msg' => $msg,  'delete' => $del));
     }
 }
 
