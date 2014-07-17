@@ -27,7 +27,7 @@ class Ajax extends CI_Controller {
     /**
      * Check email
      */
-    public function check_email() {
+    public function check_login_avatar() {
         $this->load->model('admin_model');
         $this->load->model('files_model');
         $email = $_POST['email_address'];

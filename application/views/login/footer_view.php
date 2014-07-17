@@ -15,7 +15,7 @@
             };
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('ajax/check_email') ?>",
+                url: "<?php echo base_url('ajax/check_login_avatar') ?>",
                 data: postData,
                 dataType: 'json',
                 success: function (data, status) {
