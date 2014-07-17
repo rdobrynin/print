@@ -1,6 +1,8 @@
 <div class=" navbar-collapse navbar-inverse navbar-fixed-top">
   <ul class="navbar navbar-left">
-    <li class="sidebar-brand"><span class="avatar-top"><span class="avatar-img">
+    <li class="sidebar-brand"><span class="avatar-top">
+            <span class="avatar-img-ajax"></span>
+            <span class="avatar-img">
                <?php if ($avatar != FALSE): ?>
                   <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45"></a>
                <?php else: ?>

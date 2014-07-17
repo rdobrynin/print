@@ -300,7 +300,7 @@ span.avatar-content {
     display: block;
 }
 
-#avatar-true-ajax {
+#avatar-true-ajax, .avatar-img-ajax {
     display: none;
 }
 
