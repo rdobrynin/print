@@ -212,9 +212,10 @@
 <!--      $(this).closest('form').find("input[type=text], textarea").val("");-->
 <!--      });-->
 
+//      Check if title is already registered
     $( "#client_title" ).blur(function() {
       var form_data = {
-        title: $('#client_title').val()
+        title: $(this).val()
       };
       $.ajax({
         url: "<?php echo site_url('ajax/check_client'); ?>",
@@ -231,13 +232,32 @@
             $('#create_company').removeAttr('disabled');
             $('#check_client').hide();
           }
-
-
-
         }
       });
     });
 
-
+// Check if email already registered
+      $( "#client_email" ).blur(function() {
+          var form_data = {
+              email: $(this).val()
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/check_mail'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  if(msg.result!=null) {
+                      $('#create_company').attr('disabled','disabled');
+                      $('#check_client').show();
+                      $("#check_client").empty().append(msg.result);
+                  }
+                  else {
+                      $('#create_company').removeAttr('disabled');
+                      $('#check_client').hide();
+                  }
+              }
+          });
+      });
   });
 </script>
