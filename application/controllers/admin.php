@@ -64,7 +64,9 @@ class Admin extends CI_Controller {
     if ($this->form_validation->run() !== false) {
      $this->load->model('admin_model');
       if($query=$this->admin_model->create_member()) {
+          $this->load->view('login/head_view');
         $this->load->view('login/invite_view');
+          $this->load->view('login/footer_view');
       }
     }
       else {
@@ -75,7 +77,9 @@ class Admin extends CI_Controller {
 //  forgot password or username
   function forgot() {
     session_destroy();
+      $this->load->view('login/head_view');
     $this->load->view('login/forgot_view');
+      $this->load->view('login/footer_view');
   }
 }
 
