@@ -20,12 +20,6 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                     </ul>
                 </div>
-                <div class="panel-google-plus-tags">
-                    <ul>
-                        <li>#Millennials</li>
-                        <li>#Generation</li>
-                    </ul>
-                </div>
                 <div class="panel-heading">
                     <img class="[ img-circle pull-left ]" src="https://lh3.googleusercontent.com/-CxXg7_7ylq4/AAAAAAAAAAI/AAAAAAAAAQ8/LhCIKQC5Aq4/s46-c-k-no/photo.jpg" alt="Mouse0270" />
                     <h3>Robert McIntosh</h3>
