@@ -8,7 +8,6 @@
             <!--FORM-->
             <div class="col-md-8">
                 <h2>Profile view</h2>
-
                 <form role="form" class="form-horizontal" action="<?php print(base_url()); ?>update_profile" method="POST" autocomplete="on">
                     <div class="row">
                         <div class="address-wrapper" style="height: 100%;">
@@ -19,8 +18,6 @@
                                     <label for="first_name">First name</label>
                                     <input type="text" value="<?php print($user[0]['first_name']); ?>" class="form-control" name="first_name" id="first_name" placeholder="First name">
                                 </div>
-
-
                                 <div class="col-md-6">
                                     <label for="last_name">Last name</label>
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
@@ -96,14 +93,12 @@
                         </div>
                         <div class="address-wrapper" style="height: 100%;">
                             <p class="lead">Additional information</p>
-
                             <div class="form-group">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="skype_address">Skype</label>
                                     <input type="text" value="<?php print($user[0]['skype_address']); ?>" class="form-control" id="skype_address" name="skype_address" placeholder="Skype address">
-                                </div>
+
                             </div>
-                            <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="facebook_address">Facebook</label>
                                     <input type="text" value="<?php print($user[0]['facebook_address']); ?>" class="form-control" id="facebook_address" name="facebook_address" placeholder="Facebook address">
@@ -135,7 +130,6 @@
                                 <br/>
                                 <input type="submit" class="btn btn-info" name="submit" id="submit"/>
                             </form>
-
                             <?php if ($avatar != FALSE): ?>
                                 <div id="avatar-true">
                                 <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
@@ -144,7 +138,6 @@
                                 <div id="avatar-true-ajax">
                                     <span id="ajax-temp" class="avatar-wrapper pull-right"></span>
                                 </div>
-
                             <?php endif ?>
                             <div id="files"></div>
                         </div>
@@ -193,7 +186,6 @@
             email_for_delete =$(this).children().text();
             $(".delete_email_data").append('<span><input type="hidden" name="del_email[]" value="'+email_for_delete+'"></span>');
         });
-
 
         res = $('.errors').text();
         if (res.length > 0) {
