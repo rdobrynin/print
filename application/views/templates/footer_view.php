@@ -48,6 +48,7 @@
         $('.help-block').animate({
           height: (++i % 2) ? 414 :10
         }, 200);
+          $('.help-content').toggle();
       }
     })());
 

@@ -1,7 +1,10 @@
 .help-content {
     position: fixed;
-    background-color: #ddd;
     display: none;
+    color: #fff;
+    top: 24px;
+    left: 20px;
+    width: 98%;
 }
 
 .help-content-open {
