@@ -1,4 +1,4 @@
-<?php include('head.php');?>
+<?php include('head_view.php');?>
   <div class="container" id="main_login" style="display: block;">
     <form class="form-signin" action="<?php print(base_url());?>signup" method="POST" autocomplete="off">
       <div class="errors ">
@@ -24,4 +24,4 @@
 
       </div>
       <?php echo form_close(); ?>
-<?php include('footer.php');?>
+<?php include('footer_view.php');?>

@@ -1,4 +1,4 @@
-<?php include('head.php');?>
+<?php include('head_view.php');?>
 <!-- Modal -->
 <div class="modal show" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -13,7 +13,7 @@
     </div>
   </div>
 </div>
-<?php include('footer.php');?>
+<?php include('footer_view.php');?>
 <script>
   $(function () {
     $.ajax({

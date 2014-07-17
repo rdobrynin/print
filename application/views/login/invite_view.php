@@ -1,4 +1,4 @@
-<?php include('head.php');
+<?php include('head_view.php');
 
 
 
@@ -10,4 +10,4 @@
  <a href="admin"> <button class="btn btn-info">Back</button></a>
 
 </div><!-- /#wrapper -->
-<?php include('footer.php');?>
+<?php include('footer_view.php');?>

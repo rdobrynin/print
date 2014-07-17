@@ -190,7 +190,7 @@
 </div>
 </div>
 
-<?php include('footer.php');?>
+<?php include('footer_view.php');?>
 
 <script>
   $(function () {

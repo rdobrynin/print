@@ -69,7 +69,7 @@ class Dashboard extends CI_Controller {
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -77,7 +77,7 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/sidebar_view', $data);
 
     $this->load->view('templates/dashboard_view', $data);
-    $this->load->view('templates/footer');
+    $this->load->view('templates/footer_view');
     $this->load->view('templates/settings_view', $data);
   }
 
@@ -90,7 +90,7 @@ class Dashboard extends CI_Controller {
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -109,7 +109,7 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -133,7 +133,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -163,7 +163,7 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -184,7 +184,7 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
 //    $data['roles'] = $this->admin_model->get_roles();
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -231,14 +231,14 @@ class Dashboard extends CI_Controller {
     $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('city', 'City', 'trim|required');
     $this->form_validation->set_rules('country', 'Country', 'trim|required');
+      $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+      $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+      $data['users'] = $this->admin_model->get_users();
+      $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     if ($this->form_validation->run() !== false) {
       $title = $this->admin_model->verify_client($this->input->post('title'));
      if($title) {
-       $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
-       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-       $data['users'] = $this->admin_model->get_users();
-       $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-       $this->load->view('templates/head');
+       $this->load->view('templates/head_view');
        if($data['user'][0]['helpblock']==1) {
          $this->load->view('templates/help_block_view');
        }
@@ -247,11 +247,9 @@ class Dashboard extends CI_Controller {
      }
       else {
         if($query=$this->admin_model->create_client()) {
-          $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-          $data['users'] = $this->admin_model->get_users();
           $data['response'] = 'Company creating...';
           $data['result'] = 'clients';
-          $this->load->view('templates/head');
+          $this->load->view('templates/head_view');
           if($data['user'][0]['helpblock']==1) {
             $this->load->view('templates/help_block_view');
           }
@@ -264,7 +262,7 @@ class Dashboard extends CI_Controller {
     else {
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
-      $this->load->view('templates/head');
+      $this->load->view('templates/head_view');
       if($data['user'][0]['helpblock']==1) {
         $this->load->view('templates/help_block_view');
       }
@@ -294,7 +292,7 @@ class Dashboard extends CI_Controller {
 
       }
 
-      $this->load->view('templates/head');
+      $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -302,7 +300,7 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/sidebar_view', $data);
 
     $this->load->view('templates/team_view', $data);
-    $this->load->view('templates/footer');
+    $this->load->view('templates/footer_view');
     $this->load->view('templates/settings_view', $data);
   }
 
@@ -317,7 +315,7 @@ class Dashboard extends CI_Controller {
     $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    $this->load->view('templates/head');
+    $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
@@ -377,7 +375,7 @@ class Dashboard extends CI_Controller {
       else {
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
-        $this->load->view('templates/head');
+        $this->load->view('templates/head_view');
         if ($data['user'][0]['helpblock'] == 1) {
           $this->load->view('templates/help_block_view');
         }

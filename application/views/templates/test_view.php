@@ -1,4 +1,4 @@
-<?php include('head.php'); ?>
+<?php include('head_view.php'); ?>
 <div class="container">
     <div id="page-content-wrapper">
         <div class="page-content inset">
@@ -8,4 +8,4 @@
         </div>
     </div>
 </div>
-<?php include('footer.php'); ?>
+<?php include('footer_view.php'); ?>
