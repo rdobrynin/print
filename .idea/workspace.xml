@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/help-block.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/footer_view.php" afterPath="$PROJECT_DIR$/application/views/templates/footer_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/head_view.php" afterPath="$PROJECT_DIR$/application/views/templates/head_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/help_block.css" afterPath="$PROJECT_DIR$/css/help_block.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/help_block_view.php" afterPath="$PROJECT_DIR$/application/views/templates/help_block_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +34,7 @@
           <file leaf-file-name="footer_view.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="54" column="10" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.6482593" vertical-offset="450" max-vertical-offset="2903">
+                <state line="49" column="54" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.5402161" vertical-offset="450" max-vertical-offset="2921">
                   <folding />
                 </state>
               </provider>
@@ -866,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="10" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.6482593" vertical-offset="450" max-vertical-offset="2903">
+        <state line="49" column="54" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.5402161" vertical-offset="450" max-vertical-offset="2921">
           <folding />
         </state>
       </provider>
