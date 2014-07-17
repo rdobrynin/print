@@ -33,10 +33,17 @@ class Admin extends CI_Controller {
         redirect('dashboard');
       }
       else {
-        echo 'Wrong password';
+          $this->load->view('login/head_view');
+          $this->load->view('login/error_view');
+          $this->load->view('login/login_view');
+          $this->load->view('login/footer_view');
       }
     }
-    $this->load->view('login/login_view');
+      else {
+          $this->load->view('login/head_view');
+          $this->load->view('login/login_view');
+          $this->load->view('login/footer_view');
+      }
   }
 
 // logout and session destroy

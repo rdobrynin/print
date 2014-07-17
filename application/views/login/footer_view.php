@@ -20,6 +20,7 @@
                 dataType: 'json',
                 success: function (data, status) {
                     if (data.avatar !== null) {
+                        $('.error-frame').fadeOut(500);
                         $('#avatar-login').hide();
                         $('#avatar-login-original').show();
                         $("#avatar-login-original").html('<img src="uploads/avatar/'+data.avatar+'" height="100">');
