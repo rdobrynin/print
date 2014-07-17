@@ -32,6 +32,30 @@
             });
         });
 
+        $( "#email_address_signup" ).blur(function() {
+            var form_data = {
+                email: $(this).val()
+            };
+            $.ajax({
+                url: "<?php echo site_url('ajax/check_emails'); ?>",
+                type: 'POST',
+                data: form_data,
+                dataType: 'json',
+                success: function (msg) {
+                    if(msg.result!=true) {
+                        $('#login_btn').attr('disabled','disabled');
+                        $('#check_email').show();
+                        $('.label-signin').css('display','block');
+                        $("#check_email").empty().append(msg.result);
+                    }
+                    else {
+                        $('#login_btn').removeAttr('disabled');
+                        $('#check_email').hide();
+                    }
+                }
+            });
+        });
+
     });
 </script>
 </body>

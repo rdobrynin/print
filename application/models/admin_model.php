@@ -119,7 +119,7 @@ class Admin_model extends CI_Model {
     $data = array (
       'first_name' => $this->input->post('first_name'),
       'last_name' => $this->input->post('last_name'),
-      'email_address' => $this->input->post('email_address_signup'),
+      'email_address' => $this->input->post('email'),
       'password' => $this->input->post('password_signup'),
       'role' => $this->input->post('role_signup'),
       'avatar' =>'placeholder_user.jpg',

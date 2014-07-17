@@ -51,7 +51,7 @@ class Admin extends CI_Controller {
     $this->load->library('form_validation');
     $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
-    $this->form_validation->set_rules('email_address_signup', 'Email Address', 'trim|required|valid_email');
+    $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('password_signup', 'Password', 'trim|required|min_length[4]|md5');
     $this->form_validation->set_rules('password_signup_2', 'Password', 'trim|required|matches[password_signup]');
     if ($this->form_validation->run() !== false) {

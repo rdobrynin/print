@@ -105,3 +105,13 @@ div#avatar-login {
     /* border: 1px solid rgb(48, 48, 48); */
     box-shadow: inset 0px 0px 7px rgba(153, 153, 153, 1);
 }
+
+
+.label-signin {
+    margin-top: 11px;
+    margin-bottom: 10px !important;
+    display: none;
+    padding: 10px;
+    font-size: 15px;
+
+}
