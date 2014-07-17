@@ -1,6 +1,3 @@
-
-
-
 <!-- Page content -->
 <div id="page-content-wrapper">
   <div class="content-header">
