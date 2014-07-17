@@ -14,7 +14,8 @@
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_title">Company<span class="req">*</span></label>
-                  <div class="col-sm-5"><input type="text" class="form-control" name="title" id="client_title" placeholder="Company title here">      <span id="check_client" class="label label-danger"></span></div>
+                  <div class="col-sm-5"><input type="text" class="form-control" name="title" id="client_title" placeholder="Company title here">
+                      <span id="check_client" class="label label-danger"></span></div>
                 </div>
 
                 <div class="form-group">
@@ -23,7 +24,8 @@
                 </div>
                 <div class="form-group">
                   <label class="col-sm-12" for="client_email">Email<span class="req">*</span></label>
-                  <div class="col-sm-6"><input type="text" class="form-control" name="email"  id="client_email" placeholder="Email address here"></div>
+                  <div class="col-sm-6"><input type="text" class="form-control" name="email"  id="client_email" placeholder="Email address here">
+                      <span id="check_email" class="label label-danger"></span></div>
                 </div>
                   <div class="form-group">
                   <label class="col-sm-12" for="client_url">URL</label>
@@ -249,12 +251,12 @@
               success: function (msg) {
                   if(msg.result!=null) {
                       $('#create_company').attr('disabled','disabled');
-                      $('#check_client').show();
-                      $("#check_client").empty().append(msg.result);
+                      $('#check_email').show();
+                      $("#check_email").empty().append(msg.result);
                   }
                   else {
                       $('#create_company').removeAttr('disabled');
-                      $('#check_client').hide();
+                      $('#check_email').hide();
                   }
               }
           });
