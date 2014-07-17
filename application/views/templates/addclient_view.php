@@ -147,7 +147,7 @@
       $('#items_manager_client').append('&nbsp;<span><input type="hidden" name="client_manager[]" value="input_manager_'+ manager_value + '"><div class="label label-default label-tag delete-manager-client" id="delete-manager-client' + manager_value + '">' + manager_title + '&nbsp;<i class="fa fa-times"></i></div></span>');
 
     });
-    $("body").on("click", ".delete-manager-client", function (e) {
+    $("body").on("click", ".delete-manager-client", function (e) {;
       $(this).parent("span").remove();
     });
 

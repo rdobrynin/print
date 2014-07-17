@@ -258,6 +258,40 @@ class Admin_model extends CI_Model {
         return $insert;
     }
 
+    /**
+     * delete additional email
+     * @param $id
+     * @return array
+     */
+
+    public function delete_member_email($email) {
+        $delete = array();
+            $data = array(
+                'email' => $email
+            );
+            if($email !='') {
+                $delete = $this->db->delete('users_emails', $data);
+            }
+        return $delete;
+    }
+
+    /**
+     * delete additional phones
+     * @param $id
+     * @return array
+     */
+
+    public function delete_member_phone($phone) {
+        $delete = array();
+        $data = array(
+            'phone' => $phone
+        );
+        if($phone !='') {
+            $delete = $this->db->delete('users_phones', $data);
+        }
+        return $delete;
+    }
+
   /**
    * get user phones
    * @param $id

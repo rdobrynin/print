@@ -328,6 +328,22 @@ class Dashboard extends CI_Controller {
    */
 
   function update_profile() {
+      $this->load->model('admin_model');
+//      delete additional emails
+      $email_del = $this->input->post('del_email');
+      if (!empty($email_del[0])) {
+          foreach ($email_del as $v) {
+              $this->admin_model->delete_member_email($v);
+          }
+      }
+//      delete additionals phones
+      $phone_del = $this->input->post('del_phone');
+      if (!empty($phone_del[0])) {
+          foreach ($phone_del as $v) {
+              $this->admin_model->delete_member_phone($v);
+          }
+      }
+
     $first = $this->input->post('first_name');
     $last = $this->input->post('last_name');
     if ($first == FALSE && $last == FALSE) {

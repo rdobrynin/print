@@ -37,12 +37,13 @@
                                         <?php foreach ($phones as $k => $phone): ?>
                                             <?php if (isset($phone['phone'])): ?>
                                                 <span><input type="hidden" name="<?php print($phone['id']); ?>">
-                        <span class="label label-default label-tag delete-add-phone" style="margin-left: 10px;"><i class="fa fa-phone"></i>&nbsp;<?php print($phone['phone']); ?>
+                        <span class="label label-default label-tag delete-add-phone" style="margin-left: 10px;"><span class="get_old_phone"><i class="fa fa-phone"></i>&nbsp;<?php print($phone['phone']); ?></span>
                             &nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
                                             <?php endif; ?>
                                         <?php endforeach ?>
                                     </div>
                                 </div>
+                                <div class="delete_phone_data"></div>
                             </div>
                             <div class="form-group">
                             <div class="col-md-12" style="margin-bottom: 10px;">
@@ -53,7 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12" style="margin-bottom: 10px;">
-                                    <p><span class="label label-primary label-xs">Primary email:</span>  <span><?php print($user['0']['email_address']); ?></span></p>
+                                    <p><span class="label label-primary label-xs">Primary email:</span>  <span><span class="get_old_mail"><?php print($user['0']['email_address']); ?></span></span></p>
                                     </div>
                                 <!--                additional emails-->
                                 <div class="form-group">
@@ -61,12 +62,13 @@
                                         <?php foreach ($emails as $k => $email): ?>
                                             <?php if (isset($email['email'])): ?>
                                                 <span><input type="hidden" name="<?php print($email['id']); ?>">
-                        <span class="label label-default label-tag delete-add-email" style="margin-left: 10px;"><i class="fa fa-mail"></i>&nbsp;<?php print($email['email']); ?>
+                        <span class="label label-default label-tag delete-add-email" style="margin-left: 10px;"><i class="fa fa-mail"></i>&nbsp;<span class="get_old_mail"><?php print($email['email']); ?></span>
                             &nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
                                             <?php endif; ?>
                                         <?php endforeach ?>
                                     </div>
                                 </div>
+                                <div class="delete_email_data"></div>
                                 </div>
                             <div class="form-group">
                                 <div class="col-md-12" style="margin-bottom: 10px;">
@@ -177,13 +179,22 @@
         $("body").on("click", ".delete-phone", function (e) {
             $(this).parent("div").remove();
         });
+//        Delete phone
+        $('.delete-add-phone').click(function () {
+            phone_for_delete = $.trim($(this).children().text());
+            $(".delete_phone_data").append('<span><input type="hidden" name="del_phone[]" value="'+phone_for_delete+'"></span>');
+        });
 //        Add email
         $("#add_email").click(function (e) {
             $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="email" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
         });
-        $("body").on("click", ".delete-email", function (e) {
-            $(this).parent("div").remove();
+//        Delete email
+        $('.delete-add-email').click(function () {
+            email_for_delete =$(this).children().text();
+            $(".delete_email_data").append('<span><input type="hidden" name="del_email[]" value="'+email_for_delete+'"></span>');
         });
+
+
         res = $('.errors').text();
         if (res.length > 0) {
             $('.errors').show();
