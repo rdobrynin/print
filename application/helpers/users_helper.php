@@ -2,20 +2,20 @@
   exit('No direct script access allowed');
 }
 
-if (!function_exists('test')) {
+if (!function_exists('show_role')) {
   function show_role($role) {
     $result='none';
     if($role == 4) {
-      $result = 'administrator';
+      $result = 'Admin';
     }
     else if($role == 3) {
-      $result = 'implementor';
+      $result = 'Implementor';
     }
     else if($role == 2) {
-      $result = 'manager';
+      $result = 'Manager';
     }
     else if($role == 1) {
-      $result = 'customer';
+      $result = 'Customer';
     }
     return $result;
   }

@@ -2,13 +2,13 @@
   <ul class="navbar navbar-left">
     <li class="sidebar-brand"><span class="avatar-top"><span class="avatar-img">
                <?php if ($avatar != FALSE): ?>
-                   <img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45">
+                  <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45"></a>
                <?php else: ?>
-                   <img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>" alt="Smiley face" height="45">
+                 <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>" alt="Smiley face" height="45"></a>
                <?php endif ?>
             </span></span>
     </li>
-    <span class="avatar-name">Admin</span>
+    <span class="avatar-name"><?php print(show_role($user[0]['role'])); ?></span>
   </ul>
 <div class="show-info"><div class="show-info-content"></div><div class="expandable-image"></div></div>
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
