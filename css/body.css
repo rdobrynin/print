@@ -22,3 +22,7 @@ body {
     padding-bottom: 25px;
     min-height: 400px;
 }
+
+div.navbar-collapse.navbar-inverse.navbar-fixed-top {
+    width: 99%;
+}

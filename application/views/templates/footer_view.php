@@ -22,7 +22,7 @@
               success : function (data, status)
               {
                   if(data.status != 'error') {
-                      $('#files').html('<p class="lead">Avatar successfully uploaded...</p>');
+//                      $('#files').html('<p class="lead">Avatar successfully uploaded...</p>');
                       $('#avatar-true').hide();
                       $('#avatar-true-ajax').show();
                       $('.avatar-img').hide();
@@ -30,9 +30,11 @@
                       $('.avatar-img-ajax').html("<a href='<?php print base_url(); ?>profile'><img src='<?php print base_url(); ?>uploads/avatar/"+data.new_avatar+"' alt='Smiley face' height='45'></a>");
                       $('#ajax-temp').html("<img src='<?php print base_url(); ?>"+'uploads/avatar/'+data.new_avatar+"' alt='Smiley face' height='100'>");
                   }
-                  $('.show-info').show();
-                  $('.show-info').children( ".show-info-content").html(data.msg);
-                  $('.show-info').delay(2500).fadeOut();
+                  $('#files').empty();
+                  $('#files').html('<p class="lead">'+data.msg+'</p>');
+//                  $('.show-info').show();
+//                  $('.show-info').children( ".show-info-content").html(data.msg);
+//                  $('.show-info').delay(2500).fadeOut();
               }
           });
           return false;
