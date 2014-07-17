@@ -22,7 +22,5 @@ class Dashboard_model extends CI_Model {
     $this->db->where('id', $id);
     $update =$this->db->update('users', $data);
     return $update;
-
-
   }
 }

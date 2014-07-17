@@ -44,7 +44,6 @@ class Files_model extends CI_Model {
         return $result;
     }
 
-
     /**
      * Search Avatar
      * @param $filename
@@ -59,9 +58,7 @@ class Files_model extends CI_Model {
             ->where('fid', $user_id)
             ->get('avatars');
         return $query->result_array();
-
     }
-
 }
 
 

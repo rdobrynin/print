@@ -24,7 +24,6 @@ class Ajax extends CI_Controller {
 
   }
 
-
     /**
      * Check email
      */
@@ -51,7 +50,6 @@ class Ajax extends CI_Controller {
 
     }
 
-
   /**
    * Success modal
    */
@@ -62,7 +60,6 @@ class Ajax extends CI_Controller {
     $status = array("URL"=>$url, "RESULT"=>$result);
     echo json_encode ($status) ;
   }
-
 
   /**
    * Check online status
@@ -124,16 +121,12 @@ class Ajax extends CI_Controller {
       $result['error'] = 1;
       $result['result'] = validation_errors();
     }
-
-
     echo json_encode($result); //At the end of the function.
-
   }
 
     /**
      * Upload avatar
      */
-
 
     function do_upload() {
         $this->load->model('files_model');
