@@ -27,10 +27,6 @@
                       $('#avatar-true-ajax').show();
                       $('#ajax-temp').html("<img src='<?php print base_url(); ?>"+'uploads/avatar/'+data.new_avatar+"' alt='Smiley face' height='100'>");
                   }
-
-
-
-
                   $('.show-info').show();
                   $('.show-info').children( ".show-info-content").html(data.msg);
                   $('.show-info').delay(2500).fadeOut();

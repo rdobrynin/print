@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/ajax.php" afterPath="$PROJECT_DIR$/application/controllers/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elements.css" afterPath="$PROJECT_DIR$/css/elements.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/footer_view.php" afterPath="$PROJECT_DIR$/application/views/templates/footer_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/profile_view.php" afterPath="$PROJECT_DIR$/application/views/templates/profile_view.php" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +31,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="footer_view.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="153" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.47539017" vertical-offset="108" max-vertical-offset="2813">
+                <state line="34" column="23" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.71308523" vertical-offset="36" max-vertical-offset="2741">
                   <folding />
                 </state>
               </provider>
@@ -65,10 +62,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="profile_view.php" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="profile_view.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="150" column="0" selection-start="9753" selection-end="9753" vertical-scroll-proportion="0.8427371" vertical-offset="2250" max-vertical-offset="4811">
+                <state line="145" column="42" selection-start="9620" selection-end="9620" vertical-scroll-proportion="0.7346939" vertical-offset="2250" max-vertical-offset="4811">
                   <folding>
                     <marker date="1405579908749" expanded="true" signature="10667:10702" placeholder="..." />
                     <marker date="1405579908749" expanded="true" signature="11222:11257" placeholder="..." />
@@ -818,16 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="9753" selection-end="9753" vertical-scroll-proportion="0.8427371" vertical-offset="2250" max-vertical-offset="4811">
-          <folding>
-            <marker date="1405579908749" expanded="true" signature="10667:10702" placeholder="..." />
-            <marker date="1405579908749" expanded="true" signature="11222:11257" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="188" column="49" selection-start="6336" selection-end="6336" vertical-scroll-proportion="-27.037037" vertical-offset="2654" max-vertical-offset="4379">
@@ -837,8 +824,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="153" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.47539017" vertical-offset="108" max-vertical-offset="2813">
+        <state line="34" column="23" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.71308523" vertical-offset="36" max-vertical-offset="2741">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/profile_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="42" selection-start="9620" selection-end="9620" vertical-scroll-proportion="0.7346939" vertical-offset="2250" max-vertical-offset="4811">
+          <folding>
+            <marker date="1405579908749" expanded="true" signature="10667:10702" placeholder="..." />
+            <marker date="1405579908749" expanded="true" signature="11222:11257" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
