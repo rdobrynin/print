@@ -25,7 +25,7 @@ class Ajax extends CI_Controller {
   }
 
     /**
-     * Check email
+     * Check login avatar
      */
     public function check_login_avatar() {
         $this->load->model('admin_model');
@@ -47,10 +47,39 @@ class Ajax extends CI_Controller {
         }
 
         echo json_encode($result);
-
     }
 
-  /**
+
+    /**
+     * Check emails
+     */
+    public function check_emails() {
+        $result['result'] = true;
+        $this->load->model('admin_model');
+        $email = $_POST['email'];
+        $query= $this->admin_model->emails_users($email);
+        foreach($query as $v) {
+            if($v['email_address'] == $email) {
+             $result['result'] = 'This email already registered';
+            }
+        }
+        $query= $this->admin_model->emails_client($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = 'This email already registered';
+            }
+        }
+        $query= $this->admin_model->emails_added($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = 'This email already registered';
+            }
+        }
+        echo json_encode($result);
+    }
+
+
+    /**
    * Success modal
    */
 

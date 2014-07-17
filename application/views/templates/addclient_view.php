@@ -244,12 +244,12 @@
               email: $(this).val()
           };
           $.ajax({
-              url: "<?php echo site_url('ajax/check_mail'); ?>",
+              url: "<?php echo site_url('ajax/check_emails'); ?>",
               type: 'POST',
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                  if(msg.result!=null) {
+                  if(msg.result!=true) {
                       $('#create_company').attr('disabled','disabled');
                       $('#check_email').show();
                       $("#check_email").empty().append(msg.result);

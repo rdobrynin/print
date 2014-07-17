@@ -78,7 +78,39 @@ class Admin_model extends CI_Model {
       return $result;
   }
 
-  /**
+    /**
+     * Check emails
+     * @param $email
+     * @return bool
+     */
+
+    public function emails_users($email) {
+        $query = $this
+            ->db
+            ->where('email_address', $email)
+            ->get('users');
+        $result = $query->result_array();
+        return $result;
+    }
+    public function emails_client($email) {
+        $query = $this
+            ->db
+            ->where('email', $email)
+            ->get('client');
+        $result = $query->result_array();
+        return $result;
+    }
+    public function emails_added($email) {
+        $query = $this
+            ->db
+            ->where('email', $email)
+            ->get('users_emails');
+        $result = $query->result_array();
+        return $result;
+    }
+
+
+    /**
    * Create member
    * @return mixed
    */
