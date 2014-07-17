@@ -300,3 +300,11 @@ span.avatar-content {
     display: block;
 }
 
+#avatar-true-ajax {
+    display: none;
+}
+
+div#files {
+    padding-top: 33px;
+}
+

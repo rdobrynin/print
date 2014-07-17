@@ -139,6 +139,10 @@
                                 <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
                                 </div>
 
+                                <div id="avatar-true-ajax">
+                                    <span id="ajax-temp" class="avatar-wrapper pull-right"></span>
+                                </div>
+
                             <?php endif ?>
                             <div id="files"></div>
                         </div>

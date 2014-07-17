@@ -22,9 +22,15 @@
               success : function (data, status)
               {
                   if(data.status != 'error') {
-                      $('#files').html('<p>Reloading file...</p>');
-                      refresh_files();
+                      $('#files').html('<p class="lead">Avatar successfully uploaded...</p>');
+                      $('#avatar-true').hide();
+                      $('#avatar-true-ajax').show();
+                      $('#ajax-temp').html("<img src='<?php print base_url(); ?>"+'uploads/avatar/'+data.new_avatar+"' alt='Smiley face' height='100'>");
                   }
+
+
+
+
                   $('.show-info').show();
                   $('.show-info').children( ".show-info-content").html(data.msg);
                   $('.show-info').delay(2500).fadeOut();
@@ -32,15 +38,6 @@
           });
           return false;
       });
-
-
-      function refresh_files() {
-          $.get('./uploads/avatar/')
-              .success(function (data){
-//                  $('#files').html(data);
-              });
-      }
-      refresh_files();
 
     $(".help-button").click((function() {
       var i = 0;
