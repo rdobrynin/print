@@ -32,6 +32,8 @@
             });
         });
 
+//        Check emails
+
         $( "#email_address_signup" ).blur(function() {
             var form_data = {
                 email: $(this).val()

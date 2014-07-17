@@ -50,10 +50,10 @@
                                 <div id="items_remove_phone"></div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-12" style="margin-bottom: 10px;">
-                                    <p><span class="label label-primary label-xs">Primary email:</span>  <span><span class="get_old_mail"><?php print($user['0']['email_address']); ?></span></span></p>
+                                <div class="col-md-6" style="margin-bottom: 10px;">
+                                    <p><span class="label label-primary">Primary email:</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email_address']); ?></span></span></p>
                                     </div>
-                                <!--                additional emails-->
+                                <!--additional emails-->
                                 <div class="form-group">
                                     <div class="col-md-12" style="padding-left: 20px;">
                                         <?php foreach ($emails as $k => $email): ?>
