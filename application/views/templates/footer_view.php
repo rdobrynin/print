@@ -46,9 +46,11 @@
       var i = 0;
       return function() {
         $('.help-block').animate({
-          height: (++i % 2) ? 414 :10
+          height: (++i % 2) ? 490 :10
         }, 200);
-          $('.help-content').toggle();
+          $('.help-content').slideToggle('fast'
+
+          );
       }
     })());
 

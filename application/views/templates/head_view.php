@@ -15,7 +15,6 @@
 
   <!-- Add custom CSS here -->
   <link href="<?php print(base_url());?>css/sidebar.css" rel="stylesheet">
-  <link href="<?php print(base_url());?>css/help-block.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/add_client.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/users.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/mini_inbox.css" rel="stylesheet">
