@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller {
       $this->load->model('admin_model');
       $this->load->model('dashboard_model');
       $this->load->model('files_model');
+      $this->lang->load('russian', 'russian');
       $data['avatar'] = $this->admin_model->get_user_id($_SESSION['username']);
     if(!isset($_SESSION['username'])) {
       redirect('admin');
