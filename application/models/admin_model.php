@@ -77,7 +77,6 @@ class Admin_model extends CI_Model {
       error_reporting(0);
       return $result;
   }
-
     /**
      * Check emails
      * @param $email
@@ -108,6 +107,14 @@ class Admin_model extends CI_Model {
         $result = $query->result_array();
         return $result;
     }
+    public function emails_new($email) {
+        $query = $this
+            ->db
+            ->where('email_address', $email)
+            ->get('new_users');
+        $result = $query->result_array();
+        return $result;
+    }
 
 
     /**
@@ -124,7 +131,7 @@ class Admin_model extends CI_Model {
       'role' => $this->input->post('role_signup'),
       'avatar' =>'placeholder_user.jpg',
     );
-    $insert = $this->db->insert('users', $data);
+    $insert = $this->db->insert('new_users', $data);
     return $insert;
   }
 
@@ -171,6 +178,7 @@ class Admin_model extends CI_Model {
     $data = array (
       'first_name' => $this->input->post('first_name'),
       'last_name' => $this->input->post('last_name'),
+      'role' => $this->input->post('role'),
       'phone' => $this->input->post('phone'),
       'skype_address' => $this->input->post('skype_address'),
       'facebook_address' => $this->input->post('facebook_address'),
@@ -339,6 +347,27 @@ class Admin_model extends CI_Model {
   }
 
     /**
+     * Verify new user
+     * @param $title
+     * @return mixed
+     */
+
+    public function verify_new_user($email) {
+        $query = $this
+            ->db
+            ->where('email_address', $email)
+            ->get('new_users');
+        if ($query->num_rows > 0) {
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
+
+    }
+
+
+    /**
    * get user();
    * @param $username
    * @return mixed
@@ -352,8 +381,22 @@ class Admin_model extends CI_Model {
     return $query->result_array();
   }
 
+    /**
+     * get new joined user();
+     * @param $username
+     * @return mixed
+     */
 
-  /**
+    public function get_new_users() {
+        $query = $this
+            ->db
+            ->get('new_users');
+        return $query->result_array();
+    }
+
+
+
+    /**
    * get own client ();
    * @param $username
    * @return mixed

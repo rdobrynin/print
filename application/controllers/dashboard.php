@@ -64,6 +64,9 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $new_users = $this->admin_model->get_new_users();
+    $data['new_users'] = $new_users;
+    $data['count_new_users'] = count($new_users);
     $data['roles'] = $this->admin_model->get_roles();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head_view');
@@ -140,13 +143,19 @@ class Dashboard extends CI_Controller {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-//    $data['roles'] = $this->admin_model->get_roles();
-    $this->load->view('templates/head_view');
-    if($data['user'][0]['helpblock']==1) {
-      $this->load->view('templates/help_block_view');
-    }
-    $this->load->view('templates/addclient_view', $data);
-    $this->load->view('templates/settings_view', $data);
+
+      if($data['user'][0]['role']==5 OR $data['user'][0]['role']==4 ) {
+          $this->load->view('templates/head_view');
+          if($data['user'][0]['helpblock']==1) {
+              $this->load->view('templates/help_block_view');
+          }
+          $this->load->view('templates/addclient_view', $data);
+          $this->load->view('templates/settings_view', $data);
+      }
+      else {
+         redirect(base_url().'error');
+      }
+
   }
 
   /**
@@ -192,7 +201,8 @@ class Dashboard extends CI_Controller {
       $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
       $data['users'] = $this->admin_model->get_users();
       $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-    if ($this->form_validation->run() !== false) {
+      if($data['user'][0]['role']==5 OR $data['user'][0]['role']==4 ) {
+    if ($this->form_validation->run() !== FALSE) {
       $title = $this->admin_model->verify_client($this->input->post('title'));
      if($title) {
        $this->load->view('templates/head_view');
@@ -226,6 +236,10 @@ class Dashboard extends CI_Controller {
       $this->load->view('templates/addclient_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
+      }
+      else {
+          redirect(base_url().'error');
+      }
   }
 
   /**
@@ -240,15 +254,10 @@ class Dashboard extends CI_Controller {
     $data['users'] = $this->admin_model->get_users();
       $data['avatars'] = $this->admin_model->get_avatars();
       foreach($users as $uv) {
-
                   $data['avatars']['test'][]=$uv['id'];
                   $data['avatars']['test'][]=$uv['status'];
                   $data['avatars']['test'][]=$uv['first_name'];
-
-
-
       }
-
       $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');

@@ -19,7 +19,7 @@
                                     <input type="text" value="<?php print($user[0]['first_name']); ?>" class="form-control" name="first_name" id="first_name" placeholder="First name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="last_name">Last name</label>
+                                    <label for="last_name" >Last name</label>
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label for="last_name">Role</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="role">
                                             <?php foreach ($roles as $rk => $rv): ?>
                                                     <option value="<?php print($rk); ?>"><?php print($rv); ?></option>
                                             <?php endforeach ?>

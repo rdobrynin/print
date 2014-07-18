@@ -37,11 +37,11 @@ class Ajax extends CI_Controller {
         $avatar= $this->files_model->search_avatar($id);
         $result = array();
         if($email !== $check_email[0]['email_address']){
-            $result['result'] = false;
+            $result['result'] = FALSE;
             $result['avatar'] = $avatar[0]['filename'];
         }
         else {
-            $result['result'] =true;
+            $result['result'] =TRUE;
             $result['id'] = $id;
             $result['avatar'] = $avatar[0]['filename'];
         }
@@ -54,7 +54,7 @@ class Ajax extends CI_Controller {
      * Check emails
      */
     public function check_emails() {
-        $result['result'] = true;
+        $result['result'] = TRUE;
         $this->load->model('admin_model');
         $email = $_POST['email'];
         $query= $this->admin_model->emails_users($email);
@@ -69,6 +69,13 @@ class Ajax extends CI_Controller {
                 $result['result'] = 'This email already registered';
             }
         }
+        $query= $this->admin_model->emails_new($email);
+        foreach($query as $v) {
+            if($v['email_address'] == $email) {
+                $result['result'] = 'This email already registered';
+            }
+        }
+
         $query= $this->admin_model->emails_added($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
@@ -106,7 +113,7 @@ class Ajax extends CI_Controller {
       }
       $status['status'] =$status;
     }else{
-      $status['result'] = false;
+      $status['result'] = FALSE;
     }
     echo json_encode ($status);
   }

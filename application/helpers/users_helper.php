@@ -25,7 +25,8 @@ if (!function_exists('show_role')) {
     }
     return $result;
   }
-
+}
+if (!function_exists('task_status')) {
   function task_status($status) {
     $result=0;
     if($status == 4) {
@@ -45,7 +46,8 @@ if (!function_exists('show_role')) {
     }
     return $result;
   }
-
+}
+if (!function_exists('get_countries')) {
   function get_countries() {
     $country = array(
       "-1" => "Select Country",
@@ -294,7 +296,6 @@ if (!function_exists('show_role')) {
       "XC" => "Canary Islands",
       "ME" => "Montenegro"
     );
-return $country;
+      return $country;
   }
-
-}
+  }

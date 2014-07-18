@@ -8,7 +8,12 @@
         <!--      tabs-->
         <ul class="nav nav-tabs" id="admin-users-tab">
           <li class="active"><a href="#current-users" data-toggle="tab" title="Current users"><button class="btn btn-info">Current users</button></a></li>
-          <li><a href="#new-users" data-toggle="tab" title="New users"><button class="btn btn-info">New users</button></a></li>
+          <li><a href="#new-users" data-toggle="tab" title="New users"><button class="btn btn-info">New users
+
+                      <?php if ($count_new_users>0): ?>
+                          <span class="badge badge-tab"><?php print($count_new_users); ?></span>
+                      <?php endif ?>
+                  </button></a></li>
         </ul>
 
         <div class="tab-content">
@@ -19,9 +24,6 @@
 
                 <h3 class="panel-title">Administer current users</h3>
                 <div class="pull-right">
-                  <span class="pull-left" style="margin-right: 20px;">
-                    <button class="btn btn-primary btn-xs" data-title="Add role" data-toggle="modal" data-target="#add_role" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-plus">&nbsp;Roles</span></button>
-                  </span>
                   <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
                 </div>
               </div>
@@ -55,7 +57,37 @@
           </div>
           <div class="tab-pane fade" id="new-users">
             <!--                  new users-->
+              <div class="panel panel-primary filterable panel-tabs">
+                  <div class="panel-heading">
 
+                      <h3 class="panel-title">Joined users</h3>
+                      <div class="pull-right">
+                          <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                      </div>
+                  </div>
+                  <table class="table">
+                      <thead>
+                      <tr class="filters">
+                          <th><input type="text" class="form-control" placeholder="#" disabled></th>
+                          <th><input type="text" class="form-control" placeholder="Name" disabled></th>
+                          <th><input type="text" class="form-control" placeholder="Email" disabled></th>
+                          <th><input type="hidden" class="form-control" placeholder="Edit" disabled></th>
+                          <th><input type="hidden" class="form-control" placeholder="Delete" disabled></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <?php foreach ($new_users as $uk => $uv):?>
+                          <tr>
+                              <td><?php print($uv['id']);?></td>
+                              <td><?php print($uv['first_name'].' '.$uv['last_name']);?></td>
+                              <td><?php print($uv['email_address']);?></td>
+                              <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                              <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                          </tr>
+                      <?php endforeach; ?>
+                      </tbody>
+                  </table>
+              </div>
           </div>
           <div class="clearfix"></div>
         </div>

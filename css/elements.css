@@ -307,3 +307,11 @@ span.avatar-content {
 div#files {
     padding-top: 33px;
 }
+
+.badge-tab {
+    position: relative;
+    top: -16px !important;
+    left: 20px !important;
+    background-color: red !important;
+    color: #fff !important;
+}

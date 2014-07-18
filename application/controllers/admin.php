@@ -26,7 +26,7 @@ class Admin extends CI_Controller {
        ->verify_user(
          $this->input->post('email_address'),
          $this->input->post('password'));
-      if($res !== false) {
+      if($res !== FALSE) {
         $this->admin_model->online_status($res->id);
 //person has account
         $_SESSION['username'] = $res->id;
@@ -61,16 +61,25 @@ class Admin extends CI_Controller {
     $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
     $this->form_validation->set_rules('password_signup', 'Password', 'trim|required|min_length[4]|md5');
     $this->form_validation->set_rules('password_signup_2', 'Password', 'trim|required|matches[password_signup]');
-    if ($this->form_validation->run() !== false) {
-     $this->load->model('admin_model');
-      if($query=$this->admin_model->create_member()) {
-          $this->load->view('login/head_view');
-        $this->load->view('login/invite_view');
-          $this->load->view('login/footer_view');
+      $this->load->model('admin_model');
+
+      $email_post = $this->input->post('email');
+      $verify_email = $this->admin_model->verify_new_user($email_post );
+
+      if ($verify_email !== TRUE) {
+          if ($this->form_validation->run() !== FALSE) {
+              if ($query = $this->admin_model->create_member()) {
+                  $this->load->view('login/head_view');
+                  $this->load->view('login/invite_view');
+                  $this->load->view('login/footer_view');
+              }
+          }
+          else {
+              $this->load->view('login/signup_view');
+          }
       }
-    }
       else {
-        $this->load->view('login/signup_view');
+          $this->load->view('login/signup_view');
       }
   }
 
