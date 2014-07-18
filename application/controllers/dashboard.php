@@ -62,7 +62,7 @@ class Dashboard extends CI_Controller {
 
   function users() {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-      $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+    $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $new_users = $this->admin_model->get_new_users();
     $data['new_users'] = $new_users;
