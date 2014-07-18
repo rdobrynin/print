@@ -62,6 +62,7 @@ class Dashboard extends CI_Controller {
 
   function users() {
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+      $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['roles'] = $this->admin_model->get_roles();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
@@ -69,11 +70,11 @@ class Dashboard extends CI_Controller {
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
-    if ($data['user'][0]['role'] == 4) {
+    if ($data['user'][0]['role'] == 5) {
       $this->load->view('templates/users_view', $data);
       $this->load->view('templates/settings_view', $data);
     }
-    elseif($data['user'][0]['role'] == 1) {
+    elseif($data['user'][0]['role'] == 1 OR $data['user'][0]['role'] == 2 OR $data['user'][0]['role'] == 3 OR $data['user'][0]['role'] == 4) {
       $this->load->view('templates/settings_view', $data);
     }
     else {
@@ -266,15 +267,22 @@ class Dashboard extends CI_Controller {
    */
 
   function profile() {
+      $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
     $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
+    $roles = $this->admin_model->get_roles();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $this->load->view('templates/head_view');
     if($data['user'][0]['helpblock']==1) {
       $this->load->view('templates/help_block_view');
     }
+      foreach ($roles as $rk=>$rv) {
+          $roles_array[$rv['rid']] = $rv['title'];
+
+      }
+    $data['roles']= $roles_array;
     $this->load->view('templates/profile_view', $data);
     $this->load->view('templates/settings_view', $data);
   }

@@ -73,7 +73,7 @@
         <li><a href="<?php print(base_url());?>profile"><i class="fa fa-user"></i>Profile</a></li>
         <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
         <li><a data-toggle="modal" href="#settings"><i class="fa fa-gear"></i> Settings</a></li>
-        <?php if($user[0]['role']==4):?>
+        <?php if($user[0]['role']==5):?>
           <li><a href="<?php print(base_url());?>users"><i class="fa fa-users"></i> Administer users</a></li>
         <? endif?>
         <li class="divider"></li>

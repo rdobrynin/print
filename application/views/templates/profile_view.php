@@ -74,17 +74,13 @@
                                 <div id="items_email"></div>
                                 <div id="items_remove_email"></div>
                             </div>
-
                             <?php if ($user[0]['role'] != 1):; ?>
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label for="last_name">Role</label>
                                         <select class="form-control">
-                                            <option value="<?php print($user[0]['role']); ?>"><?php print(show_role($user[0]['role'])); ?></option>
-                                            <?php foreach ($users as $uk => $uv): ?>
-                                                <?php if ($uv['role'] != $user[0]['role']):; ?>
-                                                    <option value="<?php var_dump($uv['role']); ?>"><?php print(show_role($uv['role'])); ?></option>
-                                                <?php endif ?>
+                                            <?php foreach ($roles as $rk => $rv): ?>
+                                                    <option value="<?php print($rk); ?>"><?php print($rv); ?></option>
                                             <?php endforeach ?>
                                         </select>
                                     </div>

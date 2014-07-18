@@ -5,17 +5,23 @@
 if (!function_exists('show_role')) {
   function show_role($role) {
     $result='none';
-    if($role == 4) {
-      $result = 'Admin';
+    if($role == 5) {
+      $result = 'admin';
     }
-    else if($role == 3) {
-      $result = 'Implementor';
-    }
-    else if($role == 2) {
+    else if($role == 4) {
       $result = 'Manager';
     }
+    else if($role == 3) {
+        $result = 'curator';
+    }
+    else if($role == 2) {
+        $result = 'implementor';
+    }
     else if($role == 1) {
-      $result = 'Customer';
+      $result = 'customer';
+    }
+    else if($role == 0) {
+        $result = 'quest';
     }
     return $result;
   }

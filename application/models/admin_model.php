@@ -338,7 +338,7 @@ class Admin_model extends CI_Model {
 
   }
 
-  /**
+    /**
    * get user();
    * @param $username
    * @return mixed
