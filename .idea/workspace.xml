@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/langswitch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" afterPath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dashboard_view.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dashboard_view.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1175">
+            <state line="12" column="38" selection-start="328" selection-end="328" vertical-scroll-proportion="0.25930372" vertical-offset="0" max-vertical-offset="1175">
               <folding />
             </state>
           </provider>
@@ -47,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dashboard.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="40" selection-start="243" selection-end="243" vertical-scroll-proportion="0.1944778" vertical-offset="0" max-vertical-offset="7781">
+            <state line="11" column="40" selection-start="329" selection-end="329" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="7781">
               <folding />
             </state>
           </provider>
@@ -181,8 +179,8 @@
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/controllers/langswitch.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
       </list>
     </option>
   </component>
@@ -898,16 +896,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1175">
+        <state line="11" column="40" selection-start="329" selection-end="329" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="7781">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/dashboard.php">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="243" selection-end="243" vertical-scroll-proportion="0.1944778" vertical-offset="0" max-vertical-offset="7781">
+        <state line="12" column="38" selection-start="328" selection-end="328" vertical-scroll-proportion="0.25930372" vertical-offset="0" max-vertical-offset="1175">
           <folding />
         </state>
       </provider>
