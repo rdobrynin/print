@@ -4,22 +4,22 @@
     <?php $url_arg = $this->uri->segment(1);?>
 
     <ul class="sidebar-nav">
-      <li class="<? $url_arg=='dashboard' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>dashboard"><i class="fa fa-dashboard"></i>&nbsp;<span class="left-resp-menu">Dashboard</span></a>
+      <li class="<? $url_arg=='dashboard' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>dashboard"><i class="fa fa-dashboard"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_dashboard')); ?></span></a>
       </li>
       <?php if(!empty($client)):?>
-      <li class="<? $url_arg=='clients' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>clients"><i class="fa fa-briefcase"></i>&nbsp;<span class="left-resp-menu">Clients</span></a>
+      <li class="<? $url_arg=='clients' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>clients"><i class="fa fa-briefcase"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_clients')); ?></span></a>
         <?php endif ?>
-      <li class="<? $url_arg=='projects' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>projects"><i class="fa fa-cube"></i>&nbsp;<span class="left-resp-menu">Projects</span></a><span class="badge badge-resp">1</span>
+      <li class="<? $url_arg=='projects' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>projects"><i class="fa fa-cube"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_projects')); ?></span></a><span class="badge badge-resp">1</span>
       </li>
-      <li class="<? $url_arg=='tasks' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-tasks"></i>&nbsp;<span class="left-resp-menu">Tasks</span></a><span class="badge badge-resp">8</span>
+      <li class="<? $url_arg=='tasks' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-tasks"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_tasks')); ?></span></a><span class="badge badge-resp">8</span>
       </li>
-      <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>team"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu">Team</span></a>
+      <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>team"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_team')); ?></span></a>
       </li>
-      <li class="<? $url_arg=='chart' ? print('active') : print('') ?>"><a href="#"><i class="glyphicon glyphicon-stats"></i>&nbsp;<span class="left-resp-menu">Chart</span></a>
+      <li class="<? $url_arg=='chart' ? print('active') : print('') ?>"><a href="#"><i class="glyphicon glyphicon-stats"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_chart')); ?></span></a>
       </li>
-      <li class="<? $url_arg=='comments' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>comments"><i class="fa fa-comment"></i>&nbsp;<span class="left-resp-menu">Comments</span></a>
+      <li class="<? $url_arg=='comments' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>comments"><i class="fa fa-comment"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_comments')); ?></span></a>
       </li>
-      <li class="<? $url_arg=='help' ? print('active') : print('') ?>"><a href="#"><i class="glyphicon glyphicon-question-sign"></i>&nbsp;<span class="left-resp-menu">Help</span></a>
+      <li class="<? $url_arg=='help' ? print('active') : print('') ?>"><a href="#"><i class="glyphicon glyphicon-question-sign"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_help')); ?></span></a>
       </li>
 
       <!--MINI INBOX-->
