@@ -53,19 +53,6 @@
         <li><a href="#">View Inbox <span class="badge" >7</span></a></li>
       </ul>
     </li>
-    <li class="dropdown alerts-dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Default <span class="label label-default">Default</span></a></li>
-        <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
-        <li><a href="#">Success <span class="label label-success">Success</span></a></li>
-        <li><a href="#">Info <span class="label label-info">Info</span></a></li>
-        <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
-        <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
-        <li class="divider"></li>
-        <li><a href="#">View All</a></li>
-      </ul>
-    </li>
     <li class="dropdown user-dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
         <?php print($user[0]['first_name'].' '. $user[0]['last_name'])?>
@@ -82,5 +69,15 @@
         <li id="logout"><a href="<?php print(base_url());?>logout"><i class="fa fa-power-off"></i> Log Out</a></li>
       </ul>
     </li>
+
+      <li class="dropdown user-dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Language
+              <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-user">
+              <li><div class="flag flag-ee"></div><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
+           <li><div class="flag flag-gb"></div><a href='langswitch/switchLanguage/english'>&nbsp;English</a></li>
+          <li><div class="flag flag-ru"></div><a href='langswitch/switchLanguage/russian'>&nbsp;Русский</a></li>
+          </ul>
+      </li>
   </ul>
 </div>

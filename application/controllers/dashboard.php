@@ -13,6 +13,9 @@ class Dashboard extends CI_Controller {
       if($this->session->userdata('site_lang')=='russian') {
           $this->lang->load('russian', 'russian');
       }
+      elseif($this->session->userdata('site_lang')=='estonian') {
+          $this->lang->load('estonian', 'estonian');
+      }
       else {
           $this->lang->load('english', 'english');
       }
