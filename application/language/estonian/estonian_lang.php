@@ -7,3 +7,5 @@ $lang['menu_team'] = "Rühm";
 $lang['menu_chart'] = "Aruanne";
 $lang['menu_comments'] = "Kommentaar";
 $lang['menu_help'] = "Järele aitama";
+$lang['menu_lang'] = "Keel";
+$lang['menu_add_client'] = "Lisa klient";

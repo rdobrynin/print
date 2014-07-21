@@ -17,7 +17,7 @@
   <div class="show-info-online"><div class="show-info-content-online"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
       <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
-          <li class="add-client pull-left"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn">Add client</span></button></a></li>
+          <li class="add-client pull-left"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
       <?php endif ?>
     <li class="dropdown messages-dropdown">
       <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
@@ -71,7 +71,7 @@
     </li>
 
       <li class="dropdown user-dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Language
+          <a class="dropdown-toggle" data-toggle="dropdown"><?php print(lang('menu_lang')); ?>
               <b class="caret"></b></a>
           <ul class="dropdown-menu dropdown-user">
               <li><div class="flag flag-ee"></div><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
