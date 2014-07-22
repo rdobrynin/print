@@ -26,6 +26,21 @@ if (!function_exists('show_role')) {
     return $result;
   }
 }
+if (!function_exists('show_lang')) {
+    function show_lang($lang) {
+        if($lang == 'russian') {
+            $result = 'Русский';
+        }
+        else if($lang == 'estonian') {
+            $result = 'Eesti';
+        }
+        else {
+            $result='english';
+        }
+        return $result;
+    }
+}
+
 if (!function_exists('task_status')) {
   function task_status($status) {
     $result=0;

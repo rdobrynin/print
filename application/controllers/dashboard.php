@@ -31,6 +31,7 @@ class Dashboard extends CI_Controller {
    */
 
   public function index() {
+    $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -52,6 +53,7 @@ class Dashboard extends CI_Controller {
    */
 
   function projects() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -71,6 +73,7 @@ class Dashboard extends CI_Controller {
    */
 
   function users() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -100,6 +103,7 @@ class Dashboard extends CI_Controller {
    */
 
   function comments() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
@@ -118,7 +122,7 @@ class Dashboard extends CI_Controller {
    */
 
   function test() {
-
+      $data['current_language'] = $this->session->userdata('site_lang');
       $data['avatar'] = $this->admin_model->check_email('roman.dobrynin@gmail.com');
     $this->load->view('templates/test_view',$data);
   }
@@ -128,6 +132,7 @@ class Dashboard extends CI_Controller {
    */
 
   function clients() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -149,6 +154,7 @@ class Dashboard extends CI_Controller {
    */
 
   function addclient() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -190,6 +196,7 @@ class Dashboard extends CI_Controller {
    */
 
   function  switch_help() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
     $url = $this->input->post('input_url');
     redirect(base_url().$url);
@@ -200,6 +207,7 @@ class Dashboard extends CI_Controller {
    */
 
   function addclient_form() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $this->load->library('form_validation');
     $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
@@ -257,6 +265,7 @@ class Dashboard extends CI_Controller {
    */
 
   function team() {
+      $data['current_language'] = $this->session->userdata('site_lang');
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -286,6 +295,7 @@ class Dashboard extends CI_Controller {
    */
 
   function profile() {
+      $data['current_language'] = $this->session->userdata('site_lang');
       $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
@@ -311,6 +321,7 @@ class Dashboard extends CI_Controller {
    */
 
   function update_profile() {
+      $data['current_language'] = $this->session->userdata('site_lang');
       $this->load->model('admin_model');
 //      delete additional emails
       $email_del = $this->input->post('del_email');

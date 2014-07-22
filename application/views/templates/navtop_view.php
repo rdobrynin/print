@@ -53,12 +53,20 @@
         <li><a href="#">View Inbox <span class="badge" >7</span></a></li>
       </ul>
     </li>
+      <li class="dropdown user-dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i> <span style="text-transform: capitalize;"><?php print(show_lang($current_language));?></span>
+              <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-user">
+              <li><div class="flag flag-ee"></div><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
+              <li><div class="flag flag-gb"></div><a href='langswitch/switchLanguage/english'>&nbsp;English</a></li>
+              <li><div class="flag flag-ru"></div><a href='langswitch/switchLanguage/russian'>&nbsp;Русский</a></li>
+          </ul>
+      </li>
     <li class="dropdown user-dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
         <?php print($user[0]['first_name'].' '. $user[0]['last_name'])?>
         <b class="caret"></b></a>
       <ul class="dropdown-menu dropdown-user">
-
         <li><a href="<?php print(base_url());?>profile"><i class="fa fa-user"></i>Profile</a></li>
         <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
         <li><a data-toggle="modal" href="#settings"><i class="fa fa-gear"></i> Settings</a></li>
@@ -69,15 +77,5 @@
         <li id="logout"><a href="<?php print(base_url());?>logout"><i class="fa fa-power-off"></i> Log Out</a></li>
       </ul>
     </li>
-
-      <li class="dropdown user-dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown"><?php print(lang('menu_lang')); ?>
-              <b class="caret"></b></a>
-          <ul class="dropdown-menu dropdown-user">
-              <li><div class="flag flag-ee"></div><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
-           <li><div class="flag flag-gb"></div><a href='langswitch/switchLanguage/english'>&nbsp;English</a></li>
-          <li><div class="flag flag-ru"></div><a href='langswitch/switchLanguage/russian'>&nbsp;Русский</a></li>
-          </ul>
-      </li>
   </ul>
 </div>
