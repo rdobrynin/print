@@ -17,14 +17,14 @@ class Admin extends CI_Controller {
     }
 
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('email_address', 'Email', 'trim|required|valid_email');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]');
 
     if ($this->form_validation->run() !== false) {
      $res = $this
        ->admin_model
        ->verify_user(
-         $this->input->post('email_address'),
+         $this->input->post('email'),
          $this->input->post('password'));
       if($res !== FALSE) {
         $this->admin_model->online_status($res->id);

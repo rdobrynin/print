@@ -44,7 +44,7 @@
                   <tr>
                     <td><?php print($uv['id']);?></td>
                     <td><?php print($uv['first_name'].' '.$uv['last_name']);?></td>
-                    <td><?php print($uv['email_address']);?></td>
+                    <td><?php print($uv['email']);?></td>
                     <td><?php print(show_role($uv['role']));?></td>
                     <td><?php print($uv['date_created']);?></td>
                     <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
@@ -80,7 +80,7 @@
                           <tr>
                               <td><?php print($uv['id']);?></td>
                               <td><?php print($uv['first_name'].' '.$uv['last_name']);?></td>
-                              <td><?php print($uv['email_address']);?></td>
+                              <td><?php print($uv['email']);?></td>
                               <td><p><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
                               <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete_user" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
                           </tr>

@@ -18,7 +18,7 @@ class Admin_model extends CI_Model {
   public function verify_user($email, $password) {
     $query = $this
       ->db
-      ->where('email_address', $email)
+      ->where('email', $email)
       ->where('password', md5($password))
     ->limit('1')
       ->get('users');
@@ -70,7 +70,7 @@ class Admin_model extends CI_Model {
   public function check_email($email) {
     $query = $this
       ->db
-      ->where('email_address', $email)
+      ->where('email', $email)
       ->limit('1')
       ->get('users');
       $result = $query->result_array();
@@ -86,7 +86,7 @@ class Admin_model extends CI_Model {
     public function emails_users($email) {
         $query = $this
             ->db
-            ->where('email_address', $email)
+            ->where('email', $email)
             ->get('users');
         $result = $query->result_array();
         return $result;
@@ -110,7 +110,7 @@ class Admin_model extends CI_Model {
     public function emails_new($email) {
         $query = $this
             ->db
-            ->where('email_address', $email)
+            ->where('email', $email)
             ->get('new_users');
         $result = $query->result_array();
         return $result;
@@ -126,7 +126,7 @@ class Admin_model extends CI_Model {
     $data = array (
       'first_name' => $this->input->post('first_name'),
       'last_name' => $this->input->post('last_name'),
-      'email_address' => $this->input->post('email'),
+      'email' => $this->input->post('email'),
       'password' => $this->input->post('password_signup'),
       'role' => $this->input->post('role_signup'),
       'avatar' =>'placeholder_user.jpg',
@@ -355,7 +355,7 @@ class Admin_model extends CI_Model {
     public function verify_new_user($email) {
         $query = $this
             ->db
-            ->where('email_address', $email)
+            ->where('email', $email)
             ->get('new_users');
         if ($query->num_rows > 0) {
             return TRUE;
@@ -376,7 +376,7 @@ class Admin_model extends CI_Model {
   public function get_user($username) {
     $query = $this
       ->db
-    ->where('email_address', $username)
+    ->where('email', $username)
       ->get('users');
     return $query->result_array();
   }

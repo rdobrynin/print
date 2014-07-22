@@ -17,10 +17,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
 
 $(function () {
 
-//    $( "#email_address" ).blur(function() {
+//    $( "#email" ).blur(function() {
 //        // Сначала присваеваем переменным значения из наших полей ввода
 //        // Доступ к полям по их ID
-//        var user_login = $("#email_address").val();
+//        var user_login = $("#email").val();
 //        // Это функция запроса ajax, в переменной html
 //        // мы сможем получить обратный текст после обработки
 //        var html = $.ajax({
@@ -32,7 +32,7 @@ $(function () {
 //                // Перечесляем передаваемые переменные
 //                // Сначала идёт название которое получит controller
 //                // через метод post, следом наша переменная с данными
-//                'email_address' : user_login
+//                'email' : user_login
 //            }),
 //            dataType: "html",
 //            async: false

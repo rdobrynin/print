@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6" style="margin-bottom: 10px;">
-                                    <p><span class="label label-primary">Primary email:</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email_address']); ?></span></span></p>
+                                    <p><span class="label label-primary">Primary email:</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email']); ?></span></span></p>
                                     </div>
                                 <!--additional emails-->
                                 <div class="form-group">

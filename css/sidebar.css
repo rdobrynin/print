@@ -386,10 +386,27 @@ span.avata-img {
 
 .avatar-name {
     position: relative;
-    padding-left: 39px;
-    color: #428bca;
-    top: 29px;
-    text-shadow: 1px 1px #000;
+    color: #292929;
+    top: 43px;
+    background-color: rgb(37, 177, 255);
+    padding: 3px;
+    right: -24px;
+    padding-left: 12px;
+    padding-right: 10px;
+    border-radius: 6px;
+    padding-top: 0;
+    font-size: 13px;
+}
+
+.avatar-name:after {
+    content: "";
+    position: absolute;
+    border-left: 12px solid rgba(255, 241, 190, 0);
+    border-right: 7px solid rgba(255, 241, 190, 0);
+    /* border-bottom: 13px solid #fff; */
+    left: -11px;
+    border-top: 10px solid rgb(37, 177, 255);
+    top: 4px;
 }
 
 .message {

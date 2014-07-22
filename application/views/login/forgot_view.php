@@ -5,7 +5,7 @@
         <?php echo validation_errors();?></div>
       <center><h2 class="text-muted">Forgot password ?</h2><small class="text-muted">Find your account</small></center><br>
 <div id="avatar-login-forgot"> <img src="img/question.png" alt="Smiley face" height="100"></div>
-      <input type="text" id="email_address"  name="email_address" value="" class="form-control" placeholder="Email" />
+      <input type="text" id="email"  name="email="form-control" placeholder="Email" />
       <div style="margin-top:20px;"><button class="btn btn-lg btn-primary btn-block" id="login_btn">Email new password</button></div>
 <div style="padding-bottom: 20px;">
   <small class="pull-left">
@@ -18,4 +18,5 @@
   </small>
 </div>
       <?php echo form_close(); ?>
+  </div>e(); ?>
   </div>

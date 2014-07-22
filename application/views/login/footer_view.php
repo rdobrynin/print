@@ -8,10 +8,10 @@
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
     $(function () {
-        $("#email_address").blur(function () {
-            var email_address = $(this).val();
+        $("#email").blur(function () {
+            var email = $(this).val();
             var postData = {
-                "email_address": email_address
+                "email": email
             };
             $.ajax({
                 type: "POST",
@@ -35,7 +35,7 @@
 
 //        Check emails
 
-        $( "#email_address_signup" ).blur(function() {
+        $( "#email_signup" ).blur(function() {
             var form_data = {
                 email: $(this).val()
             };

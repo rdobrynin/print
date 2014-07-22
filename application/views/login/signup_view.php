@@ -7,7 +7,7 @@
       <center><h2 class="text-muted">Brilliant Management</h2><small class="text-muted">Sign up user</small></center><br>
       <input type="text" id="first_name" name="first_name" value="" placeholder="First name" class="form-control" />
       <input type="text" id="last_name" name="last_name" value="" placeholder="Last name" class="form-control" />
-      <input type="text" id="email_address_signup" autocomplete="off"  name="email" value="" class="form-control" placeholder="Email" />
+      <input type="text" id="email_signup" autocomplete="off"  name="email" value="" class="form-control" placeholder="Email" />
     <span id="check_email"  class="label label-danger label-signin"></span>
       <input type="password" id="password_signup" name="password_signup" value="" placeholder="Password" class="form-control"/>
       <input type="password" id="password_signup_2" name="password_signup_2" value="" placeholder="Password confirmation" class="form-control"/>

@@ -30,13 +30,13 @@ class Ajax extends CI_Controller {
     public function check_login_avatar() {
         $this->load->model('admin_model');
         $this->load->model('files_model');
-        $email = $_POST['email_address'];
+        $email = $_POST['email'];
         $check_email= $this->admin_model->check_email($email);
         $getuser= $this->admin_model->get_user($email);
         $id =  $getuser[0]['id'];
         $avatar= $this->files_model->search_avatar($id);
         $result = array();
-        if($email !== $check_email[0]['email_address']){
+        if($email !== $check_email[0]['email']){
             $result['result'] = FALSE;
             $result['avatar'] = $avatar[0]['filename'];
         }
@@ -59,7 +59,7 @@ class Ajax extends CI_Controller {
         $email = $_POST['email'];
         $query= $this->admin_model->emails_users($email);
         foreach($query as $v) {
-            if($v['email_address'] == $email) {
+            if($v['email'] == $email) {
              $result['result'] = 'This email already registered';
             }
         }
@@ -71,7 +71,7 @@ class Ajax extends CI_Controller {
         }
         $query= $this->admin_model->emails_new($email);
         foreach($query as $v) {
-            if($v['email_address'] == $email) {
+            if($v['email'] == $email) {
                 $result['result'] = 'This email already registered';
             }
         }
