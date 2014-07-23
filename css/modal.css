@@ -24,15 +24,11 @@
 }
 
 .li-profile-container {
-    background: rgba(173, 173, 173, 0.50);
+    background: #272727;
     display: block;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 13px;
-    width: 367px;
     padding: 5px;
-    zoom: 1;
 }
 
 .modal-footer {
@@ -46,29 +42,37 @@
     padding:14px ;
 }
 
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(34, 34, 34, 0.80);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 0px rgba(221, 221, 221, 0.60);
+    outline: 0 none;}
+
 .form-control-modal {
     display: block;
-    width: 100%;
-    height: 28px;
     padding: 3px 6px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.428571429;
-    color: #FFF;
-    background-color: #494949;
     background-image: none;
-    border: 1px solid #4E4E4E;
     border-radius: 0px;
-    /* -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); */
-    /* box-shadow: inset 0 1px 1px rgba(245, 81, 81, 0.075); */
-    /* -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     margin-bottom: 10px;
+    border: 1px #1A1A1A solid;
+    background: #414141;
+    margin-right: 5px;
+    margin-top: 4px;
+    color: white;
+    height: 27px;
+    width: 100%;
 }
 .modal-header {
     min-height: 16.428571429px;
     padding: 15px;
     border-bottom: 0 solid #e5e5e5;
     padding-bottom: 0;
+}
+
+.modal-btn {
+    border-radius: 0 !important;
 }
 
 

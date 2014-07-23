@@ -327,3 +327,15 @@ div#files {
 .flag.flag-ee {background-position: -16px 0}
 .flag.flag-gb {background-position: 0 -11px}
 .flag.flag-ru {background-position: -16px -11px}
+
+
+select {
+    border-radius: 0 !important;
+    height: 26px !important;
+    border-color: rgba(34, 34, 34, 0.80) !important;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 0px rgba(221, 221, 221, 0.60) !important;
+    outline: 0 none !important;
+    padding: 0 3px !important;
+    color: #adadad !important;
+    background-color: #414141 !important;
+}

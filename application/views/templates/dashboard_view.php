@@ -34,15 +34,37 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <input type="email" name="email" id="email" class="form-control-modal input-sm" placeholder="Email Address">
                                     </div>
+                                        </div>
+                                        </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select class="form-control" name="category">
+                                                <option value=""></option>
+                                                <option value="0">select1</option>
+                                                <option value="1">select2</option>
+                                                <option value="2">select3</option>
+                                                <option value="2">select3</option>
+                                                <option value="2">select3</option>
+
+
+                                            </select>
+                                            </div>
+                                        </div>
+
+
+                                </div>
                                 </form>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary btn-xs" style="width: 100%;">Invite</button>
+                                <button type="button" class="btn btn-danger btn-xs modal-btn">Invite</button>
 <!--                                <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>-->
                             </div>
                         </div>
