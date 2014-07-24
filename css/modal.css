@@ -23,13 +23,6 @@
     left: 100px;
 }
 
-.li-profile-container {
-    background: #272727;
-    display: block;
-    border-radius: 0;
-    font-size: 13px;
-    padding: 5px;
-}
 
 .modal-footer {
     padding: 0 14px 14px;
@@ -47,23 +40,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 0px rgba(221, 221, 221, 0.60);
     outline: 0 none;}
 
-.form-control-modal {
-    display: block;
-    padding: 3px 6px;
-    font-size: 12px;
-    line-height: 1.428571429;
-    background-image: none;
-    border-radius: 0px;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    margin-bottom: 10px;
-    border: 1px #1A1A1A solid;
-    background: #414141;
-    margin-right: 5px;
-    margin-top: 4px;
-    color: white;
-    height: 27px;
-    width: 100%;
-}
 .modal-header {
     min-height: 16.428571429px;
     padding: 15px;
@@ -71,8 +47,10 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     padding-bottom: 0;
 }
 
-.modal-btn {
-    border-radius: 0 !important;
+
+.modal.in .modal-dialog {
+    overflow: initial;
 }
+
 
 

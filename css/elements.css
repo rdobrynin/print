@@ -328,23 +328,34 @@ div#files {
 .flag.flag-gb {background-position: 0 -11px}
 .flag.flag-ru {background-position: -16px -11px}
 
-
-select {
-    border-radius: 0 !important;
-    height: 26px !important;
-    border-color: rgba(34, 34, 34, 0.80) !important;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 0px rgba(221, 221, 221, 0.60) !important;
-    outline: 0 none !important;
-    padding: 0 3px !important;
-    color: #adadad !important;
-    background-color: #414141 !important;
+.selectpicker> li > a {
+    color:#575757 !important;
+}
+.selectpicker> li > a:hover {
+    color:#fff !important;
 }
 
-select:focus {
-    outline: none;
-}
 
-option {
+.selectpicker> li > a:hover {
+
     background-color:#575757;
-    font-weight: normal;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #575757;
+    outline: 0;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #929292;
+    background-color: #484848;
+    border-color: #313131;
+}
+
+.btn-primary{
+    color: #929292;
+    background-color: #575757;
+    border-color: #313131;
 }

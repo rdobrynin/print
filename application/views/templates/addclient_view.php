@@ -54,7 +54,7 @@
                   <label class="col-sm-6">Country<span class="req">*</span></label>
                   <div class="col-sm-6"><input type="text" class="form-control" name="city"  id="client_city" placeholder="City here"></div>
                   <div class="col-sm-6">
-                    <select id="select-country" name="country" class="form-control">
+                    <select id="select-country" name="country" class="form-control selectpicker">
                       <?php  $countries = get_countries(); ?>
                       <?php  foreach($countries as $ck => $cv): ?>
                         <?php if ($ck == 'EE'): ?>
@@ -72,7 +72,7 @@
                   <div class="form-group">
                     <label class="col-sm-12">Manager</label>
                     <div class="col-sm-4">
-                      <select id="select-manager" class="form-control">
+                      <select id="select-manager" class="form-control selectpicker">
                         <option value="1">Roman Dobrynin</option>
                         <option value="2">Andrei Abozau</option>
                         <option value="3">Jevgeni Striganov</option>
@@ -89,7 +89,7 @@
                   <div class="form-group">
                     <label class="col-sm-12">Curator</label>
                     <div class="col-sm-4">
-                      <select id="select-curator" class="form-control">
+                      <select id="select-curator" class="form-control selectpicker">
                         <option value="1">Roman Dobrynin</option>
                         <option value="2">Andrei Abozau</option>
                         <option value="3">Jevgeni Striganov</option>
@@ -109,8 +109,8 @@
                 <hr>
                 <input type="hidden" class="form-control" id="client_owner" name="curator" value="<?php print($user[0]['id']);?>">
 
-                <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-primary">Back</a></span>
-                <input type="submit"  class="btn btn-primary pull-right" id="create_company" value="Create company">
+                <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-default">Back</a></span>
+                <input type="submit"  class="btn btn-default pull-right" id="create_company" value="Create company">
               </form>
             </div>
 

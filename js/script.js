@@ -1,5 +1,8 @@
 $(function() {
-
+    $('.selectpicker').selectpicker({
+        style: 'btn-primary',
+        size: 14
+    });
     $("li a").click(function(e) {
         $('li').removeClass('active');
         $(this).parent().addClass('active');

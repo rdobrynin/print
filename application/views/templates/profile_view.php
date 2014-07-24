@@ -78,7 +78,7 @@
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label for="last_name">Role</label>
-                                        <select class="form-control" name="role">
+                                        <select class="form-control selectpicker" name="role">
                                             <?php foreach ($roles as $rk => $rv): ?>
                                                     <option value="<?php print($rk); ?>"><?php print($rv); ?></option>
                                             <?php endforeach ?>
