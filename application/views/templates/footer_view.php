@@ -11,6 +11,10 @@
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
+        $('.selectpicker').selectpicker({
+            style: 'btn-special',
+            size: 14
+        });
   $(function () {
 
 /**
