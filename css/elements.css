@@ -347,15 +347,3 @@ div#files {
     background-color: #575757;
     outline: 0;
 }
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-    color: #929292;
-    background-color: #484848;
-    border-color: #313131;
-}
-
-.btn-primary{
-    color: #929292;
-    background-color: #575757;
-    border-color: #313131;
-}
