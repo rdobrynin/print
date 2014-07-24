@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" afterPath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elements.css" afterPath="$PROJECT_DIR$/css/elements.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/modal.css" afterPath="$PROJECT_DIR$/css/modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sidebar.css" afterPath="$PROJECT_DIR$/css/sidebar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
@@ -38,19 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/login/login_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="432">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dashboard_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="82" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-26.148148" vertical-offset="176" max-vertical-offset="2326">
+            <state line="49" column="82" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1458">
               <folding />
             </state>
           </provider>
@@ -59,7 +49,7 @@
       <file leaf-file-name="head_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/templates/head_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-22.0" vertical-offset="0" max-vertical-offset="1498">
+            <state line="33" column="0" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -77,7 +67,7 @@
       <file leaf-file-name="admin_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="45" selection-start="4154" selection-end="4154" vertical-scroll-proportion="-10.666667" vertical-offset="2970" max-vertical-offset="9040">
+            <state line="181" column="45" selection-start="4154" selection-end="4154" vertical-scroll-proportion="0.0" vertical-offset="3258" max-vertical-offset="8172">
               <folding />
             </state>
           </provider>
@@ -86,7 +76,7 @@
       <file leaf-file-name="modal.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/modal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="-9.736842" vertical-offset="579" max-vertical-offset="2296">
+            <state line="63" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -95,16 +85,16 @@
       <file leaf-file-name="elements.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/elements.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="335" column="59" selection-start="6667" selection-end="6667" vertical-scroll-proportion="0.658588" vertical-offset="5405" max-vertical-offset="7051">
+            <state line="348" column="23" selection-start="6946" selection-end="6946" vertical-scroll-proportion="0.94415176" vertical-offset="5368" max-vertical-offset="7213">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
+      <file leaf-file-name="sidebar_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="153" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-0.6666667" vertical-offset="558" max-vertical-offset="3010">
+            <state line="38" column="33" selection-start="2621" selection-end="2621" vertical-scroll-proportion="-25.333334" vertical-offset="0" max-vertical-offset="2074">
               <folding />
             </state>
           </provider>
@@ -113,7 +103,16 @@
       <file leaf-file-name="sidebar.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/sidebar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="388" column="19" selection-start="6648" selection-end="6648" vertical-scroll-proportion="0.0" vertical-offset="6984" max-vertical-offset="8622">
+            <state line="261" column="1" selection-start="4215" selection-end="4215" vertical-scroll-proportion="-37.285713" vertical-offset="3654" max-vertical-offset="9435">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="153" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
@@ -176,12 +175,12 @@
         <option value="$PROJECT_DIR$/application/views/templates/profile_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/users_view.php" />
         <option value="$PROJECT_DIR$/js/my_script.js" />
-        <option value="$PROJECT_DIR$/css/sidebar.css" />
         <option value="$PROJECT_DIR$/application/views/templates/head_view.php" />
         <option value="$PROJECT_DIR$/css/body.css" />
         <option value="$PROJECT_DIR$/application/models/admin_model.php" />
         <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
         <option value="$PROJECT_DIR$/css/modal.css" />
+        <option value="$PROJECT_DIR$/css/sidebar.css" />
         <option value="$PROJECT_DIR$/css/elements.css" />
       </list>
     </option>
@@ -771,11 +770,6 @@
         <state line="10" column="44" selection-start="364" selection-end="364" vertical-scroll-proportion="0.19522777" vertical-offset="0" max-vertical-offset="1084" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="33" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.5065076" vertical-offset="235" max-vertical-offset="2074" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mini_inbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="0.7207587" vertical-offset="0" max-vertical-offset="1795" />
@@ -848,23 +842,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/my_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="32" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="918">
-          <folding />
-        </state>
+        <state line="34" column="32" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user_guide/general/styleguide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="412" column="44" selection-start="17023" selection-end="17023" vertical-scroll-proportion="0.0" vertical-offset="7416" max-vertical-offset="12240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="388" column="19" selection-start="6648" selection-end="6648" vertical-scroll-proportion="0.0" vertical-offset="6610" max-vertical-offset="9428">
-          <folding />
-        </state>
+        <state line="412" column="44" selection-start="17023" selection-end="17023" vertical-scroll-proportion="0.0" vertical-offset="7416" max-vertical-offset="12240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/login/login_view.php">
@@ -890,42 +873,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/admin_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="45" selection-start="4154" selection-end="4154" vertical-scroll-proportion="-10.666667" vertical-offset="2970" max-vertical-offset="9040">
+        <state line="181" column="45" selection-start="4154" selection-end="4154" vertical-scroll-proportion="0.0" vertical-offset="3258" max-vertical-offset="8172">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/footer_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="153" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-0.6666667" vertical-offset="558" max-vertical-offset="3010">
+        <state line="32" column="153" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/head_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-22.0" vertical-offset="0" max-vertical-offset="1498">
+        <state line="33" column="0" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="82" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-26.148148" vertical-offset="176" max-vertical-offset="2326">
+        <state line="49" column="82" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1458">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/modal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="-9.736842" vertical-offset="579" max-vertical-offset="2296">
+        <state line="63" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="33" selection-start="2621" selection-end="2621" vertical-scroll-proportion="-25.333334" vertical-offset="0" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="261" column="1" selection-start="4215" selection-end="4215" vertical-scroll-proportion="-37.285713" vertical-offset="3654" max-vertical-offset="9435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/elements.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="335" column="59" selection-start="6667" selection-end="6667" vertical-scroll-proportion="0.658588" vertical-offset="5405" max-vertical-offset="7051">
+        <state line="348" column="23" selection-start="6946" selection-end="6946" vertical-scroll-proportion="0.94415176" vertical-offset="5368" max-vertical-offset="7213">
           <folding />
         </state>
       </provider>

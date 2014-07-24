@@ -339,3 +339,12 @@ select {
     color: #adadad !important;
     background-color: #414141 !important;
 }
+
+select:focus {
+    outline: none;
+}
+
+option {
+    background-color:#575757;
+    font-weight: normal;
+}
