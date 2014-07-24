@@ -31,8 +31,14 @@ class Dashboard extends CI_Controller {
    */
 
   public function index() {
+   $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+    $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+        $roles[] = $rv;
+      }
+    $data['roles'] = $roles;
     $data['current_language'] = $this->session->userdata('site_lang');
-    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);

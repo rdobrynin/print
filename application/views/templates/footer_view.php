@@ -12,6 +12,31 @@
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
   $(function () {
+
+/**
+ * INVITATION AJAX
+ *
+ **/
+      $( "#invite-ajax-btn" ).click(function() {
+          var form_data = {
+              first_name: $('#first_name_invite').val()
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/invitation'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  if(msg.result==true) {
+                     console.log('ok');
+                  }
+                  else {
+                      console.log('not ok');
+                  }
+              }
+          });
+      });
+
       $('#upload_file').submit(function() {
           $.ajaxFileUpload({
               url             :"<?php print(base_url());?>ajax/do_upload",
@@ -110,6 +135,7 @@
       }, 5900);
 
 //      dashboard
+
   });
 </script>
 </body>

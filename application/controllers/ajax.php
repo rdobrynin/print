@@ -226,6 +226,20 @@ class Ajax extends CI_Controller {
         }
         echo json_encode(array('status' => $status, 'msg' => $msg,  'delete' => $del, 'new_avatar' => $new_avatar));
     }
+
+    /**
+     * INVITATION NEW PERSON
+     */
+    function invitation() {
+        $result = array();
+        if(trim($_POST['first_name'])=='Roman') {
+            $result['result'] = TRUE;
+        }
+        else {
+            $result['result'] = FALSE;
+        }
+        echo json_encode ($result);
+    }
 }
 
 
