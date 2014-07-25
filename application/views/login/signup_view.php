@@ -1,6 +1,7 @@
 <?php include('head_view.php');?>
   <div class="container" id="main_login" style="display: block;">
-    <form class="form-signin" action="<?php print(base_url());?>signup" method="POST" autocomplete="off">
+<?php $attributes = array('class' => 'form-signin', 'id' => 'myform', 'autocomplete'=>'ff'); ?>
+<?php  echo form_open('signup', $attributes);?>
       <div class="errors ">
         <!--          <button type="button" class="close close-login" data-dismiss="alert">×</button>-->
         <?php echo validation_errors();?></div>

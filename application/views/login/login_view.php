@@ -1,6 +1,7 @@
 
   <div class="container" id="main_login" style="display: block;">
-    <form class="form-signin" action="<?php print(base_url());?>admin" method="POST" autocomplete="on">
+      <?php $attributes = array('class' => 'form-signin', 'id' => 'myform', 'autocomplete'=>'on'); ?>
+      <?php  echo form_open('admin', $attributes);?>
       <div class="errors ">
         <?php echo validation_errors();?></div>
       <center><h2 class="text-muted">Brilliant Management</h2><small class="text-muted">user athorization</small></center><br>
