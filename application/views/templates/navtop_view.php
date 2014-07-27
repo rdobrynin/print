@@ -27,18 +27,12 @@
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
   <div class="show-info-online"><div class="show-info-content-online"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
+      <?php if ($client === FALSE): ?>
 
-      <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4 && $client !== FALSE): ?>
-
-
-
-
+          <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
               <li class="add-client pull-left visible-lg"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
-
-
+          <?php endif ?>
       <?php endif ?>
-
-
     <li class="dropdown messages-dropdown hidden-md">
       <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">

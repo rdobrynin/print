@@ -166,7 +166,7 @@ class Dashboard extends CI_Controller {
     $data['user'] = $uid;
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-  if($client !== FALSE) {
+  if($client === FALSE) {
       if($data['user'][0]['role']==5 OR $data['user'][0]['role']==4 ) {
           $this->load->view('templates/head_view');
           if($data['user'][0]['helpblock']==1) {

@@ -19,7 +19,6 @@
   <link href="<?php print(base_url());?>css/users.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/mini_inbox.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/body.css" rel="stylesheet">
-  <link href="<?php print(base_url());?>css/comments.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/elements.css" rel="stylesheet">
     <link href="<?php print(base_url());?>css/dashboard.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/responsive.css" rel="stylesheet">
