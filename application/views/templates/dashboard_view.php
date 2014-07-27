@@ -17,7 +17,8 @@
                 <h4 class="modal-title" id="myModalLabel"><small>Contact person invitaion</small></h4>
             </div>
             <div class="modal-body">
-                <form role="form">
+                <?php $attributes = array('class' => 'form-signin', 'id' => 'invite-form', 'autocomplete'=>'on'); ?>
+                <?php  echo form_open('#', $attributes);?>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">

@@ -28,17 +28,19 @@
                     <table class="table">
                         <thead>
                         <tr>
+                            <th>User id</th>
+                            <th>Name</th>
                             <th>ip address</th>
                             <th>last activity</th>
                         <tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($session as $item => $value): ?>
+
                             <tr>
-                                <td><?php print($value['ip_address']); ?></td>
-                                <td><?php print(date('d-m-Y H:i',$value['last_activity'])); ?></td>
+                                <td></td>
+                                <td></td>
                             </tr>
-                        <?php endforeach ?>
+
                         </tbody>
                     </table>
             </div>

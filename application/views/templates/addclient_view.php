@@ -8,8 +8,8 @@
 <!--FORM-->
       <div class="col-md-8">
         <h2>Add client</h2>
-              <form role="form" id="add-clientForm" class="form-horizontal"  action="<?php print(base_url());?>addclient_form" method="POST" autocomplete="off">
-
+          <?php $attributes = array('class' => 'form-horizontal', 'id' => 'add-clientForm', 'autocomplete'=>'off'); ?>
+          <?php  echo form_open('addclient_form', $attributes);?>
       <div class="address-wrapper" style="height: 100%;">
                   <p class="lead">add requirement data for company profile</p>
                 <div class="form-group">
@@ -111,7 +111,7 @@
 
                 <span class="pull-left" ><a href="javascript:history.back()"  class="btn btn-default">Back</a></span>
                 <input type="submit"  class="btn btn-default pull-right" id="create_company" value="Create company">
-              </form>
+          <?php echo form_close(); ?>
             </div>
 
       <div class="col-md-4 jumbotron-resp">
