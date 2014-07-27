@@ -407,7 +407,12 @@ class Admin_model extends CI_Model {
       ->db
       ->where('creator', $id)
       ->get('client');
-    return $query->result_array();
+      if ($query->num_rows > 0) {
+          return $query->result_array();
+      }
+      else {
+          return FALSE;
+      }
   }
 
   /**

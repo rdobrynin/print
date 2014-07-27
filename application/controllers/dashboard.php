@@ -138,7 +138,7 @@ class Dashboard extends CI_Controller {
    */
 
   function clients() {
-      $data['current_language'] = $this->session->userdata('site_lang');
+    $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['users'] = $this->admin_model->get_users();
@@ -152,7 +152,6 @@ class Dashboard extends CI_Controller {
     $this->load->view('templates/sidebar_view', $data);
     $this->load->view('templates/settings_view', $data);
     $this->load->view('templates/client_view', $data);
-
   }
 
   /**
@@ -161,11 +160,13 @@ class Dashboard extends CI_Controller {
 
   function addclient() {
       $data['current_language'] = $this->session->userdata('site_lang');
-    $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
-    $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+      $client =  $this->admin_model->get_own_client($_SESSION['username']);
+    $data['client'] = $client;
+      $uid = $this->admin_model->get_user_id($_SESSION['username']);
+    $data['user'] = $uid;
     $data['users'] = $this->admin_model->get_users();
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-
+  if($client !== FALSE) {
       if($data['user'][0]['role']==5 OR $data['user'][0]['role']==4 ) {
           $this->load->view('templates/head_view');
           if($data['user'][0]['helpblock']==1) {
@@ -175,9 +176,12 @@ class Dashboard extends CI_Controller {
           $this->load->view('templates/settings_view', $data);
       }
       else {
-         redirect(base_url().'error');
+          redirect(base_url().'error');
       }
-
+  }
+    else {
+        redirect(base_url().'error');
+    }
   }
 
   /**
