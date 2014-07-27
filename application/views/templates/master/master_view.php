@@ -25,7 +25,22 @@
     <div id="page-content-wrapper">
         <div class="page-content inset">
             <div id="wrapper">
-MASTER
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>ip address</th>
+                            <th>last activity</th>
+                        <tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($session as $item => $value): ?>
+                            <tr>
+                                <td><?php print($value['ip_address']); ?></td>
+                                <td><?php print(date('d-m-Y H:i',$value['last_activity'])); ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                        </tbody>
+                    </table>
             </div>
         </div>
     </div>

@@ -449,4 +449,16 @@ class Admin_model extends CI_Model {
       ->get('roles');
     return $query->result_array();
   }
+
+    /**
+     * get session_data);
+     * @return mixed
+     */
+
+    public function get_session() {
+        $query = $this
+            ->db
+            ->get('sessions');
+        return $query->result_array();
+    }
 }
