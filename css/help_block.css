@@ -14,17 +14,18 @@
 div.help-button {
     margin: 0 auto;
     width: 140px;
-    top: 10px;
     position: static;
     top: 4px;
     padding-top: 7px;
-    background-color: #fff;
+    background-color: #000;
     text-align: center;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     margin-top: 4px;
-    font-size: 13px;
+    font-size: 11px;
+    color: #dddddd;
     cursor: pointer;
+    padding-bottom: 4px;
 }
 
 div.help-block-open-btn {

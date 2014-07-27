@@ -1,4 +1,4 @@
-<div class="help-block">
+<div class="help-block visible-lg">
     <div class="help-content">
         <div class="row">
             <div class="col-md-3">

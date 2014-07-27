@@ -55,19 +55,6 @@ $route['delete_client'] = 'dashboard/delete_client';
 $route['addclient_form'] = 'dashboard/addclient_form';
 $route['update_profile'] = 'dashboard/update_profile';
 $route['404_override'] = 'custom404';
-//Help pages
-$route['h_clients'] = 'help/clients';
-$route['h_info'] = 'help';
-$route['h_persons'] = 'help/persons';
-$route['h_users'] = 'help/users';
-$route['h_profile'] = 'help/profile';
-$route['h_projects'] = 'help/manage_projects';
-$route['h_tasks'] = 'help/manage_tasks';
-$route['h_comments'] = 'help/comments';
-$route['h_charts'] = 'help/charts';
-$route['h_team'] = 'help/team';
-$route['h_faq'] = 'help/faq';
-$route['h_notifications'] = 'help/notifications';
 
 
 /* End of file routes.php */

@@ -342,10 +342,8 @@ span.badge-resp {
     span.badge-resp {
         position: absolute;
         right: 10px;
-        /* width: 19px; */
         height: 18px;
         text-align: center;
-        padding: 0;
         margin: 0;
         float: inherit;
         /* background: transparent; */
@@ -375,7 +373,6 @@ span.badge-resp {
 }
 
 span.avata-img {
-    left: 1px;
     position: relative;
     left: -2px;
     top: -3px;
@@ -387,7 +384,7 @@ span.avata-img {
     top: 43px;
     background-color: rgb(37, 177, 255);
     padding: 3px;
-    right: -24px;
+    left: 52px;
     padding-left: 12px;
     padding-right: 10px;
     border-radius: 6px;

@@ -347,3 +347,7 @@ div#files {
     background-color: #575757;
     outline: 0;
 }
+
+.navbar-inverse {
+    border: 0;
+}

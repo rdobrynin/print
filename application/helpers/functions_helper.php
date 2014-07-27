@@ -6,7 +6,7 @@ if (!function_exists('show_role')) {
   function show_role($role) {
     $result='none';
     if($role == 5) {
-      $result = 'admin';
+      $result = 'master';
     }
     else if($role == 4) {
       $result = 'Manager';

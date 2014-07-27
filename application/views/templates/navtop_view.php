@@ -1,5 +1,16 @@
-<div class=" navbar-collapse navbar-inverse navbar-fixed-top">
-  <ul class="navbar navbar-left">
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-left">
     <li class="sidebar-brand"><span class="avatar-top">
             <span class="avatar-img-ajax"></span>
             <span class="avatar-img">
@@ -10,16 +21,16 @@
                <?php endif ?>
             </span></span>
     </li>
-    <span class="avatar-name"><?php print(show_role($user[0]['role'])); ?></span>
+    <span class="avatar-name visible-lg"><?php print(show_role($user[0]['role'])); ?></span>
   </ul>
 <div class="show-info"><div class="show-info-content"></div><div class="expandable-image"></div></div>
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
   <div class="show-info-online"><div class="show-info-content-online"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
       <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
-          <li class="add-client pull-left"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
+          <li class="add-client pull-left visible-lg"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
       <?php endif ?>
-    <li class="dropdown messages-dropdown">
+    <li class="dropdown messages-dropdown hidden-md">
       <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li class="dropdown-header">7 New Messages</li>
@@ -78,4 +89,7 @@
       </ul>
     </li>
   </ul>
-</div>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
