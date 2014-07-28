@@ -393,14 +393,25 @@ class Dashboard extends CI_Controller {
 
       }
       else {
-        $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
-        $data['users'] = $this->admin_model->get_users();
-        $this->load->view('templates/head_view');
-        if ($data['user'][0]['helpblock'] == 1) {
-          $this->load->view('templates/help_block_view');
-        }
-        $this->load->view('templates/profile_view', $data);
-        $this->load->view('templates/settings_view', $data);
+          $data['current_language'] = $this->session->userdata('site_lang');
+          $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
+          $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
+          $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
+          $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
+          $data['users'] = $this->admin_model->get_users();
+          $roles = $this->admin_model->get_roles();
+          $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
+          $this->load->view('templates/head_view');
+          if($data['user'][0]['helpblock']==1) {
+              $this->load->view('templates/help_block_view');
+          }
+          foreach ($roles as $rk=>$rv) {
+              $roles_array[$rv['rid']] = $rv['title'];
+
+          }
+          $data['roles']= $roles_array;
+          $this->load->view('templates/profile_view', $data);
+          $this->load->view('templates/settings_view', $data);
       }
     }
   }
