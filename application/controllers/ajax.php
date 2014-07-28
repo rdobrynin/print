@@ -33,11 +33,9 @@ class Ajax extends CI_Controller {
         $email = $_POST['email'];
         $check_email= $this->admin_model->check_email($email);
         $getuser= $this->admin_model->get_user($email);
-        $online= $this->admin_model->online_auth($email);
         $id =  $getuser[0]['id'];
         $avatar= $this->files_model->search_avatar($id);
         $result = array();
-        $result['online'] = $online[0]['status'];
         if($email !== $check_email[0]['email']){
             $result['result'] = FALSE;
             $result['avatar'] = $avatar[0]['filename'];

@@ -94,8 +94,8 @@ li.sidebar-brand {
 
 .inset {
 
-  padding-left: 36px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #menu-toggle {
@@ -349,25 +349,26 @@ span.avata-img {
     color: #292929;
     top: 43px;
     background-color: rgb(37, 177, 255);
-    padding: 3px;
-    left: 52px;
+    padding: 2px;
+    left: 70px;
     padding-left: 12px;
     padding-right: 10px;
     border-radius: 6px;
     padding-top: 0;
-    font-size: 13px;
+    font-size: 11px;
 }
+
 
 .avatar-name:after {
     content: "";
     position: absolute;
-    border-left: 12px solid rgba(255, 241, 190, 0);
-    border-right: 7px solid rgba(255, 241, 190, 0);
-    /* border-bottom: 13px solid #fff; */
-    left: -11px;
-    border-top: 10px solid rgb(37, 177, 255);
+    border-left: 8px solid rgba(255, 241, 190, 0);
+    border-right: 4px solid rgba(255, 241, 190, 0);
+    left: -7px;
+    border-top: 7px solid rgb(37, 177, 255);
     top: 4px;
 }
+
 
 .message {
     display: block;

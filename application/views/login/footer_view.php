@@ -19,16 +19,6 @@
                 data: postData,
                 dataType: 'json',
                 success: function (data, status) {
-                  if(data.online == '1') {
-                     $('#login_btn').attr('disabled','disabled');
-                      $('#check_email_login').show();
-                      $('.label-signin').css('display','block');
-                      $("#check_email_login").empty().append('This account already is online');
-                  }
-                    else {
-                      $('#login_btn').removeAttr('disabled');
-                      $('#check_email_login').hide();
-                  }
                     if (data.avatar !== null) {
                         $('.error-frame').fadeOut(500);
                         $('#avatar-login').hide();

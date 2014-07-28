@@ -24,6 +24,7 @@
   <link href="<?php print(base_url());?>css/responsive.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/task_table.css" rel="stylesheet">
   <link href="<?php print(base_url());?>css/help_block.css" rel="stylesheet">
+    <link href="<?php print(base_url());?>css/right_sidebar.css" rel="stylesheet">
     <link href="<?php print(base_url());?>css/modal.css" rel="stylesheet">
     <link href="<?php print(base_url());?>css/bootstrap-select.css" rel="stylesheet">
     <link href="<?php print(base_url());?>css/btn.css" rel="stylesheet">
@@ -32,3 +33,7 @@
 </head>
 
 <body>
+<div class="right-sidebar">
+
+
+</div>
