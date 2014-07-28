@@ -53,3 +53,13 @@ div.navbar-collapse.navbar-inverse.navbar-fixed-top {
      padding-right: 0;
      padding-left: 0;
 }
+
+.copyright {
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 1px 2px #000000;
+}
