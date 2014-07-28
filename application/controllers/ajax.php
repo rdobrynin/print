@@ -181,7 +181,7 @@ class Ajax extends CI_Controller {
         if ($status != "error") {
             $config['upload_path'] = './uploads/avatar';
             $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = 1024 * 8;
+            $config['max_size'] = 1024 * .5;
             $config['encrypt_name'] = FALSE;
 
             $this->load->library('upload', $config);

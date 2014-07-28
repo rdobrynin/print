@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin_model.php" afterPath="$PROJECT_DIR$/application/models/admin_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/ajax.php" afterPath="$PROJECT_DIR$/application/controllers/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login/footer_view.php" afterPath="$PROJECT_DIR$/application/views/login/footer_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login/login_view.php" afterPath="$PROJECT_DIR$/application/views/login/login_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="print.iws" />
@@ -29,7 +26,7 @@
     <favorites_list name="print" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6419948">
+    <splitter split-orientation="horizontal" split-proportion="0.3417323">
       <split-first>
         <leaf>
           <file leaf-file-name="login_view.php" pinned="false" current="false" current-in-tab="false">
@@ -50,10 +47,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="footer_view.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/login/footer_view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="55" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.6295082" vertical-offset="0" max-vertical-offset="2265">
+                <state line="24" column="53" selection-start="974" selection-end="974" vertical-scroll-proportion="0.5044843" vertical-offset="0" max-vertical-offset="2296">
                   <folding />
                 </state>
               </provider>
@@ -81,10 +78,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ajax.php" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="ajax.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="7" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.6721311" vertical-offset="393" max-vertical-offset="5685">
+                <state line="189" column="34" selection-start="5958" selection-end="5958" vertical-scroll-proportion="0.5147541" vertical-offset="2985" max-vertical-offset="5397">
                   <folding />
                 </state>
               </provider>
@@ -152,10 +149,10 @@
         <option value="$PROJECT_DIR$/application/views/templates/profile_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/navtop_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/dashboard.php" />
-        <option value="$PROJECT_DIR$/application/controllers/ajax.php" />
         <option value="$PROJECT_DIR$/application/models/admin_model.php" />
         <option value="$PROJECT_DIR$/application/views/login/login_view.php" />
         <option value="$PROJECT_DIR$/application/views/login/footer_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/ajax.php" />
       </list>
     </option>
   </component>
@@ -857,16 +854,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
+    <entry file="file://$PROJECT_DIR$/application/views/login/footer_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="7" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.6721311" vertical-offset="393" max-vertical-offset="5397">
+        <state line="24" column="53" selection-start="974" selection-end="974" vertical-scroll-proportion="0.5044843" vertical-offset="0" max-vertical-offset="2296">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login/footer_view.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="55" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.6295082" vertical-offset="0" max-vertical-offset="2265">
+        <state line="189" column="34" selection-start="5958" selection-end="5958" vertical-scroll-proportion="0.5147541" vertical-offset="2985" max-vertical-offset="5397">
           <folding />
         </state>
       </provider>
