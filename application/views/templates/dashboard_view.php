@@ -2,9 +2,27 @@
     <div id="page-content-wrapper">
         <div class="page-content inset">
             <div class="row">
-                <a href="" data-toggle="modal" data-target="#invite" title="invite">
-                   <button class="btn btn-primary"> Invite person</button>
-                </a>
+                <div class="col-md-8">
+                    <a href="" data-toggle="modal" data-target="#invite" title="invite">
+                        <button class="btn btn-primary btn-xs"> Invite person</button>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Activity Stream</h3>
+                            <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-minus"></i></span>
+                        </div>
+                        <div class="panel-body">
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
             </div> <!-- ./row-->
             </div>
         </div>
