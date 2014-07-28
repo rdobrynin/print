@@ -216,46 +216,6 @@ ul.navbar.navbar-left {
 }
 
 
-.messages-dropdown .dropdown-menu {
-    min-width: 300px;
-}
-
-.messages-dropdown .dropdown-menu .message-preview .avatar {
-    float: left;
-    margin-right: 15px;
-}
-
-.messages-dropdown .dropdown-menu .message-preview .time {
-    font-size: 12px;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-}
-.dropdown-header {
-    display: block;
-    padding: 3px 20px;
-    font-size: 12px;
-    line-height: 1.428571429;
-    color: #999;
-}
 
 .left-resp-menu {
     display: inline;
@@ -320,22 +280,29 @@ ul.navbar.navbar-left {
 
 }
 
+
 span.badge-resp {
     position: absolute;
     right: 0;
-    /* width: 19px; */
     height: 16px;
     text-align: center;
-    padding: 0;
     margin: 0;
     float: inherit;
-    /* background: transparent; */
-    text-indent: initial;
     padding: 5px;
     padding-top: 3px;
     display: block;
     margin-top: -20px;
-    background-color: red;
+    -pie-background: linear-gradient(rgba(247,247,247,0.75) 0%,rgba(246,247,247,0.65) 25%,rgba(236,238,239,0.55) 85%,rgba(232,232,234,0.45) 100%);
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(247,247,247,0.75)), color-stop(25%, rgba(246,247,247,0.65)), color-stop(85%, rgba(236,238,239,0.55)), color-stop(100%, rgba(232,232,234,0.45)));
+    background-image: -webkit-linear-gradient(rgba(247,247,247,0.75) 0%,rgba(246,247,247,0.65) 25%,rgba(236,238,239,0.55) 85%,rgba(232,232,234,0.45) 100%);
+    background-image: -moz-linear-gradient(rgba(247,247,247,0.75) 0%,rgba(246,247,247,0.65) 25%,rgba(236,238,239,0.55) 85%,rgba(232,232,234,0.45) 100%);
+    background-image: -o-linear-gradient(rgba(247,247,247,0.75) 0%,rgba(246,247,247,0.65) 25%,rgba(236,238,239,0.55) 85%,rgba(232,232,234,0.45) 100%);
+    background-image: linear-gradient(rgba(247,247,247,0.75) 0%,rgba(246,247,247,0.65) 25%,rgba(236,238,239,0.55) 85%,rgba(232,232,234,0.45) 100%);
+    -webkit-box-shadow: 0 1px 3px #2e2e30,0 1px 1px rgba(255,255,255,0.2) inset;
+    -moz-box-shadow: 0 1px 3px #2e2e30,0 1px 1px rgba(255,255,255,0.2) inset;
+    box-shadow: 0 1px 3px #2e2e30,0 1px 1px rgba(255,255,255,0.2) inset;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    background-color: #000;
 }
 
 @media (min-width: 768px) {
@@ -352,7 +319,6 @@ span.badge-resp {
         padding-top: 3px;
         display: block !important;
         margin-top: -20px;
-        background-color: red;
         width: 20px;
         padding-right: 7px;
     }
@@ -431,6 +397,7 @@ i.fa-clock-o {
     color: #333;
     white-space: nowrap;
     color: rgb(184, 184, 184) !important;
+    text-shadow: 0px 1px 1px rgba(3, 0, 0, 0.3);
 }
 
 .dropdown-menu > li > a:hover {
@@ -439,9 +406,9 @@ i.fa-clock-o {
     clear: both;
     font-weight: normal;
     line-height: 1.428571429;
-    color: #333;
     white-space: nowrap;
     color: #222 !important;
+    text-shadow: 0 0 0 rgba(255, 35, 152, 0.30);
 }
 
 ul.sidebar-nav li i {

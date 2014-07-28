@@ -9,9 +9,9 @@ body {
     overflow: hidden;
     height: 100%;
     background: #fff;
-    border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     background: url('../img/bgnoise.png');
     width: 98%;
     margin: 0 auto;
@@ -47,4 +47,9 @@ div.navbar-collapse.navbar-inverse.navbar-fixed-top {
     -webkit-overflow-scrolling: touch;
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.container-fluid {
+     padding-right: 0;
+     padding-left: 0;
 }

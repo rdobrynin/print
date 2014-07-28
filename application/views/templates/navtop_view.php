@@ -34,7 +34,7 @@
           <?php endif ?>
       <?php endif ?>
     <li class="dropdown messages-dropdown hidden-md">
-      <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+      <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages &nbsp;<span class="badge badge-resp">7</span> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li class="dropdown-header">7 New Messages</li>
         <li class="message-preview">
@@ -64,16 +64,16 @@
           </a>
         </li>
         <li class="divider"></li>
-        <li><a href="#">View Inbox <span class="badge" >7</span></a></li>
+        <li><a href="#">View Inbox&nbsp;<span class="badge badge-resp" >7</span></a></li>
       </ul>
     </li>
       <li class="dropdown user-dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i> <span style="text-transform: capitalize;"><?php print(show_lang($current_language));?></span>
               <b class="caret"></b></a>
           <ul class="dropdown-menu dropdown-user">
-              <li><div class="flag flag-ee"></div><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
-              <li><div class="flag flag-gb"></div><a href='langswitch/switchLanguage/english'>&nbsp;English</a></li>
-              <li><div class="flag flag-ru"></div><a href='langswitch/switchLanguage/russian'>&nbsp;Русский</a></li>
+              <li><a href='langswitch/switchLanguage/estonian'>&nbsp;Eesti</a></li>
+              <li><a href='langswitch/switchLanguage/english'>&nbsp;English</a></li>
+              <li><a href='langswitch/switchLanguage/russian'>&nbsp;Русский</a></li>
           </ul>
       </li>
     <li class="dropdown user-dropdown">

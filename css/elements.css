@@ -43,6 +43,88 @@ div.panel.panel-primary.filterable.panel-tabs {
     margin-top: 0;
 }
 
+li.dropdown {
+    border: 1px solid rgb(48, 48, 48);
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    box-shadow: -1px 0 #000000
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #6D6D6D;
+background: transparent;
+}
+
+.messages-dropdown .dropdown-menu {
+    min-width: 300px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: inherit;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #2B2B2B;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    right: -2px !important;
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #999;
+}
+.dropdown-menu > li {
+    /*padding-left: 13px;*/
+}
+
+.dropdown-menu .divider {
+    height: 1px;
+    overflow: hidden;
+    border: 1px solid rgb(29, 29, 29);
+    box-shadow: 0 1px 0 0 #4E4E4E;
+    margin-left: 1px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #b9b9b9;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav.navbar-right:last-child {
+        margin-right: 0;
+    }
+}
+
+.navbar-right {
+    float: right !important;
+    padding-right: 15px;
+}
+
+
 .nav-tabs > li > a {
     margin-right: 2px;
     line-height: 1.428571429;
