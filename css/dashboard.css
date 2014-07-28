@@ -28,3 +28,43 @@ a.clickable:hover { text-decoration:none; }
     font-size: 12px;
     margin-right: 10px;
 }
+
+.avatar-activity {
+    width: 45px;
+    height: 45px;
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
+    display: block;
+    top: 17px;
+    left: 19px;
+    overflow: hidden;
+    border-radius: 25px;
+    float: left;
+    margin-right: 10px;
+}
+
+.activity-item-summary span.resolved-link {
+    text-decoration: line-through;
+}
+
+.activity-item-summary {
+    font-size: 13px;
+}
+
+i.clock-activity {
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.sub-activity {
+    padding-bottom: 30px;
+}
+
+.activity-item-comment-form {
+display: none;
+}
+
+.show-more-activity {
+    padding: 10px;
+}
+

@@ -21,15 +21,25 @@ $(function() {
             $this.parents('.panel').find('.panel-body').slideUp();
             $this.addClass('panel-collapsed');
             $this.find('i').removeClass('glyphicon-minus').addClass('glyphicon-plus');
+            $('.show-more-activity').hide();
         } else {
             $this.parents('.panel').find('.panel-body').slideDown();
             $this.removeClass('panel-collapsed');
             $this.find('i').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+            $('.show-more-activity').show();
         }
     });
     $(document).ready(function () {
         $('.panel-heading span.clickable').click();
         $('.panel div.clickable').click();
+    });
+
+    $('.activity-item-comment-link').click(function () {
+        $(".activity-item-comment-form").show();
+    });
+
+    $('.close-activity-form').click(function () {
+        $(".activity-item-comment-form").hide();
     });
 
 
