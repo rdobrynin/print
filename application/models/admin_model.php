@@ -206,6 +206,20 @@ class Admin_model extends CI_Model {
     return $update;
   }
 
+    /**
+     * Change status to online
+     * @param $id
+     * @return mixed
+     */
+
+    public function online_auth($email) {
+        $query = $this
+            ->db
+            ->where('email', $email)
+            ->get('users');
+        return $query->result_array();
+    }
+
   /**
    * Change status to offline
    * @param $id

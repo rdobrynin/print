@@ -8,6 +8,7 @@
 <div id="avatar-login"> <img src="<?php print(base_url());?>img/ProfilePlaceholderSuit1.png" alt="Smiley face" height="100"></div>
         <div id="avatar-login-original"> <img src="<?php print(base_url());?>img/ProfilePlaceholderSuit1.png" alt="Smiley face" height="100"></div>
       <input type="text" id="email"  name="email" value="" class="form-control" placeholder="Email" />
+      <span id="check_email_login"  class="label label-danger label-signin"></span>
       <input type="password" id="password" name="password" value="" placeholder="Password" class="form-control"/>
       <button class="btn btn-lg btn-primary btn-block" id="login_btn"> <i class="fa fa-check"></i></button>
 <div style="padding-bottom: 20px;">
