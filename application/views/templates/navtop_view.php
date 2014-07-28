@@ -30,7 +30,7 @@
       <?php if ($client == FALSE): ?>
 
           <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
-              <li class="add-client pull-left visible-lg"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
+              <li class="add-client pull-left visible-lg"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="fa fa-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
           <?php endif ?>
       <?php endif ?>
     <li class="dropdown messages-dropdown hidden-md">
@@ -82,7 +82,7 @@
         <b class="caret"></b></a>
       <ul class="dropdown-menu dropdown-user">
         <li><a href="<?php print(base_url());?>profile"><i class="fa fa-user"></i>Profile</a></li>
-        <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
+        <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge badge-resp">7</span></a></li>
         <li><a data-toggle="modal" href="#settings"><i class="fa fa-gear"></i> Settings</a></li>
         <?php if($user[0]['role']==5):?>
           <li><a href="<?php print(base_url());?>users"><i class="fa fa-users"></i> Administer users</a></li>
