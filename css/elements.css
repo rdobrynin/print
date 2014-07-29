@@ -460,4 +460,11 @@ div#files {
 textarea {
     width: 100%;
     resize: none;
+    margin: 10px 0;
+    padding: 5px;
+    color: #999;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
 }

@@ -9,3 +9,39 @@ $lang['menu_comments'] = "Comments";
 $lang['menu_help'] = "Help";
 $lang['menu_lang'] = "Language";
 $lang['menu_add_client'] = "Add client";
+$lang['menu_settings'] = "Settings";
+$lang['menu_profile'] = "Profile";
+$lang['menu_admin_users'] = "Administer users";
+$lang['menu_logout'] = "Log out";
+$lang['menu_messages'] = "Messages";
+$lang['mess_new_messages'] ='New messages';
+$lang['mess_inbox'] ='Inbox';
+$lang['mess_view_inbox'] ='View inbox';
+
+$lang['profile_view'] ='Profile view';
+$lang['req_info'] ='Requirement information';
+$lang['first_name'] ='First name';
+$lang['last_name'] ='Last name';
+$lang['add_phone'] ='Add phone';
+$lang['phone'] ='Phone';
+$lang['prim_email'] ='Primary email';
+$lang['add_email'] ='Add email';
+$lang['role'] ='Role';
+$lang['add_info'] ='Additional information';
+$lang['profile_picture'] ='Avatar';
+
+// Buttons
+
+$lang['back'] ='Back';
+$lang['submit'] ='Submit';
+$lang['upload'] ='Upload';
+
+$lang['company'] ='Company';
+$lang['company_desc'] ='Company description';
+$lang['url'] ='URL';
+$lang['regional_info'] ='Regional information';
+$lang['address'] ='address';
+$lang['index'] ='index';
+$lang['country'] ='Country';
+$lang['city'] ='City';
+$lang['contact_person_info'] = '';
