@@ -15,9 +15,9 @@
             <span class="avatar-img-ajax"></span>
             <span class="avatar-img">
                <?php if ($avatar != FALSE): ?>
-                  <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="45"></a>
+                  <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>"  height="45"></a>
                <?php else: ?>
-                 <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>" alt="Smiley face" height="45"></a>
+                 <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>"  height="45"></a>
                <?php endif ?>
             </span></span>
     </li>
@@ -78,7 +78,7 @@
       </li>
     <li class="dropdown user-dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-        <?php print($user[0]['first_name'].' '. $user[0]['last_name'])?>
+        <?php print($user[0]['first_name'].' '. lastname_letter($user[0]['last_name']))?>
         <b class="caret"></b></a>
       <ul class="dropdown-menu dropdown-user">
         <li><a href="<?php print(base_url());?>profile"><i class="fa fa-user"></i>Profile</a></li>

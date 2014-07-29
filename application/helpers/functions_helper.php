@@ -41,6 +41,15 @@ if (!function_exists('show_lang')) {
     }
 }
 
+if (!function_exists('lastname_letter')) {
+    function lastname_letter($str) {
+       $result = $str[0];
+        $result = strtoupper($result);
+        return $result.'...';
+    }
+}
+
+
 if (!function_exists('task_status')) {
   function task_status($status) {
     $result=0;
