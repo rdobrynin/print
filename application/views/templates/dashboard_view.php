@@ -29,7 +29,7 @@
 
                                     <div class="activity-item-info">
                                         <i class="fa fa-clock-o clock-activity"></i>
-                                        <span class="timestamp">5 hours ago</span>&nbsp;
+                                        <span class="timestamp">30 min ago</span>&nbsp;
                                        <span class="activity-item-action"><a href="#" class="activity-item-comment-link">Comment</a></span>
                                     </div>
                                 </div>
@@ -44,12 +44,12 @@
                             </div>
                             <div class="activity-item-summary">
                                 <a href="/secure/ViewProfile.jspa?name=romdo" class="activity-item-user activity-item-author" target="_parent">Jevgeni S...</a>&nbsp;<span class="label label-default label-xs">closed</span>&nbsp;
-                                <a href="#" target="_parent"><span class="resolved-link">ECL-217</span> - LESS implemetation loremip sumcococodfdf Be carefull for implementation </a>
+                                <a href="#" target="_parent"><span class="resolved-link">ECL-217</span> - LESS implemetation  for implementation </a>
                                 <div class="activity-item-description">
 
                                     <div class="activity-item-info">
                                         <i class="fa fa-clock-o clock-activity"></i>
-                                        <span class="timestamp">30 min ago</span>&nbsp;
+                                        <span class="timestamp">2 hours ago</span>&nbsp;
                                         <span class="activity-item-action"><a href="#" class="activity-item-comment-link">Comment</a></span>
                                     </div>
                                 </div>
@@ -70,12 +70,12 @@
 
                                     <div class="activity-item-info">
                                         <i class="fa fa-clock-o clock-activity"></i>
-                                        <span class="timestamp">5 hours ago</span>&nbsp;
+                                        <span class="timestamp">3 hours ago</span>&nbsp;
                                         <span class="activity-item-action"><a href="#" class="activity-item-comment-link">Comment</a></span>
                                         <form class="activity-item-comment-form ready" method="post" action="" style="">
                                             <fieldset><input type="hidden" name="replyTo" value="">
                                                 <input type="hidden" name="xsrfToken" value=""><textarea cols="40" rows="6" name="comment"></textarea>
-                                            </fieldset><div class="submit pull-left" style="padding-left: 54px;"><button name="submit" type="submit" class="btn btn-danger btn-xs">Add</button>&nbsp;
+                                            </fieldset><div class="pull-left"><span class="btn btn-danger btn-xs">Add</span>&nbsp;
                                                 <a href="#" class="btn btn-default btn-xs close-activity-form">Cancel</a></div></form>
                                     </div>
                                 </div>
@@ -91,12 +91,11 @@
                             </div>
                             <div class="activity-item-summary">
                                 <a href="/secure/ViewProfile.jspa?name=romdo" class="activity-item-user activity-item-author" target="_parent">Jevgeni S...</a>&nbsp;<span class="label label-default label-xs">closed</span>&nbsp;
-                                <a href="#" target="_parent"><span class="resolved-link">ECL-217</span> - LESS implemetation loremip sumcococodfdf Be carefull for implementation </a>
+                                <a href="#" target="_parent"><span class="resolved-link">ECL-217</span> - LESS implemetation for implementation </a>
                                 <div class="activity-item-description">
-
                                     <div class="activity-item-info">
                                         <i class="fa fa-clock-o clock-activity"></i>
-                                        <span class="timestamp">30 min ago</span>&nbsp;
+                                        <span class="timestamp">4 hours ago</span>&nbsp;
                                         <span class="activity-item-action"><a href="#" class="activity-item-comment-link">Comment</a></span>
                                     </div>
                                 </div>
@@ -104,10 +103,7 @@
                         </div>
 
                     </div>
-
-
                     <div class="show-more-activity"> <button class="btn btn-default btn-xs" style="width: 100%">Show more</button></div>
-
                 </div>
             </div>
         </div>
