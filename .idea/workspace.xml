@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/functions_helper.php" afterPath="$PROJECT_DIR$/application/helpers/functions_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/navtop_view.php" afterPath="$PROJECT_DIR$/application/views/templates/navtop_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" afterPath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elements.css" afterPath="$PROJECT_DIR$/css/elements.css" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="navtop_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="elements.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/elements.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="440" column="1" selection-start="8777" selection-end="8777" vertical-scroll-proportion="0.3431694" vertical-offset="7606" max-vertical-offset="9231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="120" selection-start="5093" selection-end="5093" vertical-scroll-proportion="-24.481482" vertical-offset="671" max-vertical-offset="3958">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navtop_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="89" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.72707427" vertical-offset="792" max-vertical-offset="2662">
+            <state line="69" column="38" selection-start="3895" selection-end="3895" vertical-scroll-proportion="-16.666666" vertical-offset="792" max-vertical-offset="2662">
               <folding />
             </state>
           </provider>
@@ -105,13 +123,13 @@
         <option value="$PROJECT_DIR$/css/sidebar.css" />
         <option value="$PROJECT_DIR$/application/views/login/footer_view.php" />
         <option value="$PROJECT_DIR$/application/views/templates/footer_view.php" />
-        <option value="$PROJECT_DIR$/css/elements.css" />
         <option value="$PROJECT_DIR$/css/body.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
         <option value="$PROJECT_DIR$/css/dashboard.css" />
         <option value="$PROJECT_DIR$/application/helpers/functions_helper.php" />
         <option value="$PROJECT_DIR$/application/views/templates/navtop_view.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
+        <option value="$PROJECT_DIR$/css/elements.css" />
       </list>
     </option>
   </component>
@@ -819,20 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="22" selection-start="3942" selection-end="3942" vertical-scroll-proportion="0.019088017" vertical-offset="3636" max-vertical-offset="9169">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="38" selection-start="5692" selection-end="5692" vertical-scroll-proportion="0.8342421" vertical-offset="612" max-vertical-offset="3790">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/body.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="0.3244963" vertical-offset="126" max-vertical-offset="2113">
@@ -849,7 +853,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/navtop_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="89" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.72707427" vertical-offset="792" max-vertical-offset="2662">
+        <state line="69" column="38" selection-start="3895" selection-end="3895" vertical-scroll-proportion="-16.666666" vertical-offset="792" max-vertical-offset="2662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="120" selection-start="5093" selection-end="5093" vertical-scroll-proportion="-24.481482" vertical-offset="671" max-vertical-offset="3958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="440" column="1" selection-start="8777" selection-end="8777" vertical-scroll-proportion="0.3431694" vertical-offset="7606" max-vertical-offset="9231">
           <folding />
         </state>
       </provider>

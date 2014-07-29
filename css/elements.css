@@ -456,3 +456,8 @@ div#files {
 .navbar-inverse {
     border: 0;
 }
+
+textarea {
+    width: 100%;
+    resize: none;
+}

@@ -74,7 +74,7 @@
                                         <span class="activity-item-action"><a href="#" class="activity-item-comment-link">Comment</a></span>
                                         <form class="activity-item-comment-form ready" method="post" action="" style="">
                                             <fieldset><input type="hidden" name="replyTo" value="">
-                                                <input type="hidden" name="xsrfToken" value=""><textarea cols="40" rows="6" name="comment"></textarea>
+                                                <input type="hidden" name="xsrfToken" value=""><textarea rows="6" name="comment"></textarea>
                                             </fieldset><div class="pull-left"><span class="btn btn-danger btn-xs">Add</span>&nbsp;
                                                 <a href="#" class="btn btn-default btn-xs close-activity-form">Cancel</a></div></form>
                                     </div>
