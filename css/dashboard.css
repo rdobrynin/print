@@ -1,10 +1,9 @@
-.clickable
-{
+.clickable {
     cursor: pointer;
 }
 
 .panel-heading {
-    padding: 7px 7px;
+    padding: 5px 5px;
 }
 
 .clickable .glyphicon {
@@ -12,17 +11,26 @@
     display: inline-block;
     padding: 3px 3px;
     border-radius: 4px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
-.panel-heading span
-{
+.panel-title {
+    font-size: 13px;
+}
+
+.panel-heading span {
     margin-top: -23px;
     font-size: 15px;
     margin-right: -9px;
 }
-a.clickable { color: inherit; }
-a.clickable:hover { text-decoration:none; }
+
+a.clickable {
+    color: inherit;
+}
+
+a.clickable:hover {
+    text-decoration: none;
+}
 
 .clickable i.glyphicon {
     font-size: 12px;
@@ -61,7 +69,7 @@ i.clock-activity {
 }
 
 .activity-item-comment-form {
-display: none;
+    display: none;
 }
 
 .show-more-activity {

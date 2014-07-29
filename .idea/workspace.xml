@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" afterPath="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/dashboard.css" afterPath="$PROJECT_DIR$/css/dashboard.css" />
     </list>
     <ignored path="print.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,19 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dashboard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2185">
+            <state line="30" column="19" selection-start="425" selection-end="425" vertical-scroll-proportion="0.47720042" vertical-offset="90" max-vertical-offset="2329">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dashboard_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="152" selection-start="3987" selection-end="3987" vertical-scroll-proportion="0.46346784" vertical-offset="612" max-vertical-offset="3756">
+            <state line="80" column="38" selection-start="5692" selection-end="5692" vertical-scroll-proportion="-28.76923" vertical-offset="612" max-vertical-offset="3756">
               <folding />
             </state>
           </provider>
@@ -128,8 +127,8 @@
         <option value="$PROJECT_DIR$/css/elements.css" />
         <option value="$PROJECT_DIR$/css/body.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/css/dashboard.css" />
         <option value="$PROJECT_DIR$/application/views/templates/dashboard_view.php" />
+        <option value="$PROJECT_DIR$/css/dashboard.css" />
       </list>
     </option>
   </component>
@@ -836,16 +835,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/dashboard.css">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2185">
+        <state line="80" column="38" selection-start="5692" selection-end="5692" vertical-scroll-proportion="-28.76923" vertical-offset="612" max-vertical-offset="3756">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/dashboard_view.php">
+    <entry file="file://$PROJECT_DIR$/css/dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="152" selection-start="3987" selection-end="3987" vertical-scroll-proportion="0.46346784" vertical-offset="612" max-vertical-offset="3756">
+        <state line="30" column="19" selection-start="425" selection-end="425" vertical-scroll-proportion="0.47720042" vertical-offset="90" max-vertical-offset="2329">
           <folding />
         </state>
       </provider>
