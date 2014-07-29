@@ -395,9 +395,8 @@ i.fa-clock-o {
     clear: both;
     font-weight: normal;
     line-height: 1.428571429;
-    color: #333;
+    color: #fff;
     white-space: nowrap;
-    color: rgb(184, 184, 184) !important;
     text-shadow: 0px 1px 1px rgba(3, 0, 0, 0.3);
 }
 

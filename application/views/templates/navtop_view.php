@@ -27,47 +27,28 @@
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
   <div class="show-info-online"><div class="show-info-content-online"></div></div>
   <ul class="nav navbar-nav navbar-right navbar-user">
-      <?php if ($client == FALSE): ?>
+      <li class="dropdown user-dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-user">
+              <li> <a href="#">Agile Ansewrs</a></li>
+              <li> <a href="#">Online Help</a></li>
+              <li> <a href="#">About Brilliant</a></li>
+          </ul>
+      </li>
 
-          <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
-              <li class="add-client pull-left visible-lg"><a href="<?php print(base_url());?>addclient"><button class="btn btn-success btn-xs"><i class="fa fa-plus"></i><span class="add-client-btn"><?php print(lang('menu_add_client')); ?></span></button></a></li>
-          <?php endif ?>
-      <?php endif ?>
-    <li class="dropdown messages-dropdown hidden-md">
-      <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i>
-          <?php print(lang('menu_messages'))?>&nbsp;&nbsp;<span class="badge badge-resp">7</span> <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li class="dropdown-header">7&nbsp;<?php print(lang('mess_new_messages'))?></li>
-        <li class="message-preview">
-          <a href="#">
-            <span class="avatar"><img src="http://placehold.it/50x50"></span>
-            <span class="name">Roman Dobrynin:</span>
-            <span class="message">Hey there, I wanted to ask you something...</span>
-            <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li class="message-preview">
-          <a href="#">
-            <span class="avatar"><img src="http://placehold.it/50x50"></span>
-            <span class="name">Roman Dobrynin:</span>
-            <span class="message">Hey there, I wanted to ask you something...</span>
-            <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li class="message-preview">
-          <a href="#">
-            <span class="avatar"><img src="http://placehold.it/50x50"></span>
-            <span class="name">Roman Dobrynin:</span>
-            <span class="message">Hey there, I wanted to ask you something...</span>
-            <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="#"><?php print(lang('mess_view_inbox'))?>&nbsp;<span class="badge badge-resp" >7</span></a></li>
-      </ul>
-    </li>
+      <li class="dropdown user-dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i><b class="caret"></b></span></a>
+          <ul class="dropdown-menu dropdown-user">
+              <?php if ($client == FALSE): ?>
+                  <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
+                      <li class="add-client"><a href="<?php print(base_url());?>addclient"><i class="fa fa-plus"></i><?php print(lang('menu_add_client')); ?></a></li>
+                  <?php endif ?>
+              <?php endif ?>
+              <li> <a href="" data-toggle="modal" data-target="#invite" title="invite"><i class="fa fa-plus"></i><?php print(lang('menu_invite_person')); ?></a></li>
+
+          </ul>
+      </li>
+
       <li class="dropdown user-dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i> <span style="text-transform: capitalize;"><?php print(show_lang($current_language));?></span>
               <b class="caret"></b></a>

@@ -14,6 +14,7 @@ $lang['menu_profile'] = "Profile";
 $lang['menu_admin_users'] = "Administer users";
 $lang['menu_logout'] = "Log out";
 $lang['menu_messages'] = "Messages";
+$lang['menu_invite_person'] ='Invite person';
 $lang['mess_new_messages'] ='New messages';
 $lang['mess_inbox'] ='Inbox';
 $lang['mess_view_inbox'] ='View inbox';

@@ -14,6 +14,7 @@ $lang['menu_profile'] = "Профиль";
 $lang['menu_admin_users'] = "Управление пользователями";
 $lang['menu_logout'] = "Выйти";
 $lang['menu_messages'] = "Сообщения";
+$lang['menu_invite_person'] ='Добавить контакт';
 $lang['mess_new_messages'] ='Новых сообщений';
 $lang['mess_inbox'] ='Входящие';
 $lang['mess_view_inbox'] ='Посмотреть входящие';

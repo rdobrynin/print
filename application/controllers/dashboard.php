@@ -59,6 +59,12 @@ class Dashboard extends CI_Controller {
    */
 
   function projects() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -79,6 +85,12 @@ class Dashboard extends CI_Controller {
    */
 
   function users() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -109,6 +121,12 @@ class Dashboard extends CI_Controller {
    */
 
   function comments() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -138,6 +156,12 @@ class Dashboard extends CI_Controller {
    */
 
   function clients() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
     $data['current_language'] = $this->session->userdata('site_lang');
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
     $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -159,6 +183,12 @@ class Dashboard extends CI_Controller {
    */
 
   function addclient() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
       $client =  $this->admin_model->get_own_client($_SESSION['username']);
     $data['client'] = $client;
@@ -217,6 +247,12 @@ class Dashboard extends CI_Controller {
    */
 
   function addclient_form() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
     $this->load->library('form_validation');
     $this->form_validation->set_rules('title', 'Company title', 'trim|required|min_length[3]');
@@ -275,6 +311,12 @@ class Dashboard extends CI_Controller {
    */
 
   function team() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
     $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -305,6 +347,12 @@ class Dashboard extends CI_Controller {
    */
 
   function profile() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
       $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
     $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -331,6 +379,12 @@ class Dashboard extends CI_Controller {
    */
 
   function update_profile() {
+      $roles_array=$this->admin_model->get_roles();
+      $roles = array();
+      foreach($roles_array as $rk=>$rv) {
+          $roles[] = $rv;
+      }
+      $data['roles'] = $roles;
       $data['current_language'] = $this->session->userdata('site_lang');
       $this->load->model('admin_model');
 //      delete additional emails
