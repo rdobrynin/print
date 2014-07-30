@@ -395,7 +395,7 @@ i.fa-clock-o {
     clear: both;
     font-weight: normal;
     line-height: 1.428571429;
-    color: #fff;
+    color: #9b9b9b;
     white-space: nowrap;
     text-shadow: 0px 1px 1px rgba(3, 0, 0, 0.3);
 }
@@ -421,8 +421,8 @@ ul.sidebar-nav li:hover {
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #fff;
-    background-color: #080808;
+    color: #25B1FF !important;
+    background-color: #292929 !important;
 }
 
 div.navbar-collapse.navbar-inverse.navbar-fixed-top {
