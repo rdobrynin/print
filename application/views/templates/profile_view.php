@@ -7,25 +7,25 @@
         <div class="row">
             <!--FORM-->
             <div class="col-md-8">
-                <h2>Profile view</h2>
+                <h2><?php print(lang('menu_profile'))?></h2>
                 <form role="form" class="form-horizontal" action="<?php print(base_url()); ?>update_profile" method="POST" autocomplete="on">
                     <div class="row">
                         <div class="address-wrapper" style="height: 100%;">
-                            <p class="lead">Requirement information</p>
+                            <p class="lead"><?php print(lang('req_info'))?></p>
 
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label for="first_name">First name</label>
+                                    <label for="first_name"><?php print(lang('first_name'))?></label>
                                     <input type="text" value="<?php print($user[0]['first_name']); ?>" class="form-control" name="first_name" id="first_name" placeholder="First name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="last_name" >Last name</label>
+                                    <label for="last_name" ><?php print(lang('last_name'))?></label>
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label for="phone">Phone</label>
+                                    <label for="phone"><?php print(lang('phone'))?></label>
                                     <input type="text" value="<?php print($user[0]['phone']); ?>" class="form-control" name="phone" id="basic_phone" placeholder="Phone number">
                                 </div>
                                 <!--                additional phones-->
@@ -44,14 +44,14 @@
                             </div>
                             <div class="form-group">
                             <div class="col-md-12" style="margin-bottom: 10px;">
-                                <div class="btn btn-xs btn-success" id="add_phone">Add Phone</div>
+                                <div class="btn btn-xs btn-success" id="add_phone"><?php print(lang('add_phone'))?></div>
                             </div>
                                 <div id="items_phone"></div>
                                 <div id="items_remove_phone"></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6" style="margin-bottom: 10px;">
-                                    <p><span class="label label-primary">Primary email:</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email']); ?></span></span></p>
+                                    <p><span class="label label-primary"><?php print(lang('prim_email'))?> :</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email']); ?></span></span></p>
                                     </div>
                                 <!--additional emails-->
                                 <div class="form-group">
@@ -69,7 +69,7 @@
                                 </div>
                             <div class="form-group">
                                 <div class="col-md-12" style="margin-bottom: 10px;">
-                                    <div class="btn btn-xs btn-success" id="add_email">Add Email</div>
+                                    <div class="btn btn-xs btn-success" id="add_email"><?php print(lang('add_email'))?></div>
                                 </div>
                                 <div id="items_email"></div>
                                 <div id="items_remove_email"></div>
@@ -77,10 +77,10 @@
                             <?php if ($user[0]['role'] != 1):; ?>
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                        <label for="last_name">Role</label>
+                                        <label for="last_name"><?php print(lang('role'))?></label>
                                         <select class="form-control selectpicker" name="role">
                                             <?php foreach ($roles as $rk => $rv): ?>
-                                                    <option value="<?php print($rk); ?>"><?php print($rv); ?></option>
+                                                    <option value="<?php print($rk); ?>"><?php print(show_role($rk)); ?></option>
                                             <?php endforeach ?>
                                         </select>
                                     </div>
@@ -88,7 +88,7 @@
                             <?php endif ?>
                         </div>
                         <div class="address-wrapper" style="height: 100%;">
-                            <p class="lead">Additional information</p>
+                            <p class="lead"><?php print(lang('add_info'))?></p>
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="skype_address">Skype</label>
@@ -107,28 +107,28 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="pull-left"><a href="javascript:history.back()" class="btn btn-primary">Back</a></span>
+                        <span class="pull-left"><a href="javascript:history.back()" class="btn btn-primary"><?php print(lang('back'))?></a></span>
                         <input type="hidden" value="<?php print(time()); ?>" name="date_edited">
-                        <button type="submit" id="profile-update-btn" class="btn btn-primary pull-right">Submit</button>
+                        <button type="submit" id="profile-update-btn" class="btn btn-primary pull-right"><?php print(lang('submit'))?></button>
                     </div>
                 </form>
             </div>
             <div class="col-md-4">
-                <h2>Profile Picture</h2>
+                <h2><?php print(lang('avatar'))?></h2>
 
                 <div class="address-wrapper" style="height: 100%;">
                     <div class="row">
                         <div class="col-md-12">
                             <form method="post" action="" id="upload_file">
-                                <label for="userfile">Upload</label>
+                                <label for="userfile"><?php print(lang('upload'))?></label>
                                 <input type="file" name="userfile" id="userfile" size="20"/>
                                 <input type="hidden" value="<?php print($user[0]['id']); ?>" name="user_id" id="user_id">
                                 <br/>
-                                <input type="submit" class="btn btn-info" name="submit" id="submit"/>
+                                <input type="submit" class="btn btn-info" name="<?php print(lang('submit'))?>" id="submit"/>
                             </form>
 
                                 <div id="avatar-true">
-                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" alt="Smiley face" height="100"></span>
+                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100"></span>
                                 </div>
 
                                 <div id="avatar-true-ajax">

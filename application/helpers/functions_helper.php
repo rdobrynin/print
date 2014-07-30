@@ -6,22 +6,22 @@ if (!function_exists('show_role')) {
   function show_role($role) {
     $result='none';
     if($role == 5) {
-      $result = 'master';
+      $result = lang('role_master');
     }
     else if($role == 4) {
-      $result = 'Manager';
+      $result = lang('role_manager');
     }
     else if($role == 3) {
-        $result = 'curator';
+        $result = lang('role_curator');
     }
     else if($role == 2) {
-        $result = 'implementor';
+        $result = lang('role_implementor');
     }
     else if($role == 1) {
-      $result = 'customer';
+      $result = lang('role_customer');
     }
     else if($role == 0) {
-        $result = 'quest';
+        $result = lang('role_guest');
     }
     return $result;
   }

@@ -45,4 +45,10 @@ $lang['address'] ='address';
 $lang['index'] ='index';
 $lang['country'] ='Country';
 $lang['city'] ='City';
-$lang['contact_person_info'] = '';
+
+$lang['role_master'] ='Master';
+$lang['role_curator'] ='Curator';
+$lang['role_implementor'] ='Implementor';
+$lang['role_customer'] ='Customer';
+$lang['role_guest'] ='Guest';
+$lang['role_manager'] ='Manager';
