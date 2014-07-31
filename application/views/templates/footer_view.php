@@ -59,6 +59,8 @@
 <script src="js/bootstrap-select.js"></script>
 <script src="js/ajaxfileupload.js"></script>
 <script src="js/script.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-confirmation.js"></script>
 
 <!-- Custom JavaScript for the Menu Toggle -->
 <script>
@@ -193,14 +195,6 @@
 
   });
 </script>
-
-<div class="copyright">
-
-    <p id="copyright" property="dc:rights">&copy;
-        <span property="dc:dateCopyrighted">2014</span>&nbsp;<span property="dc:publisher">Brilliant Solutions LLC.</span>
-    </p>
-
-</div>
 
 </body>
 

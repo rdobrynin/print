@@ -114,8 +114,7 @@
                 </form>
             </div>
             <div class="col-md-4">
-                <h2><?php print(lang('avatar'))?></h2>
-
+                <h2><?php print(lang('profile_picture'))?></h2>
                 <div class="address-wrapper" style="height: 100%;">
                     <div class="row">
                         <div class="col-md-12">

@@ -4,7 +4,7 @@ $lang['menu_clients'] = "Клиенты";
 $lang['menu_projects'] = "Проекты";
 $lang['menu_tasks'] = "Задачи";
 $lang['menu_team'] = "Команда";
-$lang['menu_chart'] = "Отчеты";
+$lang['menu_chart'] = "Графики";
 $lang['menu_comments'] = "Комментарии";
 $lang['menu_help'] = "Помощь";
 $lang['menu_lang'] = "Язык";
@@ -30,7 +30,6 @@ $lang['add_email'] ='Добавить эл.почту';
 $lang['role'] ='Роль';
 $lang['add_info'] ='Дополнительная информация';
 $lang['profile_picture'] ='Аватар';
-// Buttons
 
 $lang['back'] ='Назад';
 $lang['submit'] ='отправить';

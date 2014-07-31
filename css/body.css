@@ -4,6 +4,14 @@ body {
     background: url('../img/mesh.png') #222;
 }
 
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
 #page-content-wrapper {
     padding: 20px 25px 0;
     overflow: hidden;
@@ -53,14 +61,4 @@ div.navbar-collapse.navbar-inverse.navbar-fixed-top {
 .container-fluid {
      padding-right: 0;
      padding-left: 0;
-}
-
-.copyright {
-    color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    padding-top: 10px;
-    text-shadow: 1px 2px #000000;
 }

@@ -4,7 +4,7 @@ $lang['menu_clients'] = "Client";
 $lang['menu_projects'] = "Projects";
 $lang['menu_tasks'] = "Tasks";
 $lang['menu_team'] = "Team";
-$lang['menu_chart'] = "Chart";
+$lang['menu_chart'] = "Charts";
 $lang['menu_comments'] = "Comments";
 $lang['menu_help'] = "Help";
 $lang['menu_lang'] = "Language";
@@ -31,7 +31,7 @@ $lang['role'] ='Role';
 $lang['add_info'] ='Additional information';
 $lang['profile_picture'] ='Avatar';
 
-// Buttons
+
 
 $lang['back'] ='Back';
 $lang['submit'] ='Submit';
