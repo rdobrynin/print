@@ -85,7 +85,6 @@ $(function() {
 
     $('#back-to-top').tooltip('show');
 
-
 $('.closebox').click(function(e){
     $(this).parent().fadeOut( "slow", function() {
         // Animation complete.

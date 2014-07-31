@@ -127,7 +127,9 @@
                             </form>
 
                                 <div id="avatar-true">
-                                <span class="avatar-wrapper pull-right"><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100"></span>
+                                <span class="avatar-wrapper pull-right" ><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100">
+                                </span>
+                                    <a href="#" id="del-avatar"><span class="del-avatar btn btn-danger btn-xs"><?php print(lang('remove'))?></span></a>
                                 </div>
 
                                 <div id="avatar-true-ajax">

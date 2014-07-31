@@ -2,7 +2,7 @@
 $lang['menu_dashboard'] = "Панель управления";
 $lang['menu_clients'] = "Клиенты";
 $lang['menu_projects'] = "Проекты";
-$lang['menu_tasks'] = "Задачи";
+$lang['menu_tasks'] = "Задания";
 $lang['menu_team'] = "Команда";
 $lang['menu_chart'] = "Графики";
 $lang['menu_comments'] = "Комментарии";
@@ -34,6 +34,7 @@ $lang['profile_picture'] ='Аватар';
 $lang['back'] ='Назад';
 $lang['submit'] ='отправить';
 $lang['upload'] ='Загрузить';
+$lang['delete'] ='Удалить';
 
 $lang['company'] ='Компания';
 $lang['company_desc'] ='Описание деятельности';

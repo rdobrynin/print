@@ -216,6 +216,13 @@ button.btn.btn-success.btn-xs {
     cursor: pointer;
 }
 
+span.del-avatar {
+    position: relative;
+    color: #fff;
+    float: right;
+    bottom: -77px;
+}
+
 .alert {
     /*padding: 12px;*/
     /*text-align: center;*/

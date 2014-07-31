@@ -36,6 +36,7 @@ $lang['profile_picture'] ='Avatar';
 $lang['back'] ='Back';
 $lang['submit'] ='Submit';
 $lang['upload'] ='Upload';
+$lang['remove'] ='Remove';
 
 $lang['company'] ='Company';
 $lang['company_desc'] ='Company description';
