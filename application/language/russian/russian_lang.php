@@ -34,7 +34,7 @@ $lang['profile_picture'] ='Аватар';
 $lang['back'] ='Назад';
 $lang['submit'] ='отправить';
 $lang['upload'] ='Загрузить';
-$lang['delete'] ='Удалить';
+$lang['remove'] ='Удалить';
 
 $lang['company'] ='Компания';
 $lang['company_desc'] ='Описание деятельности';
