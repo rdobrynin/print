@@ -148,9 +148,9 @@ class Dashboard extends CI_Controller {
 
     function test() {
         $data['current_language'] = $this->session->userdata('site_lang');
-        $this->parser->parse('templates/head_view.tpl');
-        $this->parser->parse('templates/test_view.tpl', $data);
-        $this->parser->parse('templates/footer_view.tpl');
+        $this->load->view('templates/head_view');
+        $this->load->view('templates/test_view', $data);
+        $this->load->view('templates/footer_view');
     }
 
     function charts() {
