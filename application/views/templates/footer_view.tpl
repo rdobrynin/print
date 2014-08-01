@@ -101,8 +101,8 @@
                         $('#avatar-true-ajax').show();
                         $('.avatar-img').hide();
                         $('.avatar-img-ajax').show();
-                        $('.avatar-img-ajax').html("<a href='{/literal}{base_url('profile')}{literal}'><img src='{/literal}{base_url('uploads/avatar')}{literal}"+data.new_avatar+"'height='45'></a>");
-                        $('#ajax-temp').html("<img src='{/literal}{base_url('uploads/avatar/')}{literal}"+data.new_avatar+"'height='100'>");
+                        $('.avatar-img-ajax').html("<a href='localhost:/prm/profile'><img src='localhost/prm/uploads/avatar/"+data.new_avatar+"' height='45'></a>");
+                        $('#ajax-temp').html("<img src='localhost:/prm/"+'uploads/avatar/'+data.new_avatar+"' height='100'>");
                     }
                     $('#files').show();
                     $('#files').empty();
