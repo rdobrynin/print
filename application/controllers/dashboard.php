@@ -7,6 +7,7 @@ class Dashboard extends CI_Controller {
     public function __construct() {
         session_start();
         parent::__construct();
+        $this->load->library('parser');
         $this->load->model('admin_model');
         $this->load->model('dashboard_model');
         $this->load->model('files_model');
@@ -147,8 +148,9 @@ class Dashboard extends CI_Controller {
 
     function test() {
         $data['current_language'] = $this->session->userdata('site_lang');
-        $data['avatar'] = $this->admin_model->check_email('roman.dobrynin@gmail.com');
-        $this->load->view('templates/test_view', $data);
+        $this->parser->parse('templates/head_view.tpl');
+        $this->parser->parse('templates/test_view.tpl', $data);
+        $this->parser->parse('templates/footer_view.tpl');
     }
 
     function charts() {
