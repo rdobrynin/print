@@ -51,6 +51,7 @@
     </div>
 </div> <!-- #/myModal -->
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<div class="bench">test: <?php echo $this->benchmark->elapsed_time();?>&nbsp;sec</div>
 <!-- JavaScript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

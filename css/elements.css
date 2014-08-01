@@ -483,3 +483,11 @@ textarea {
     -webkit-border-radius: 4px;
 }
 
+.bench {
+    color:#fff;
+    margin: 0 auto;
+    position: fixed;
+    text-align: right;
+    width: 300px;
+}
+

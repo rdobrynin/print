@@ -20,8 +20,9 @@
                  <a href="<?php print(base_url());?>profile"><img src="<?php print base_url().'uploads/avatar/'.($user[0]['avatar']); ?>"  height="45"></a>
                <?php endif ?>
             </span></span>
+
+        <span class="avatar-name visible-lg"><?php print(show_role($user[0]['role'])); ?></span>
     </li>
-    <span class="avatar-name visible-lg"><?php print(show_role($user[0]['role'])); ?></span>
   </ul>
 <div class="show-info"><div class="show-info-content"></div><div class="expandable-image"></div></div>
   <div class="show-info-error"><div class="show-info-content"></div><div class="expandable-nagative-image"></div></div>
