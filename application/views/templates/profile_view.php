@@ -23,6 +23,21 @@
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="password-profile"><?php print(lang('password'))?></label>
+                                    <input type="text" value="" class="form-control" name="password" id="password-profile" placeholder="Password">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="password-profile-confirm" ><?php print(lang('password_confirm'))?></label>
+                                    <input type="text" value="" class="form-control" name="password_confirm" id="password-confirm" placeholder="Password confirm">
+                                </div>
+                            </div>
+
+
+
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="phone"><?php print(lang('phone'))?></label>
@@ -188,7 +203,6 @@
                     dataType: 'json',
                     success: function (msg) {
                         if(msg.result!=true) {
-                            alert(msg.result);
                             $('#profile-update-btn').attr('disabled','disabled');
                             $('#check_email_profile').show();
                             $('.label-signin').css('display','block');

@@ -30,6 +30,8 @@ $lang['add_email'] ='Добавить эл.почту';
 $lang['role'] ='Роль';
 $lang['add_info'] ='Дополнительная информация';
 $lang['profile_picture'] ='Аватар';
+$lang['password'] ='Пароль';
+$lang['password_confirm'] ='Подтверждение пароля';
 
 $lang['back'] ='Назад';
 $lang['submit'] ='отправить';
