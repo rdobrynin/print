@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="address-wrapper" style="height: 100%;">
                             <p class="lead"><?php print(lang('req_info'))?></p>
-
+<!--NAME-->
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="first_name"><?php print(lang('first_name'))?></label>
@@ -23,8 +23,7 @@
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
-
-
+<!--PASSWORD-->
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="password-profile"><?php print(lang('password'))?></label>
@@ -35,9 +34,7 @@
                                     <input type="text" value="" class="form-control" name="password_confirm" id="password-confirm" placeholder="Password confirm">
                                 </div>
                             </div>
-
-
-
+<!--PHONE-->
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="phone"><?php print(lang('phone'))?></label>
@@ -57,6 +54,7 @@
                                 </div>
                                 <div class="delete_phone_data"></div>
                             </div>
+<!--ADD PHONE-->
                             <div class="form-group">
                             <div class="col-md-12" style="margin-bottom: 10px;">
                                 <div class="btn btn-xs btn-success" id="add_phone"><?php print(lang('add_phone'))?></div>
@@ -68,7 +66,7 @@
                                 <div class="col-md-6" style="margin-bottom: 10px;">
                                     <p><span class="label label-primary"><?php print(lang('prim_email'))?> :</span>  <span><span class="lead">&nbsp;<?php print($user['0']['email']); ?></span></span></p>
                                     </div>
-                                <!--additional emails-->
+<!--ADD EMAIL-->
                                 <div class="form-group">
                                     <div class="col-md-12" style="padding-left: 20px;">
                                         <?php foreach ($emails as $k => $email): ?>
@@ -106,6 +104,7 @@
                                 </div>
                             <?php endif ?>
                         </div>
+<!--ADD INFO-->
                         <div class="address-wrapper" style="height: 100%;">
                             <p class="lead"><?php print(lang('add_info'))?></p>
                             <div class="form-group">

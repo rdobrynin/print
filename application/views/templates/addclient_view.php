@@ -66,44 +66,6 @@
                   </div>
                 </div>
               </div>
-<!--                CONTACT PERSON INFORMATION-->
-                <div class="address-wrapper" style="height: 100%;">
-                    <p class="lead">Contact persons information</p>
-                  <div class="form-group">
-                    <label class="col-sm-12">Manager</label>
-                    <div class="col-sm-4">
-                      <select id="select-manager" class="form-control selectpicker">
-                        <option value="1">Roman Dobrynin</option>
-                        <option value="2">Andrei Abozau</option>
-                        <option value="3">Jevgeni Striganov</option>
-                        <option value="4">Alexandr Perch</option>
-                        <option value="5">Aldir Tojama</option>
-                      </select>
-                    </div>
-                    <div class="col-md-1" style="margin-bottom: 10px;">
-                      <div class="btn btn-xs btn-success" id="add_manager_client">Add manager</div>
-                    </div>
-                  </div>
-                  <div id="items_manager_client"></div>
-<!--                  IMPLEMENTOR-->
-                  <div class="form-group">
-                    <label class="col-sm-12">Curator</label>
-                    <div class="col-sm-4">
-                      <select id="select-curator" class="form-control selectpicker">
-                        <option value="1">Roman Dobrynin</option>
-                        <option value="2">Andrei Abozau</option>
-                        <option value="3">Jevgeni Striganov</option>
-                        <option value="4">Alexandr Perch</option>
-                        <option value="5">Aldir Tojama</option>
-                      </select>
-                    </div>
-                    <div class="col-md-1" style="margin-bottom: 10px;">
-                      <div class="btn btn-xs btn-success" id="add_curator_client">Add curator</div>
-                    </div>
-                  </div>
-                  <div id="items_curator_client"></div>
-              </div>
-
                 <div id="contact_form">
                 </div>
                 <hr>
