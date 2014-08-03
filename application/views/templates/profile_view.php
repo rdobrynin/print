@@ -23,6 +23,7 @@
                                     <input type="text" value="<?php print($user[0]['last_name']); ?>" class="form-control" name="last_name" id="last_name" placeholder="Last name">
                                 </div>
                             </div>
+
 <!--PASSWORD-->
                             <div class="form-group">
                                 <div class="col-md-6">

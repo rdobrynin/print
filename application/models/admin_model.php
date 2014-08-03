@@ -54,10 +54,9 @@ class Admin_model extends CI_Model {
      */
 
     public function get_avatars() {
-        $query = $this->db
-            ->get('avatars');
-            $result = $query->result_array();
-            return $result;
+        $query = $this->db->get('avatars');
+        $result = $query->result_array();
+        return $result;
     }
 
 
@@ -315,6 +314,28 @@ class Admin_model extends CI_Model {
       ->get('users_phones');
     return $query->result_array();
   }
+
+
+    /**
+     * get user password
+     * @param $id
+     * @return mixed
+     */
+
+
+    public function get_password($id) {
+        $query = $this->db->where('id', $id)->get('users');
+        if ($query->num_rows > 0) {
+            foreach ($query->result() as $row) {
+                return $row->password;
+            }
+        }
+        else {
+            return FALSE;
+        }
+        return TRUE;
+    }
+
 
     /**
      * get user emails

@@ -382,6 +382,8 @@ class Dashboard extends CI_Controller {
         $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
         $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
+        $data['password'] = $this->admin_model->get_password($_SESSION['username']);
+
         $roles = $this->admin_model->get_roles();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
         $this->load->view('templates/head_view');
