@@ -11,10 +11,6 @@
     </div>
 </div>
 <?php include('footer_view.php'); ?>
-
-
-
-
 <script>
     $(function () {
         $('[data-toggle="confirmation-inline"]').confirmation(

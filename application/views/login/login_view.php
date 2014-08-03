@@ -18,6 +18,7 @@
   </small>
   <small class="pull-right">
     <center><br><a href="forgot" id="show_activate_form">Forgot password ?</a>
+    <center><br><a href="forgot" id="show_activate_form">Forgot password ?</a>
     </center>
   </small>
 </div>

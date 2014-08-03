@@ -491,3 +491,15 @@ textarea {
     width: 300px;
 }
 
+#check_email_profile {
+    /* height: 100px; */
+    /* width: 100%; */
+    display: none;
+    color: white;
+    /* width: 20px; */
+    padding: 3px;
+    background-color: red;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-size: 12px;
+}

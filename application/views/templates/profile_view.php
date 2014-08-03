@@ -35,7 +35,7 @@
                                             <?php if (isset($phone['phone'])): ?>
                                                 <span><input type="hidden" name="<?php print($phone['id']); ?>">
                         <span class="label label-default label-tag delete-add-phone" style="margin-left: 10px;"><span class="get_old_phone"><i class="fa fa-phone"></i>&nbsp;<?php print($phone['phone']); ?></span>
-                            &nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
+&nbsp;&nbsp;&nbsp;<i class="fa fa-times"></i></span></span>
                                             <?php endif; ?>
                                         <?php endforeach ?>
                                     </div>
@@ -73,15 +73,19 @@
                                 </div>
                                 <div id="items_email"></div>
                                 <div id="items_remove_email"></div>
+                                <span id="check_email_profile"></span>
                             </div>
                             <?php if ($user[0]['role'] != 1):; ?>
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                        <label for="last_name"><?php print(lang('role'))?></label>
-                                        <select class="form-control selectpicker" name="role">
-                                            <?php foreach ($roles as $rk => $rv): ?>
+                                        <label for="role-select"><?php print(lang('role'))?></label>
+                                        <select class="form-control selectpicker" name="role" id="role-select">
+                                            <option selected="selected" value="<?php print($user_role); ?>"><?php print(show_role($user_role)); ?></option>
+                                                <?php foreach ($roles as $rk => $rv): ?>
+                                                    <?php if ($user_role !=$rk): ?>
                                                     <option value="<?php print($rk); ?>"><?php print(show_role($rk)); ?></option>
-                                            <?php endforeach ?>
+                                                    <?php endif ?>
+                                                <?php endforeach ?>
                                         </select>
                                     </div>
                                 </div>
@@ -107,7 +111,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="pull-left"><a href="javascript:history.back()" class="btn btn-primary"><?php print(lang('back'))?></a></span>
+                        <div class="pull-left"><a href="javascript:history.back()" class="btn btn-primary"><?php print(lang('back'))?></a></div>
                         <input type="hidden" value="<?php print(time()); ?>" name="date_edited">
                         <button type="submit" id="profile-update-btn" class="btn btn-primary pull-right"><?php print(lang('submit'))?></button>
                     </div>
@@ -127,9 +131,8 @@
                             </form>
 
                                 <div id="avatar-true">
-                                <span class="avatar-wrapper pull-right" ><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100">
-                                </span>
-                                    <a href="#" id="del-avatar"><span class="del-avatar btn btn-danger btn-xs"><?php print(lang('remove'))?></span></a>
+                                <div class="avatar-wrapper pull-right" ><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100">
+                                </div>
                                 </div>
 
                                 <div id="avatar-true-ajax">
@@ -173,7 +176,32 @@
         });
 //        Add email
         $("#add_email").click(function (e) {
-            $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="email" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
+            $("#items_email").append('<div class="col-md-12"><div class="form-group"><div class="col-md-3"><input type="email" placeholder="Additional email address" style="margin-bottom:8px; margin-top: 2px;" class="form-control col-md-10"  id="input-add-email" name="add_email[]"></div><button  class="btn btn-danger btn-xs delete-email">Delete</button></div></div></div><div>');
+            $("#input-add-email").blur(function () {
+                var form_data = {
+                    email: $(this).val()
+                };
+                $.ajax({
+                    url: "<?php echo site_url('ajax/check_emails'); ?>",
+                    type: 'POST',
+                    data: form_data,
+                    dataType: 'json',
+                    success: function (msg) {
+                        if(msg.result!=true) {
+                            alert(msg.result);
+                            $('#profile-update-btn').attr('disabled','disabled');
+                            $('#check_email_profile').show();
+                            $('.label-signin').css('display','block');
+                            $("#check_email_profile").empty().append(msg.result);
+                        }
+                        else {
+                            $('#profile-update-btn').removeAttr('disabled');
+                            $('#check_email_profile').hide();
+                        }
+                    }
+                });
+
+            });
         });
 //        Delete email
         $('.delete-add-email').click(function () {
@@ -194,6 +222,5 @@
         $('body').click(function () {
             $('.errors').slideUp("fast");
         });
-
     });
 </script>

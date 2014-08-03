@@ -392,6 +392,7 @@ class Dashboard extends CI_Controller {
             $roles_array[$rv['rid']] = $rv['title'];
 
         }
+        $data['user_role']=$data['user'][0]['role'];
         $data['roles'] = $roles_array;
         $this->load->view('templates/profile_view', $data);
         $this->load->view('templates/settings_view', $data);
