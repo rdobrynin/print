@@ -30,7 +30,7 @@ $lang['add_email'] ='Add email';
 $lang['role'] ='Role';
 $lang['add_info'] ='Additional information';
 $lang['profile_picture'] ='Avatar';
-$lang['password'] ='Password';
+$lang['new_password'] ='New password';
 $lang['password_confirm'] ='Password confirmation';
 
 

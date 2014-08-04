@@ -336,6 +336,17 @@ class Admin_model extends CI_Model {
         return TRUE;
     }
 
+    public function updatePassword($id, $password) {
+
+        $data = array(
+            'password' => $password,
+            'id' => $id
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('users', $data);
+    }
+
 
     /**
      * get user emails

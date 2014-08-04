@@ -27,12 +27,12 @@
 <!--PASSWORD-->
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label for="password-profile"><?php print(lang('password'))?></label>
-                                    <input type="text" value="" class="form-control" name="password" id="password-profile" placeholder="Password">
+                                    <label for="password-profile"><?php print(lang('new_password'))?></label>
+                                    <input type="text" value="" class="form-control" name="password" id="passworde" placeholder="Password">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="password-profile-confirm" ><?php print(lang('password_confirm'))?></label>
-                                    <input type="text" value="" class="form-control" name="password_confirm" id="password-confirm" placeholder="Password confirm">
+                                    <input type="text" value="" class="form-control" name="password2" id="password2" placeholder="Password confirm">
                                 </div>
                             </div>
 <!--PHONE-->

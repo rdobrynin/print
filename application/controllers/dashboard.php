@@ -370,6 +370,7 @@ class Dashboard extends CI_Controller {
      */
 
     function profile() {
+
         $roles_array = $this->admin_model->get_roles();
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
@@ -382,8 +383,7 @@ class Dashboard extends CI_Controller {
         $data['phones'] = $this->admin_model->get_phones($_SESSION['username']);
         $data['emails'] = $this->admin_model->get_emails($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
-        $data['password'] = $this->admin_model->get_password($_SESSION['username']);
-
+        $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
         $roles = $this->admin_model->get_roles();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
         $this->load->view('templates/head_view');
@@ -411,6 +411,7 @@ class Dashboard extends CI_Controller {
             $roles[] = $rv;
         }
         $data['roles'] = $roles;
+        $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
         $data['current_language'] = $this->session->userdata('site_lang');
         $this->load->model('admin_model');
 //      delete additional emails
@@ -438,12 +439,22 @@ class Dashboard extends CI_Controller {
             $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
             $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
             $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
-
+            $this->form_validation->set_rules('password', 'Password', 'trim|min_length[4]|md5');
+            $this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|required|matches[password]');
             $this->load->model('admin_model');
             $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
             $id = $data['user'][0]['id'];
             if ($this->form_validation->run() !== FALSE) {
                 $this->load->model('admin_model');
+                $password = $this->input->post('password');
+                if($password !='') {
+                    $this->admin_model->updatePassword($id, $password);
+                }
+
+
+
+
+
                 $phone_add = $this->input->post('add_phone');
                 $email_add = $this->input->post('add_email');
 
@@ -473,6 +484,7 @@ class Dashboard extends CI_Controller {
 
             }
             else {
+                $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
                 $data['current_language'] = $this->session->userdata('site_lang');
                 $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
                 $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -489,6 +501,7 @@ class Dashboard extends CI_Controller {
                     $roles_array[$rv['rid']] = $rv['title'];
 
                 }
+                $data['user_role']=$data['user'][0]['role'];
                 $data['roles'] = $roles_array;
                 $this->load->view('templates/profile_view', $data);
                 $this->load->view('templates/settings_view', $data);
