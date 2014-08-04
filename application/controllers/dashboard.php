@@ -439,8 +439,16 @@ class Dashboard extends CI_Controller {
             $this->form_validation->set_rules('first_name', 'First name', 'trim|required|min_length[3]');
             $this->form_validation->set_rules('last_name', 'Last name', 'trim|required|min_length[3]');
             $this->form_validation->set_rules('phone', 'Phone', 'trim|required|min_length[3]');
-            $this->form_validation->set_rules('password', 'Password', 'trim|min_length[4]|md5');
-            $this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|required|matches[password]');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]');
+            $password = $this->input->post('password');
+            if($password =='') {
+                $this->form_validation->set_rules('password', 'Password', 'trim|min_length[4]|md5');
+                $this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|matches[password]');
+            }
+            else {
+                $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|md5');
+                $this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|required|matches[password]');
+            }
             $this->load->model('admin_model');
             $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
             $id = $data['user'][0]['id'];
@@ -450,14 +458,8 @@ class Dashboard extends CI_Controller {
                 if($password !='') {
                     $this->admin_model->updatePassword($id, $password);
                 }
-
-
-
-
-
                 $phone_add = $this->input->post('add_phone');
                 $email_add = $this->input->post('add_email');
-
                 if (!empty($phone_add[0])) {
                     if ($query = $this->admin_model->insert_member_phone($id) && $query = $this->admin_model->update_member($id)) {
 
@@ -481,7 +483,6 @@ class Dashboard extends CI_Controller {
                         $this->load->view('templates/success_view', $data);
                     }
                 }
-
             }
             else {
                 $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
