@@ -12,15 +12,9 @@
       <input type="password" id="password" name="password" value="" placeholder="Password" class="form-control"/>
       <button class="btn btn-lg btn-primary btn-block" id="login_btn"> <i class="fa fa-check"></i></button>
 <div style="padding-bottom: 20px;">
-  <small class="pull-left">
-    <center><br><a href="signup" id="show_activate_form">Sign up</a>
-    </center>
-  </small>
+  <small class="pull-left"><br><a href="signup" id="show_activate_form">Sign up</a></small>
   <small class="pull-right">
-    <center><br><a href="forgot" id="show_activate_form">Forgot password ?</a>
-    <center><br><a href="forgot" id="show_activate_form">Forgot password ?</a>
-    </center>
-  </small>
+<br><a href="forgot" id="show_activate_form">Forgot password ?</a></small>
 </div>
       <?php echo form_close(); ?>
   </div>
