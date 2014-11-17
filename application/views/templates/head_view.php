@@ -29,7 +29,7 @@
 
     <!-- Bootstrap core CSS -->
 <!--    <link rel="stylesheet/less" type="text/css" href="--><?php //print(base_url()); ?><!--less/style.less">-->
-<!--    <script src="--><?php //print(base_url()); ?><!--js/less.min.js" type="text/javascript"></script>-->
+    <script src="<?php print(base_url()); ?>js/less.min.js" type="text/javascript"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php print(base_url()); ?>js/ie10-viewport-bug-workaround.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
