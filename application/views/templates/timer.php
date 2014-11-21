@@ -144,15 +144,12 @@
 
         $('#task-timer-stop').click(function () {
             if (typeof(Storage) !== "undefined") {
+                $('#task_modal_timer').modal({show:true});
 
-
-
-
-
-
-
-
-
+                $( "#log_timer" ).val( function( index, val ) {
+                    val = localStorage.ctime;
+                    return val ;
+                });
 
                 clearInterval(timer);
                 localStorage.play = false;
