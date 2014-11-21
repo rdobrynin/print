@@ -53,7 +53,7 @@
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 <!--<div class="bench">test: --><?php //echo $this->benchmark->elapsed_time();?><!--&nbsp;sec</div>-->
 <div class="time-wrapper">
-    <div class="timer">
+    <div class="timer" style="width: auto;">
         <i class="fa fa-clock-o pull-left" id="clock-bottom"></i>&nbsp;
         <span id="task-timer">00:00</span>
         <button class="btn btn-default btn-md" id="play-timer" style="padding: 3px 12px; float: left;">Play</button>

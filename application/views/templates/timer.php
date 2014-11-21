@@ -47,7 +47,6 @@
             if(localStorage.pause ==='ok') {
                 timer=0;
                 clearInterval(timer);
-                $('.timer').css({"width": "205px"});
                 $('#play-timer').removeClass('active-time');
                 $('#play-timer').prop("disabled", false);
                 $('#task-timer, #task-timer-pause, #task-timer-stop').show();
@@ -56,7 +55,6 @@
                 $('#play-timer').attr("disabled", "disabled");
             }
             else if(localStorage.stop ==='ok') {
-                $('.timer').css({"width": "113px"});
                 $('#play-timer').removeClass('active-time');
                 $('#play-timer').prop("disabled", false);
                 $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
@@ -74,7 +72,6 @@
             if(localStorage.pause ==='ok') {
                 timer=0;
                 clearInterval(timer);
-                $('.timer').css({"width": "205px"});
                 $('#play-timer').removeClass('active-time');
                 $('#play-timer').prop("disabled", false);
                 $('#task-timer, #task-timer-pause, #task-timer-stop').show();
@@ -83,7 +80,6 @@
                 $('#play-timer').attr("disabled", "disabled");
             }
             else if(localStorage.stop ==='ok') {
-                $('.timer').css({"width": "113px"});
                 $('#play-timer').removeClass('active-time');
                 $('#play-timer').prop("disabled", false);
                 $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
@@ -111,14 +107,12 @@
             if (localStorage.play === 'ok') {
                 $('#play-timer').addClass('active-time');
                 $('#play-timer').attr("disabled", "disabled");
-                $('.timer').css({"width": "205px"});
                 $('#task-timer, #task-timer-pause, #task-timer-stop').show();
             }
 
             if (localStorage.stop === 'ok') {
                 $('#play-timer').removeClass('active-time');
                 $('#play-timer').prop("disabled", false);
-                $('.timer').css({"width": "113px"});
                 $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
             }
         }
@@ -149,7 +143,6 @@
             }
             $(this).addClass('active-time');
             $('.active-time').attr("disabled", "disabled");
-            $('.timer').css({"width": "205px"});
             $('#task-timer, #task-timer-pause, #task-timer-stop').show();
         });
 
@@ -164,7 +157,6 @@
                 alert('fault with local storage');
             }
             $('#play-timer').removeClass('active-time');
-            $('.timer').css({"width": "113px"});
             $('#play-timer').prop("disabled", false);
             $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
         });
