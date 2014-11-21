@@ -240,6 +240,15 @@ class Ajax extends CI_Controller {
         }
         echo json_encode ($result);
     }
+
+    /**
+     * Get user ID for localStorage
+     */
+
+    function getUserId() {
+        $result =$this->session->userdata('user_id');
+        echo json_encode (array('id'=>$result[0]['id']));
+    }
 }
 
 

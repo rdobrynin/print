@@ -30,8 +30,8 @@
         }
         return zpad;
     }
-//
-// todo
+
+
     $(function () {
         if (typeof(Storage) === "undefined") {
             localStorage.ctime[0] =0;
@@ -60,7 +60,7 @@
                 $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
             }
         }
-//todo
+
 
         if (typeof(Storage) !== "undefined") {
             if(localStorage.ctime[0] !==0 && localStorage.ctime[1] !==0 && localStorage.ctime[3] !== 0 && localStorage.ctime[4] !== 0) {
@@ -92,13 +92,9 @@
             type: 'GET',
             dataType: 'json',
             success: function (msg) {
-                userIdTimer = msg.result[0]['id'];
                 //    localstorage
                 if (typeof(Storage) !== "undefined") {
-                    localStorage.id = userIdTimer;
-                }
-                else {
-                    alert('local storage error');
+                    localStorage.id = msg.id;
                 }
             }
         });
