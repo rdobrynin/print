@@ -3,10 +3,65 @@
     <div class="page-content inset">
         <div class="row">
             <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 col-vlg-3 col-sm-6">
+                        <div class="tiles green m-b-10">
+                            <div class="tiles-body">
+                                <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+                                <div class="tiles-title text-black">Projects</div>
+                                <div class="widget-stats">
+                                    <div class="wrapper transparent">
+                                        <span class="item-title">Overall Projects</span> <span class="item-count animate-number semi-bold" data-value="2415" data-animation-duration="700">2,415</span>
+                                    </div>
+                                </div>
+                                <div class="widget-stats">
+                                    <div class="wrapper transparent">
+                                        <span class="item-title">Current Team</span> <span class="item-count animate-number semi-bold" data-value="751" data-animation-duration="700">751</span>
+                                    </div>
+                                </div>
+                                <div class="widget-stats ">
+                                    <div class="wrapper last">
+                                        <span class="item-title">Overall hours</span> <span class="item-count animate-number semi-bold" data-value="1547" data-animation-duration="700">1,547</span>
+                                    </div>
+                                </div>
+                                <div class="progress transparent progress-small no-radius m-t-20" style="width:90%">
+                                    <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="64.8%" style="width: 64.8%;"></div>
+                                </div>
+                                <div class="description"> <span class="text-white mini-description ">4% project <span class="blend">completed</span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-vlg-3 col-sm-6">
+                        <div class="tiles blue m-b-10">
+                            <div class="tiles-body">
+                                <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+                                <div class="tiles-title text-black">Tasks</div>
+                                <div class="widget-stats">
+                                    <div class="wrapper transparent">
+                                        <span class="item-title">Overall Tasks</span> <span class="item-count animate-number semi-bold" data-value="15489" data-="" animation-duration="700">15,489</span>
+                                    </div>
+                                </div>
+                                <div class="widget-stats">
+                                    <div class="wrapper transparent">
+                                        <span class="item-title">Process Tasks</span> <span class="item-count animate-number semi-bold" data-value="551" data-animation-duration="700">551</span>
+                                    </div>
+                                </div>
+                                <div class="widget-stats ">
+                                    <div class="wrapper last">
+                                        <span class="item-title">Overdue Tasks</span> <span class="item-count animate-number semi-bold" data-value="1450" data-animation-duration="700">1,450</span>
+                                    </div>
+                                </div>
+                                <div class="progress transparent progress-small no-radius m-t-20" style="width:90%">
+                                    <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="54%" style="width: 54%;"></div>
+                                </div>
+                                <div class="description"> <span class="text-white mini-description ">4% tasks <span class="blend">completed</span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorem ducimus, magnam natus nostrum obcaecati provident ullam. Alias aliquam atque commodi consequatur delectus dicta distinctio doloremque dolorum eaque eligendi et excepturi fuga fugit ipsa iusto minus nihil odio optio perspiciatis, praesentium provident quae qui quis reiciendis sit temporibus voluptate, voluptatibus!
-            </p>
+
+
             </div>
             <div class="col-md-4">
                 <div class="panel panel-primary">

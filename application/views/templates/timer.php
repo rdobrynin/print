@@ -144,6 +144,16 @@
 
         $('#task-timer-stop').click(function () {
             if (typeof(Storage) !== "undefined") {
+
+
+
+
+
+
+
+
+
+
                 clearInterval(timer);
                 localStorage.play = false;
                 localStorage.pause = false;

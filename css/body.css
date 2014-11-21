@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     background: url('../img/mesh.png') #222;
 }
@@ -17,10 +17,10 @@ h2 {
     overflow: hidden;
     height: 100%;
     background: #fff;
-    border-radius:5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    background: url('../img/bgnoise.png');
+    /*border-radius:5px;*/
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*background: url('../img/bgnoise.png');*/
     width: 98%;
     margin: 0 auto;
     padding: 5px;
@@ -28,7 +28,7 @@ h2 {
     margin-left: 0;
     padding-bottom: 25px;
     min-height: 400px;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 div.navbar-collapse.navbar-inverse.navbar-fixed-top {
