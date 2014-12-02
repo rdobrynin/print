@@ -31,13 +31,19 @@
         });
   $(function () {
 
+
+
 /**
  * INVITATION AJAX
  *
  **/
       $( "#invite-ajax-btn" ).click(function() {
           var form_data = {
-              first_name: $('#first_name_invite').val()
+              email: $('#email_invite').val(),
+              first_name: $('#first_name_invite').val(),
+              last_name: $('#last_name_invite').val(),
+              role: $('#role_invite').val()
+
           };
           $.ajax({
               url: "<?php echo site_url('ajax/invitation'); ?>",
@@ -45,11 +51,12 @@
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                  if(msg.result==true) {
-                     console.log('ok');
+                  if(msg.result == false) {
+                      $('#check_email').css('display','block');
                   }
                   else {
-                      console.log('not ok');
+                      console.log(msg.data);
+                      $('#check_email').css('display','none');
                   }
               }
           });
@@ -62,7 +69,7 @@
               fileElementId   :'userfile',
               dataType        : 'json',
               data            : {
-                  'user_id'             : $('#user_id').val()
+              'user_id'             : $('#user_id').val()
               },
               success : function (data, status)
               {

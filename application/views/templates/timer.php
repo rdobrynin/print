@@ -33,36 +33,40 @@
 
 
     $(function () {
-        if (typeof(Storage) === "undefined") {
-            localStorage.ctime[0] =0;
-            localStorage.ctime[1] =0;
-            localStorage.ctime[3] =0;
-            localStorage.ctime[4] =0;
-            if(localStorage.ctime[0] !==0 && localStorage.ctime[1] !==0 && localStorage.ctime[3] !== 0 && localStorage.ctime[4] !== 0) {
-                $("#task-timer").text(localStorage.ctime[0] + localStorage.ctime[1] + ":" + localStorage.ctime[3] + localStorage.ctime[4]);
-            }
-            if(localStorage.play ==='ok') {
-                startCount();
-            }
-            if(localStorage.pause ==='ok') {
-                timer=0;
-                clearInterval(timer);
-                $('#play-timer').removeClass('active-time');
-                $('#play-timer').prop("disabled", false);
-                $('#task-timer, #task-timer-pause, #task-timer-stop').show();
-            }
-            else if(localStorage.play ==='ok') {
-                $('#play-timer').attr("disabled", "disabled");
-            }
-            else if(localStorage.stop ==='ok') {
-                $('#play-timer').removeClass('active-time');
-                $('#play-timer').prop("disabled", false);
-                $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
-            }
-        }
+//        if (typeof(Storage) === "undefined") {
+//            localStorage.ctime[0] =0;
+//            localStorage.ctime[1] =0;
+//            localStorage.ctime[3] =0;
+//            localStorage.ctime[4] =0;
+//            if(localStorage.ctime[0] !==0 && localStorage.ctime[1] !==0 && localStorage.ctime[3] !== 0 && localStorage.ctime[4] !== 0) {
+//                $("#task-timer").text(localStorage.ctime[0] + localStorage.ctime[1] + ":" + localStorage.ctime[3] + localStorage.ctime[4]);
+//            }
+//            if(localStorage.play ==='ok') {
+//                startCount();
+//            }
+//            if(localStorage.pause ==='ok') {
+//                timer=0;
+//                clearInterval(timer);
+//                $('#play-timer').removeClass('active-time');
+//                $('#play-timer').prop("disabled", false);
+//                $('#task-timer, #task-timer-pause, #task-timer-stop').show();
+//            }
+//            else if(localStorage.play ==='ok') {
+//                $('#play-timer').attr("disabled", "disabled");
+//            }
+//            else if(localStorage.stop ==='ok') {
+//                $('#play-timer').removeClass('active-time');
+//                $('#play-timer').prop("disabled", false);
+//                $('#task-timer, #task-timer-pause, #task-timer-stop').hide();
+//            }
+//        }
 
 
         if (typeof(Storage) !== "undefined") {
+//            localStorage.ctime[0] =0;
+//            localStorage.ctime[1] =0;
+//            localStorage.ctime[3] =0;
+//            localStorage.ctime[4] =0;
             if(localStorage.ctime[0] !==0 && localStorage.ctime[1] !==0 && localStorage.ctime[3] !== 0 && localStorage.ctime[4] !== 0) {
                 $("#task-timer").text(localStorage.ctime[0] + localStorage.ctime[1] + ":" + localStorage.ctime[3] + localStorage.ctime[4]);
             }

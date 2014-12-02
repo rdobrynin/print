@@ -227,18 +227,52 @@ class Ajax extends CI_Controller {
         echo json_encode(array('status' => $status, 'msg' => $msg,  'delete' => $del, 'new_avatar' => $new_avatar));
     }
 
+
     /**
      * INVITATION NEW PERSON
      */
     function invitation() {
-        $result = array();
-        if(trim($_POST['first_name'])=='Roman') {
-            $result['result'] = TRUE;
+        $result['result'] = TRUE;
+        $this->load->model('admin_model');
+        $email = $_POST['email'];
+        $fname = $_POST['first_name'];
+        $lname = $_POST['last_name'];
+        $role = $_POST['role'];
+        $query= $this->admin_model->emails_users($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = false;
+            }
         }
-        else {
-            $result['result'] = FALSE;
+        $query= $this->admin_model->emails_client($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = false;
+            }
         }
-        echo json_encode ($result);
+        $query= $this->admin_model->emails_new($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = false;
+            }
+        }
+
+        $query= $this->admin_model->emails_added($email);
+        foreach($query as $v) {
+            if($v['email'] == $email) {
+                $result['result'] = false;
+            }
+        }
+
+        if($result['result'] == true) {
+          $result['data'] = array(
+          'fname'=>$fname,
+          'lname'=>$lname,
+          'role'=>$role,
+         );
+        }
+
+        echo json_encode($result);
     }
 
     /**

@@ -9,8 +9,10 @@
   </div>
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content">
-    <div class="row">
-        <?php var_dump($avatars); ?>
+    <div class="container-fluid">
+        <pre>
+        <?php var_dump($users); ?>
+            </pre>
       <?php foreach ($users as $ak => $u): ?>
         <ul>
           <?php if (($u['status'] == 1)): ?>

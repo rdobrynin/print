@@ -11,7 +11,6 @@
     line-height: 1.428571429;
     color: #9b9b9b;
     white-space: nowrap;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.95);
 }
 
 .dropdown-menu > li > a:hover {
@@ -22,7 +21,7 @@
     line-height: 1.428571429;
     white-space: nowrap;
     color: #222 !important;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+    /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);*/
 }
 
 ul.sidebar-nav li i {
