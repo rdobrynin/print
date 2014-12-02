@@ -54,9 +54,12 @@
                   if(msg.result == false) {
                       $('#check_email').css('display','block');
                   }
+                  else if(msg.empty == true) {
+                      $('#check_empty').css('display','block');
+                  }
                   else {
                       console.log(msg.data);
-                      $('#check_email').css('display','none');
+                      $('#check_email, #check_empty').css('display','none');
                   }
               }
           });

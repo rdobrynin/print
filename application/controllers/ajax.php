@@ -233,6 +233,7 @@ class Ajax extends CI_Controller {
      */
     function invitation() {
         $result['result'] = TRUE;
+        $result['empty'] = false;
         $this->load->model('admin_model');
         $email = $_POST['email'];
         $fname = $_POST['first_name'];
@@ -264,12 +265,13 @@ class Ajax extends CI_Controller {
             }
         }
 
-        if($result['result'] == true) {
-          $result['data'] = array(
-          'fname'=>$fname,
-          'lname'=>$lname,
-          'role'=>$role,
-         );
+        if($email == '' OR $fname == '' OR $lname == '') {
+            $result['empty'] = true;
+        }
+
+
+        if ($result['result'] == true) {
+            $result['data'] = array('fname' => $fname, 'lname' => $lname, 'role' => $role, 'email' => $email,);
         }
 
         echo json_encode($result);

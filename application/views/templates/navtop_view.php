@@ -36,7 +36,6 @@
               <li> <a href="#">About Brilliant</a></li>
           </ul>
       </li>
-
       <li class="dropdown user-dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i><b class="caret"></b></span></a>
           <ul class="dropdown-menu dropdown-user">
@@ -45,7 +44,9 @@
                       <li class="add-client"><a href="<?php print(base_url());?>addclient"><i class="fa fa-plus"></i><?php print(lang('menu_add_client')); ?></a></li>
                   <?php endif ?>
               <?php endif ?>
+              <?php if ($client != FALSE): ?>
               <li> <a href="" data-toggle="modal" data-target="#invite" title="invite"><i class="fa fa-plus"></i><?php print(lang('menu_invite_person')); ?></a></li>
+              <?php endif ?>
 
           </ul>
       </li>

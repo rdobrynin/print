@@ -13,19 +13,19 @@
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="first_name" id="first_name_invite" class="form-control btn-special input-sm" placeholder="First Name">
+                            <input type="text" name="first_name" id="first_name_invite" class="form-control btn-special" placeholder="First Name">
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="last_name" id="last_name_invite" class="form-control btn-special input-sm" placeholder="Last Name">
+                            <input type="text" name="last_name" id="last_name_invite" class="form-control btn-special" placeholder="Last Name">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <input type="email" name="email" id="email_invite" class="form-control btn-special input-sm" placeholder="Email Address">
+                            <input type="email" name="email" id="email_invite" class="form-control btn-special" placeholder="Email Address">
                         </div>
                         <div style="display: none; margin-bottom: 10px;" id="check_email" class="label label-danger label-signin">This email already registered</div>
                     </div>
@@ -36,7 +36,9 @@
                         <div class="form-group">
                             <select class="form-control selectpicker" id="role_invite" name="role_invite">
                                 <?php foreach ($roles as $rk => $rv): ?>
-                                    <option value="<?php print($rv['rid']); ?>"><?php print(ucfirst($rv['title'])); ?></option>
+                                    <?php if ($rv['rid'] == 3 || $rv['rid'] == 2): ?>
+                                        <option value="<?php print($rv['rid']); ?>"><?php print(ucfirst($rv['title'])); ?></option>
+                                    <?php endif ?>
                                 <?php endforeach ?>
                             </select>
                         </div>
@@ -45,6 +47,7 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <div style="display: none; margin-bottom: 10px;" id="check_empty" class="label label-danger label-signin">Fields must be not empty</div>
                 <button type="button" class="btn btn-danger" id="invite-ajax-btn">Invite</button>
                 <!-- <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>-->
             </div>
