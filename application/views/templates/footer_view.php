@@ -52,19 +52,9 @@
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                  if(msg.email_empty == false) {
-                      $('#check_empty').css('display','none');
-                  }
-                  if(msg.email_empty == true) {
-                      $('#check_email').css('display','block');
-                      $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;Email field is empty');
-                  }
                   if(msg.email == false) {
                       $('#check_email').css('display','block');
                       $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
-                  }
-                  else if(msg.empty == true) {
-                      $('#check_empty').css('display','block');
                   }
                   else {
                       console.log(msg.data);

@@ -266,19 +266,6 @@ class Ajax extends CI_Controller {
             }
         }
 
-        if($fname == '' OR $lname == '') {
-            $result['empty'] = true;
-        }
-
-        if($email == '') {
-            $result['email_empty'] = true;
-        }
-        else {
-            $result['email_empty'] = false;
-        }
-
-
-
         if ($result['email'] == true) {
             $result['data'] = array('fname' => $fname, 'lname' => $lname, 'role' => $role, 'email' => $email,);
         }

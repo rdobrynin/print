@@ -1,6 +1,6 @@
 <div class="modal" id="settings">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content modal-content-inverse">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h4 class="modal-title custom_align" id="Heading"><i class="fa fa-gear"></i>&nbsp;Settings</h4>
