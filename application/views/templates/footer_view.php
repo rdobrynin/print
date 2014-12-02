@@ -20,6 +20,7 @@
 <script src="js/script.js"></script>
 <script src="js/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap-confirmation.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <?php include('modals/modal_view.php');?>
 <?php include('modals/modal_task.php');?>
 <?php include('timer.php');?>
@@ -51,8 +52,16 @@
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                  if(msg.result == false) {
+                  if(msg.email_empty == false) {
+                      $('#check_empty').css('display','none');
+                  }
+                  if(msg.email_empty == true) {
                       $('#check_email').css('display','block');
+                      $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;Email field is empty');
+                  }
+                  if(msg.email == false) {
+                      $('#check_email').css('display','block');
+                      $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
                   }
                   else if(msg.empty == true) {
                       $('#check_empty').css('display','block');
@@ -63,6 +72,7 @@
                   }
               }
           });
+
       });
 
       $('#upload_file').submit(function() {

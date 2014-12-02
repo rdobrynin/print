@@ -232,8 +232,9 @@ class Ajax extends CI_Controller {
      * INVITATION NEW PERSON
      */
     function invitation() {
-        $result['result'] = TRUE;
+        $result['email'] = true;
         $result['empty'] = false;
+        $result['email_empty'] = false;
         $this->load->model('admin_model');
         $email = $_POST['email'];
         $fname = $_POST['first_name'];
@@ -242,35 +243,43 @@ class Ajax extends CI_Controller {
         $query= $this->admin_model->emails_users($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
-                $result['result'] = false;
+                $result['email'] = false;
             }
         }
         $query= $this->admin_model->emails_client($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
-                $result['result'] = false;
+                $result['email'] = false;
             }
         }
         $query= $this->admin_model->emails_new($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
-                $result['result'] = false;
+                $result['email'] = false;
             }
         }
 
         $query= $this->admin_model->emails_added($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
-                $result['result'] = false;
+                $result['email'] = false;
             }
         }
 
-        if($email == '' OR $fname == '' OR $lname == '') {
+        if($fname == '' OR $lname == '') {
             $result['empty'] = true;
         }
 
+        if($email == '') {
+            $result['email_empty'] = true;
+        }
+        else {
+            $result['email_empty'] = false;
+        }
 
-        if ($result['result'] == true) {
+
+
+        if ($result['email'] == true) {
             $result['data'] = array('fname' => $fname, 'lname' => $lname, 'role' => $role, 'email' => $email,);
         }
 
