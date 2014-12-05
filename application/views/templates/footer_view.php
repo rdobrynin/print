@@ -38,30 +38,72 @@
  * INVITATION AJAX
  *
  **/
-      $( "#invite-ajax-btn" ).click(function() {
-          var form_data = {
-              email: $('#email_invite').val(),
-              first_name: $('#first_name_invite').val(),
-              last_name: $('#last_name_invite').val(),
-              role: $('#role_invite').val()
 
-          };
-          $.ajax({
-              url: "<?php echo site_url('ajax/invitation'); ?>",
-              type: 'POST',
-              data: form_data,
-              dataType: 'json',
-              success: function (msg) {
-                  if(msg.email == false) {
-                      $('#check_email').css('display','block');
-                      $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
-                  }
-                  else {
-                      console.log(msg.data);
-                      $('#check_email, #check_empty').css('display','none');
-                  }
-              }
-          });
+
+
+
+$('#invite-form').validate({
+    rules: {
+        first_name_invite: {
+            required: true
+        },
+        last_name_invite: {
+            required: true
+        }
+    },
+    submitHandler: function(form) {
+        $(form).submit();
+        var form_data = {
+            email: $('#email_invite').val(),
+            first_name: $('#first_name_invite').val(),
+            last_name: $('#last_name_invite').val(),
+            role: $('#role_invite').val()
+
+        };
+        $.ajax({
+            url: "<?php echo site_url('ajax/invitation'); ?>",
+            type: 'POST',
+            data: form_data,
+            dataType: 'json',
+            success: function (msg) {
+                if(msg.email == false) {
+                    $('#check_email').css('display','block');
+                    $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
+                }
+                else {
+                    console.log(msg.data);
+                    $('#check_email, #check_empty').css('display','none');
+                }
+            }
+        });
+        return false;
+    }
+
+<!---->
+<!--      $( "#invite-ajax-btn" ).click(function() {-->
+<!--          var form_data = {-->
+<!--              email: $('#email_invite').val(),-->
+<!--              first_name: $('#first_name_invite').val(),-->
+<!--              last_name: $('#last_name_invite').val(),-->
+<!--              role: $('#role_invite').val()-->
+<!---->
+<!--          };-->
+<!--          $.ajax({-->
+<!--              url: "--><?php //echo site_url('ajax/invitation'); ?><!--",-->
+<!--              type: 'POST',-->
+<!--              data: form_data,-->
+<!--              dataType: 'json',-->
+<!--              success: function (msg) {-->
+<!--                  if(msg.email == false) {-->
+<!--                      $('#check_email').css('display','block');-->
+
+<!--                  }-->
+<!--                  else {-->
+<!--                      console.log(msg.data);-->
+<!--                      $('#check_email, #check_empty').css('display','none');-->
+<!--                  }-->
+<!--              }-->
+<!--          });-->
 
       });
 

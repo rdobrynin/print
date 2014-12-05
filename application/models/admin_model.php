@@ -30,6 +30,26 @@ class Admin_model extends CI_Model {
     }
   }
 
+    /** Verify user email
+     * @param $email
+     * @param $password
+     * @return bool
+     */
+
+    public function verify_user_email($email) {
+        $query = $this
+            ->db
+            ->where('email', $email)
+            ->limit('1')
+            ->get('users');
+        if ($query->num_rows > 0) {
+            return $query->row();
+        }
+        else {
+            return FALSE;
+        }
+    }
+
     /**
      * get avatar
      * @param $email
@@ -113,6 +133,20 @@ class Admin_model extends CI_Model {
             ->get('new_users');
         $result = $query->result_array();
         return $result;
+    }
+
+
+    /**
+     * get users();
+     * @return mixed
+     */
+
+    public function get_admins() {
+        $query = $this
+            ->db
+            ->where('role', '5')
+            ->get('users');
+        return $query->result_array();
     }
 
 
@@ -413,6 +447,8 @@ class Admin_model extends CI_Model {
       ->get('users');
     return $query->result_array();
   }
+
+
 
     /**
      * get new joined user();

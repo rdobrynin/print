@@ -77,21 +77,19 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td valign="middle">
+                                <td >
                                     <div class="checkbox check-default">
                                         <input id="checkbox11" type="checkbox" value="1">
                                         <label for="checkbox11"></label>
                                     </div>
                                 </td>
-                                <td valign="middle">Early Bird</td>
-                                <td valign="middle"><span class="muted">Redesign project template</span>
+                                <td >Early Bird</td>
+                                <td ><span class="muted">Redesign project template</span>
                                 </td>
                                 <td><span class="label label-success">progress</span>
                                 </td>
-                                <td valign="middle">
-                                    <div class="progress progress-success">
-                                        <div data-percentage="79%" id="" class="bar animate-progress-bar" style="width: 79%;"></div>
-                                    </div>
+                                <td >
+
                                 </td>
                             </tr>
                             <tr>
@@ -108,9 +106,7 @@
                                 <td><span class="label label-danger">overdue</span>
                                 </td>
                                 <td>
-                                    <div class="progress progress-danger">
-                                        <div data-percentage="100%" class="bar animate-progress-bar" style="width: 100%;"></div>
-                                    </div>
+
                                 </td>
                             </tr>
                             <tr>
@@ -121,14 +117,12 @@
                                     </div>
                                 </td>
                                 <td>PHP Login page</td>
-                                <td valign="middle"><span class="muted">A project in business and science is typically defined</span>
+                                <td ><span class="muted">A project in business and science is typically defined</span>
                                 </td>
                                 <td><span class="label label-primary">completed</span>
                                 </td>
                                 <td>
-                                    <div class="progress progress-info">
-                                        <div data-percentage="100%" class="bar animate-progress-bar" style="width: 100%;"></div>
-                                    </div>
+
                                 </td>
                             </tr>
                             <tr>
@@ -139,14 +133,12 @@
                                     </div>
                                 </td>
                                 <td>Zombies</td>
-                                <td valign="middle"><span class="muted">frequently involving research or design</span>
+                                <td ><span class="muted">frequently involving research or design</span>
                                 </td>
                                 <td><span class="label label-warning">approve</span>
                                 </td>
                                 <td>
-                                    <div class="progress progress-warning">
-                                        <div data-percentage="42%" class="bar animate-progress-bar" style="width: 42%;"></div>
-                                    </div>
+
                                 </td>
                             </tr>
                             </tbody>

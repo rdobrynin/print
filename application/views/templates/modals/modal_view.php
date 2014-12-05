@@ -13,19 +13,19 @@
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="first_name" id="first_name_invite" class="form-control btn-special" placeholder="First Name" required>
+                            <input type="text" name="first_name_invite" id="first_name_invite" class="form-control btn-special" placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="last_name" id="last_name_invite" class="form-control btn-special" placeholder="Last Name">
+                            <input type="text" name="last_name_invite" id="last_name_invite" class="form-control btn-special" placeholder="Last Name">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <input type="email" name="email" id="email_invite" class="form-control btn-special" placeholder="Email Address">
+                            <input type="email" name="email_invite" id="email_invite" class="form-control btn-special" placeholder="Email Address">
                         </div>
                         <div style="display: none; margin-bottom: 10px;" id="check_email" class="label label-danger label-signin"></div>
                     </div>
