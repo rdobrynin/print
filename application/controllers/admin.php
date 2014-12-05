@@ -89,7 +89,6 @@ class Admin extends CI_Controller {
                       $this->load->view('login/head_view');
                       $this->load->view('login/invite_view');
                       $this->load->view('login/footer_view');
-
                       $this->load->library('email');
                       $this->email->from($email_post, $f_name.' '.$l_name);
                       $this->email->to($curator_email);
@@ -113,8 +112,6 @@ class Admin extends CI_Controller {
       $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
       $email_post = $this->input->post('email');
       $verify_email = $this->admin_model->verify_user_email($email_post);
-
-
       if ($this->form_validation->run() !== false) {
           $email = $verify_email->email;
           // Generate password
@@ -127,12 +124,14 @@ class Admin extends CI_Controller {
           }
           $this->admin_model->updatePassword($verify_email->id, md5($pass));
 //          send email with a new password
+
           $this->load->library('email');
           $this->email->from('info@brilliant-solutions.eu', 'Admin');
           $this->email->to($verify_email->email);
           $this->email->subject('Registration at Brilliant project management');
           $this->email->message("Hello, ".$verify_email->first_name." ".$verify_email->last_name."\n"."\n"."here is a new password for login"."\n"."\n". "Username: ".$verify_email->email."\n"."\n". "Password: ".$pass);
           $this->email->send();
+
           $this->load->view('login/head_view');
           $this->load->view('login/forgot_success_view');
           $this->load->view('login/footer_view');
@@ -143,8 +142,6 @@ class Admin extends CI_Controller {
           $this->load->view('login/forgot_view');
           $this->load->view('login/footer_view');
       }
-
-
   }
 }
 
