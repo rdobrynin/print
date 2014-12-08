@@ -554,7 +554,7 @@ class Admin_model extends CI_Model {
   }
 
     /**
-     * get session_data);
+     * get session_data();
      * @return mixed
      */
 
@@ -565,3 +565,5 @@ class Admin_model extends CI_Model {
         return $query->result_array();
     }
 }
+
+

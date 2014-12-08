@@ -33,7 +33,7 @@
           <ul class="dropdown-menu dropdown-user">
               <li> <a href="#">Agile Ansewrs</a></li>
               <li> <a href="#">Online Help</a></li>
-              <li> <a href="#">About Brilliant</a></li>
+              <li> <a href="http://www.brilliant-solutions.eu" target="blank">Brilliant Solutions</a></li>
           </ul>
       </li>
       <li class="dropdown user-dropdown">
@@ -43,11 +43,14 @@
                   <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
                       <li class="add-client"><a href="<?php print(base_url());?>addclient"><i class="fa fa-plus"></i><?php print(lang('menu_add_client')); ?></a></li>
                   <?php endif ?>
+
               <?php endif ?>
               <?php if ($client != FALSE): ?>
-              <li> <a href="" data-toggle="modal" data-target="#invite" title="invite"><i class="fa fa-plus"></i><?php print(lang('menu_invite_person')); ?></a></li>
+              <li> <a href="#" data-toggle="modal" data-target="#invite" title="invite"><i class="fa fa-plus"></i><?php print(lang('menu_invite_person')); ?></a></li>
+                  <?php if ($user[0]['role'] ==5 OR $user[0]['role']==4): ?>
+                  <li class="add-client"><a href="#" data-toggle="modal" data-target="#addproject_modal" title="create project"><i class="fa fa-plus"></i><?php print(lang('menu_add_project')); ?></a></li>
+                  <?php endif ?>
               <?php endif ?>
-
           </ul>
       </li>
 

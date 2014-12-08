@@ -78,12 +78,48 @@
 
                   if(msg.send == true) {
                       $('#send_mail').css('display', 'block');
-                      setInterval(function() {
+                      setTimeout(function() {
                           $('#invite').modal('hide');
                       }, 2000);
                   }
 
 
+              }
+          });
+      });
+
+
+      /**
+       * Add project
+       *
+      **/
+
+      $("#addproject_btn").click(function () {
+          var form_data = {
+              project_title: $('#project_title').val(),
+              project_desc: $('#project_desc').val(),
+              user_id: $('#user_added_id').val()
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/addproject'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  console.log(msg);
+                  if(msg.empty == false) {
+                      $('#check_empty_project').css('display', 'block');
+                  }
+                  if(msg.empty == true) {
+                      $('#check_empty_project').css('display', 'none');
+                  }
+
+                  if(msg.send == true) {
+                      $('#save_project_modal').css('display', 'block');
+                      setTimeout(function() {
+                          $('#addproject_modal').modal('hide');
+                      }, 2000);
+                  }
               }
           });
       });

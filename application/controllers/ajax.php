@@ -316,6 +316,32 @@ class Ajax extends CI_Controller {
         echo json_encode($result);
     }
 
+
+    /**
+     * Add project
+     */
+
+    function addproject() {
+        $this->load->model('project_model');
+        $result['empty'] = true;
+        $result['send'] = false;
+        $title = $_POST['project_title'];
+        $desc = $_POST['project_desc'];
+        $uid = $_POST['user_id'];
+        $result['id']=$uid;
+        $result['title']=$title;
+        $result['desc']=$desc;
+        if ($title == '' OR $desc == '') {
+            $result['empty'] = false;
+        }
+        else {
+            if ($query = $this->project_model->create_project($title, $desc, $uid)) {
+                $result['send'] = true;
+            }
+        }
+        echo json_encode($result);
+    }
+
     /**
      * Get user ID for localStorage
      */
