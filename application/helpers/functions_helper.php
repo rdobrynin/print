@@ -2,6 +2,10 @@
   exit('No direct script access allowed');
 }
 
+/**
+ * Show role
+ */
+
 if (!function_exists('show_role')) {
   function show_role($role) {
     $result='none';
@@ -26,6 +30,11 @@ if (!function_exists('show_role')) {
     return $result;
   }
 }
+
+/**Show language string
+ *
+ */
+
 if (!function_exists('show_lang')) {
     function show_lang($lang) {
         if($lang == 'russian') {
@@ -41,6 +50,10 @@ if (!function_exists('show_lang')) {
     }
 }
 
+/**
+ * short lastname with trim
+ */
+
 if (!function_exists('lastname_letter')) {
     function lastname_letter($str) {
        $result = $str[0];
@@ -49,6 +62,9 @@ if (!function_exists('lastname_letter')) {
     }
 }
 
+/**
+ * Task statuses
+ */
 
 if (!function_exists('task_status')) {
   function task_status($status) {
@@ -71,6 +87,34 @@ if (!function_exists('task_status')) {
     return $result;
   }
 }
+
+/**
+ * project statuses
+ */
+
+if (!function_exists('project_status')) {
+    function project_status($status) {
+        $result=0;
+        if($status == 3) {
+            $result = 'frozen';
+        }
+        else if($status == 2) {
+            $result = 'complete';
+        }
+        else if($status == 1) {
+            $result = 'process';
+        }
+        else if($status == 0) {
+            $result = 'approve';
+        }
+        return $result;
+    }
+}
+
+/**
+ * get countries
+ */
+
 if (!function_exists('get_countries')) {
   function get_countries() {
     $country = array(

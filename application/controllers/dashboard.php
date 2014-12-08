@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller {
         $this->load->library('parser');
         $this->load->model('admin_model');
         $this->load->model('dashboard_model');
+        $this->load->model('project_model');
         $this->load->model('files_model');
         if ($this->session->userdata('site_lang') == 'russian') {
             $this->lang->load('russian', 'russian');
@@ -32,6 +33,13 @@ class Dashboard extends CI_Controller {
      */
 
     public function index() {
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
         $this->session->set_userdata('user_id', $this->admin_model->get_user_id($_SESSION['username']));
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $roles_array = $this->admin_model->get_roles();
@@ -66,6 +74,15 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -87,10 +104,18 @@ class Dashboard extends CI_Controller {
      */
 
     function users() {
+
         $roles_array = $this->admin_model->get_roles();
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
         }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
@@ -128,6 +153,13 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -160,6 +192,13 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -184,6 +223,13 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
         }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
@@ -211,6 +257,13 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
         }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
@@ -276,6 +329,13 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $this->load->library('form_validation');
@@ -340,6 +400,13 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
+        }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
@@ -363,7 +430,7 @@ class Dashboard extends CI_Controller {
             $this->load->view('templates/sidebar_view', $data);
 
             $this->load->view('templates/team_view', $data);
-            $this->load->view('templates/footer_view');
+            $this->load->view('templates/footer_view', $data);
             $this->load->view('templates/settings_view', $data);
         }
         else {
@@ -383,6 +450,13 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
         }
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
@@ -417,6 +491,13 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+        $project_array = $this->project_model->get_projects();
+        if($project_array) {
+            $data['projects']= $project_array;
+        }
+        else {
+            $data['projects']=false;
         }
         $data['roles'] = $roles;
         $data['password'] =  $this->admin_model->get_password($_SESSION['username']);

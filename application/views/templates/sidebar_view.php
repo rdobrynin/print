@@ -9,7 +9,7 @@
       <?php if(!empty($client)):?>
       <li class="<? $url_arg=='clients' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>clients"><i class="fa fa-briefcase"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_clients')); ?></span></a>
         <?php endif ?>
-      <li class="<? $url_arg=='projects' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>projects"><i class="fa fa-cube"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_projects')); ?></span></a><span class="badge badge-resp">3</span>
+      <li class="<? $url_arg=='projects' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>projects"><i class="fa fa-cube"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_projects')); ?></span></a>    <?php if ($projects != false): ?><span class="badge badge-resp" id="badge-count-projects"><?php print(count($projects));?></span> <?php else:?><span class="badge badge-resp" id="badge-count-projects">0</span> <?php endif ?>
       </li>
       <li class="<? $url_arg=='tasks' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-tasks"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_tasks')); ?></span></a><span class="badge badge-resp">4</span>
       </li>
@@ -25,12 +25,12 @@
 <!--      </li>-->
 
       <!--MINI INBOX-->
+
       <div class="mini-inbox">
         <div class="alert inbox">
           <button type="button" class="close" data-dismiss="alert">
             ×
           </button>
-
           <a href="javascript:void(0)">
             <i class="fa fa-comment"></i>
             From: Evgeni S...

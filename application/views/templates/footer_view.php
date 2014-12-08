@@ -89,6 +89,7 @@
       });
 
 
+
       /**
        * Add project
        *
@@ -122,6 +123,15 @@
                   }
               }
           });
+//update count of projects
+          setInterval(function(){
+              $.get( "<?php echo site_url('ajax/countProjects'); ?>", function( data ) {
+                  if(data >0) {
+                      console.log(data);
+                      $('#badge-count-projects').html(data);
+                  }
+              }, "json" );
+          }, 3000);
       });
 
 
@@ -227,6 +237,29 @@
       }, 5900);
 
 //      dashboard
+
+
+
+
+//     Set interval
+
+//todo
+      setInterval(function(){
+          $.get( "<?php echo site_url('ajax/readEvent'); ?>", function( data ) {
+             var data_time = parseInt(data.time);
+              console.log(data_time);
+              var dt = new Date().getTime();
+              var n = dt.toString();
+              var new_time = n.slice(0, -3);
+              var new_time_int = parseInt(new_time);
+
+              if(new_time_int-3 < data_time) {
+                  console.log(new_time_int);
+              }
+
+          }, "json" );
+      }, 3000);
+
 
   });
 </script>

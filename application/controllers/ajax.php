@@ -335,6 +335,9 @@ class Ajax extends CI_Controller {
             $result['empty'] = false;
         }
         else {
+            $text ='created project';
+            $event ='project';
+            $this->project_model->createEvent($uid, $event, $text);
             if ($query = $this->project_model->create_project($title, $desc, $uid)) {
                 $result['send'] = true;
             }
@@ -349,6 +352,25 @@ class Ajax extends CI_Controller {
     function getUserId() {
         $result =$this->session->userdata('user_id');
         echo json_encode (array('id'=>$result[0]['id']));
+    }
+
+    /**
+     * countProjects
+     */
+
+    function countProjects() {
+        $this->load->model('project_model');
+        $result = $this->project_model->countProjects();
+        echo json_encode ($result);
+    }
+
+    /**
+     * Read event
+     */
+    function readEvent() {
+        $this->load->model('project_model');
+        $result = $this->project_model->readEvent();
+        echo json_encode ($result);
     }
 }
 
