@@ -39,73 +39,59 @@
  *
  **/
 
+      $("#invite-ajax-btn").click(function () {
+          var form_data = {
+              email: $('#email_invite').val(),
+              first_name: $('#first_name_invite').val(),
+              last_name: $('#last_name_invite').val(),
+              role: $('#role_invite').val(),
+              user_id: $('#user_invite_id').val()
+
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/invitation'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  if (msg.email == false) {
+                      $('#check_email').css('display', 'block');
+                      $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
+                  }
+                  else {
+                      $('#check_email').css('display', 'none');
+                  }
+
+                  if(msg.empty == false) {
+                      $('#check_empty').css('display', 'block');
+                  }
+                  if(msg.empty == true) {
+                      $('#check_empty').css('display', 'none');
+                  }
+                  if(msg.check_email == false) {
+                      $('#check_email_f').css('display', 'block');
+                      $('#check_email_f').html('<i class="fa fa-exclamation-circle"></i>&nbsp;email address is invalid');
+                  }
+                  else {
+                      $('#check_email_f').css('display', 'none');
+                  }
+
+                  if(msg.send == true) {
+                      $('#send_mail').css('display', 'block');
+                      setInterval(function() {
+                          $('#invite').modal('hide');
+                      }, 2000);
+                  }
 
 
-
-$('#invite-form').validate({
-    rules: {
-        first_name_invite: {
-            required: true
-        },
-        last_name_invite: {
-            required: true
-        }
-    },
-    submitHandler: function(form) {
-        $(form).submit();
-        var form_data = {
-            email: $('#email_invite').val(),
-            first_name: $('#first_name_invite').val(),
-            last_name: $('#last_name_invite').val(),
-            role: $('#role_invite').val()
-
-        };
-        $.ajax({
-            url: "<?php echo site_url('ajax/invitation'); ?>",
-            type: 'POST',
-            data: form_data,
-            dataType: 'json',
-            success: function (msg) {
-                if(msg.email == false) {
-                    $('#check_email').css('display','block');
-                    $('#check_email').html('<i class="fa fa-exclamation-circle"></i>&nbsp;This email is already registered');
-                }
-                else {
-                    console.log(msg.data);
-                    $('#check_email, #check_empty').css('display','none');
-                }
-            }
-        });
-        return false;
-    }
-
-<!---->
-<!--      $( "#invite-ajax-btn" ).click(function() {-->
-<!--          var form_data = {-->
-<!--              email: $('#email_invite').val(),-->
-<!--              first_name: $('#first_name_invite').val(),-->
-<!--              last_name: $('#last_name_invite').val(),-->
-<!--              role: $('#role_invite').val()-->
-<!---->
-<!--          };-->
-<!--          $.ajax({-->
-<!--              url: "--><?php //echo site_url('ajax/invitation'); ?><!--",-->
-<!--              type: 'POST',-->
-<!--              data: form_data,-->
-<!--              dataType: 'json',-->
-<!--              success: function (msg) {-->
-<!--                  if(msg.email == false) {-->
-<!--                      $('#check_email').css('display','block');-->
-
-<!--                  }-->
-<!--                  else {-->
-<!--                      console.log(msg.data);-->
-<!--                      $('#check_email, #check_empty').css('display','none');-->
-<!--                  }-->
-<!--              }-->
-<!--          });-->
-
+              }
+          });
       });
+
+
+      /**
+       *  Upload avatar
+      **/
 
       $('#upload_file').submit(function() {
           $.ajaxFileUpload({

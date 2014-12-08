@@ -5,6 +5,7 @@
 class Ajax extends CI_Controller {
 
 
+
   /**
    * Check client on input blur
    */
@@ -232,14 +233,23 @@ class Ajax extends CI_Controller {
      * INVITATION NEW PERSON
      */
     function invitation() {
+        $url = base_url();
         $result['email'] = true;
-        $result['empty'] = false;
-        $result['email_empty'] = false;
+        $result['check_email'] = true;
+        $result['empty'] = true;
+        $result['send'] = false;
         $this->load->model('admin_model');
-        $email = $_POST['email'];
-        $fname = $_POST['first_name'];
-        $lname = $_POST['last_name'];
+        $email = trim($_POST['email']);
+        $fname = trim($_POST['first_name']);
+        $lname = trim($_POST['last_name']);
         $role = $_POST['role'];
+        $user_id = $_POST['user_id'];
+        $user_array = $this->admin_model->get_user_id($user_id);
+//        get curator data
+        $curator_fname = $user_array[0]['first_name'];
+        $curator_lname = $user_array[0]['last_name'];
+        $curator_name = $curator_fname. ' '.$curator_lname;
+        $curator_email = $user_array[0]['email'];
         $query= $this->admin_model->emails_users($email);
         foreach($query as $v) {
             if($v['email'] == $email) {
@@ -266,8 +276,38 @@ class Ajax extends CI_Controller {
             }
         }
 
-        if ($result['email'] == true) {
-            $result['data'] = array('fname' => $fname, 'lname' => $lname, 'role' => $role, 'email' => $email,);
+        if($email == '' OR $fname == '' OR $lname == '') {
+            $result['empty'] = false;
+        }
+        else {
+            $result['empty'] = true;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $result['check_email'] = false;
+        }
+        else {
+            $result['check_email'] = true;
+        }
+
+        if ($result['email'] == true AND $result['empty'] == true AND $result['check_email'] == true ) {
+            // mail to user
+            // Generate password
+            $letter = 'qwertyuipasdfghjklzxcvbnm';
+            $letter .= strtoupper($letter);
+            $letter .= '123456789';
+            $pass = '';
+            for ($i = 0; $i < 6; $i++){
+                $pass .= $letter[mt_rand(0, strlen($letter)-1)];
+            }
+            $this->load->library('email');
+            $this->email->from($curator_email, $curator_name);
+            $this->email->to($email);
+            $this->email->subject('Invitation from Brilliant project management');
+            $this->email->message("Hello, ".$fname." ".$lname."\n"."\n".$curator_name." Invites you to Brilliant Project management"."\n"."\n".
+            "Link: ".$url."\n"."\n"."Username: ".$email."\n"."\n"."Password: ".$pass."\n"."\n");
+            $this->email->send();
+            $result['send'] = true;
         }
 
         echo json_encode($result);

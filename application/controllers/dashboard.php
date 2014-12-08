@@ -353,16 +353,23 @@ class Dashboard extends CI_Controller {
             $data['avatars']['test'][] = $uv['status'];
             $data['avatars']['test'][] = $uv['first_name'];
         }
-        $this->load->view('templates/head_view');
-        if ($data['user'][0]['helpblock'] == 1) {
-            $this->load->view('templates/help_block_view');
-        }
-        $this->load->view('templates/navtop_view', $data);
-        $this->load->view('templates/sidebar_view', $data);
 
-        $this->load->view('templates/team_view', $data);
-        $this->load->view('templates/footer_view');
-        $this->load->view('templates/settings_view', $data);
+        if($data['user'][0]['role'] == 5 OR $data['user'][0]['role'] == 4 ) {
+            $this->load->view('templates/head_view');
+            if ($data['user'][0]['helpblock'] == 1) {
+                $this->load->view('templates/help_block_view');
+            }
+            $this->load->view('templates/navtop_view', $data);
+            $this->load->view('templates/sidebar_view', $data);
+
+            $this->load->view('templates/team_view', $data);
+            $this->load->view('templates/footer_view');
+            $this->load->view('templates/settings_view', $data);
+        }
+        else {
+            show_404();
+        }
+
     }
 
 

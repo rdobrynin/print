@@ -93,7 +93,7 @@ class Admin extends CI_Controller {
                       $this->email->from($email_post, $f_name.' '.$l_name);
                       $this->email->to($curator_email);
                       $this->email->subject('Registration at Brilliant project management');
-                      $this->email->message("Hello, Curator\n"."\n".$f_name." ".$l_name." registered"."\n"."\n"."Approve account now");
+                      $this->email->message("Hello, Curator\n"."\n".$f_name." ".$l_name." is registered"."\n"."\n"."need to Approve account now");
                       $this->email->send();
               }
           }

@@ -27,16 +27,16 @@
                         <div class="form-group">
                             <input type="email" name="email_invite" id="email_invite" class="form-control btn-special" placeholder="Email Address">
                         </div>
-                        <div style="display: none; margin-bottom: 10px;" id="check_email" class="label label-danger label-signin"></div>
+                        <div style="display: none; margin-bottom: 10px;" id="check_email" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;This email is already in system</div>
+                        <div style="display: none; margin-bottom: 10px;" id="check_email_f" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Email address is invalid</div>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <select class="form-control selectpicker" id="role_invite" name="role_invite">
                                 <?php foreach ($roles as $rk => $rv): ?>
-                                    <?php if ($rv['rid'] == 3 || $rv['rid'] == 2): ?>
+                                    <?php if ($rv['rid'] != 5): ?>
                                         <option value="<?php print($rv['rid']); ?>"><?php print(ucfirst($rv['title'])); ?></option>
                                     <?php endif ?>
                                 <?php endforeach ?>
@@ -44,10 +44,12 @@
                         </div>
                     </div>
                 </div>
+                <div style="display: none; margin-bottom: 10px;" id="send_mail" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully sent invitation</div>
             </div>
             <div class="modal-footer">
+                <input type="hidden" name="user_id" id="user_invite_id" value="<?php print($user[0]['id'])?>">
                 <div style="display: none; margin-bottom: 10px;" id="check_empty" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
-                <button type="button" class="btn btn-danger" id="invite-ajax-btn">Invite</button>
+                <button type="button" class="btn btn-success" id="invite-ajax-btn">Invite</button>
                 <!-- <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>-->
             </div>
         </div>

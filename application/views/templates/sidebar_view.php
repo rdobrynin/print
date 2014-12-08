@@ -13,8 +13,10 @@
       </li>
       <li class="<? $url_arg=='tasks' ? print('active') : print('') ?>"><a href="#"><i class="fa fa-tasks"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_tasks')); ?></span></a><span class="badge badge-resp">4</span>
       </li>
-      <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>team"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_team')); ?></span></a>
-      </li>
+        <?php if ($user[0]['role']==5 OR $user[0]['role']==4): ?>
+            <li class="<? $url_arg=='team' ? print('active') : print('') ?>"><a href="<?php print(base_url());?>team"><i class="fa fa-users"></i>&nbsp;<span class="left-resp-menu"><?php print(lang('menu_team')); ?></span></a>
+            </li>
+        <?php endif ?>
 <!--      <li class="--><?// $url_arg=='charts' ? print('active') : print('') ?><!-- disabled"><a href="--><?php //print(base_url());?><!--charts"><i class="glyphicon glyphicon-stats"></i>&nbsp;<span class="left-resp-menu">--><?php //print(lang('menu_chart')); ?><!--</span></a>-->
 <!--      </li>-->
 <!--      <li class="--><?// $url_arg=='comments' ? print('active') : print('') ?><!-- disabled"><a href="--><?php //print(base_url());?><!--comments"><i class="fa fa-comment"></i>&nbsp;<span class="left-resp-menu">--><?php //print(lang('menu_comments')); ?><!--</span></a>-->
