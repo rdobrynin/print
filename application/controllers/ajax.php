@@ -290,16 +290,18 @@ class Ajax extends CI_Controller {
             $result['check_email'] = true;
         }
 
+        // mail to user
+        // Generate password
+        $letter = 'qwertyuipasdfghjklzxcvbnm';
+        $letter .= strtoupper($letter);
+        $letter .= '123456789';
+        $pass = '';
+        for ($i = 0; $i < 6; $i++){
+            $pass .= $letter[mt_rand(0, strlen($letter)-1)];
+        }
+
         if ($result['email'] == true AND $result['empty'] == true AND $result['check_email'] == true ) {
-            // mail to user
-            // Generate password
-            $letter = 'qwertyuipasdfghjklzxcvbnm';
-            $letter .= strtoupper($letter);
-            $letter .= '123456789';
-            $pass = '';
-            for ($i = 0; $i < 6; $i++){
-                $pass .= $letter[mt_rand(0, strlen($letter)-1)];
-            }
+            if ($query = $this->admin_model->insert_user($fname,$lname,$role,$email,$pass)) {
             $this->load->library('email');
             $this->email->from($curator_email, $curator_name);
             $this->email->to($email);
@@ -308,6 +310,7 @@ class Ajax extends CI_Controller {
             "Link: ".$url."\n"."\n"."Username: ".$email."\n"."\n"."Password: ".$pass."\n"."\n");
             $this->email->send();
             $result['send'] = true;
+            }
         }
 
         echo json_encode($result);

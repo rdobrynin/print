@@ -190,6 +190,29 @@ class Admin_model extends CI_Model {
     return $insert;
   }
 
+
+    /**
+     * Insert user from invitation system
+     * @param $fname
+     * @param $lname
+     * @param $role
+     * @param $email
+     * @param $password
+     * @return mixed
+     */
+    public function insert_user($fname,$lname,$role,$email,$password) {
+        $data = array (
+            'first_name' => $fname,
+            'last_name' => $lname,
+            'role' => $role,
+            'email' => $email,
+            'password' => md5($password),
+            'avatar' =>'placeholder_user.jpg'
+        );
+        $insert = $this->db->insert('users', $data);
+        return $insert;
+    }
+
   /**
    * Delete company
    * @return mixed
@@ -369,6 +392,12 @@ class Admin_model extends CI_Model {
         }
         return TRUE;
     }
+
+    /**
+     * Updfate password
+     * @param $id
+     * @param $password
+     */
 
     public function updatePassword($id, $password) {
 
