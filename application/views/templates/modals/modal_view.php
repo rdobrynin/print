@@ -126,6 +126,19 @@
                         </div>
                     </div>
                 </div>
+               <div class="row">
+                   <div class="col-xs-12 col-md-6">
+                       <div class="form-group">
+                           <label for="idTourDateDetails">Due to:</label>
+                           <div class="form-group">
+                               <div class="input-group">
+                                   <input type="text" name="idTourDateDetails" id="idTourDateDetails" readonly="readonly" class="form-control clsDatePicker">
+                                   <span class="input-group-addon"><i id="calIconTourDateDetails" class="glyphicon glyphicon-th"></i></span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
                         <div class="form-group">
@@ -137,6 +150,7 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group">
                             <label for="task_priority_choose">Priority</label>
@@ -160,3 +174,15 @@
         <?php form_close( );?>
     </div>
 </div> <!-- #/addtask_pr_modal -->
+
+
+
+<script>
+    $('#idTourDateDetails').datepicker({
+        dateFormat: 'dd-mm-yy',
+        minDate: '+5d',
+        changeMonth: true,
+        changeYear: true
+    });
+
+</script>

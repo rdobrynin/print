@@ -65,3 +65,14 @@ div.navbar-collapse.navbar-inverse.navbar-fixed-top {
      padding-left: 0;
 }
 
+.datepicker{z-index:1151 !important;}
+
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top {
+    padding: 10px;
+    cursor: pointer;
+}
+
+td.active.day, td.day:hover {
+    background-color: #ddd;
+    border-radius: 3px;
+}
