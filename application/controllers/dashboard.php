@@ -441,6 +441,7 @@ class Dashboard extends CI_Controller {
      */
 
     function  switch_help() {
+        exit();
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
         $url = $this->input->post('input_url');

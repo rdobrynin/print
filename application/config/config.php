@@ -358,5 +358,9 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/* Admin email*/
+
+$config['admin_email'] = 'roman.dobrynin@gmail.com';
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
