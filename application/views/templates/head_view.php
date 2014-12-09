@@ -25,6 +25,7 @@
     <link href="<?php print(base_url()); ?>css/right_sidebar.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>css/modal.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>css/bootstrap-select.css" rel="stylesheet">
+    <link href="<?php print(base_url()); ?>css/datepicker3.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>css/btn.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->

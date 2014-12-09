@@ -21,6 +21,7 @@
 <script src="js/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap-confirmation.js"></script>
 <script src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
 <?php include('modals/modal_view.php');?>
 <?php include('modals/modal_task.php');?>
 <?php include('timer.php');?>
