@@ -21,6 +21,20 @@ class Task_model extends CI_Model {
         return $query->result_array();
     }
 
+    /**
+     * get users();
+     * @return mixed
+     */
+
+    public function get_imps() {
+        $query = $this
+            ->db
+            ->where('role', '2')
+            ->get('users');
+        return $query->result_array();
+    }
+
+
 }
 
 

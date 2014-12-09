@@ -158,6 +158,28 @@
                             </select>
                         </div>
                     </div>
+
+
+                    <div class="col-xs-12 col-md-12">
+                        <div class="form-group">
+                            <label for="implementor_choose_modal">Choose implementor:</label>
+
+                            <?php if ($imps != false): ?>
+                                <select class="selectpicker" name="curator" id="implementor_choose_modal">
+                                    <?php foreach ($imps as $k => $v): ?>
+                                        <option value="<?php echo $v['id'] ?>"><?php echo $v['first_name'] . ' ' . $v['last_name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            <?php else: ?>
+                                <div style="display: block; margin-bottom: 10px;" id="no_imps_modal" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;No one implementors found.&nbsp;&nbsp;<span class="btn btn-xs btn-primary pull-right" id="btn_modal_miss_imp" style="position:relative;top:4px;">Invite first</span></div>
+                            <?php endif ?>
+
+
+
+                        </div>
+                    </div>
+
+
                 </div>
                 <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
             </div>
@@ -174,5 +196,9 @@
 <script type="text/javascript">
     $(function () {
         $('#dueto_modal').datetimepicker({theme:'dark'});
+        $('#btn_modal_miss_imp').click(function () {
+            $('#addtask_pr_modal').modal('hide');
+            $('#invite').modal('show');
+        });
     });
 </script>
