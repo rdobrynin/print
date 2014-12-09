@@ -111,6 +111,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -145,6 +154,15 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['task_types']=false;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $project_array = $this->project_model->get_projects();
@@ -198,6 +216,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -237,6 +264,15 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -279,6 +315,16 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $project_array = $this->project_model->get_projects();
         if($project_array) {
             $data['projects']= $project_array;
@@ -329,6 +375,16 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -407,6 +463,15 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['projects']=false;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -489,6 +554,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -549,6 +623,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -597,6 +680,15 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['projects']=false;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
