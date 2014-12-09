@@ -74,12 +74,11 @@ class Project_model extends CI_Model {
      */
 
     public function createEvent($uid,$title,$text) {
-        $date = new DateTime();
+
         $data = array (
             'uid' => $uid,
             'title' => $title,
-            'text' => $text,
-            'time' => $date->getTimestamp()
+            'text' => $text
         );
         $insert = $this->db->insert('events', $data);
         return $insert;
