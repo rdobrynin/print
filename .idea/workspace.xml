@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list id="779e2b8c-3c4a-4d46-a48a-6945e26af1e9" name="Default" comment="" />
     <list default="true" id="e8cd4946-5a01-4774-8255-63f4d3074170" name="add profile form" comment="add profile form">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/ajax.php" afterPath="$PROJECT_DIR$/application/controllers/ajax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/custom404_view.php" afterPath="$PROJECT_DIR$/application/views/custom404_view.php" />
     </list>
     <ignored path="print.iws" />
@@ -27,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ajax.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ajax.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="404" column="42" selection-start="13005" selection-end="13005" vertical-scroll-proportion="0.44382024" vertical-offset="6956" max-vertical-offset="7794">
+            <state line="400" column="57" selection-start="12893" selection-end="12893" vertical-scroll-proportion="-19.037037" vertical-offset="6686" max-vertical-offset="7794">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom404_view.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="custom404_view.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/custom404_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="42" selection-start="4760" selection-end="4760" vertical-scroll-proportion="-22.608696" vertical-offset="670" max-vertical-offset="1890">
+            <state line="102" column="17" selection-start="5364" selection-end="5364" vertical-scroll-proportion="0.4888268" vertical-offset="1078" max-vertical-offset="1876">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -141,8 +140,8 @@
         <option value="$PROJECT_DIR$/application/views/templates/settings_view.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/css/error.css" />
-        <option value="$PROJECT_DIR$/application/views/custom404_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/ajax.php" />
+        <option value="$PROJECT_DIR$/application/views/custom404_view.php" />
       </list>
     </option>
   </component>
@@ -962,9 +961,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="400" column="57" selection-start="12893" selection-end="12893" vertical-scroll-proportion="-19.037037" vertical-offset="6686" max-vertical-offset="7794">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/custom404_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="42" selection-start="4760" selection-end="4760" vertical-scroll-proportion="-22.608696" vertical-offset="670" max-vertical-offset="1890">
+        <state line="102" column="17" selection-start="5364" selection-end="5364" vertical-scroll-proportion="0.4888268" vertical-offset="1078" max-vertical-offset="1876">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -973,13 +979,6 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="404" column="42" selection-start="13005" selection-end="13005" vertical-scroll-proportion="0.44382024" vertical-offset="6956" max-vertical-offset="7794">
-          <folding />
         </state>
       </provider>
     </entry>

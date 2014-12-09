@@ -95,7 +95,6 @@
             data: form_data,
             dataType: 'json',
             success: function (msg) {
-                console.log(msg);
                 if(msg.empty == false) {
                     $('#error_empty_modal').css('display', 'block');
                 }
