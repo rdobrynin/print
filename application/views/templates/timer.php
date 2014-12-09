@@ -102,7 +102,6 @@
                 }
             }
         });
-        console.log(localStorage);
         if (typeof(Storage) !== "undefined") {
             if (localStorage.play === 'ok') {
                 $('#play-timer').addClass('active-time');

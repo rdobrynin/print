@@ -30,10 +30,7 @@
             style: 'btn-special',
             size: 14
         });
-        function toTimestamp(strDate){
-            var datum = Date.parse(strDate);
-            return datum/1000;
-        }
+
   $(function () {
 
 
@@ -83,6 +80,8 @@
                   if(msg.send == true) {
                       $('#send_mail').css('display', 'block');
                       setTimeout(function() {
+                          $('#check_email_f, #check_email').css('display', 'none');
+                          $("input[type=text], textarea").val("");
                           $('#invite').modal('hide');
                       }, 2000);
                   }
@@ -93,7 +92,7 @@
       });
 
 
-
+console.log(localStorage);
       /**
        * Add project
        *
@@ -111,7 +110,6 @@
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                  console.log(msg);
                   if(msg.empty == false) {
                       $('#check_empty_project').css('display', 'block');
                   }
@@ -122,6 +120,10 @@
                   if(msg.send == true) {
                       $('#save_project_modal').css('display', 'block');
                       setTimeout(function() {
+
+                          $('#save_project_modal, #check_empty_project').css('display', 'none');
+                          $("input[type=text], textarea").val("");
+
                           $('#addproject_modal').modal('hide');
                       }, 2000);
                   }
@@ -137,27 +139,20 @@
               }, "json" );
           }, 3000);
 
-          setTimeout(function(){
-          $.get( "<?php echo site_url('ajax/readEvent'); ?>", function( data ) {
-              var data_time = toTimestamp(data.time);
-              var dt = new Date().getTime();
-              var n = dt.toString();
-              var new_time = n.slice(0, -3);
-              var name = data.name.slice(0,-5);
-              name = name+'...';
-              var new_time_int = parseInt(new_time);
-                  // here we build html markup
-                  $('.mini-inbox').append(
-                      '<div class="alert inbox"><button type="button" class="close" data-dismiss="alert">×' +
-                          '</button><a href="javascript:void(0)"><i class="fa fa-bell"></i>From: '+name+'</a>' +
-                          '<span class="message-mini">'+data.title+' Project has been created</span></div>'
-                  );
-          }, "json" );
-
-          }, 3000);
 
 
       });
+<!---->
+<!---->
+<!--      setInterval(function(){-->
+<!--          $.get( "--><?php //echo site_url('ajax/countProjects'); ?><!--", function( data ) {-->
+<!--              if(data >0) {-->
+<!--                  console.log(data);-->
+<!--                  $('#badge-count-projects').html(data);-->
+<!--              }-->
+<!--          }, "json" );-->
+<!--      }, 3000);-->
+
 
 
       /**
@@ -262,6 +257,7 @@
       }, 5900);
   });
 </script>
+<?php include('interval.php');?>
 </body>
 
 </html>

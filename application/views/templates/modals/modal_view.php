@@ -66,7 +66,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title" id="myModalLabel">
-                    <small>Crete project</small>
+                    <small>Create project</small>
                 </h4>
             </div>
             <div class="modal-body">
@@ -80,7 +80,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="project_desc">Description</label>
-                            <textarea name="project_desc" id="project_desc" class="form-control btn-special" rows="3"></textarea>
+                            <textarea name="project_desc" id="project_desc" class="form-control btn-special" rows="3" placeholder="Description"></textarea>
                         </div>
                     </div>
                 </div>
