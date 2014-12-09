@@ -323,11 +323,17 @@ class Ajax extends CI_Controller {
 
     function addproject() {
         $this->load->model('project_model');
+        $this->load->model('admin_model');
         $result['empty'] = true;
         $result['send'] = false;
         $title = $_POST['project_title'];
         $desc = $_POST['project_desc'];
         $uid = $_POST['user_id'];
+
+
+        $name_array =  $this->admin_model->get_user_id($uid);
+        $full_name = $name_array[0]['first_name'].' '.$name_array[0]['last_name'];
+
         $result['id']=$uid;
         $result['title']=$title;
         $result['desc']=$desc;
@@ -336,8 +342,7 @@ class Ajax extends CI_Controller {
         }
         else {
             $text ='created project';
-            $event ='project';
-            $this->project_model->createEvent($uid, $event, $text);
+            $this->project_model->createEvent($uid, $desc, $text, $full_name, $title);
             if ($query = $this->project_model->create_project($title, $desc, $uid)) {
                 $result['send'] = true;
             }

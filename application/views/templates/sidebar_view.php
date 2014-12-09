@@ -27,38 +27,17 @@
       <!--MINI INBOX-->
 
       <div class="mini-inbox">
-        <div class="alert inbox">
-          <button type="button" class="close" data-dismiss="alert">
-            ×
-          </button>
-          <a href="javascript:void(0)">
-            <i class="fa fa-comment"></i>
-            From: Evgeni S...
-          </a>
-          <span class="message-mini">Andrei, <a href="">close</a> Task (111)...</span>
-        </div>
-        <!-- inbox message 2-->
-        <div class="alert inbox">
-          <button type="button" class="close" data-dismiss="alert">
-            ×
-          </button>
-          <a href="javascript:void(0)">
-            <i class="fa fa-comment"></i>
-            Re: Task (111)...
-          </a>
-          <span class="message-mini">Jevgeni, need more time...</span>
-        </div>
-        <!-- inbox message 3-->
-        <div class="alert inbox last-child">
-          <button type="button" class="close" data-dismiss="alert">
-            ×
-          </button>
-          <a href="javascript:void(0)">
-            <i class="fa fa-bell"></i>
-            Project (123) has ...
-          </a>
-          <span class="message-mini">Project (123) has been completed..</span>
-        </div>
+<!--        <div class="alert inbox">-->
+<!--          <button type="button" class="close" data-dismiss="alert">-->
+<!--            ×-->
+<!--          </button>-->
+<!--          <a href="javascript:void(0)">-->
+<!--            <i class="fa fa-comment"></i>-->
+<!--            From: Evgeni S...-->
+<!--          </a>-->
+<!--          <span class="message-mini">Andrei, <a href="">close</a> Task (111)...</span>-->
+<!--        </div>-->
+
 
       </div>
       <!--END MINI INBOX-->

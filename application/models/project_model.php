@@ -73,12 +73,14 @@ class Project_model extends CI_Model {
      * @return mixed
      */
 
-    public function createEvent($uid,$title,$text) {
+    public function createEvent($uid,$event,$text,$name,$title) {
 
         $data = array (
             'uid' => $uid,
+            'event' => $event,
             'title' => $title,
-            'text' => $text
+            'text' => $text,
+            'name' => $name
         );
         $insert = $this->db->insert('events', $data);
         return $insert;
