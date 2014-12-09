@@ -96,4 +96,44 @@
         </div>
         <?php form_close( );?>
     </div>
-</div> <!-- #/myModal -->
+</div> <!-- #/addproject_moda -->
+
+<!--Create task for project modal window-->
+<div class="modal fade" id="addtask_pr_modal" tabindex="-1" role="dialog" aria-labelledby="addtask_pr_formLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <?php $attributes = array('class' => 'form-signin', 'id' => 'addtask_pr_form', 'autocomplete' => 'on'); ?>
+        <?php echo form_open('#', $attributes); ?>
+        <div class="modal-content modal-content-inverse">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    <small>Add task</small>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="task_pr_title">Task name</label>
+                            <input type="text" name="task_pr_title" id="task_pr_title" class="form-control btn-special" placeholder="Task name title">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="task_pr_desc">Description</label>
+                            <textarea name="task_pr_desc" id="task_pr_desc" class="form-control btn-special" rows="3" placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" name="user_added_task_pr_id" id="user_added_task_pr_id" value="<?php print($user[0]['id'])?>">
+                <div style="display: none; margin-bottom: 10px;" id="check_empty_task_pr" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
+                <button type="button" class="btn btn-success" id="addtask_pr_btn">Add task</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <?php form_close( );?>
+    </div>
+</div> <!-- #/addtask_pr_modal -->
