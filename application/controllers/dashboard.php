@@ -11,6 +11,7 @@ class Dashboard extends CI_Controller {
         $this->load->model('admin_model');
         $this->load->model('dashboard_model');
         $this->load->model('project_model');
+        $this->load->model('task_model');
         $this->load->model('files_model');
         if ($this->session->userdata('site_lang') == 'russian') {
             $this->lang->load('russian', 'russian');
@@ -40,6 +41,16 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
+
         $this->session->set_userdata('user_id', $this->admin_model->get_user_id($_SESSION['username']));
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $roles_array = $this->admin_model->get_roles();
@@ -73,6 +84,14 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
         }
 
         $project_array = $this->project_model->get_projects();
@@ -110,6 +129,15 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $project_array = $this->project_model->get_projects();
         if($project_array) {
             $data['projects']= $project_array;
@@ -160,6 +188,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -192,6 +229,15 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $project_array = $this->project_model->get_projects();
         if($project_array) {
             $data['projects']= $project_array;
@@ -231,6 +277,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
@@ -265,6 +320,14 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $client = $this->admin_model->get_own_client($_SESSION['username']);
@@ -336,6 +399,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $this->load->library('form_validation');
@@ -407,6 +479,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
@@ -458,6 +539,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
@@ -499,6 +589,15 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $task_types = $this->task_model->getTaskTypes();
+        if($task_types) {
+            $data['task_types']= $task_types;
+        }
+        else {
+            $data['task_types']=false;
+        }
+
         $data['roles'] = $roles;
         $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
         $data['current_language'] = $this->session->userdata('site_lang');

@@ -126,6 +126,28 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="form-group">
+                            <label for="task_type_choose">Label</label>
+                            <select class="form-control selectpicker" id="task_type_choose" name="task_type_choose">
+                                <?php foreach ($task_types as $tk=>$tv): ?>
+                                        <option value="<?php print($tv['id']); ?>"><?php print(ucfirst($tv['title'])); ?></option>
+                                <?php endforeach ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label for="task_priority_choose">Priority</label>
+                            <select class="form-control selectpicker" id="task_priority_choose" name="task_priority_choose">
+                                    <option value="minor" data-content="<span class='label label-xs label-primary'>Minor</span>"></option>
+                                    <option value="major" data-content="<span class='label label-xs label-warning'>Major</span>"></option>
+                                    <option value="critical" data-content="<span class='label label-xs label-danger'>Critical</span>"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
             </div>
             <div class="modal-footer">
