@@ -126,10 +126,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="choose_project_modal">Choose project</label>
+                            <select class="form-control selectpicker" id="task_type_choose" name="choose_project_modal">
+                                <?php foreach ($projects as $pk=>$pv): ?>
+                                    <option value="<?php print($pv['pid']); ?>" ><?php print(ucfirst($pv['title'])); ?></option>
+                                <?php endforeach ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                <div class="row">
                    <div class="col-xs-12 col-md-6">
                        <div class="form-group">
-                           <label for="dueto_modal">Due to:</label>
+                           <label for="dueto_modal">Due to</label>
                                <div class='input-group date'>
                                    <input type='text' class="form-control btn-special"  id='dueto_modal' />
                                </div>
@@ -173,21 +185,18 @@
                             <?php else: ?>
                                 <div style="display: block; margin-bottom: 10px;" id="no_imps_modal" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;No one implementors found.&nbsp;&nbsp;<span class="btn btn-xs btn-primary pull-right" id="btn_modal_miss_imp" style="position:relative;top:4px;">Invite first</span></div>
                             <?php endif ?>
-
-
-
                         </div>
                     </div>
-
-
                 </div>
                 <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" style="padding-top: 10px;">
+                <div class="form-group">
                 <input type="hidden" name="user_added_task_pr_id" id="user_added_task_pr_id" value="<?php print($user[0]['id'])?>">
                 <div style="display: none; margin-bottom: 10px;" id="check_empty_task_pr" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
                 <button type="button" class="btn btn-success" id="addtask_pr_btn">Add task</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
             </div>
         </div>
         <?php form_close( );?>
