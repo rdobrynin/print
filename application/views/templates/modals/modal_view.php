@@ -129,13 +129,10 @@
                <div class="row">
                    <div class="col-xs-12 col-md-6">
                        <div class="form-group">
-                           <label for="idTourDateDetails">Due to:</label>
-                           <div class="form-group">
-                               <div class="input-group">
-                                   <input type="text" name="idTourDateDetails" id="idTourDateDetails" readonly="readonly" class="form-control clsDatePicker">
-                                   <span class="input-group-addon"><i id="calIconTourDateDetails" class="glyphicon glyphicon-th"></i></span>
+                           <label for="dueto_modal">Due to:</label>
+                               <div class='input-group date'>
+                                   <input type='text' class="form-control btn-special"  id='dueto_modal' />
                                </div>
-                           </div>
                        </div>
                    </div>
                </div>
@@ -174,15 +171,8 @@
         <?php form_close( );?>
     </div>
 </div> <!-- #/addtask_pr_modal -->
-
-
-
-<script>
-    $('#idTourDateDetails').datepicker({
-        dateFormat: 'dd-mm-yy',
-        minDate: '+5d',
-        changeMonth: true,
-        changeYear: true
+<script type="text/javascript">
+    $(function () {
+        $('#dueto_modal').datetimepicker({theme:'dark'});
     });
-
 </script>

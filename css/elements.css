@@ -80,7 +80,7 @@ background: transparent;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
+    z-index: 99999;
     display: none;
     float: inherit;
     min-width: 160px;
@@ -97,6 +97,16 @@ background: transparent;
     padding-top: 10px;
     padding-bottom: 6px;
 }
+
+.selectpicker, .open {
+   background-color: #575757 !important;
+}
+
+.selectpicker  > li > a:hover, .selectpicker  > li > a:focus{
+    background-color: #3a3a3a !important;
+}
+
+
 .dropdown-header {
     display: block;
     padding: 3px 20px;

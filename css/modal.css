@@ -98,9 +98,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     }
 }
 
-#addtask_pr_modal .modal-dialog {
-    width: 600px;
-}
 
 
 

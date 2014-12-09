@@ -10,7 +10,7 @@
     <link href="<?php print(base_url()); ?>assets/css/bootstrap.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>assets/css/bootstrap-switch.min.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>assets/css/bootstrap-select.css" rel="stylesheet">
-    <link href="<?php print(base_url()); ?>assets/css/datepicker3.css" rel="stylesheet">
+    <link href="<?php print(base_url()); ?>assets/css/jquery.datetimepicker.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="<?php print(base_url()); ?>css/sidebar.css" rel="stylesheet">

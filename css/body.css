@@ -65,14 +65,16 @@ div.navbar-collapse.navbar-inverse.navbar-fixed-top {
      padding-left: 0;
 }
 
-.datepicker{z-index:1151 !important;}
-
-.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top {
-    padding: 10px;
-    cursor: pointer;
+.xdsoft_datetimepicker.xdsoft_dark {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-top: 8px;
 }
 
-td.active.day, td.day:hover {
-    background-color: #ddd;
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
 }
+
