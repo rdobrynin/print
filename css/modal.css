@@ -51,42 +51,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     overflow: initial;
 }
 
-#task_modal_timer .modal-dialog {
-    background: transparent;
-}
-
-#task_modal_timer .modal-content {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
-#task_modal_timer .form-control{
-    background-color: #fff;
-    color: #A0A0A0;
-}
-
-#task_modal_timer .btn-special {
-    color: #929292;
-    background-color: #FFFFFF;
-    border-color: #C0C0C0;
-}
-
-#task_modal_timer .dropdown-menu {
-
-    background-color: #FFFFFF;
-
-}
-
-#task_modal_timer .dropdown-menu > li > a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.428571429;
-    color: #9b9b9b;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.95);
-}
 
 
 @media (min-width: 768px) {

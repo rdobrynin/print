@@ -11,7 +11,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="<?php print(base_url());?>assets/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php print(base_url());?>assets/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="<?php print(base_url());?>assets/css/bootstrap-select.css" rel="stylesheet">
   <!-- Add custom CSS here -->
   <link href="<?php print(base_url());?>css/login.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
