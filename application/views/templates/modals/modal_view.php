@@ -76,6 +76,7 @@
                             <label for="project_title">Project title</label>
                             <input type="text" name="project_title" id="project_title" class="form-control btn-special" placeholder="Project title">
                         </div>
+                        <div style="display: none; margin-bottom: 10px;" id="check_title_project" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;This project already added</div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">

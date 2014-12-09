@@ -56,6 +56,24 @@ class Project_model extends CI_Model {
     }
 
     /**
+     * Get projects
+     * @return mixed
+     */
+
+    public function check_project($title) {
+        $query = $this
+            ->db
+            ->where('title', $title)
+            ->get('project');
+        if ($query->num_rows > 0) {
+            return FALSE;
+        }
+        else {
+            return TRUE;
+        }
+    }
+
+    /**
      * Count projects
      * @return mixed
      */

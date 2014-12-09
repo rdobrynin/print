@@ -83,11 +83,18 @@ console.log(localStorage);
                       $('#check_empty_project').css('display', 'none');
                   }
 
-                  if(msg.send == true) {
+                  if(msg.project == true) {
+                      $('#check_title_project').css('display', 'none');
+                  }
+                  if(msg.project == false) {
+                      $('#check_title_project').css('display', 'block');
+                  }
+
+                  if(msg.send == true && msg.project == true) {
                       $('#save_project_modal').css('display', 'block');
                       setTimeout(function() {
 
-                          $('#save_project_modal, #check_empty_project').css('display', 'none');
+                          $('#save_project_modal, #check_empty_project, #check_title_project').css('display', 'none');
                           $("input[type=text], textarea").val("");
 
                           $('#addproject_modal').modal('hide');
@@ -131,11 +138,18 @@ console.log(localStorage);
                       $('#check_empty_project').css('display', 'none');
                   }
 
-                  if(msg.send == true) {
+                  if(msg.project == true) {
+                      $('#check_title_project').css('display', 'none');
+                  }
+                  if(msg.project == false) {
+                      $('#check_title_project').css('display', 'block');
+                  }
+
+                  if(msg.send == true && msg.project == true) {
                       $('#save_project_modal').css('display', 'block');
                       setTimeout(function() {
 
-                          $('#save_project_modal, #check_empty_project').css('display', 'none');
+                          $('#save_project_modal, #check_empty_project, #check_title_project').css('display', 'none');
                           $("input[type=text], textarea").val("");
 
                           $('#addproject_modal').modal('hide');

@@ -131,11 +131,11 @@ class Dashboard extends CI_Controller {
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
-        if ($data['user'][0]['role'] == 5) {
+        if ($data['user'][0]['role'] == 5 OR $data['user'][0]['role'] == 4) {
             $this->load->view('templates/users_view', $data);
             $this->load->view('templates/settings_view', $data);
         }
-        elseif ($data['user'][0]['role'] == 1 OR $data['user'][0]['role'] == 2 OR $data['user'][0]['role'] == 3 OR $data['user'][0]['role'] == 4) {
+        elseif ($data['user'][0]['role'] == 1 OR $data['user'][0]['role'] == 2 OR $data['user'][0]['role'] == 3) {
             $this->load->view('templates/settings_view', $data);
         }
         else {
