@@ -428,9 +428,9 @@ class Ajax extends CI_Controller {
 
     function changeTaskType() {
         $this->load->model('task_model');
-        $task_types = $this->task_model->getTaskTypes();
         $result['title'] = $_POST['title'];
         $result['id'] = substr(trim($_POST['id']), 4);
+        $task_types = $this->task_model->getTaskTypes();
         $result['title_change'] = false;
         $result['change'] = false;
         if ($_POST['title'] != '') {
@@ -443,7 +443,12 @@ class Ajax extends CI_Controller {
                 }
             }
             if ($result['change'] == true) {
-                $result['title_change'] = $_POST['title'];
+                if ($query = $this->task_model->updateTaskType($result['id'], $result['title'])) {
+                    $result['result']=$result['title'];
+                }
+                else {
+                    $result['result']=false;
+                }
             }
         }
         echo json_encode($result);

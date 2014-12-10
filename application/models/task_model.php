@@ -22,6 +22,24 @@ class Task_model extends CI_Model {
     }
 
     /**
+     * Get types of tasks
+     * @return mixed
+     */
+
+    public function updateTaskType($id,$title) {
+        $data = array(
+            'title' =>  $title
+        );
+
+        $this->db->where('id', $id);
+        $update =$this->db->update('task_type', $data);
+        return $update;
+    }
+
+
+
+
+    /**
      * get users();
      * @return mixed
      */
