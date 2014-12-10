@@ -452,15 +452,29 @@ class Ajax extends CI_Controller {
     }
 
     function createTask() {
-        $result['title'] = $_POST['title'];
-        $result['desc'] = $_POST['desc'];
-        $result['project'] = $_POST['project'];
-        $result['dueto'] = $_POST['dueto'];
-        $result['label'] = $_POST['label'];
-        $result['priority'] = $_POST['priority'];
-        $result['implementor'] = $_POST['implementor'];
-        $result['owner'] = $_POST['owner'];
+        $this->load->model('task_model');
+        $result['title'] = $this->input->post('title');
+        $result['desc'] = $this->input->post('desc');
+        $result['project'] = $this->input->post('project');
+        $result['dueto'] = $this->input->post('dueto');
+        $result['label'] = $this->input->post('label');
+        $result['priority'] = $this->input->post('priority');
+        $result['implementor'] = $this->input->post('implementor');
+        $result['owner'] = $this->input->post('owner');
+        $result['empty'] = false;
+        if ($_POST['title'] == '' OR $_POST['desc'] == '' OR $_POST['project'] == '' OR $_POST['label'] == '' OR $_POST['dueto'] == '' OR $_POST['priority'] == '' OR $_POST['implementor'] == '') {
+            $result['empty'] = true;
+        }
+        else {
+            $result['empty'] = false;
 
+            if ($this->task_model->insertTask() == true) {
+                $result['result'] = true;
+            }
+            else {
+                $result['result'] = false;
+            }
+        }
         echo json_encode($result);
     }
 }

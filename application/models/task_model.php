@@ -75,7 +75,7 @@ class Task_model extends CI_Model {
      * Create task
      * @return mixed
      */
-    public function insert_task() {
+    public function insertTask() {
         $data = array (
             'uid' => $this->input->post('owner'),
             'pid' => $this->input->post('project'),
@@ -83,6 +83,8 @@ class Task_model extends CI_Model {
             'title' => $this->input->post('title'),
             'desc' => $this->input->post('desc'),
             'due_time' =>$this->input->post('dueto'),
+            'label' =>$this->input->post('label'),
+            'priority' =>$this->input->post('priority'),
         );
         $insert = $this->db->insert('task', $data);
         return $insert;

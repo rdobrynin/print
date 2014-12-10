@@ -131,6 +131,27 @@ if (!function_exists('project_status')) {
     }
 }
 
+
+/**
+ * priority status
+ */
+
+if (!function_exists('priority_status_index')) {
+    function priority_status_index($status) {
+        $result=0;
+        if($status == 0) {
+            $result = 'minor';
+        }
+        else if($status == 1) {
+            $result = 'major';
+        }
+        else if($status == 2) {
+            $result = 'critical';
+        }
+        return $result;
+    }
+}
+
 /**
  * get countries
  */

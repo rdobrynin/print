@@ -301,7 +301,6 @@ console.log(localStorage);
       });
 
       $("#addtask_pr_btn").click(function(event) {
-
           var form_data = {
               title :$('#task_pr_title').val(),
               desc :$('#task_pr_desc').val(),
@@ -318,7 +317,25 @@ console.log(localStorage);
               data: form_data,
               dataType: 'json',
               success: function (msg) {
-                console.log(msg);
+                  console.log(msg);
+                  if (msg.empty == true) {
+                      $('#check_empty_task_pr').fadeIn('slow').css('display', 'block');
+                  }
+                  else {
+                      $('#check_empty_task_pr').fadeIn('slow').css('display', 'none');
+                  }
+                  if(msg.result == true) {
+                      $('#save_task_pr_modal').fadeIn('slow').css('display', 'block');
+                      setTimeout(function() {
+                          $('#save_task_pr_modal,#save_error_task_pr_modal').css('display', 'none');
+                          $("input[type=text], textarea").val("");
+                          $('#addtask_pr_modal').modal('hide');
+                      }, 2000);
+                  }
+                  else {
+                      $('#save_task_pr_modal').css('display', 'none');
+                      $('#save_error_task_pr_modal').fadeIn('slow').css('display', 'block');
+                  }
               }
           });
       });

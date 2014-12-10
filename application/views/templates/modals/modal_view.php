@@ -164,9 +164,9 @@
                         <div class="form-group">
                             <label for="task_priority_choose">Priority</label>
                             <select class="form-control selectpicker" id="task_priority_choose" name="task_priority_choose">
-                                    <option value="minor" data-content="<span class='label label-xs label-primary'>Minor</span>"></option>
-                                    <option value="major" data-content="<span class='label label-xs label-warning'>Major</span>"></option>
-                                    <option value="critical" data-content="<span class='label label-xs label-danger'>Critical</span>"></option>
+                                    <option value="0" data-content="<span class='label label-xs label-primary'><?php echo priority_status_index(0) ?></span>"></option>
+                                    <option value="1" data-content="<span class='label label-xs label-warning'><?php echo priority_status_index(1) ?></span>"></option>
+                                    <option value="2" data-content="<span class='label label-xs label-danger'><?php echo priority_status_index(2) ?></span>"></option>
                             </select>
                         </div>
                     </div>
@@ -187,7 +187,8 @@
                         </div>
                     </div>
                 </div>
-                <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
+                <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added the task</div>
+                <div style="display: none; margin-bottom: 10px;" id="save_error_task_pr_modal" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Error to add task</div>
             </div>
             <div class="modal-footer" style="padding-top: 10px;">
                 <div class="form-group">
