@@ -269,5 +269,35 @@ console.log(localStorage);
           }
         });
       }, 5900);
+
+      $(".btn-update-ttp").click(function(event) {
+          var current_id = event.target.id;
+          var input_id = event.target.id+'_input';
+          var input_val = $('#'+input_id).val();
+          var form_data = {
+              title :input_val,
+              id: current_id
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/changeTaskType'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  console.log(msg.check['title']);
+                  if (msg.empty == true) {
+                      $('#check_empty_' + input_id).fadeIn('slow').css('display', 'block');
+                  }
+                  else {
+                      if (msg.check['title'] != input_val) {
+                          $('#' + current_id).html('updated');
+                      }
+
+                      $('#check_empty_' + input_id).fadeOut('slow').css('display', 'none');
+
+                  }
+              }
+          });
+      });
   });
 </script>
