@@ -90,6 +90,27 @@ class Task_model extends CI_Model {
         return $insert;
     }
 
+
+    /**
+     * verify task
+     * @param $id
+     * @return bool
+     */
+
+    public function checkTask($title) {
+        $query = $this
+            ->db
+            ->where('title', $title)
+            ->limit('1')
+            ->get('task');
+        if ($query->num_rows > 0) {
+            return $query->row();
+        }
+        else {
+            return FALSE;
+        }
+    }
+
 }
 
 

@@ -292,9 +292,7 @@ console.log(localStorage);
                       if (msg.check['title'] != input_val) {
                           $('#' + current_id).html('updated');
                       }
-
                       $('#check_empty_' + input_id).fadeOut('slow').css('display', 'none');
-
                   }
               }
           });
@@ -324,7 +322,8 @@ console.log(localStorage);
                   else {
                       $('#check_empty_task_pr').fadeIn('slow').css('display', 'none');
                   }
-                  if(msg.result == true) {
+                  if(msg.result == true && msg.repeat == false) {
+                      $('#check_repeat_task_pr').fadeIn('slow').css('display', 'none');
                       $('#save_task_pr_modal').fadeIn('slow').css('display', 'block');
                       setTimeout(function() {
                           $('#save_task_pr_modal,#save_error_task_pr_modal').css('display', 'none');
@@ -332,9 +331,12 @@ console.log(localStorage);
                           $('#addtask_pr_modal').modal('hide');
                       }, 2000);
                   }
+                  else if(msg.repeat != false) {
+                      $('#check_repeat_task_pr').fadeIn('slow').css('display', 'block');
+                  }
                   else {
                       $('#save_task_pr_modal').css('display', 'none');
-                      $('#save_error_task_pr_modal').fadeIn('slow').css('display', 'block');
+//                      $('#save_error_task_pr_modal').fadeIn('slow').css('display', 'block');
                   }
               }
           });

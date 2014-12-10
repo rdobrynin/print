@@ -462,18 +462,26 @@ class Ajax extends CI_Controller {
         $result['implementor'] = $this->input->post('implementor');
         $result['owner'] = $this->input->post('owner');
         $result['empty'] = false;
+        $result['repeat'] = $this->task_model->checkTask($this->input->post('title'));
         if ($_POST['title'] == '' OR $_POST['desc'] == '' OR $_POST['project'] == '' OR $_POST['label'] == '' OR $_POST['dueto'] == '' OR $_POST['priority'] == '' OR $_POST['implementor'] == '') {
             $result['empty'] = true;
         }
         else {
-            $result['empty'] = false;
+            if($result['repeat'] == false) {
+                $result['empty'] = false;
+                if ($this->task_model->insertTask() == true) {
+                    $result['result'] = true;
+                }
+                else {
+                    $result['result'] = false;
+                }
 
-            if ($this->task_model->insertTask() == true) {
-                $result['result'] = true;
             }
             else {
                 $result['result'] = false;
             }
+
+
         }
         echo json_encode($result);
     }
