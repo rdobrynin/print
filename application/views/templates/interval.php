@@ -6,7 +6,6 @@
         // Get last record from events du to current timestamp
         setInterval(function(){
             $.get( "<?php echo site_url('ajax/readEvent'); ?>", function( data ) {
-                console.log(data['type']);
                 var data_time = toTimestamp(data.time);
                 var dt = new Date().getTime();
                 var n = dt.toString();

@@ -1,5 +1,5 @@
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div class="page-content-wrapper">
   <div class="content-header">
     <h1>
       <a id="menu-toggle" href="#" class="btn btn-default"><i

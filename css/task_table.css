@@ -36,9 +36,15 @@ tbody.tbody-task {
 
 .panel-primary {
     border-color: #CFCFCF;
+    background-color: #E7E7E7;
 }
 
 #status-id{
 background-color: #FFDBDD;
 }
 
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #9E9E9E;
+    border-color: #CFCFCF;
+}

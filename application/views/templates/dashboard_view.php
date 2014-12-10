@@ -1,9 +1,11 @@
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div class="page-content-wrapper">
     <div class="page-content inset">
         <div class="row">
             <div class="col-md-8">
+                <h3 class="h_title">Current activity</h3>
                 <div class="row">
+
                     <div class="col-md-6 col-vlg-3 col-sm-6">
                         <div class="tiles green m-b-10">
                             <div class="tiles-body">
@@ -11,12 +13,13 @@
                                 <div class="tiles-title text-black">Projects</div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
-                                        <span class="item-title">Overall Projects</span> <span class="item-count animate-number semi-bold" data-value="2415" data-animation-duration="700">2</span>
+                                        <span class="item-title">Overall Projects</span> <span class="item-count animate-number semi-bold" data-value="2415" data-animation-duration="700"><?php if ($projects != false): ?><?php print(count($projects));?><?php else:?>0<?php endif ?></span>
                                     </div>
                                 </div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
                                         <span class="item-title">Current Team</span> <span class="item-count animate-number semi-bold" data-value="751" data-animation-duration="700">2</span>
+
                                     </div>
                                 </div>
                                 <div class="widget-stats ">
@@ -38,7 +41,7 @@
                                 <div class="tiles-title text-black">Tasks</div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
-                                        <span class="item-title">Overall Tasks</span> <span class="item-count animate-number semi-bold" data-value="15489" data-="" animation-duration="700">4</span>
+                                        <span class="item-title">Overall Tasks</span> <span class="item-count animate-number semi-bold" data-value="15489" data-="" animation-duration="700"><?php if ($tasks != false): ?><?php print(count($tasks));?><?php else:?>0<?php endif ?></span>
                                     </div>
                                 </div>
                                 <div class="widget-stats">
@@ -60,10 +63,6 @@
                     </div>
 
                 </div>
-
-
-
-
                     <div class="row-fluid" style="padding-top: 20px;">
                         <table class="table">
                             <thead>
@@ -144,9 +143,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
             </div>
             <div class="col-md-4">
                 <div class="panel panel-primary">
@@ -251,6 +247,25 @@
         <!-- ./row-->
     </div>
 </div>
+
+
+
+
+
+
+<div class="page-content-wrapper">
+<div class="page-content inset">
+<div class="row">
+<div class="col-md-12">
+    <h3 class="h_title">Logs activity</h3>
+
+</div>
+
+</div>
+<!-- ./row-->
+</div>
+</div>
+
 
 </div>
 
