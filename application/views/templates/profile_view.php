@@ -2,7 +2,7 @@
 <?php include('navtop_view.php'); ?>
 <?php include('sidebar_view.php'); ?>
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div class="page-content-wrapper">
     <div class="page-content inset">
         <div class="row">
             <!--FORM-->

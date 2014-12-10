@@ -13,10 +13,10 @@ if (!function_exists('show_role')) {
       $result = lang('role_master');
     }
     else if($role == 4) {
-      $result = lang('role_manager');
+      $result = lang('role_curator');
     }
     else if($role == 3) {
-        $result = lang('role_curator');
+        $result = lang('role_manager');
     }
     else if($role == 2) {
         $result = lang('role_implementor');
@@ -126,6 +126,27 @@ if (!function_exists('project_status')) {
         }
         else if($status == 0) {
             $result = 'approve';
+        }
+        return $result;
+    }
+}
+
+
+/**
+ * priority status
+ */
+
+if (!function_exists('priority_status_index')) {
+    function priority_status_index($status) {
+        $result=0;
+        if($status == 0) {
+            $result = 'minor';
+        }
+        else if($status == 1) {
+            $result = 'major';
+        }
+        else if($status == 2) {
+            $result = 'critical';
         }
         return $result;
     }

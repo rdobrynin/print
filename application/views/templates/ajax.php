@@ -269,5 +269,91 @@ console.log(localStorage);
           }
         });
       }, 5900);
+
+      $(".btn-update-ttp").click(function(event) {
+          var current_id = event.target.id;
+          var input_id = event.target.id+'_input';
+          var input_val = $('#'+input_id).val();
+          var form_data = {
+              title :input_val,
+              id: current_id
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/changeTaskType'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  console.log(msg.check['title']);
+                  if (msg.empty == true) {
+                      $('#check_empty_' + input_id).fadeIn('slow').css('display', 'block');
+                  }
+                  else {
+                      if (msg.check['title'] != input_val) {
+                          $('#' + current_id).html('updated');
+                      }
+                      $('#check_empty_' + input_id).fadeOut('slow').css('display', 'none');
+                  }
+              }
+          });
+      });
+
+      $("#addtask_pr_btn").click(function(event) {
+          var form_data = {
+              title :$('#task_pr_title').val(),
+              desc :$('#task_pr_desc').val(),
+              project :$('#choose_project_modal').val(),
+              dueto :$('#dueto_modal').val(),
+              label :$('#task_type_choose').val(),
+              priority :$('#task_priority_choose').val(),
+              implementor :$('#implementor_choose_modal').val(),
+              owner :$('#user_added_task_pr_id').val()
+
+
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/createTask'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                  console.log(msg);
+                  if (msg.empty == true) {
+                      $('#check_empty_task_pr').fadeIn('slow').css('display', 'block');
+                  }
+                  else {
+                      $('#check_empty_task_pr').fadeIn('slow').css('display', 'none');
+                  }
+                  if(msg.result == true && msg.repeat == false) {
+                      $('#check_repeat_task_pr').fadeIn('slow').css('display', 'none');
+                      $('#save_task_pr_modal').fadeIn('slow').css('display', 'block');
+                      setTimeout(function() {
+                          $('#save_task_pr_modal,#save_error_task_pr_modal').css('display', 'none');
+                          $("input[type=text], textarea").val("");
+                          $('#addtask_pr_modal').modal('hide');
+                      }, 2000);
+
+
+                      setInterval(function(){
+                          $.get( "<?php echo site_url('ajax/countTasks'); ?>", function( data ) {
+                              if(data.length >0) {
+                                  console.log(data);
+                                  $('#badge-count-tasks').html(data.length);
+                              }
+                          }, "json" );
+                      }, 3000);
+
+
+                  }
+                  else if(msg.repeat != false) {
+                      $('#check_repeat_task_pr').fadeIn('slow').css('display', 'block');
+                  }
+                  else {
+                      $('#save_task_pr_modal').css('display', 'none');
+//                      $('#save_error_task_pr_modal').fadeIn('slow').css('display', 'block');
+                  }
+              }
+          });
+      });
   });
 </script>

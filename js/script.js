@@ -1,3 +1,8 @@
+function toTimestamp(strDate){
+    var datum = Date.parse(strDate);
+    return datum/1000;
+}
+
 $(function() {
 
     $(document).on('click', '.panel-heading span.clickable', function (e) {

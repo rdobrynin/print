@@ -27,6 +27,7 @@
     <link href="<?php print(base_url()); ?>css/right_sidebar.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>css/modal.css" rel="stylesheet">
     <link href="<?php print(base_url()); ?>css/btn.css" rel="stylesheet">
+    <link href="<?php print(base_url()); ?>css/logs.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
 <!--    <link rel="stylesheet/less" type="text/css" href="--><?php //print(base_url()); ?><!--less/style.less">-->

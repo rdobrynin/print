@@ -1,9 +1,11 @@
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div class="page-content-wrapper">
     <div class="page-content inset">
         <div class="row">
             <div class="col-md-8">
+                <h3 class="h_title">Current activity</h3>
                 <div class="row">
+
                     <div class="col-md-6 col-vlg-3 col-sm-6">
                         <div class="tiles green m-b-10">
                             <div class="tiles-body">
@@ -11,12 +13,13 @@
                                 <div class="tiles-title text-black">Projects</div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
-                                        <span class="item-title">Overall Projects</span> <span class="item-count animate-number semi-bold" data-value="2415" data-animation-duration="700">2</span>
+                                        <span class="item-title">Overall Projects</span> <span class="item-count animate-number semi-bold" data-value="2415" data-animation-duration="700"><?php if ($projects != false): ?><?php print(count($projects));?><?php else:?>0<?php endif ?></span>
                                     </div>
                                 </div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
                                         <span class="item-title">Current Team</span> <span class="item-count animate-number semi-bold" data-value="751" data-animation-duration="700">2</span>
+
                                     </div>
                                 </div>
                                 <div class="widget-stats ">
@@ -38,7 +41,7 @@
                                 <div class="tiles-title text-black">Tasks</div>
                                 <div class="widget-stats">
                                     <div class="wrapper transparent">
-                                        <span class="item-title">Overall Tasks</span> <span class="item-count animate-number semi-bold" data-value="15489" data-="" animation-duration="700">4</span>
+                                        <span class="item-title">Overall Tasks</span> <span class="item-count animate-number semi-bold" data-value="15489" data-="" animation-duration="700"><?php if ($tasks != false): ?><?php print(count($tasks));?><?php else:?>0<?php endif ?></span>
                                     </div>
                                 </div>
                                 <div class="widget-stats">
@@ -60,10 +63,6 @@
                     </div>
 
                 </div>
-
-
-
-
                     <div class="row-fluid" style="padding-top: 20px;">
                         <table class="table">
                             <thead>
@@ -144,9 +143,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
             </div>
             <div class="col-md-4">
                 <div class="panel panel-primary">
@@ -251,6 +247,92 @@
         <!-- ./row-->
     </div>
 </div>
+
+
+
+
+
+
+<div class="page-content-wrapper">
+<div class="page-content inset">
+<div class="row">
+<div class="col-md-12">
+    <h3 class="h_title">Logs activity</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+
+                    <div class="panel-body-table">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <td><strong>#ID</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Date</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>User</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Action</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Status</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>item</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Description</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Andrei Abozau</td>
+                                    <td class="text-left">in development</td>
+                                    <td class="text-left"><span class="label label-xs label-success">proccess</span></td>
+                                    <td class="text-left">task</td>
+                                    <td class="text-left">Paypal module</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+</div>
+<!-- ./row-->
+</div>
+</div>
+
 
 </div>
 

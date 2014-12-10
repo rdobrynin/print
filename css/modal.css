@@ -59,6 +59,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     }
 }
 
+#settings-dialog-modal {
+    width: 600px;
+}
+
+#settings-content-modal {
+    height: 100%;
+}
 
 
 

@@ -348,7 +348,7 @@ class Ajax extends CI_Controller {
         }
         else {
             $text ='created project';
-            $this->project_model->createEvent($uid, $desc, $text, $full_name, $title);
+            $this->project_model->createEvent($uid, $desc, $text, $full_name, $title, 0);
             if ($query = $this->project_model->create_project($title, $desc, $uid)) {
                 $result['send'] = true;
                 $result['project'] = true;
@@ -375,6 +375,18 @@ class Ajax extends CI_Controller {
         $result = $this->project_model->countProjects();
         echo json_encode ($result);
     }
+
+
+    /**
+     * countTasks
+     */
+
+    function countTasks() {
+        $this->load->model('task_model');
+        $result = $this->task_model->countTasks();
+        echo json_encode ($result);
+    }
+
 
     /**
      * Read event
@@ -422,6 +434,72 @@ class Ajax extends CI_Controller {
         echo json_encode($result);
     }
 
+    /**
+     * Add project
+     */
+
+    function changeTaskType() {
+        $this->load->model('task_model');
+        $result['title'] = $_POST['title'];
+        $result['id'] = substr(trim($_POST['id']), 4);
+        $check_task = $this->task_model->checkTaskType($result['id']);
+        $result['title_change'] = false;
+
+        $result['empty']=false;
+        if ($_POST['title'] != '') {
+
+            $result['check'] =$check_task;
+                if ($query = $this->task_model->updateTaskType($result['id'], $result['title'])) {
+                    $result['result']=$result['title'];
+                }
+                else {
+                    $result['result']=false;
+                }
+
+        }
+        else {
+            $result['empty']=true;
+        }
+        echo json_encode($result);
+    }
+
+    function createTask() {
+        $this->load->model('project_model');
+        $this->load->model('task_model');
+        $this->load->model('admin_model');
+        $result['title'] = $this->input->post('title');
+        $result['desc'] = $this->input->post('desc');
+        $result['project'] = $this->input->post('project');
+        $result['dueto'] = $this->input->post('dueto');
+        $result['label'] = $this->input->post('label');
+        $result['priority'] = $this->input->post('priority');
+        $result['implementor'] = $this->input->post('implementor');
+        $result['owner'] = $this->input->post('owner');
+        $result['empty'] = false;
+        $name_array =  $this->admin_model->get_user_id($result['owner']);
+        $full_name = $name_array[0]['first_name'].' '.$name_array[0]['last_name'];
+        $result['repeat'] = $this->task_model->checkTask($this->input->post('title'));
+        if ($_POST['title'] == '' OR $_POST['desc'] == '' OR $_POST['project'] == '' OR $_POST['label'] == '' OR $_POST['dueto'] == '' OR $_POST['priority'] == '' OR $_POST['implementor'] == '') {
+            $result['empty'] = true;
+        }
+        else {
+            if($result['repeat'] == false) {
+                $result['empty'] = false;
+                $text = 'added task';
+                $this->project_model->createEvent($result['owner'], $result['desc'],  $text, $full_name, $result['title'], 1);
+                if ($this->task_model->insertTask() == true) {
+                    $result['result'] = true;
+                }
+                else {
+                    $result['result'] = false;
+                }
+            }
+            else {
+                $result['result'] = false;
+            }
+        }
+        echo json_encode($result);
+    }
 }
 
 

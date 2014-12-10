@@ -22,7 +22,7 @@
 <body>
 <!--CONETNT-->
 <div class="container">
-    <div id="page-content-wrapper">
+    <div class="page-content-wrapper">
         <div class="page-content inset">
             <div id="wrapper">
                     <table class="table">

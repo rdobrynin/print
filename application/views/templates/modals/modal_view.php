@@ -118,6 +118,7 @@
                             <label for="task_pr_title">Task name</label>
                             <input type="text" name="task_pr_title" id="task_pr_title" class="form-control btn-special" placeholder="Task name title">
                         </div>
+                        <div style="display: none; margin-bottom: 10px;" id="check_repeat_task_pr" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;This title already exists</div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -130,7 +131,7 @@
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="choose_project_modal">Choose project</label>
-                            <select class="form-control selectpicker" id="task_type_choose" name="choose_project_modal">
+                            <select class="form-control selectpicker" id="choose_project_modal" name="choose_project_modal">
                                 <?php foreach ($projects as $pk=>$pv): ?>
                                     <option value="<?php print($pv['pid']); ?>" ><?php print(ucfirst($pv['title'])); ?></option>
                                 <?php endforeach ?>
@@ -164,9 +165,9 @@
                         <div class="form-group">
                             <label for="task_priority_choose">Priority</label>
                             <select class="form-control selectpicker" id="task_priority_choose" name="task_priority_choose">
-                                    <option value="minor" data-content="<span class='label label-xs label-primary'>Minor</span>"></option>
-                                    <option value="major" data-content="<span class='label label-xs label-warning'>Major</span>"></option>
-                                    <option value="critical" data-content="<span class='label label-xs label-danger'>Critical</span>"></option>
+                                    <option value="0" data-content="<span class='label label-xs label-primary'><?php echo priority_status_index(0) ?></span>"></option>
+                                    <option value="1" data-content="<span class='label label-xs label-warning'><?php echo priority_status_index(1) ?></span>"></option>
+                                    <option value="2" data-content="<span class='label label-xs label-danger'><?php echo priority_status_index(2) ?></span>"></option>
                             </select>
                         </div>
                     </div>
@@ -174,10 +175,9 @@
 
                     <div class="col-xs-12 col-md-12">
                         <div class="form-group">
-                            <label for="implementor_choose_modal">Choose implementor:</label>
-
+                            <label for="implementor_choose_modal">Choose implementor: </label>
                             <?php if ($imps != false): ?>
-                                <select class="selectpicker" name="curator" id="implementor_choose_modal">
+                                <select class="form-control selectpicker" id="implementor_choose_modal" name="implementor_choose_modal">
                                     <?php foreach ($imps as $k => $v): ?>
                                         <option value="<?php echo $v['id'] ?>"><?php echo $v['first_name'] . ' ' . $v['last_name'] ?></option>
                                     <?php endforeach ?>
@@ -188,13 +188,14 @@
                         </div>
                     </div>
                 </div>
-                <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added task</div>
+                <div style="display: none; margin-bottom: 10px;" id="save_task_pr_modal" class="label label-primary label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;You have successfully added the task</div>
+                <div style="display: none; margin-bottom: 10px;" id="save_error_task_pr_modal" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Error to add task</div>
             </div>
             <div class="modal-footer" style="padding-top: 10px;">
                 <div class="form-group">
                 <input type="hidden" name="user_added_task_pr_id" id="user_added_task_pr_id" value="<?php print($user[0]['id'])?>">
                 <div style="display: none; margin-bottom: 10px;" id="check_empty_task_pr" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
-                <button type="button" class="btn btn-success" id="addtask_pr_btn">Add task</button>
+                <button type="button" class="btn btn-success <?php if ($imps == false): ?>disabled<?php endif ?>" id="addtask_pr_btn">Add task</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
             </div>
@@ -204,7 +205,7 @@
 </div> <!-- #/addtask_pr_modal -->
 <script type="text/javascript">
     $(function () {
-        $('#dueto_modal').datetimepicker({theme:'dark'});
+        $('#dueto_modal').datetimepicker({theme:'dark',minDate: 0,minTime:0});
         $('#btn_modal_miss_imp').click(function () {
             $('#addtask_pr_modal').modal('hide');
             $('#invite').modal('show');

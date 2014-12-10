@@ -1,5 +1,5 @@
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div class="page-content-wrapper">
 
   <!-- Keep all page content within the page-content inset div! -->
   <div class="page-content inset">
