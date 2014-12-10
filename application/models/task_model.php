@@ -22,7 +22,28 @@ class Task_model extends CI_Model {
     }
 
     /**
-     * Get types of tasks
+     * verify task type
+     * @param $id
+     * @return bool
+     */
+
+    public function checkTaskType($id) {
+        $query = $this
+            ->db
+            ->where('id', $id)
+            ->limit('1')
+            ->get('task_type');
+        if ($query->num_rows > 0) {
+            return $query->row();
+        }
+        else {
+            return FALSE;
+        }
+    }
+
+
+    /**
+     * Update task
      * @return mixed
      */
 
@@ -30,7 +51,6 @@ class Task_model extends CI_Model {
         $data = array(
             'title' =>  $title
         );
-
         $this->db->where('id', $id);
         $update =$this->db->update('task_type', $data);
         return $update;

@@ -24,7 +24,7 @@
              </fieldset>
          </div>
          </form>
-          <?php if ($task_types != false): ?>
+          <?php if ($task_types != false AND $user[0]['role'] ==5 OR $user[0]['role']==4): ?>
           <form role="form" id="settings_form_ttp">
               <div class="well">
                   <fieldset class="scheduler-border">
@@ -35,6 +35,7 @@
                           <div class="form-group">
                               <input type="text" class="form-control btn-special" id="ttp_<?php print($tv['id']) ?>_input" value="<?php print($tv['title']) ?>"/>
                           </div>
+                          <div style="display: none; margin-bottom: 10px;" id="check_empty_ttp_<?php print($tv['id']) ?>_input" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
                       </div>
                       <div class="col-md-2" style="padding-left: 0">
                           <div class="form-group">
@@ -54,7 +55,7 @@
           <?php endif ?>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location = '<?php print(site_url()) ?>';">Update task types</button>
       </div>
     </div>
 
@@ -78,20 +79,30 @@
             var current_id = event.target.id;
             var input_id = event.target.id+'_input';
             var input_val = $('#'+input_id).val();
-
                 var form_data = {
                     title :input_val,
                     id: current_id
                 };
-                $.ajax({
-                    url: "<?php echo site_url('ajax/changeTaskType'); ?>",
-                    type: 'POST',
-                    data: form_data,
-                    dataType: 'json',
-                    success: function (msg) {
-                   console.log(msg);
+            $.ajax({
+                url: "<?php echo site_url('ajax/changeTaskType'); ?>",
+                type: 'POST',
+                data: form_data,
+                dataType: 'json',
+                success: function (msg) {
+                    console.log(msg.check['title']);
+                    if (msg.empty == true) {
+                        $('#check_empty_' + input_id).fadeIn('slow').css('display', 'block');
                     }
-                });
+                    else {
+                        if (msg.check['title'] != input_val) {
+                            $('#' + current_id).html('updated');
+                        }
+
+                        $('#check_empty_' + input_id).fadeOut('slow').css('display', 'none');
+
+                    }
+                }
+            });
         });
 
     });

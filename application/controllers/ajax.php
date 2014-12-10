@@ -430,26 +430,23 @@ class Ajax extends CI_Controller {
         $this->load->model('task_model');
         $result['title'] = $_POST['title'];
         $result['id'] = substr(trim($_POST['id']), 4);
-        $task_types = $this->task_model->getTaskTypes();
+        $check_task = $this->task_model->checkTaskType($result['id']);
         $result['title_change'] = false;
-        $result['change'] = false;
+
+        $result['empty']=false;
         if ($_POST['title'] != '') {
-            foreach ($task_types as $tk => $tv) {
-                if ($tv['title'] == $_POST['title']) {
-                    $result['change'] = false;
-                }
-                else {
-                    $result['change'] = true;
-                }
-            }
-            if ($result['change'] == true) {
+
+            $result['check'] =$check_task;
                 if ($query = $this->task_model->updateTaskType($result['id'], $result['title'])) {
                     $result['result']=$result['title'];
                 }
                 else {
                     $result['result']=false;
                 }
-            }
+
+        }
+        else {
+            $result['empty']=true;
         }
         echo json_encode($result);
     }
