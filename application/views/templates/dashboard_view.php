@@ -258,7 +258,74 @@
 <div class="row">
 <div class="col-md-12">
     <h3 class="h_title">Logs activity</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
 
+                    <div class="panel-body-table">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <td><strong>#ID</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Date</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>User</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Action</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Status</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>item</strong></td>
+                                    <td class="text-left" style="border-left: 1px solid #ddd;"><strong>Description</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Andrei Abozau</td>
+                                    <td class="text-left">in development</td>
+                                    <td class="text-left"><span class="label label-xs label-success">proccess</span></td>
+                                    <td class="text-left">task</td>
+                                    <td class="text-left">Paypal module</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+                                <tr>
+                                    <td>1012</td>
+                                    <td class="text-left">2014-12-10 16:56:03</td>
+                                    <td class="text-left">Roman Dobrynin</td>
+                                    <td class="text-left">create</td>
+                                    <td class="text-left"><span class="label label-xs label-warning">approve</span></td>
+                                    <td class="text-left">project</td>
+                                    <td class="text-left">Magento implementation</td>
+                                </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
 </div>
 
 </div>
