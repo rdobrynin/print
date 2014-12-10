@@ -308,6 +308,8 @@ console.log(localStorage);
               priority :$('#task_priority_choose').val(),
               implementor :$('#implementor_choose_modal').val(),
               owner :$('#user_added_task_pr_id').val()
+
+
           };
           $.ajax({
               url: "<?php echo site_url('ajax/createTask'); ?>",

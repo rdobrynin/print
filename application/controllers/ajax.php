@@ -348,7 +348,7 @@ class Ajax extends CI_Controller {
         }
         else {
             $text ='created project';
-            $this->project_model->createEvent($uid, $desc, $text, $full_name, $title);
+            $this->project_model->createEvent($uid, $desc, $text, $full_name, $title, 0);
             if ($query = $this->project_model->create_project($title, $desc, $uid)) {
                 $result['send'] = true;
                 $result['project'] = true;
@@ -464,7 +464,9 @@ class Ajax extends CI_Controller {
     }
 
     function createTask() {
+        $this->load->model('project_model');
         $this->load->model('task_model');
+        $this->load->model('admin_model');
         $result['title'] = $this->input->post('title');
         $result['desc'] = $this->input->post('desc');
         $result['project'] = $this->input->post('project');
@@ -474,6 +476,8 @@ class Ajax extends CI_Controller {
         $result['implementor'] = $this->input->post('implementor');
         $result['owner'] = $this->input->post('owner');
         $result['empty'] = false;
+        $name_array =  $this->admin_model->get_user_id($result['owner']);
+        $full_name = $name_array[0]['first_name'].' '.$name_array[0]['last_name'];
         $result['repeat'] = $this->task_model->checkTask($this->input->post('title'));
         if ($_POST['title'] == '' OR $_POST['desc'] == '' OR $_POST['project'] == '' OR $_POST['label'] == '' OR $_POST['dueto'] == '' OR $_POST['priority'] == '' OR $_POST['implementor'] == '') {
             $result['empty'] = true;
@@ -481,6 +485,8 @@ class Ajax extends CI_Controller {
         else {
             if($result['repeat'] == false) {
                 $result['empty'] = false;
+                $text = 'added task';
+                $this->project_model->createEvent($result['owner'], $result['desc'],  $text, $full_name, $result['title'], 1);
                 if ($this->task_model->insertTask() == true) {
                     $result['result'] = true;
                 }

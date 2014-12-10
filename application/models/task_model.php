@@ -122,6 +122,29 @@ class Task_model extends CI_Model {
         return $query->result_array();
     }
 
+    /**
+     * Create Event
+     * @param $uid
+     * @param $title
+     * @param $text
+     * @return mixed
+     */
+
+    public function createEvent($uid,$event,$text,$name,$title) {
+
+        $data = array (
+            'uid' => $uid,
+            'event' => $event,
+            'title' => $title,
+            'text' => $text,
+            'name' => $name,
+            'type' => 1
+        );
+        $insert = $this->db->insert('events', $data);
+        return $insert;
+    }
+
+
 
 }
 
