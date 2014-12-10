@@ -64,17 +64,6 @@
 
 <script>
     $(function () {
-        $('#save_ttp').click(function () {
-            var bad = 0;
-            $('#settings_form_ttp :text').each(function () {
-                if ($.trim(this.value) == "") bad++;
-            });
-            if (bad > 0) {
-               $('#check_empty_ttp').css('display','block');
-            }
-        });
-
-
         $(".btn-update-ttp").click(function(event) {
             var current_id = event.target.id;
             var input_id = event.target.id+'_input';
