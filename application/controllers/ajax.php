@@ -422,6 +422,32 @@ class Ajax extends CI_Controller {
         echo json_encode($result);
     }
 
+    /**
+     * Add project
+     */
+
+    function changeTaskType() {
+        $this->load->model('task_model');
+        $task_types = $this->task_model->getTaskTypes();
+        $result['title'] = $_POST['title'];
+        $result['id'] = substr(trim($_POST['id']), 4);
+        $result['title_change'] = false;
+        $result['change'] = false;
+        if ($_POST['title'] != '') {
+            foreach ($task_types as $tk => $tv) {
+                if ($tv['title'] == $_POST['title']) {
+                    $result['change'] = false;
+                }
+                else {
+                    $result['change'] = true;
+                }
+            }
+            if ($result['change'] == true) {
+                $result['title_change'] = $_POST['title'];
+            }
+        }
+        echo json_encode($result);
+    }
 }
 
 

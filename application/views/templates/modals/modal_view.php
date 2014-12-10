@@ -172,12 +172,11 @@
                     </div>
 
 
-                    <div class="col-xs-12 col-md-12">
+                    <div class="col-xs-12 col-md-8">
                         <div class="form-group">
-                            <label for="implementor_choose_modal">Choose implementor:</label>
-
+                            <label for="implementor_choose_modal">Choose implementor: </label>
                             <?php if ($imps != false): ?>
-                                <select class="selectpicker" name="curator" id="implementor_choose_modal">
+                                <select class="form-control selectpicker" id="implementor_choose_modal" name="implementor_choose_modal">
                                     <?php foreach ($imps as $k => $v): ?>
                                         <option value="<?php echo $v['id'] ?>"><?php echo $v['first_name'] . ' ' . $v['last_name'] ?></option>
                                     <?php endforeach ?>
