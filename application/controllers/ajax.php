@@ -384,6 +384,44 @@ class Ajax extends CI_Controller {
         $result = $this->project_model->readEvent();
         echo json_encode ($result);
     }
+
+    /**
+     * Mail form from error page
+     */
+
+    function error_mail() {
+        $result['empty'] = true;
+        $result['send'] = false;
+        $result['check_email'] = true;
+        $name = $_POST['name'];
+        $message = $_POST['message'];
+        $email = trim($_POST['email']);
+        $phone = $_POST['phone'];
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $result['check_email'] = false;
+        }
+        else {
+            $result['check_email'] = true;
+        }
+        if($name == '' OR $message == '' OR $phone == '' OR $email == '') {
+            $result['empty'] = false;
+        }
+        else {
+            $result['empty'] = true;
+        }
+        if ($result['empty'] == true AND $result['check_email'] == true) {
+            $this->load->library('email');
+            $this->email->from($email, $name);
+            $this->email->to('roman.dobrynin@gmail.com');
+            $this->email->subject('Message from Brilliant project management error page');
+            $this->email->message("Hello, ".$name."\n"."\n"."Phone: ".$phone."\n"."\n"."Message: "."\n"."\n".$message."\n"."\n");
+            $this->email->send();
+            $result['send'] = true;
+        }
+        echo json_encode($result);
+    }
+
 }
 
 

@@ -51,6 +51,26 @@ if (!function_exists('show_lang')) {
 }
 
 /**
+ * Show prefix of language
+ */
+
+if (!function_exists('show_pref_lang')) {
+    function show_pref_lang($lang) {
+        if($lang == 'russian') {
+            $result = 'ru';
+        }
+        else if($lang == 'estonian') {
+            $result = 'et';
+        }
+        else {
+            $result='en';
+        }
+        return $result;
+    }
+}
+
+
+/**
  * short lastname with trim
  */
 

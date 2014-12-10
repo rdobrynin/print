@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
         $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -111,13 +111,22 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -147,6 +156,15 @@ class Dashboard extends CI_Controller {
             $data['task_types']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $project_array = $this->project_model->get_projects();
         if($project_array) {
             $data['projects']= $project_array;
@@ -164,7 +182,7 @@ class Dashboard extends CI_Controller {
         $data['count_new_users'] = count($new_users);
         $data['roles'] = $this->admin_model->get_roles();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -198,6 +216,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -211,7 +238,7 @@ class Dashboard extends CI_Controller {
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -227,7 +254,7 @@ class Dashboard extends CI_Controller {
 
     function test() {
         $data['current_language'] = $this->session->userdata('site_lang');
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         $this->load->view('templates/test_view', $data);
         $this->load->view('templates/footer_view');
     }
@@ -237,6 +264,15 @@ class Dashboard extends CI_Controller {
         $roles = array();
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -260,7 +296,7 @@ class Dashboard extends CI_Controller {
         $data['client'] = $this->admin_model->get_own_client($_SESSION['username']);
         $data['users'] = $this->admin_model->get_users();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -279,6 +315,16 @@ class Dashboard extends CI_Controller {
         foreach ($roles_array as $rk => $rv) {
             $roles[] = $rv;
         }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $project_array = $this->project_model->get_projects();
         if($project_array) {
             $data['projects']= $project_array;
@@ -302,7 +348,7 @@ class Dashboard extends CI_Controller {
         $data['users'] = $this->admin_model->get_users();
         $data['roles'] = $this->admin_model->get_roles();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -329,6 +375,16 @@ class Dashboard extends CI_Controller {
         else {
             $data['projects']=false;
         }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -347,7 +403,7 @@ class Dashboard extends CI_Controller {
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
         if ($client === FALSE) {
             if ($data['user'][0]['role'] == 5 OR $data['user'][0]['role'] == 4) {
-                $this->load->view('templates/head_view');
+                $this->load->view('templates/head_view',$data);
                 if ($data['user'][0]['helpblock'] == 1) {
                     $this->load->view('templates/help_block_view');
                 }
@@ -385,6 +441,7 @@ class Dashboard extends CI_Controller {
      */
 
     function  switch_help() {
+        exit();
         $data['current_language'] = $this->session->userdata('site_lang');
         $data['help'] = $this->dashboard_model->settings_help($_SESSION['username'], $this->input->post('help_block'));
         $url = $this->input->post('input_url');
@@ -407,6 +464,15 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['projects']=false;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -434,7 +500,7 @@ class Dashboard extends CI_Controller {
             if ($this->form_validation->run() !== FALSE) {
                 $title = $this->admin_model->verify_client($this->input->post('title'));
                 if ($title) {
-                    $this->load->view('templates/head_view');
+                    $this->load->view('templates/head_view',$data);
                     if ($data['user'][0]['helpblock'] == 1) {
                         $this->load->view('templates/help_block_view');
                     }
@@ -445,7 +511,7 @@ class Dashboard extends CI_Controller {
                     if ($query = $this->admin_model->create_client()) {
                         $data['response'] = 'Company creating...';
                         $data['result'] = 'clients';
-                        $this->load->view('templates/head_view');
+                        $this->load->view('templates/head_view',$data);
                         if ($data['user'][0]['helpblock'] == 1) {
                             $this->load->view('templates/help_block_view');
                         }
@@ -458,7 +524,7 @@ class Dashboard extends CI_Controller {
             else {
                 $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
                 $data['users'] = $this->admin_model->get_users();
-                $this->load->view('templates/head_view');
+                $this->load->view('templates/head_view',$data);
                 if ($data['user'][0]['helpblock'] == 1) {
                     $this->load->view('templates/help_block_view');
                 }
@@ -489,6 +555,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -512,7 +587,7 @@ class Dashboard extends CI_Controller {
         }
 
         if($data['user'][0]['role'] == 5 OR $data['user'][0]['role'] == 4 ) {
-            $this->load->view('templates/head_view');
+            $this->load->view('templates/head_view',$data);
             if ($data['user'][0]['helpblock'] == 1) {
                 $this->load->view('templates/help_block_view');
             }
@@ -549,6 +624,15 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -567,7 +651,7 @@ class Dashboard extends CI_Controller {
         $data['password'] =  $this->admin_model->get_password($_SESSION['username']);
         $roles = $this->admin_model->get_roles();
         $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-        $this->load->view('templates/head_view');
+        $this->load->view('templates/head_view',$data);
         if ($data['user'][0]['helpblock'] == 1) {
             $this->load->view('templates/help_block_view');
         }
@@ -597,6 +681,15 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['projects']=false;
+        }
+
+        $imps = $this->task_model->get_imps();
+
+        if($imps) {
+            $data['imps']= $imps;
+        }
+        else {
+            $data['imps']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -691,7 +784,7 @@ class Dashboard extends CI_Controller {
                 $data['users'] = $this->admin_model->get_users();
                 $roles = $this->admin_model->get_roles();
                 $data['avatar'] = $this->admin_model->get_avatar($_SESSION['username']);
-                $this->load->view('templates/head_view');
+                $this->load->view('templates/head_view',$data);
                 if ($data['user'][0]['helpblock'] == 1) {
                     $this->load->view('templates/help_block_view');
                 }
