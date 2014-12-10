@@ -130,7 +130,7 @@
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="choose_project_modal">Choose project</label>
-                            <select class="form-control selectpicker" id="task_type_choose" name="choose_project_modal">
+                            <select class="form-control selectpicker" id="choose_project_modal" name="choose_project_modal">
                                 <?php foreach ($projects as $pk=>$pv): ?>
                                     <option value="<?php print($pv['pid']); ?>" ><?php print(ucfirst($pv['title'])); ?></option>
                                 <?php endforeach ?>
@@ -172,7 +172,7 @@
                     </div>
 
 
-                    <div class="col-xs-12 col-md-8">
+                    <div class="col-xs-12 col-md-12">
                         <div class="form-group">
                             <label for="implementor_choose_modal">Choose implementor: </label>
                             <?php if ($imps != false): ?>
@@ -193,7 +193,7 @@
                 <div class="form-group">
                 <input type="hidden" name="user_added_task_pr_id" id="user_added_task_pr_id" value="<?php print($user[0]['id'])?>">
                 <div style="display: none; margin-bottom: 10px;" id="check_empty_task_pr" class="label label-danger label-signin"><i class="fa fa-exclamation-circle"></i>&nbsp;Fields must be not empty</div>
-                <button type="button" class="btn btn-success" id="addtask_pr_btn">Add task</button>
+                <button type="button" class="btn btn-success <?php if ($imps == false): ?>disabled<?php endif ?>" id="addtask_pr_btn">Add task</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
             </div>

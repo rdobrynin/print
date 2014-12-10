@@ -450,6 +450,19 @@ class Ajax extends CI_Controller {
         }
         echo json_encode($result);
     }
+
+    function createTask() {
+        $result['title'] = $_POST['title'];
+        $result['desc'] = $_POST['desc'];
+        $result['project'] = $_POST['project'];
+        $result['dueto'] = $_POST['dueto'];
+        $result['label'] = $_POST['label'];
+        $result['priority'] = $_POST['priority'];
+        $result['implementor'] = $_POST['implementor'];
+        $result['owner'] = $_POST['owner'];
+
+        echo json_encode($result);
+    }
 }
 
 

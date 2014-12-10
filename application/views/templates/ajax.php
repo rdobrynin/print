@@ -299,5 +299,28 @@ console.log(localStorage);
               }
           });
       });
+
+      $("#addtask_pr_btn").click(function(event) {
+
+          var form_data = {
+              title :$('#task_pr_title').val(),
+              desc :$('#task_pr_desc').val(),
+              project :$('#choose_project_modal').val(),
+              dueto :$('#dueto_modal').val(),
+              label :$('#task_type_choose').val(),
+              priority :$('#task_priority_choose').val(),
+              implementor :$('#implementor_choose_modal').val(),
+              owner :$('#user_added_task_pr_id').val()
+          };
+          $.ajax({
+              url: "<?php echo site_url('ajax/createTask'); ?>",
+              type: 'POST',
+              data: form_data,
+              dataType: 'json',
+              success: function (msg) {
+                console.log(msg);
+              }
+          });
+      });
   });
 </script>

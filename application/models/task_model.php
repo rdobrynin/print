@@ -57,10 +57,8 @@ class Task_model extends CI_Model {
     }
 
 
-
-
     /**
-     * get users();
+     * get implementors();
      * @return mixed
      */
 
@@ -72,6 +70,23 @@ class Task_model extends CI_Model {
         return $query->result_array();
     }
 
+
+    /**
+     * Create task
+     * @return mixed
+     */
+    public function insert_task() {
+        $data = array (
+            'uid' => $this->input->post('owner'),
+            'pid' => $this->input->post('project'),
+            'implementor' => $this->input->post('implementor'),
+            'title' => $this->input->post('title'),
+            'desc' => $this->input->post('desc'),
+            'due_time' =>$this->input->post('dueto'),
+        );
+        $insert = $this->db->insert('task', $data);
+        return $insert;
+    }
 
 }
 
