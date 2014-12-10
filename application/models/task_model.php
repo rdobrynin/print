@@ -111,6 +111,18 @@ class Task_model extends CI_Model {
         }
     }
 
+
+    /**
+     * Count tasks
+     * @return mixed
+     */
+
+    public function countTasks() {
+        $query = $this->db->get('task');
+        return $query->result_array();
+    }
+
+
 }
 
 

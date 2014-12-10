@@ -60,6 +60,14 @@ class Dashboard extends CI_Controller {
             $data['imps']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $this->session->set_userdata('user_id', $this->admin_model->get_user_id($_SESSION['username']));
         $data['user'] = $this->admin_model->get_user_id($_SESSION['username']);
         $roles_array = $this->admin_model->get_roles();
@@ -111,6 +119,14 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $imps = $this->task_model->get_imps();
 
         if($imps) {
@@ -154,6 +170,14 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['task_types']=false;
+        }
+
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
         }
 
         $imps = $this->task_model->get_imps();
@@ -216,6 +240,14 @@ class Dashboard extends CI_Controller {
             $data['projects']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $imps = $this->task_model->get_imps();
 
         if($imps) {
@@ -275,6 +307,14 @@ class Dashboard extends CI_Controller {
             $data['imps']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -323,6 +363,14 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['imps']=false;
+        }
+
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
         }
 
         $project_array = $this->project_model->get_projects();
@@ -383,6 +431,14 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['imps']=false;
+        }
+
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();
@@ -483,6 +539,14 @@ class Dashboard extends CI_Controller {
             $data['task_types']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $data['roles'] = $roles;
         $data['current_language'] = $this->session->userdata('site_lang');
         $this->load->library('form_validation');
@@ -564,6 +628,14 @@ class Dashboard extends CI_Controller {
             $data['imps']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -633,6 +705,14 @@ class Dashboard extends CI_Controller {
             $data['imps']=false;
         }
 
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
+        }
+
         $task_types = $this->task_model->getTaskTypes();
         if($task_types) {
             $data['task_types']= $task_types;
@@ -690,6 +770,14 @@ class Dashboard extends CI_Controller {
         }
         else {
             $data['imps']=false;
+        }
+
+        $task_array = $this->task_model->countTasks();
+        if($task_array) {
+            $data['tasks']= $task_array;
+        }
+        else {
+            $data['tasks']=false;
         }
 
         $task_types = $this->task_model->getTaskTypes();

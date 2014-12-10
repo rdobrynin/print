@@ -376,6 +376,18 @@ class Ajax extends CI_Controller {
         echo json_encode ($result);
     }
 
+
+    /**
+     * countTasks
+     */
+
+    function countTasks() {
+        $this->load->model('task_model');
+        $result = $this->task_model->countTasks();
+        echo json_encode ($result);
+    }
+
+
     /**
      * Read event
      */

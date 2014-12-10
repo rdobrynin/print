@@ -330,6 +330,18 @@ console.log(localStorage);
                           $("input[type=text], textarea").val("");
                           $('#addtask_pr_modal').modal('hide');
                       }, 2000);
+
+
+                      setInterval(function(){
+                          $.get( "<?php echo site_url('ajax/countTasks'); ?>", function( data ) {
+                              if(data.length >0) {
+                                  console.log(data);
+                                  $('#badge-count-tasks').html(data.length);
+                              }
+                          }, "json" );
+                      }, 3000);
+
+
                   }
                   else if(msg.repeat != false) {
                       $('#check_repeat_task_pr').fadeIn('slow').css('display', 'block');
