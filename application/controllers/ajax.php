@@ -475,13 +475,10 @@ class Ajax extends CI_Controller {
                 else {
                     $result['result'] = false;
                 }
-
             }
             else {
                 $result['result'] = false;
             }
-
-
         }
         echo json_encode($result);
     }

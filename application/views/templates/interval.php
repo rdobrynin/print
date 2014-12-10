@@ -1,9 +1,6 @@
 <script>
 //convert datetime to timestamp
-function toTimestamp(strDate){
-    var datum = Date.parse(strDate);
-    return datum/1000;
-}
+
     $(function () {
 //todo
         // Get last record from events du to current timestamp
