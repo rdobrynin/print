@@ -81,7 +81,7 @@ i.clock-activity {
 }
 
 .tiles .tiles-body {
-    padding: 19px 16px 15px 21px;
+    padding: 11px 12px 9px 12px;
 }
 
 .tiles {
@@ -122,10 +122,10 @@ i.clock-activity {
     margin-bottom: 10px;
 }
 .widget-stats .wrapper {
-    margin: 5px 0 5px 0;
+    margin: 2px 0 2px 0;
     border-right: 1px solid #363a41;
-    margin-right: 7px;
-    padding-right: 7px;
+    margin-right: 5px;
+    padding-right: 5px;
 }
 
 .progress.progress-small {
