@@ -290,7 +290,7 @@ console.log(localStorage);
                   }
                   else {
                       if (msg.check['title'] != input_val) {
-                          $('#' + current_id).html('updated');
+                          $('#' + current_id).html('applied');
                       }
                       $('#check_empty_' + input_id).fadeOut('slow').css('display', 'none');
                   }

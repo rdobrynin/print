@@ -39,7 +39,7 @@
                       </div>
                       <div class="col-md-2" style="padding-left: 0">
                           <div class="form-group">
-                           <a href="#" class="btn btn-success btn-update-ttp"  id="ttp_<?php print($tv['id']) ?>">update</a>
+                           <a href="#" class="btn btn-primary btn-update-ttp"  id="ttp_<?php print($tv['id']) ?>">apply</a>
                           </div>
                       </div>
                       <?php endforeach ?>
@@ -55,7 +55,7 @@
           <?php endif ?>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location = '<?php print(site_url()) ?>';">Update task types</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location = '<?php print(site_url()) ?>';">Save settings</button>
       </div>
     </div>
 

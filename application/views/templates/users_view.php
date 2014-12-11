@@ -97,6 +97,10 @@
 
 <!--  New users-->
 </div>
+<!--logs-->
+
+<?php include('logs_view.php'); ?>
+
 </div>
 
 

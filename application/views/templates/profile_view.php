@@ -144,12 +144,12 @@
                                 <br/>
                                 <input type="submit" class="btn btn-info" name="<?php print(lang('submit'))?>" id="submit"/>
                             </form>
-
+                            <?php if ($avatar != FALSE): ?>
                                 <div id="avatar-true">
                                 <div class="avatar-wrapper pull-right" ><img src="<?php print base_url().'uploads/avatar/'.($avatar); ?>" height="100">
                                 </div>
                                 </div>
-
+                            <?php endif ?>
                                 <div id="avatar-true-ajax">
                                     <span id="ajax-temp" class="avatar-wrapper pull-right"></span>
                                 </div>

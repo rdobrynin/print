@@ -21,7 +21,7 @@
                             '<div class="alert inbox"><button type="button" class="close" data-dismiss="alert">×' +
                                 '</button><a href="javascript:void(0)"><i class="fa fa-bell"></i>From: ' + name + '</a>' +
                                 '<span class="message-mini">' + data.title + ' Project has been created</span></div>'
-                        ).fadeIn('9000');
+                        ).fadeIn('3000');
                     }
 //                    for tasks
                     else if (data['type'] == 1) {
@@ -29,7 +29,7 @@
                             '<div class="alert inbox"><button type="button" class="close" data-dismiss="alert">×' +
                                 '</button><a href="javascript:void(0)"><i class="fa fa-bell"></i>From: ' + name + '</a>' +
                                 '<span class="message-mini">' + data.title + ' Task has been added</span></div>'
-                        ).fadeIn('9000');
+                        ).fadeIn('3000');
                     }
 
                 }

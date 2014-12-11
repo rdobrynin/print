@@ -58,6 +58,10 @@
     </div>
   </div>
 </div>
+<!--logs-->
+
+<?php include('logs_view.php'); ?>
+
 </div>
 <?php include('footer_view.php');?>
 <script>
