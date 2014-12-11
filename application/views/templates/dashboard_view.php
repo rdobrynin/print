@@ -5,7 +5,6 @@
             <div class="col-md-8">
                 <h3 class="h_title">Current activity</h3>
                 <div class="row">
-
                     <div class="col-md-6 col-vlg-3 col-sm-6">
                         <div class="tiles green m-b-10">
                             <div class="tiles-body">
@@ -64,84 +63,72 @@
 
                 </div>
                     <div class="row-fluid" style="padding-top: 20px;">
-                        <table class="table">
+                        <h3 class="h_title">Last tasks</h3>
+                        <div class="panel panel-default">
+
+                            <div class="panel-body-table">
+                                <div class="table-responsive">
+                        <table class="table table-condensed">
                             <thead>
                             <tr>
-                                <th width="1%"></th>
-                                <th width="9%">Task title</th>
-                                <th width="22%">Description</th>
-                                <th width="6%">Status</th>
-                                <th width="10%">Progress</th>
+                                <th width="1%" class="text-left" style="border-left: 1px solid #ddd;">#ID</th>
+                                <th width="9%" class="text-left" style="border-left: 1px solid #ddd;">Task title</th>
+                                <th width="18%" class="text-left" style="border-left: 1px solid #ddd;">Description</th>
+                                <th width="6%" class="text-left" style="border-left: 1px solid #ddd;">Status</th>
+                                <th width="10%" class="text-left" style="border-left: 1px solid #ddd;">Due to</th>
+                                <th width="4%" class="text-left" style="border-left: 1px solid #ddd;">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td >
-                                    <div class="checkbox check-default">
-                                        <input id="checkbox11" type="checkbox" value="1">
-                                        <label for="checkbox11"></label>
-                                    </div>
-                                </td>
+                                <td>1012</td>
                                 <td >Early Bird</td>
                                 <td ><span class="muted">Redesign project template</span>
                                 </td>
-                                <td><span class="label label-success">progress</span>
+                                <td><span class="label label-success label-xs">progress</span>
                                 </td>
-                                <td >
-
-                                </td>
+                                <td class="text-left">2014-12-10 16:56:03</td>
+                                <td class="text-center"><a href="#"><i class="fa fa-pencil"></i></a></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="checkbox check-default">
-                                        <input id="checkbox12" type="checkbox" value="1">
-                                        <label for="checkbox12"></label>
-                                    </div>
-                                </td>
+                                <td>1012</td>
                                 <td>Angry Birds&nbsp;&nbsp;&nbsp;<span class="label label-important">ALERT!</span>
                                 </td>
                                 <td><span class="muted">Something goes here</span>
                                 </td>
-                                <td><span class="label label-danger">overdue</span>
+                                <td><span class="label label-danger label-xs">overdue</span>
                                 </td>
-                                <td>
+                                <td class="text-left">2014-12-10 16:56:03</td>
+                                <td class="text-center"><a href="#"><i class="fa fa-pencil"></i></a></td>
 
-                                </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="checkbox check-default">
-                                        <input id="checkbox13" type="checkbox" value="1">
-                                        <label for="checkbox13"></label>
-                                    </div>
-                                </td>
+                                <td>1012</td>
                                 <td>PHP Login page</td>
                                 <td ><span class="muted">A project in business and science is typically defined</span>
                                 </td>
-                                <td><span class="label label-primary">completed</span>
+                                <td><span class="label label-primary label-xs">completed</span>
                                 </td>
-                                <td>
+                                <td class="text-left">2014-12-10 16:56:03</td>
+                                <td class="text-center"><a href="#"><i class="fa fa-pencil"></i></a></td>
 
-                                </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="checkbox check-default">
-                                        <input id="checkbox14" type="checkbox" value="1">
-                                        <label for="checkbox14"></label>
-                                    </div>
-                                </td>
+                                <td>1012</td>
                                 <td>Zombies</td>
                                 <td ><span class="muted">frequently involving research or design</span>
                                 </td>
-                                <td><span class="label label-warning">approve</span>
+                                <td><span class="label label-warning label-xs">approve</span>
                                 </td>
-                                <td>
+                                <td class="text-left">2014-12-10 16:56:03</td>
+                                <td class="text-center"><a href="#"><i class="fa fa-pencil"></i></a></td>
 
-                                </td>
                             </tr>
                             </tbody>
                         </table>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
             </div>
             <div class="col-md-4">
