@@ -237,5 +237,6 @@
 
 <!--logs-->
 
+<!--test-->
 <?php include('logs_view.php'); ?>
 
